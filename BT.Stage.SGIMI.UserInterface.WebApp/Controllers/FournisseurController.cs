@@ -32,7 +32,10 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         // GET: Fournisseur/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            Fournisseur fournisseur = fournisseurRepository.GetFournisseurById(id);
+
+            FournisseurViewModel fournisseurViewModel = FournisseurTranspose.FournisseurToFournisseurViewModel(fournisseur);
+            return View(fournisseurViewModel);
         }
 
         // GET: Fournisseur/Create

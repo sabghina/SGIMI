@@ -13,6 +13,12 @@ namespace BT.Stage.SGIMI.DataAccess.Interface
         /// Returns List Fournissuers.
         /// </summary>
         /// <returns></returns>
-        List<Fournisseur> GetFournisseurs(); 
+        List<Fournisseur> GetFournisseurs();
+        /// <summary>
+        /// Return fournisseur by id.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        Fournisseur GetFournisseurById(int id);
     }
 }

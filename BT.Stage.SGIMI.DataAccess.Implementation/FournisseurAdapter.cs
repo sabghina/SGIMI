@@ -10,6 +10,19 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
 {
     public class FournisseurAdapter : IFournisseurAdapter
     {
+        public Fournisseur GetFournisseurById(int id)
+        {
+            // replace with database access
+            Fournisseur fournisseur = new Fournisseur
+            {
+                Id = id,
+                Nom = "Fournisseur" + id,
+                CreatedBy = id + 1
+            };
+
+            return fournisseur;
+        }
+
         public List<Fournisseur> GetFournisseurs()
         {
             // replace with databse access

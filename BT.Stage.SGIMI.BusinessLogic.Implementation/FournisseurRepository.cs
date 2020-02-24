@@ -16,6 +16,12 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
         {
             fournisseurAdapter = _fournisseurAdapter;
         }
+
+        public Fournisseur GetFournisseurById(int id)
+        {
+            return fournisseurAdapter.GetFournisseurById(id);
+        }
+
         public List<Fournisseur> GetFournisseurs()
         {
             List<Fournisseur> fournisseurs = fournisseurAdapter.GetFournisseurs();
