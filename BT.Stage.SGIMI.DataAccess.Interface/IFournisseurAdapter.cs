@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BT.Stage.SGIMI.BusinessLogic.Interface
+namespace BT.Stage.SGIMI.DataAccess.Interface
 {
-    public class ISGIMIRepository
+    public class IFournisseurAdapter
     {
     }
 }
