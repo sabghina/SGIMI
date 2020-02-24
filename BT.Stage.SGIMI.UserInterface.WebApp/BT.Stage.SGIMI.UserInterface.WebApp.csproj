@@ -168,6 +168,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\FournisseurController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -235,6 +236,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Fournisseur\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -251,6 +253,20 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BT.Stage.SGIMI.Commun.Tools\BT.Stage.SGIMI.Commun.Tools.csproj">
+      <Project>{3350BA2A-2E27-44BB-A700-72390DAD7CEE}</Project>
+      <Name>BT.Stage.SGIMI.Commun.Tools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BT.Stage.SGIMI.Data.Entity\BT.Stage.SGIMI.Data.Entity.csproj">
+      <Project>{9D473CFB-2BCB-4A7A-8810-6335B4FBF0EA}</Project>
+      <Name>BT.Stage.SGIMI.Data.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BT.Stage.SGIMI.UserInterface.ViewModel\BT.Stage.SGIMI.UserInterface.ViewModel.csproj">
+      <Project>{753F3014-9A39-42D9-A24F-5C530B590F1F}</Project>
+      <Name>BT.Stage.SGIMI.UserInterface.ViewModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
