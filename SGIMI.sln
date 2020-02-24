@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BT.Stage.SGIMI.UserInterfac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BT.Stage.SGIMI.Commun.Tools", "BT.Stage.SGIMI.Commun.Tools\BT.Stage.SGIMI.Commun.Tools.csproj", "{3350BA2A-2E27-44BB-A700-72390DAD7CEE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BT.Stage.SGIMI.Commun.Dependencies", "BT.Stage.SGIMI.Commun.Dependencies\BT.Stage.SGIMI.Commun.Dependencies.csproj", "{F48000EE-14CE-45AA-9396-D4E2E03E1FAD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{3350BA2A-2E27-44BB-A700-72390DAD7CEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3350BA2A-2E27-44BB-A700-72390DAD7CEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3350BA2A-2E27-44BB-A700-72390DAD7CEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F48000EE-14CE-45AA-9396-D4E2E03E1FAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F48000EE-14CE-45AA-9396-D4E2E03E1FAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F48000EE-14CE-45AA-9396-D4E2E03E1FAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F48000EE-14CE-45AA-9396-D4E2E03E1FAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -83,6 +89,7 @@ Global
 		{9D473CFB-2BCB-4A7A-8810-6335B4FBF0EA} = {2ACE512D-87C7-4B07-A72C-F69733C3D8B4}
 		{753F3014-9A39-42D9-A24F-5C530B590F1F} = {358C11E4-A373-49BC-808E-53AD35F8E236}
 		{3350BA2A-2E27-44BB-A700-72390DAD7CEE} = {5AC3EF0A-AE7B-477D-9120-3FFC6BA49AA6}
+		{F48000EE-14CE-45AA-9396-D4E2E03E1FAD} = {5AC3EF0A-AE7B-477D-9120-3FFC6BA49AA6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0F149131-3BC2-42FD-BE6B-661FCB8C62F9}
