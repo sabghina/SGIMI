@@ -23,8 +23,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BT.Stage.SGIMI.BusinessLogi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BT.Stage.SGIMI.BusinessLogic.Interface", "BT.Stage.SGIMI.BusinessLogic.Interface\BT.Stage.SGIMI.BusinessLogic.Interface.csproj", "{33EDBC04-EABF-4A50-A024-08DCE2D3F0D7}"
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "BT.Stage.SGIMI.Data.DataBase", "BT.Stage.SGIMI.Data.DataBase\BT.Stage.SGIMI.Data.DataBase.sqlproj", "{26D42D55-8F8F-4DAC-8347-0742CB46D107}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,12 +49,6 @@ Global
 		{33EDBC04-EABF-4A50-A024-08DCE2D3F0D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33EDBC04-EABF-4A50-A024-08DCE2D3F0D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33EDBC04-EABF-4A50-A024-08DCE2D3F0D7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{26D42D55-8F8F-4DAC-8347-0742CB46D107}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{26D42D55-8F8F-4DAC-8347-0742CB46D107}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{26D42D55-8F8F-4DAC-8347-0742CB46D107}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{26D42D55-8F8F-4DAC-8347-0742CB46D107}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{26D42D55-8F8F-4DAC-8347-0742CB46D107}.Release|Any CPU.Build.0 = Release|Any CPU
-		{26D42D55-8F8F-4DAC-8347-0742CB46D107}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,7 +59,6 @@ Global
 		{9EF0E5D3-F826-4EF3-8A39-B6024A6D7089} = {B0D1B17F-52C4-47F3-AE4E-054F00428571}
 		{E62DD37D-DBAB-46BD-8102-585985CA2B56} = {DBBF6ACB-6AE3-437D-B818-227F6D8D63E9}
 		{33EDBC04-EABF-4A50-A024-08DCE2D3F0D7} = {DBBF6ACB-6AE3-437D-B818-227F6D8D63E9}
-		{26D42D55-8F8F-4DAC-8347-0742CB46D107} = {631811B9-FFF8-48B1-A35E-981243730AF2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0F149131-3BC2-42FD-BE6B-661FCB8C62F9}
