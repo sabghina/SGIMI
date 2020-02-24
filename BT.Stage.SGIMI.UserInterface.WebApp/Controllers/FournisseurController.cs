@@ -1,4 +1,5 @@
-﻿using BT.Stage.SGIMI.Commun.Tools;
+﻿using BT.Stage.SGIMI.BusinessLogic.Interface;
+using BT.Stage.SGIMI.Commun.Tools;
 using BT.Stage.SGIMI.Data.Entity;
 using BT.Stage.SGIMI.UserInterface.ViewModel;
 using System;
@@ -11,22 +12,16 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
 {
     public class FournisseurController : Controller
     {
+        readonly IFournisseurRepository fournisseurRepository;
+        public FournisseurController(IFournisseurRepository _fournisseurRepository)
+        {
+            fournisseurRepository = _fournisseurRepository;
+        }
         // GET: Fournisseur
         public ActionResult Index()
         {
             // 1.get service list fournisseur 
-            List<Fournisseur> fournisseurs = new List<Fournisseur>();
-            for (int i = 1; i < 10; i++)
-            {
-                Fournisseur fournisseur = new Fournisseur
-                {
-                    Id = i,
-                    Nom = "Fournisseur" + i,
-                    CreatedBy = i + 1
-                };
-
-                fournisseurs.Add(fournisseur);
-            }
+            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
 
             // 2. transpose entity -> view model
             List<FournisseurViewModel> fournisseurViewModels = FournisseurTranspose.FournisseurListToFournisseurViewModelList(fournisseurs);

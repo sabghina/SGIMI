@@ -12,6 +12,7 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
     {
         public List<Fournisseur> GetFournisseurs()
         {
+            // replace with databse access
             List<Fournisseur> fournisseurs = new List<Fournisseur>();
             for (int i = 1; i < 10; i++)
             {

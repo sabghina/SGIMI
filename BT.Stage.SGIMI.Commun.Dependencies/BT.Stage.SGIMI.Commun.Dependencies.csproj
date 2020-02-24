@@ -81,5 +81,23 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BT.Stage.SGIMI.BusinessLogic.Implementation\BT.Stage.SGIMI.BusinessLogic.Implementation.csproj">
+      <Project>{E62DD37D-DBAB-46BD-8102-585985CA2B56}</Project>
+      <Name>BT.Stage.SGIMI.BusinessLogic.Implementation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BT.Stage.SGIMI.BusinessLogic.Interface\BT.Stage.SGIMI.BusinessLogic.Interface.csproj">
+      <Project>{33EDBC04-EABF-4A50-A024-08DCE2D3F0D7}</Project>
+      <Name>BT.Stage.SGIMI.BusinessLogic.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BT.Stage.SGIMI.DataAccess.Implementation\BT.Stage.SGIMI.DataAccess.Implementation.csproj">
+      <Project>{CEF0D6F2-B066-4DB4-B7AD-933D35E07BA1}</Project>
+      <Name>BT.Stage.SGIMI.DataAccess.Implementation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BT.Stage.SGIMI.DataAccess.Interface\BT.Stage.SGIMI.DataAccess.Interface.csproj">
+      <Project>{9EF0E5D3-F826-4EF3-8A39-B6024A6D7089}</Project>
+      <Name>BT.Stage.SGIMI.DataAccess.Interface</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

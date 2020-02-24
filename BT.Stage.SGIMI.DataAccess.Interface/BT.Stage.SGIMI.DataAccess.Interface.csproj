@@ -44,5 +44,11 @@
     <Compile Include="IFournisseurAdapter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BT.Stage.SGIMI.Data.Entity\BT.Stage.SGIMI.Data.Entity.csproj">
+      <Project>{9D473CFB-2BCB-4A7A-8810-6335B4FBF0EA}</Project>
+      <Name>BT.Stage.SGIMI.Data.Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
