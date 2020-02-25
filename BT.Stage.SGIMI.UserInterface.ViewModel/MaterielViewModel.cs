@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BT.Stage.SGIMI.Data.Entity
+namespace BT.Stage.SGIMI.UserInterface.ViewModel
 {
-    public class Materiel
+    public class MaterielViewModel
     {
         public int Id { get; set; }
         public string Nom { get; set; }
