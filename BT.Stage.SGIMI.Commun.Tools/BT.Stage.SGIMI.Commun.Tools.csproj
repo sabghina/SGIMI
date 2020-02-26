@@ -45,6 +45,7 @@
     <Compile Include="FournisseurTranspose.cs" />
     <Compile Include="MaterielTranspose.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SocieteTierceTranspose.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BT.Stage.SGIMI.Data.Entity\BT.Stage.SGIMI.Data.Entity.csproj">

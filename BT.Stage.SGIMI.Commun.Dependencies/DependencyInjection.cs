@@ -23,6 +23,8 @@ namespace BT.Stage.SGIMI.Commun.Dependencies
             unityContainer.RegisterType<IMaterielRepository, MaterielRepository>();
             unityContainer.RegisterType<IReclamationAdapter, ReclamationAdapter>();
             unityContainer.RegisterType<IReclamationRepository, ReclamationRepository>();
+            unityContainer.RegisterType<ISocieteTierceAdapter, SocieteTierceAdapter>();
+            unityContainer.RegisterType<ISocieteTierceRepository, SocieteTierceRepository>();
 
             return unityContainer;
         } 

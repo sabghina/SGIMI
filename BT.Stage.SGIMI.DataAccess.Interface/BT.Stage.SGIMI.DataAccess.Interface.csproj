@@ -44,6 +44,7 @@
     <Compile Include="IReclamationAdapter.cs" />
     <Compile Include="IFournisseurAdapter.cs" />
     <Compile Include="IMaterielAdapter.cs" />
+    <Compile Include="ISocieteTierceAdapter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
