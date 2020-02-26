@@ -19,6 +19,8 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Data
         {
         }
 
-        public System.Data.Entity.DbSet<BT.Stage.SGIMI.Data.Entity.Materiel> Materiels { get; set; }
+        //public System.Data.Entity.DbSet<BT.Stage.SGIMI.Data.Entity.Materiel> Materiels { get; set; }
+        //public System.Data.Entity.DbSet<BT.Stage.SGIMI.Data.Entity.Reclamation> Reclamations { get; set; }
+
     }
 }

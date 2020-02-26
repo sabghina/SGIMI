@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ReclamationViewModel.cs" />
     <Compile Include="FournisseurViewModel.cs" />
     <Compile Include="MaterielViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ReclamationTranspose.cs" />
     <Compile Include="FournisseurTranspose.cs" />
     <Compile Include="MaterielTranspose.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

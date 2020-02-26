@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ReclamationRepository.cs" />
     <Compile Include="FournisseurRepository.cs" />
     <Compile Include="MaterielRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

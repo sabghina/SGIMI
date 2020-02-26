@@ -194,6 +194,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MaterielController.cs" />
+    <Compile Include="Controllers\ReclamationController.cs" />
     <Compile Include="Data\BTStageSGIMIUserInterfaceWebAppContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -265,6 +266,8 @@
     <Content Include="Views\Fournisseur\Details.cshtml" />
     <Content Include="Views\Materiel\Index.cshtml" />
     <Content Include="Views\Materiel\Details.cshtml" />
+    <Content Include="Views\Reclamation\Details.cshtml" />
+    <Content Include="Views\Reclamation\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

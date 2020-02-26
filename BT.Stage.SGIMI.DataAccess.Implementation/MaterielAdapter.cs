@@ -19,17 +19,12 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
                 Nom = "Materiel" + id,
                 Reference = "Mat00" + id,
                 //Exemple pour le test
-                Fournisseur = id - 1,
+                Fournisseur = id + 1,
                 CreatedBy = id + 1
             };
 
             return materiel;
         }
-        public List<Materiel> GetMateriel()
-        {
-            throw new NotImplementedException();
-        }
-
         public List<Materiel> GetMateriels()
         {
             // replace with databse access
@@ -42,7 +37,7 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
                     Nom = "Materiel" + i,
                     Reference = "Mat00" + i,
                     //Exemple pour le test
-                    Fournisseur = i - 1,
+                    Fournisseur = i + 1,
                     CreatedBy = i + 1
                 };
 
