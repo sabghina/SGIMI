@@ -8,21 +8,21 @@ using System.Threading.Tasks;
 
 namespace BT.Stage.SGIMI.BusinessLogic.Interface
 {
-        public interface ISocieteTierceRepository
-        {
+    public interface ISocieteTierceRepository
+    {
 
         /// <summary>
         /// Returns List SocieteTierce.
         /// </summary>
         /// <returns></returns>
-        List<SocieteTierce> GetSocieteTierces();
+        List<Fournisseur> GetSocieteTierces();
         /// <summary>
         /// Returns societe tierce by id.
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        SocieteTierce GetSocieteTierceById(int id);
+        Fournisseur GetSocieteTierceById(int id);
     }
 
-      
+
 }

@@ -10,7 +10,7 @@ namespace BT.Stage.SGIMI.UserInterface.ViewModel
     {
         public int Id { get; set; }
         public string Nom { get; set; }
-        public int CreatedBy { get; set; }
+        public string CreatedBy { get; set; }
 
     }
 }

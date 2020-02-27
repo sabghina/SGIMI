@@ -10,13 +10,13 @@ namespace BT.Stage.SGIMI.Commun.Tools
 {
     public static class SocieteTierceTranspose
     {
-        public static List<SocieteTierceViewModel> SocieteTierceListToSocieteTierceViewModelList(List<SocieteTierce> societeTierces)
+        public static List<SocieteTierceViewModel> FournisseurListToSocieteTierceViewModelList(List<Fournisseur> societeTierces)
         {
             List<SocieteTierceViewModel> societeTierceViewModels = new List<SocieteTierceViewModel>();
 
-            foreach (SocieteTierce societeTierce in societeTierces)
+            foreach (Fournisseur societeTierce in societeTierces)
             {
-                SocieteTierceViewModel societeTierceViewModel = SocieteTierceToSocieteTierceViewModel(societeTierce);
+                SocieteTierceViewModel societeTierceViewModel = FournisseurToSocieteTierceViewModel(societeTierce);
 
                 societeTierceViewModels.Add(societeTierceViewModel);
             }
@@ -24,7 +24,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
             return societeTierceViewModels;
         }
 
-        public static SocieteTierceViewModel SocieteTierceToSocieteTierceViewModel(SocieteTierce societeTierce)
+        public static SocieteTierceViewModel FournisseurToSocieteTierceViewModel(Fournisseur societeTierce)
         {
             SocieteTierceViewModel societeTierceViewModel = new SocieteTierceViewModel
             {

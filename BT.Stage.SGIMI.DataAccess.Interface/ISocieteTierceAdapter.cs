@@ -9,19 +9,18 @@ namespace BT.Stage.SGIMI.DataAccess.Interface
 {
     public interface ISocieteTierceAdapter
     {
-     
-            /// <summary>
-            /// Returns List SocieteTierce.
-            /// </summary>
-            /// <returns></returns>
-            List<SocieteTierce> GetSocieteTierces();
-            /// <summary>
-            /// Return SocieteTierce by id.
-            /// </summary>
-            /// <param name="id"></param>
-            /// <returns></returns>
-            SocieteTierce GetSocieteTierceById(int id);
-        }
+        /// <summary>
+        /// Returns List SocieteTierce.
+        /// </summary>
+        /// <returns></returns>
+        List<Fournisseur> GetSocieteTierces();
+        /// <summary>
+        /// Return SocieteTierce by id.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        Fournisseur GetSocieteTierceById(int id);
     }
+}
 
 

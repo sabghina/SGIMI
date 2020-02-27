@@ -18,14 +18,14 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
         {
             societeTierceAdapter = _societeTierceAdapter;
         }
-        public SocieteTierce GetSocieteTierceById(int id)
+        public Fournisseur GetSocieteTierceById(int id)
         {
             return societeTierceAdapter.GetSocieteTierceById(id);
         }
 
-        public List<SocieteTierce> GetSocieteTierces()
+        public List<Fournisseur> GetSocieteTierces()
         {
-            List<SocieteTierce> societeTierces = societeTierceAdapter.GetSocieteTierces();
+            List<Fournisseur> societeTierces = societeTierceAdapter.GetSocieteTierces();
             return societeTierces;
         }
     }

@@ -42,22 +42,40 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         // GET: Fournisseur/Create
         public ActionResult Create()
         {
-            return View();
+            FournisseurViewModel fournisseurViewModel = new FournisseurViewModel();
+            return View(fournisseurViewModel);
         }
 
         // POST: Fournisseur/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(FournisseurViewModel fournisseurViewModel)
         {
             try
             {
+                // controle existance email
+                //ModelState.AddModelError("Email", "Email existe");
+                // controle
+                if (!ModelState.IsValid)
+                {
+                    return View(fournisseurViewModel);
+                }
                 // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
+                string user = User.Identity.Name;
+                Fournisseur fournisseur = FournisseurTranspose.FournisseurViewModelToFournisseur(fournisseurViewModel, user);
+                
+                bool fournisseurIsCreated = fournisseurRepository.CreateFournisseur(fournisseur);
+                if (fournisseurIsCreated)
+                {
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    throw new InvalidOperationException("oops");
+                }
             }
             catch
             {
-                return View();
+                throw;
             }
         }
 

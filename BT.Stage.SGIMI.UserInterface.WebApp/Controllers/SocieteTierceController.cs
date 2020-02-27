@@ -23,10 +23,10 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         public ActionResult Index()
         {
             // 1.get service list societeTierce 
-            List<SocieteTierce> societeTierces = societeTierceRepository.GetSocieteTierces();
+            List<Fournisseur> societeTierces = societeTierceRepository.GetSocieteTierces();
 
             // 2. transpose entity -> view model
-            List<SocieteTierceViewModel> societeTierceViewModels = SocieteTierceTranspose.SocieteTierceListToSocieteTierceViewModelList(societeTierces);
+            List<SocieteTierceViewModel> societeTierceViewModels = SocieteTierceTranspose.FournisseurListToSocieteTierceViewModelList(societeTierces);
 
             return View(societeTierceViewModels);
         }
@@ -34,9 +34,9 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         // GET: SocieteTierce/Details/5
         public ActionResult Details(int id)
         {
-            SocieteTierce societeTierce = societeTierceRepository.GetSocieteTierceById(id);
+            Fournisseur societeTierce = societeTierceRepository.GetSocieteTierceById(id);
 
-            SocieteTierceViewModel societeTierceViewModel = SocieteTierceTranspose.SocieteTierceToSocieteTierceViewModel(societeTierce);
+            SocieteTierceViewModel societeTierceViewModel = SocieteTierceTranspose.FournisseurToSocieteTierceViewModel(societeTierce);
             return View(societeTierceViewModel);
         }
 

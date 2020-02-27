@@ -10,6 +10,12 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
 {
     public class FournisseurAdapter : IFournisseurAdapter
     {
+        public bool CreateFournisseur(Fournisseur fournisseur)
+        {
+            // ajout in database
+            return true;
+        }
+
         public Fournisseur GetFournisseurById(int id)
         {
             // replace with database access
@@ -17,7 +23,7 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
             {
                 Id = id,
                 Nom = "Fournisseur" + id,
-                CreatedBy = id + 1
+                CreatedBy = "user" + id + 1
             };
 
             return fournisseur;
@@ -33,7 +39,7 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
                 {
                     Id = i,
                     Nom = "Fournisseur" + i,
-                    CreatedBy = i + 1
+                    CreatedBy = "user" + i + 1
                 };
 
                 fournisseurs.Add(fournisseur);

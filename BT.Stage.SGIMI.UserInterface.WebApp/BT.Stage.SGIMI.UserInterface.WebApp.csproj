@@ -275,6 +275,7 @@
     <Content Include="Views\SocieteTierce\Index.cshtml" />
     <Content Include="Views\Intervention\Details.cshtml" />
     <Content Include="Views\Intervention\Index.cshtml" />
+    <Content Include="Views\Fournisseur\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

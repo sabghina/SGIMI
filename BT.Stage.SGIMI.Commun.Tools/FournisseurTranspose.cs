@@ -23,7 +23,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
 
             return fournisseurViewModels;
         }
-        
+
         public static FournisseurViewModel FournisseurToFournisseurViewModel(Fournisseur fournisseur)
         {
             FournisseurViewModel fournisseurViewModel = new FournisseurViewModel
@@ -33,6 +33,18 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 CreatedBy = fournisseur.CreatedBy
             };
             return fournisseurViewModel;
+        }
+
+        public static Fournisseur FournisseurViewModelToFournisseur(FournisseurViewModel fournisseurViewModel, string user)
+        {
+            Fournisseur fournisseur = new Fournisseur
+            {
+                Nom = fournisseurViewModel.Nom,
+                Email = fournisseurViewModel.Email,
+                Type = (char)fournisseurViewModel.Type,
+                CreatedBy = user
+            };
+            return fournisseur;
         }
     }
 }
