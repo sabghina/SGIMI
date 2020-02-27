@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Unity;
+using Unity.Injection;
 
 namespace BT.Stage.SGIMI.Commun.Dependencies
 {
@@ -29,6 +30,6 @@ namespace BT.Stage.SGIMI.Commun.Dependencies
             unityContainer.RegisterType<IInterventionRepository, InterventionRepository>();
 
             return unityContainer;
-        } 
+        }
     }
 }
