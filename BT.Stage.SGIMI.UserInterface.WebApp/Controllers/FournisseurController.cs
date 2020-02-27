@@ -10,6 +10,7 @@ using System.Web.Mvc;
 
 namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
 {
+    [Authorize]
     public class FournisseurController : Controller
     {
         readonly IFournisseurRepository fournisseurRepository;
