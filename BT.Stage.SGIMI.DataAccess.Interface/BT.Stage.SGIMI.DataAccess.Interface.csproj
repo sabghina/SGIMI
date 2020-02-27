@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IInterventionAdapter.cs" />
     <Compile Include="IReclamationAdapter.cs" />
     <Compile Include="IFournisseurAdapter.cs" />
     <Compile Include="IMaterielAdapter.cs" />

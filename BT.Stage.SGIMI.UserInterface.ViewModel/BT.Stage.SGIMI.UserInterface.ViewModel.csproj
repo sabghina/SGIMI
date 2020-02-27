@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InterventionViewModel.cs" />
     <Compile Include="ReclamationViewModel.cs" />
     <Compile Include="FournisseurViewModel.cs" />
     <Compile Include="MaterielViewModel.cs" />

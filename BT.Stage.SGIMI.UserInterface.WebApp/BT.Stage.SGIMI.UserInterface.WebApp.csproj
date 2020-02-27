@@ -192,6 +192,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\FournisseurController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InterventionController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MaterielController.cs" />
     <Compile Include="Controllers\ReclamationController.cs" />
@@ -274,6 +275,8 @@
     <Content Include="Views\Reclamation\Index.cshtml" />
     <Content Include="Views\SocieteTierce\Details.cshtml" />
     <Content Include="Views\SocieteTierce\Index.cshtml" />
+    <Content Include="Views\Intervention\Details.cshtml" />
+    <Content Include="Views\Intervention\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
