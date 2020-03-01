@@ -15,7 +15,7 @@ namespace BT.Stage.SGIMI.UserInterface.ViewModel
         public string Nom { get; set; }
         public string Email { get; set; }
         /// <summary>
-        /// F: Fourniseur, S: Société 
+        /// F: Fourniseur, S: SociétéTierce
         /// </summary>
         public TypeFournisseur Type { get; set; }
         public string CreatedBy { get; set; }
