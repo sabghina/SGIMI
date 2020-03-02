@@ -17,9 +17,11 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
             {
                 Id = id,
                 Nom = "Materiel" + id,
-                Reference = "Mat00" + id,
-                //Exemple pour le test
-                Fournisseur = id + 1,
+                Marque = "Marque" + id,
+                Modele = "Modele" + id,
+                ReferenceBT = "Mat00" + id,
+                NumeroDeSerie = id + 1,
+                Fournisseur = "Fournisseur" + id,
                 CreatedBy = id + 1
             };
 
@@ -35,13 +37,15 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
                 {
                     Id = i,
                     Nom = "Materiel" + i,
-                    Reference = "Mat00" + i,
-                    //Exemple pour le test
-                    Fournisseur = i + 1,
+                    Marque = "Marque" + i,
+                    Modele = "Modele" + i,
+                    ReferenceBT = "Mat00" + i,
+                    NumeroDeSerie = i + 1,
+                    Fournisseur = "Fournisseur" + i,
                     CreatedBy = i + 1
                 };
 
-                    materiels.Add(materiel);
+                materiels.Add(materiel);
             }
 
             return materiels;

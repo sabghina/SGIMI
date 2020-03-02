@@ -267,8 +267,6 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Fournisseur\Index.cshtml" />
     <Content Include="Views\Fournisseur\Details.cshtml" />
-    <Content Include="Views\Materiel\Index.cshtml" />
-    <Content Include="Views\Materiel\Details.cshtml" />
     <Content Include="Views\Reclamation\Details.cshtml" />
     <Content Include="Views\Reclamation\Index.cshtml" />
     <Content Include="Views\SocieteTierce\Details.cshtml" />
@@ -276,6 +274,8 @@
     <Content Include="Views\Intervention\Details.cshtml" />
     <Content Include="Views\Intervention\Index.cshtml" />
     <Content Include="Views\Fournisseur\Create.cshtml" />
+    <Content Include="Views\Materiel\Index.cshtml" />
+    <Content Include="Views\Materiel\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

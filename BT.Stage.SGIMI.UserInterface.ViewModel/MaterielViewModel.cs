@@ -10,9 +10,11 @@ namespace BT.Stage.SGIMI.UserInterface.ViewModel
     {
         public int Id { get; set; }
         public string Nom { get; set; }
-        public string Reference { get; set; }
-        //doit etre changer par un attribut significatif
-        public int Fournisseur { get; set; }
+        public string Marque { get; set; }
+        public string Modele { get; set; }
+        public string ReferenceBT { get; set; }
+        public int NumeroDeSerie { get; set; }
+        public string Fournisseur { get; set; }
         public int CreatedBy { get; set; }
     }
 }

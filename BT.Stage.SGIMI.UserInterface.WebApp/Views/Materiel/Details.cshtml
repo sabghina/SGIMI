@@ -1,7 +1,7 @@
 ﻿@model BT.Stage.SGIMI.UserInterface.ViewModel.MaterielViewModel
 
 @{
-    ViewBag.Title = "details";
+    ViewBag.Title = "Details";
 }
 
 <h2>Details</h2>
@@ -19,11 +19,35 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Reference)
+            @Html.DisplayNameFor(model => model.Marque)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Reference)
+            @Html.DisplayFor(model => model.Marque)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Modele)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Modele)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReferenceBT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReferenceBT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroDeSerie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroDeSerie)
         </dd>
 
         <dt>

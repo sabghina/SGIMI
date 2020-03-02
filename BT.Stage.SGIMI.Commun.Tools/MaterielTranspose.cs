@@ -28,9 +28,13 @@ namespace BT.Stage.SGIMI.Commun.Tools
             {
                 Id = materiel.Id,
                 Nom = materiel.Nom,
-                Reference = materiel.Reference,
+                Marque = materiel.Marque,
+                Modele = materiel.Modele,
+                ReferenceBT = materiel.ReferenceBT,
+                NumeroDeSerie = materiel.NumeroDeSerie,
                 Fournisseur = materiel.Fournisseur,
                 CreatedBy = materiel.CreatedBy
+
             };
             return materielViewModel;
         }
