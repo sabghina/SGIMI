@@ -23,7 +23,8 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
             {
                 Id = id,
                 Nom = "Fournisseur" + id,
-                CreatedBy = "user" + id + 1
+                Email = "fourniseuremail" + id,
+                CreatedBy = "user" + id + 1 
             };
 
             return fournisseur;
@@ -39,6 +40,7 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
                 {
                     Id = i,
                     Nom = "Fournisseur" + i,
+                    Email = "fourniseuremail" + i,
                     CreatedBy = "user" + i + 1
                 };
 

@@ -26,5 +26,10 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
             List<Materiel> materiels = materielAdapter.GetMateriels();
             return materiels;
         }
+
+        bool IMaterielRepository.CreateMateriel(Materiel materiel)
+        {
+            return materielAdapter.CreateMateriel(materiel);
+        }
     }
 }

@@ -38,6 +38,24 @@ namespace BT.Stage.SGIMI.Commun.Tools
             };
             return materielViewModel;
         }
+
+        public static Materiel MaterielViewModelToMateriel(MaterielViewModel materielViewModel)
+        {
+            Materiel materiel = new Materiel
+          
+        {
+                Id = materielViewModel.Id,
+                Nom = materielViewModel.Nom,
+                Marque = materielViewModel.Marque,
+                Modele = materielViewModel.Modele,
+                ReferenceBT = materielViewModel.ReferenceBT,
+                NumeroDeSerie = materielViewModel.NumeroDeSerie,
+                Fournisseur = materielViewModel.Fournisseur,
+                CreatedBy = "admin"
+
+            };
+            return materiel;
+        }
     }
 }
 

@@ -20,5 +20,11 @@ namespace BT.Stage.SGIMI.DataAccess.Interface
         /// <param name="id"></param>
         /// <returns></returns>
         Materiel GetMaterielById(int id);
+        /// <summary>
+        /// Create new materiel.
+        /// </summary>
+        /// <param name="materiel"></param>
+        /// <returns></returns> 
+        bool CreateMateriel(Materiel materiel);
     }
 }

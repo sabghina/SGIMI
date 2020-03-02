@@ -22,7 +22,7 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
                 ReferenceBT = "Mat00" + id,
                 NumeroDeSerie = id + 1,
                 Fournisseur = "Fournisseur" + id,
-                CreatedBy = id + 1
+                CreatedBy = "admin"
             };
 
             return materiel;
@@ -42,13 +42,19 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
                     ReferenceBT = "Mat00" + i,
                     NumeroDeSerie = i + 1,
                     Fournisseur = "Fournisseur" + i,
-                    CreatedBy = i + 1
+                    CreatedBy = "admin"
                 };
 
                 materiels.Add(materiel);
             }
 
             return materiels;
+        }
+
+        bool IMaterielAdapter.CreateMateriel(Materiel materiel)
+        {
+            // ajout in database
+            return true;
         }
     }
 }

@@ -15,6 +15,6 @@ namespace BT.Stage.SGIMI.UserInterface.ViewModel
         public string ReferenceBT { get; set; }
         public int NumeroDeSerie { get; set; }
         public string Fournisseur { get; set; }
-        public int CreatedBy { get; set; }
+        public string CreatedBy { get; set; }
     }
 }

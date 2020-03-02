@@ -43,22 +43,40 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         // GET: Materiel/Create
         public ActionResult Create()
         {
-            return View();
+            MaterielViewModel materielViewModel = new MaterielViewModel();
+            return View(materielViewModel);
         }
 
         // POST: Materiel/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(MaterielViewModel materielViewModel)
         {
             try
             {
+                // controle existance email
+                //ModelState.AddModelError("Email", "Email existe");
+                // controle
+                if (!ModelState.IsValid)
+                {
+                    return View(materielViewModel);
+                }
                 // TODO: Add insert logic here
+                string user = User.Identity.Name;
+                Materiel materiel = MaterielTranspose.MaterielViewModelToMateriel(materielViewModel);
 
-                return RedirectToAction("Index");
+                bool materielIsCreated = materielRepository.CreateMateriel(materiel);
+                if (materielIsCreated)
+                {
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    throw new InvalidOperationException("oops");
+                }
             }
             catch
             {
-                return View();
+                throw;
             }
         }
 
