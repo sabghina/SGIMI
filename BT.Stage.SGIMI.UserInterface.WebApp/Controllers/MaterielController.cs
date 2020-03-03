@@ -53,21 +53,17 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         {
             try
             {
-                // controle existance email
-                //ModelState.AddModelError("Email", "Email existe");
-                // controle
                 if (!ModelState.IsValid)
                 {
                     return View(materielViewModel);
                 }
-                // TODO: Add insert logic here
-                string user = User.Identity.Name;
+                //string user = User.Identity.Name;
                 Materiel materiel = MaterielTranspose.MaterielViewModelToMateriel(materielViewModel);
 
                 bool materielIsCreated = materielRepository.CreateMateriel(materiel);
                 if (materielIsCreated)
                 {
-                    return RedirectToAction("Index");
+                     return RedirectToAction("Index");
                 }
                 else
                 {
@@ -76,7 +72,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             }
             catch
             {
-                throw;
+                throw new InvalidOperationException("sorry you can't insert this item"); ;
             }
         }
 

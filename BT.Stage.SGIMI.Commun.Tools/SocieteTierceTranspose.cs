@@ -34,5 +34,10 @@ namespace BT.Stage.SGIMI.Commun.Tools
             };
             return societeTierceViewModel;
         }
+
+        public static Fournisseur SocieteTierceViewModelToSocieteTierce(SocieteTierceViewModel societeTierceViewModel, string user)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -17,7 +17,14 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
         public SocieteTierceRepository(ISocieteTierceAdapter _societeTierceAdapter)
         {
             societeTierceAdapter = _societeTierceAdapter;
+
         }
+
+        public bool CreateSocieteTierce(Fournisseur societeTierce)
+        {
+            throw new NotImplementedException();
+        }
+
         public Fournisseur GetSocieteTierceById(int id)
         {
             return societeTierceAdapter.GetSocieteTierceById(id);
@@ -28,5 +35,6 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
             List<Fournisseur> societeTierces = societeTierceAdapter.GetSocieteTierces();
             return societeTierces;
         }
+
     }
 }

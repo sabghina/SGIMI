@@ -20,6 +20,12 @@ namespace BT.Stage.SGIMI.DataAccess.Interface
         /// <param name="id"></param>
         /// <returns></returns>
         Fournisseur GetSocieteTierceById(int id);
+        /// <summary>
+        /// Create new SocieteTierce
+        /// </summary>
+        /// <param name="societeTierce"></param>
+        /// <returns></returns>
+        bool CreateSocieteTierce(Fournisseur societeTierce);
     }
 }
 

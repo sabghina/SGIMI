@@ -24,6 +24,7 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
                 Id = id,
                 Nom = "Fournisseur" + id,
                 Email = "fourniseuremail" + id,
+               
                 CreatedBy = "user" + id + 1 
             };
 

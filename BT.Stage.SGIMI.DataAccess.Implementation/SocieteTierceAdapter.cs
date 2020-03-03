@@ -11,7 +11,11 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
 
     public class SocieteTierceAdapter : ISocieteTierceAdapter
     {
-
+        public bool CreateSocieteTierce(Fournisseur societeTierce)
+        {
+            // ajout in database
+            return true;
+        }
         public Fournisseur GetSocieteTierceById(int id)
         {
             // replace with database access
@@ -19,6 +23,7 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
             {
                 Id = id,
                 Nom = "SocieteTierce" + id,
+                Email = "fournisseur" +id,
                 CreatedBy = "user"+id + 1
             };
 
@@ -35,6 +40,7 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
                 {
                     Id = i,
                     Nom = "SocieteTierce" + i,
+                    Email = "fournisseur" + i,
                     CreatedBy = "user"+i + 1
                 };
 
@@ -42,5 +48,7 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
             }
             return societeTierces;
         }
+
+        
     }
 }

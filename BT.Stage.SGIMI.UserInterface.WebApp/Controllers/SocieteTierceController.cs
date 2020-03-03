@@ -43,22 +43,41 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         // GET: SocieteTierce/Create
         public ActionResult Create()
         {
-            return View();
+
+           SocieteTierceViewModel societeTierceViewModel = new SocieteTierceViewModel();
+            return View(societeTierceViewModel);
         }
 
         // POST: SocieteTierce/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(SocieteTierceViewModel societeTierceViewModel)
         {
             try
             {
+                // controle existance email
+                //ModelState.AddModelError("Email", "Email existe");
+                // controle
+                 if (!ModelState.IsValid)
+                {
+                    return View(societeTierceViewModel);
+                }
                 // TODO: Add insert logic here
+                string user = User.Identity.Name;
+                Fournisseur societeTierce = SocieteTierceTranspose.SocieteTierceViewModelToSocieteTierce(societeTierceViewModel, user);
 
-                return RedirectToAction("Index");
+                bool societeTierceIsCreated = societeTierceRepository.CreateSocieteTierce(societeTierce);
+                if (societeTierceIsCreated)
+                {
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    throw new InvalidOperationException("oops");
+                }
             }
             catch
             {
-                return View();
+                throw;
             }
         }
 

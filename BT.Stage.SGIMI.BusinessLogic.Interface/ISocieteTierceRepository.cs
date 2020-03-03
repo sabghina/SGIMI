@@ -17,11 +17,12 @@ namespace BT.Stage.SGIMI.BusinessLogic.Interface
         /// <returns></returns>
         List<Fournisseur> GetSocieteTierces();
         /// <summary>
-        /// Returns societe tierce by id.
+        /// Returns societe tierce .
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="societeTierce"></param>
         /// <returns></returns>
         Fournisseur GetSocieteTierceById(int id);
+        bool CreateSocieteTierce(Fournisseur societeTierce);
     }
 
 
