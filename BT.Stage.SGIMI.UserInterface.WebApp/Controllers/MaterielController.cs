@@ -14,56 +14,80 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
     public class MaterielController : Controller
     {
         readonly IMaterielRepository materielRepository;
-        public MaterielController(IMaterielRepository _materielRepository)
+        readonly IFournisseurRepository fournisseurRepository;
+        public MaterielController(
+            IMaterielRepository _materielRepository,
+            IFournisseurRepository _fournisseurRepository)
         {
-             materielRepository = _materielRepository;
+            materielRepository = _materielRepository;
+            fournisseurRepository = _fournisseurRepository;
         }
-        
+
         // GET: Materiel
         public ActionResult Index()
         {
-             // 1.get service list materiel 
-             List<Materiel> materiels = materielRepository.GetMateriels();
+            // 1.get service list materiel 
+            List<Materiel> materiels = materielRepository.GetMateriels();
 
-             // 2. transpose entity -> view model
-             List<MaterielViewModel> materielViewModels = MaterielTranspose.MaterielListToMaterielViewModelList(materiels);
+            // 2. transpose entity -> view model
+            List<MaterielViewModel> materielViewModels = MaterielTranspose.MaterielListToMaterielViewModelList(materiels);
 
-             return View(materielViewModels);
+            return View(materielViewModels);
         }
 
         // GET: Materiel/Details/5
         public ActionResult Details(int id)
         {
-             Materiel materiel = materielRepository.GetMaterielById(id);
+            Materiel materiel = materielRepository.GetMaterielById(id);
 
             MaterielViewModel materielViewModel = MaterielTranspose.MaterielToMaterielViewModel(materiel);
-             return View(materielViewModel);
+            return View(materielViewModel);
         }
 
         // GET: Materiel/Create
         public ActionResult Create()
         {
-            MaterielViewModel materielViewModel = new MaterielViewModel();
-            return View(materielViewModel);
+            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
+            IEnumerable<SelectListItem> fournisseursSelectListItem = new SelectList(fournisseurs.Select(
+                fournisseur => new
+                {
+                    Id = fournisseur.Id,
+                    Text = fournisseur.Nom + " (" + fournisseur.Type + ")"
+                }).AsEnumerable(), "Id", "Text");
+
+            CreateMaterielViewModel createMatrielViewModel = new CreateMaterielViewModel
+            {
+                Fournisseurs = fournisseursSelectListItem
+            };
+            return View(createMatrielViewModel);
         }
 
         // POST: Materiel/Create
         [HttpPost]
-        public ActionResult Create(MaterielViewModel materielViewModel)
+        public ActionResult Create(CreateMaterielViewModel createMatrielViewModel)
         {
             try
             {
                 if (!ModelState.IsValid)
                 {
-                    return View(materielViewModel);
+                    List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
+                    IEnumerable<SelectListItem> fournisseursSelectListItem = new SelectList(fournisseurs.Select(
+                    fournisseur => new
+                    {
+                        Id = fournisseur.Id,
+                        Text = fournisseur.Nom + " (" + fournisseur.Type + ")"
+                    }).AsEnumerable(), "Id", "Text");
+                    createMatrielViewModel.Fournisseurs = fournisseursSelectListItem;
+
+                    return View(createMatrielViewModel);
                 }
                 //string user = User.Identity.Name;
-                Materiel materiel = MaterielTranspose.MaterielViewModelToMateriel(materielViewModel);
+                Materiel materiel = MaterielTranspose.CreateMaterielViewModelToMateriel(createMatrielViewModel);
 
                 bool materielIsCreated = materielRepository.CreateMateriel(materiel);
                 if (materielIsCreated)
                 {
-                     return RedirectToAction("Index");
+                    return RedirectToAction("Index");
                 }
                 else
                 {

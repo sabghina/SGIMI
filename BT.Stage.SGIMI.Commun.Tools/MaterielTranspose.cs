@@ -32,26 +32,24 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Modele = materiel.Modele,
                 ReferenceBT = materiel.ReferenceBT,
                 NumeroDeSerie = materiel.NumeroDeSerie,
-                Fournisseur = materiel.Fournisseur,
+                Fournisseur = materiel.Fournisseur.ToString(),
                 CreatedBy = materiel.CreatedBy
 
             };
             return materielViewModel;
         }
 
-        public static Materiel MaterielViewModelToMateriel(MaterielViewModel materielViewModel)
+        public static Materiel CreateMaterielViewModelToMateriel(CreateMaterielViewModel createMaterielViewModel)
         {
             Materiel materiel = new Materiel
-          
-        {
-                Id = materielViewModel.Id,
-                Nom = materielViewModel.Nom,
-                Marque = materielViewModel.Marque,
-                Modele = materielViewModel.Modele,
-                ReferenceBT = materielViewModel.ReferenceBT,
-                NumeroDeSerie = materielViewModel.NumeroDeSerie,
-                Fournisseur = materielViewModel.Fournisseur,
-                CreatedBy = "admin"
+            {                
+                Nom = createMaterielViewModel.Nom,
+                Marque = createMaterielViewModel.Marque,
+                Modele = createMaterielViewModel.Modele,
+                ReferenceBT = createMaterielViewModel.ReferenceBT,
+                NumeroDeSerie = createMaterielViewModel.NumeroDeSerie,
+                Fournisseur = createMaterielViewModel.Fournisseur,
+                CreatedBy = "admin" // TODO: add current connected user
 
             };
             return materiel;

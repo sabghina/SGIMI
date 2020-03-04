@@ -21,7 +21,7 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
                 Modele = "Modele" + id,
                 ReferenceBT = "Mat00" + id,
                 NumeroDeSerie = id + 1,
-                Fournisseur = "Fournisseur" + id,
+                Fournisseur = id,
                 CreatedBy = "admin"
             };
 
@@ -41,7 +41,7 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
                     Modele = "Modele" + i,
                     ReferenceBT = "Mat00" + i,
                     NumeroDeSerie = i + 1,
-                    Fournisseur = "Fournisseur" + i,
+                    Fournisseur = i,
                     CreatedBy = "admin"
                 };
 

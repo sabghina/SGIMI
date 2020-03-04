@@ -1,4 +1,4 @@
-﻿@model BT.Stage.SGIMI.UserInterface.ViewModel.MaterielViewModel
+﻿@model BT.Stage.SGIMI.UserInterface.ViewModel.CreateMaterielViewModel
 
 @{
     ViewBag.Title = "Create";
@@ -10,7 +10,7 @@
 @using (Html.BeginForm("Create", "Materiel", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>MaterielViewModel</h4>
         <hr />
@@ -58,7 +58,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Fournisseur, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Fournisseur, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.DropDownListFor(model => model.Fournisseur, Model.Fournisseurs, "-----", htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.Fournisseur, "", new { @class = "text-danger" })
             </div>
         </div>
