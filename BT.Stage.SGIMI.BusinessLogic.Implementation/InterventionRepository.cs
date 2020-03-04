@@ -17,7 +17,11 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
         {
             interventionAdapter = _interventionAdapter;
         }
-  
+        public bool CreateIntervention(Intervention intervention)
+        {
+            // traitement
+            return interventionAdapter.CreateIntervention(intervention);
+        }
         public Intervention GetInterventionById(int id)
         {
             return interventionAdapter.GetInterventionById(id);

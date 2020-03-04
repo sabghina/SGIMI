@@ -43,24 +43,43 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         // GET: Intervention/Create
         public ActionResult Create()
         {
-            return View();
+            InterventionViewModel interventionViewModel = new InterventionViewModel();
+            return View(interventionViewModel);
         }
 
         // POST: Intervention/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(InterventionViewModel interventionViewModel)
         {
             try
             {
+                // controle existance email
+                //ModelState.AddModelError("Email", "Email existe");
+                // controle
+                if (!ModelState.IsValid)
+                {
+                    return View(interventionViewModel);
+                }
                 // TODO: Add insert logic here
+                string user = User.Identity.Name;
+                Intervention intervention = InterventionTranspose.InterventionViewModelToIntervention(interventionViewModel, user);
 
-                return RedirectToAction("Index");
+                bool interventionIsCreated = interventionRepository.CreateIntervention(intervention);
+                if (interventionIsCreated)
+                {
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    throw new InvalidOperationException("oops");
+                }
             }
             catch
             {
-                return View();
+                throw;
             }
         }
+
 
         // GET: Intervention/Edit/5
         public ActionResult Edit(int id)

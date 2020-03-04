@@ -11,6 +11,11 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
    public class InterventionAdapter : IInterventionAdapter
 
     {
+        public bool CreateIntervention(Intervention intervention)
+        {
+            return true;
+        }
+
         public Intervention GetInterventionById(int id)
         {
             // replace with database access
@@ -22,7 +27,7 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
                 //Exemple pour le test
                 Etat = "En cours",
                 Reclamation = id + 1,
-                CreatedBy = id + 1
+                CreatedBy = "user" + id + 1
             };
 
             return intervention;
@@ -40,7 +45,8 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
                     Date = "0" + i + "/0" + i + "/2020",
                     //Exemple pour le test
                     Etat = "En cours",
-                    CreatedBy = i + 1
+                    Reclamation = i+1,
+                    CreatedBy = "user" + i + 1
                 };
 
                 interventions.Add(intervention);

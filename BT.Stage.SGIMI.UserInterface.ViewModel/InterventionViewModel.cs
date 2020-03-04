@@ -13,7 +13,7 @@ namespace BT.Stage.SGIMI.UserInterface.ViewModel
         public string Date { get; set; }
         public string Etat { get; set; }
         public int Reclamation { get; set; }
-        public int CreatedBy { get; set; }
+        public string CreatedBy { get; set; }
         
     }
 }
