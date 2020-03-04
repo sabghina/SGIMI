@@ -22,7 +22,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
 
         public bool CreateSocieteTierce(Fournisseur societeTierce)
         {
-            throw new NotImplementedException();
+            return societeTierceAdapter.CreateSocieteTierce(societeTierce);
         }
 
         public Fournisseur GetSocieteTierceById(int id)
