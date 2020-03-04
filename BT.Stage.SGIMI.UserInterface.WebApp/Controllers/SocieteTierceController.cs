@@ -68,7 +68,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 bool societeTierceIsCreated = societeTierceRepository.CreateSocieteTierce(societeTierce);
                 if (societeTierceIsCreated)
                 {
-                    return RedirectToAction("Index");
+                    return RedirectToAction("SocieteTierce/Index");
                 }
                 else
                 {

@@ -11,12 +11,23 @@
 </p>
 <table class="table">
     <tr>
-        <th></th>
         <th>
             @Html.DisplayNameFor(model => model.Nom)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telephone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Adresse)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fax)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SiteWeb)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.CreatedBy)
@@ -27,13 +38,22 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            <img src="~/Icon/treaty.png" width="25" height="25" />
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.Nom)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telephone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Adresse)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fax)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SiteWeb)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.CreatedBy)

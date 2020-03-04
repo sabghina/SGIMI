@@ -22,9 +22,13 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
             Fournisseur societeTierce = new Fournisseur
             {
                 Id = id,
-                Nom = "SocieteTierce" + id,
-                Email = "fournisseur" +id,
-                CreatedBy = "user"+id + 1
+                Nom = "Societe Tierce" + id,
+                Email = "SocieteTierceemail" + id,
+                Telephone = "+216xxxxx",
+                Fax = "7xxxxxx",
+                Adresse = "Rue xxxxxxxx",
+                SiteWeb = "www.societe.com",
+                CreatedBy = "user" + id + 1
             };
 
             return societeTierce;
@@ -39,9 +43,13 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
                 Fournisseur societeTierce = new Fournisseur
                 {
                     Id = i,
-                    Nom = "SocieteTierce" + i,
-                    Email = "fournisseur" + i,
-                    CreatedBy = "user"+i + 1
+                    Nom = "Societe Tierce" + i,
+                    Email = "SocieteTierceemail" + i,
+                    Telephone = "+216xxxxx",
+                    Fax = "7xxxxxx",
+                    Adresse = "Rue xxxxxxxx",
+                    SiteWeb = "www.societe.com",
+                    CreatedBy = "user" + i + 1
                 };
 
                 societeTierces.Add(societeTierce);

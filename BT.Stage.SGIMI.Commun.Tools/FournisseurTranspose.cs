@@ -31,6 +31,10 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Id = fournisseur.Id,
                 Nom = fournisseur.Nom,
                 Email = fournisseur.Email,
+                Telephone = fournisseur.Telephone,
+                Adresse = fournisseur.Adresse,
+                Fax = fournisseur.Fax,
+                SiteWeb = fournisseur.SiteWeb,
                 CreatedBy = fournisseur.CreatedBy
             };
             return fournisseurViewModel;
@@ -42,6 +46,10 @@ namespace BT.Stage.SGIMI.Commun.Tools
             {
                 Nom = fournisseurViewModel.Nom,
                 Email = fournisseurViewModel.Email,
+                Telephone = fournisseurViewModel.Telephone,
+                Adresse = fournisseurViewModel.Adresse,
+                Fax = fournisseurViewModel.Fax,
+                SiteWeb = fournisseurViewModel.SiteWeb,
                 Type = (char)fournisseurViewModel.Type,
                 CreatedBy = user
             };

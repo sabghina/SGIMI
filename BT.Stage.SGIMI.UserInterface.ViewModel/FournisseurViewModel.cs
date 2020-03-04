@@ -14,6 +14,10 @@ namespace BT.Stage.SGIMI.UserInterface.ViewModel
         [Required]
         public string Nom { get; set; }
         public string Email { get; set; }
+        public string Telephone { get; set; }
+        public string Adresse { get; set; }
+        public string Fax { get; set; }
+        public string SiteWeb { get; set; }
         /// <summary>
         /// F: Fourniseur, S: SociétéTierce
         /// </summary>

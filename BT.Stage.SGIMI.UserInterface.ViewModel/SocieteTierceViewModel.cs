@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace BT.Stage.SGIMI.UserInterface.ViewModel
 {
-    public class SocieteTierceViewModel
+    public class SocieteTierceViewModel : FournisseurViewModel
     {
-        public int Id { get; set; }
-        public string Nom { get; set; }
-        public string Email { get; set; }
-        public string CreatedBy { get; set; }
-        public char Type { get; set; }
+        
     }
 }

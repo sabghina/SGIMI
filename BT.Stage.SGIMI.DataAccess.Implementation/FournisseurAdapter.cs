@@ -24,7 +24,10 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
                 Id = id,
                 Nom = "Fournisseur" + id,
                 Email = "fourniseuremail" + id,
-               
+                Telephone = "+216xxxxx",
+                Fax = "7xxxxxx",
+                Adresse = "Rue xxxxxxxx",
+                SiteWeb = "www.societe.com",
                 CreatedBy = "user" + id + 1 
             };
 
@@ -42,6 +45,10 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
                     Id = i,
                     Nom = "Fournisseur" + i,
                     Email = "fourniseuremail" + i,
+                    Telephone = "+216xxxxx",
+                    Fax = "7xxxxxx",
+                    Adresse = "Rue xxxxxxxx",
+                    SiteWeb = "www.fournisseur.com",
                     CreatedBy = "user" + i + 1
                 };
 

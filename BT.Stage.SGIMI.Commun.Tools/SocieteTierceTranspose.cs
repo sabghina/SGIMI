@@ -30,6 +30,11 @@ namespace BT.Stage.SGIMI.Commun.Tools
             {
                 Id = societeTierce.Id,
                 Nom = societeTierce.Nom,
+                Email = societeTierce.Email,
+                Telephone = societeTierce.Telephone,
+                Fax = societeTierce.Fax,
+                Adresse = societeTierce.Adresse,
+                SiteWeb = societeTierce.SiteWeb,
                 CreatedBy = societeTierce.CreatedBy
             };
             return societeTierceViewModel;
@@ -37,7 +42,19 @@ namespace BT.Stage.SGIMI.Commun.Tools
 
         public static Fournisseur SocieteTierceViewModelToSocieteTierce(SocieteTierceViewModel societeTierceViewModel, string user)
         {
-            throw new NotImplementedException();
+
+            Fournisseur societeTierce = new Fournisseur
+            {
+                Nom = societeTierceViewModel.Nom,
+                Email = societeTierceViewModel.Email,
+                Telephone = societeTierceViewModel.Telephone,
+                Adresse = societeTierceViewModel.Adresse,
+                Fax = societeTierceViewModel.Fax,
+                SiteWeb = societeTierceViewModel.SiteWeb,
+                Type = (char)societeTierceViewModel.Type,
+                CreatedBy = user
+            };
+            return societeTierce;
         }
     }
 }
