@@ -43,22 +43,36 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         // GET: Reclamation/Create
         public ActionResult Create()
         {
-            return View();
+            ReclamationViewModel reclamationViewModel = new ReclamationViewModel();
+            return View(reclamationViewModel);
         }
 
         // POST: Reclamation/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(ReclamationViewModel reclamationViewModel)
         {
             try
             {
-                // TODO: Add insert logic here
+                if (!ModelState.IsValid)
+                {
+                    return View(reclamationViewModel);
+                }
+                //string user = User.Identity.Name;
+                Reclamation reclamation = ReclamationTranspose.ReclamationViewModelToReclamation(reclamationViewModel);
 
-                return RedirectToAction("Index");
+                bool reclamationIsCreated = reclamationRepository.CreateReclamation(reclamation);
+                if (reclamationIsCreated)
+                {
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    throw new InvalidOperationException("oops");
+                }
             }
             catch
             {
-                return View();
+                throw new InvalidOperationException("sorry you can't insert this item");
             }
         }
 

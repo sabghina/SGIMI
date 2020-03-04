@@ -11,6 +11,8 @@ namespace BT.Stage.SGIMI.Data.Entity
         public int Id { get; set; }
         public string Materiel { get; set; }
         public string Date { get; set; }
+        public string Probleme { get; set; }
+        public string Commentaire { get; set; }
         public string Etat { get; set; }
         public int CreatedBy { get; set; }
     }

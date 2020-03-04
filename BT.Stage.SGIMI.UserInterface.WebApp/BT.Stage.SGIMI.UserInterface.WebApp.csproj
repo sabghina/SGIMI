@@ -265,8 +265,6 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Reclamation\Details.cshtml" />
-    <Content Include="Views\Reclamation\Index.cshtml" />
     <Content Include="Views\Intervention\Details.cshtml" />
     <Content Include="Views\Intervention\Index.cshtml" />
     <Content Include="Views\Fournisseur\Create.cshtml" />
@@ -278,6 +276,9 @@
     <Content Include="Views\SocieteTierce\Details.cshtml" />
     <Content Include="Views\SocieteTierce\Index.cshtml" />
     <Content Include="Views\SocieteTierce\Create.cshtml" />
+    <Content Include="Views\Reclamation\Index.cshtml" />
+    <Content Include="Views\Reclamation\Details.cshtml" />
+    <Content Include="Views\Reclamation\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

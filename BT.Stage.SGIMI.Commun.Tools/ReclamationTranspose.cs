@@ -29,10 +29,17 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Id = reclamation.Id,
                 Materiel = reclamation.Materiel,
                 Date = reclamation.Date,
+                Probleme = reclamation.Probleme,
+                Commentaire = reclamation.Commentaire,
                 Etat = reclamation.Etat,
                 CreatedBy = reclamation.CreatedBy
-            };
+    };
             return reclamationViewModel;
+        }
+
+        public static Reclamation ReclamationViewModelToReclamation(ReclamationViewModel reclamationViewModel)
+        {
+            throw new NotImplementedException();
         }
     }
 }

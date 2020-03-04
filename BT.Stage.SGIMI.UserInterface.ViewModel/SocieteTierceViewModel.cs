@@ -12,6 +12,6 @@ namespace BT.Stage.SGIMI.UserInterface.ViewModel
         public string Nom { get; set; }
         public string Email { get; set; }
         public string CreatedBy { get; set; }
-
+        public char Type { get; set; }
     }
 }

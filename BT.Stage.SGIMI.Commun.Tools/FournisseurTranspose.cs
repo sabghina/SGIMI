@@ -30,6 +30,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
             {
                 Id = fournisseur.Id,
                 Nom = fournisseur.Nom,
+                Email = fournisseur.Email,
                 CreatedBy = fournisseur.CreatedBy
             };
             return fournisseurViewModel;

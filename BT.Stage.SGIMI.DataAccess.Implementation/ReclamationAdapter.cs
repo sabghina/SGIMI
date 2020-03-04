@@ -10,15 +10,22 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
 {
     public class ReclamationAdapter : IReclamationAdapter 
     {
+        public bool CreateReclamation(Reclamation reclamation)
+        {
+            // ajout in database
+            return true;
+        }
+
         public Reclamation GetReclamationById(int id)
         {
             // replace with database access
             Reclamation reclamation = new Reclamation
             {
                 Id = id,
-                Materiel = "Reclamation" + id,
-                Date = "0" + id + "/0" + id + "/2020" ,
-                //Exemple pour le test
+                Materiel = "Matériel" + id,
+                Date = "0" + id + "/0" + id + "/2020",
+                Probleme = "Problème" + id,
+                Commentaire = "Commentaire" + id,
                 Etat = "En cours",
                 CreatedBy = id + 1
             };
@@ -34,9 +41,10 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
                 Reclamation reclamation = new Reclamation
                 {
                     Id = i,
-                    Materiel = "Reclamation" + i,
+                    Materiel = "Matériel" + i,
                     Date = "0" + i + "/0" + i + "/2020",
-                    //Exemple pour le test
+                    Probleme ="Problème" + i,
+                    Commentaire = "Commentaire"+i,
                     Etat = "En cours",
                     CreatedBy = i + 1
                 };

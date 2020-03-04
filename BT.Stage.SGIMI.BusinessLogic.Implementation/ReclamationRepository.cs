@@ -16,6 +16,12 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
         {
             reclamationAdapter = _reclamationAdapter;
         }
+
+        public bool CreateReclamation(Reclamation reclamation)
+        {
+            return reclamationAdapter.CreateReclamation(reclamation);
+        }
+
         public Reclamation GetReclamationById(int id)
         {
             return reclamationAdapter.GetReclamationById(id);

@@ -11,7 +11,8 @@ namespace BT.Stage.SGIMI.UserInterface.ViewModel
         public int Id { get; set; }
         public string Materiel { get; set; }
         public string Date { get; set; }
-        //doit etre changer par un attribut significatif
+        public string Probleme { get; set; }
+        public string Commentaire { get; set; }
         public string Etat { get; set; }
         public int CreatedBy { get; set; }
     }
