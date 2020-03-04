@@ -59,5 +59,10 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
 
             return fournisseurs;
         }
+
+        public bool UpdateFournisseur(Fournisseur fournisseur)
+        {
+            return true;
+        }
     }
 }

@@ -55,5 +55,21 @@ namespace BT.Stage.SGIMI.Commun.Tools
             };
             return fournisseur;
         }
+        public static Fournisseur UpdatedFournisseurViewModelToUpdatedFournisseur(int id,FournisseurViewModel fournisseurViewModel, string user)
+        {
+            Fournisseur fournisseur = new Fournisseur
+            {
+                Id = id,
+                Nom = fournisseurViewModel.Nom,
+                Email = fournisseurViewModel.Email,
+                Telephone = fournisseurViewModel.Telephone,
+                Adresse = fournisseurViewModel.Adresse,
+                Fax = fournisseurViewModel.Fax,
+                SiteWeb = fournisseurViewModel.SiteWeb,
+                Type = (char)fournisseurViewModel.Type,
+                UpdatedBy = user
+            };
+            return fournisseur;
+        }
     }
 }

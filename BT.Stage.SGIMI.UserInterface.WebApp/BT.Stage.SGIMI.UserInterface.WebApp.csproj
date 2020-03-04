@@ -280,6 +280,7 @@
     <Content Include="Views\Intervention\Create.cshtml" />
     <Content Include="Views\Intervention\Index.cshtml" />
     <Content Include="Views\Intervention\Details.cshtml" />
+    <Content Include="Views\Fournisseur\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

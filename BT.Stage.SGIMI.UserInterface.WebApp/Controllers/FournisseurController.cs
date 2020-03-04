@@ -82,18 +82,39 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         // GET: Fournisseur/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            Fournisseur fournisseur = fournisseurRepository.GetFournisseurById(id);
+            FournisseurViewModel fournisseurViewModel = FournisseurTranspose.FournisseurToFournisseurViewModel(fournisseur);
+            return View(fournisseurViewModel);
         }
 
         // POST: Fournisseur/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, FournisseurViewModel fournisseurViewModel)
         {
             try
             {
+                if (!ModelState.IsValid)
+                {
+                    return View(fournisseurViewModel);
+                }
                 // TODO: Add update logic here
+                string user = User.Identity.Name;
+                Fournisseur fournisseur = FournisseurTranspose.UpdatedFournisseurViewModelToUpdatedFournisseur(id,fournisseurViewModel, user);
 
-                return RedirectToAction("Index");
+                bool fournisseurIsUpdated = fournisseurRepository.UpdatedFournisseur(fournisseur);
+                if (fournisseurIsUpdated)
+                {
+                    return RedirectToAction("Details",new
+                    {
+                        id = fournisseur.Id
+                    });
+                }
+                else
+                {
+                    throw new InvalidOperationException("oops");
+                }
+
+                
             }
             catch
             {

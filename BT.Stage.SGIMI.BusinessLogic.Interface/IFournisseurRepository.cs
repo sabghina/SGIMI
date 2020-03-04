@@ -26,5 +26,6 @@ namespace BT.Stage.SGIMI.BusinessLogic.Interface
         /// <param name="fournisseur"></param>
         /// <returns></returns>
         bool CreateFournisseur(Fournisseur fournisseur);
+        bool UpdatedFournisseur(Fournisseur fournisseur);
     }
 }
