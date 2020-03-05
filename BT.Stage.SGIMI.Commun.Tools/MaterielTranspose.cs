@@ -33,6 +33,11 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 ReferenceBT = materiel.ReferenceBT,
                 NumeroDeSerie = materiel.NumeroDeSerie,
                 Fournisseur = materiel.Fournisseur.ToString(),
+                Created = materiel.Created,
+                CreatedTime = materiel.CreatedTime,
+                LastUpdated = materiel.LastUpdated,
+                LastUpdatedTime = materiel.LastUpdatedTime,
+                LastUpdatedBy = materiel.LastUpdatedBy,
                 CreatedBy = materiel.CreatedBy
 
             };

@@ -15,10 +15,10 @@ namespace BT.Stage.SGIMI.Data.Entity
         public string ReferenceBT { get; set; }
         public int NumeroDeSerie { get; set; }
         public int Fournisseur { get; set; }
-        public DateTime Created { get; set; }
-        public DateTime CreatedTime { get; set; }
-        public DateTime LastUpdated { get; set; }
-        public DateTime LastUpdatedTime  { get; set; }
+        public string Created { get; set; }
+        public string CreatedTime { get; set; }
+        public string LastUpdated { get; set; }
+        public string LastUpdatedTime  { get; set; }
         public string LastUpdatedBy { get; set; }
         public string CreatedBy { get; set; }
     }

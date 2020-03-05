@@ -81,7 +81,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
 
                     return View(createMatrielViewModel);
                 }
-                //string user = User.Identity.Name;
+                string user = User.Identity.Name;
                 Materiel materiel = MaterielTranspose.CreateMaterielViewModelToMateriel(createMatrielViewModel);
 
                 bool materielIsCreated = materielRepository.CreateMateriel(materiel);
