@@ -22,9 +22,9 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
                 ReferenceBT = "Mat00" + id,
                 NumeroDeSerie = id + 1,
                 Fournisseur = id,
-                Created = DateTime.Now.ToString("dddd, dd MMMM yyyy"),
+                CreatedDate = DateTime.Now.ToString("dddd, dd MMMM yyyy"),
                 CreatedTime = DateTime.Now.ToString("HH:mm:ss"),
-                LastUpdated = DateTime.Now.ToString("dddd, dd MMMM yyyy"),
+                LastUpdatedDate = DateTime.Now.ToString("dddd, dd MMMM yyyy"),
                 LastUpdatedTime = DateTime.Now.ToString("HH:mm:ss"),
                 LastUpdatedBy = "admin",
                 CreatedBy = "admin"
@@ -47,9 +47,9 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
                     ReferenceBT = "Mat00" + i,
                     NumeroDeSerie = i + 1,
                     Fournisseur = i,
-                    Created = DateTime.Now.ToString("dddd, dd MMMM yyyy"),
+                    CreatedDate = DateTime.Now.ToString("dddd, dd MMMM yyyy"),
                     CreatedTime = DateTime.Now.ToString("HH:mm:ss"),
-                    LastUpdated = DateTime.Now.ToString("dddd, dd MMMM yyyy"),
+                    LastUpdatedDate = DateTime.Now.ToString("dddd, dd MMMM yyyy"),
                     LastUpdatedTime = DateTime.Now.ToString("HH:mm:ss"),
                     LastUpdatedBy = "admin",
                     CreatedBy = "admin"
