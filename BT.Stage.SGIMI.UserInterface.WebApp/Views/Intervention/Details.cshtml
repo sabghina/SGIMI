@@ -1,10 +1,7 @@
 ﻿@model BT.Stage.SGIMI.UserInterface.ViewModel.InterventionViewModel
-
 @{
     ViewBag.Title = "Details";
 }
-
-<h2>Details</h2>
 
 <div>
     <h4>InterventionViewModel</h4>
@@ -48,6 +45,46 @@
 
         <dd>
             @Html.DisplayFor(model => model.CreatedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastUpdatedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastUpdatedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastUpdatedTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastUpdatedTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastUpdatedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastUpdatedBy)
         </dd>
 
     </dl>

@@ -39,7 +39,6 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             InterventionViewModel interventionViewModel = InterventionTranspose.InterventionToInterventionViewModel(intervention);
             return View(interventionViewModel);
         }
-
         // GET: Intervention/Create
         public ActionResult Create()
         {

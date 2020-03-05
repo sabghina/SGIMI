@@ -31,7 +31,12 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Date = intervention.Date,
                 Etat = intervention.Etat,
                 Reclamation = intervention.Reclamation,
-                CreatedBy = intervention.CreatedBy
+                CreatedBy = intervention.CreatedBy,
+                CreatedDate = intervention.CreatedDate,
+                CreatedTime = intervention.CreatedTime,
+                LastUpdatedDate = intervention.LastUpdatedDate,
+                LastUpdatedTime = intervention.LastUpdatedTime,
+                LastUpdatedBy = intervention.LastUpdatedBy
             };
             return interventionViewModel;
         }

@@ -27,7 +27,12 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
                 //Exemple pour le test
                 Etat = "En cours",
                 Reclamation = id + 1,
-                CreatedBy = "user" + id + 1
+                CreatedBy = "user" + id + 1,
+                CreatedDate = DateTime.Now.ToString("dddd, dd MMMM yyyy"),
+                CreatedTime = DateTime.Now.ToString("HH:mm:ss"),
+                LastUpdatedBy = "admin",
+                LastUpdatedDate = DateTime.Now.ToString("dddd, dd MMMM yyyy"),
+                LastUpdatedTime = DateTime.Now.ToString("HH:mm:ss")
             };
 
             return intervention;
@@ -46,7 +51,12 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
                     //Exemple pour le test
                     Etat = "En cours",
                     Reclamation = i+1,
-                    CreatedBy = "user" + i + 1
+                    CreatedBy = "user" + i + 1,
+                    CreatedDate = DateTime.Now.ToString("dddd, dd MMMM yyyy"),
+                    CreatedTime = DateTime.Now.ToString("HH:mm:ss"),
+                    LastUpdatedBy = "admin",
+                    LastUpdatedDate = DateTime.Now.ToString("dddd, dd MMMM yyyy"),
+                    LastUpdatedTime = DateTime.Now.ToString("HH:mm:ss")
                 };
 
                 interventions.Add(intervention);
