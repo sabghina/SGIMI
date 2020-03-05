@@ -28,7 +28,12 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
                 Fax = "7xxxxxx",
                 Adresse = "Rue xxxxxxxx",
                 SiteWeb = "www.societe.com",
-                CreatedBy = "user" + id + 1
+                CreatedBy = "user" + id + 1,
+                CreatedDate = DateTime.Now.ToString("dddd, dd MMMM yyyy"),
+                CreatedTime = DateTime.Now.ToString("HH:mm:ss"),
+                LastUpdatedBy = "admin",
+                LastUpdatedDate = DateTime.Now.ToString("dddd, dd MMMM yyyy"),
+                LastUpdatedTime = DateTime.Now.ToString("HH:mm:ss")
             };
 
             return societeTierce;
@@ -49,7 +54,12 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
                     Fax = "7xxxxxx",
                     Adresse = "Rue xxxxxxxx",
                     SiteWeb = "www.societe.com",
-                    CreatedBy = "user" + i + 1
+                    CreatedBy = "user" + i + 1,
+                    CreatedDate = DateTime.Now.ToString("dddd, dd MMMM yyyy"),
+                    CreatedTime = DateTime.Now.ToString("HH:mm:ss"),
+                    LastUpdatedBy = "admin",
+                    LastUpdatedDate = DateTime.Now.ToString("dddd, dd MMMM yyyy"),
+                    LastUpdatedTime = DateTime.Now.ToString("HH:mm:ss")
                 };
 
                 societeTierces.Add(societeTierce);

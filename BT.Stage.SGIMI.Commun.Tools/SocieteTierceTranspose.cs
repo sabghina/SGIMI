@@ -10,6 +10,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
 {
     public static class SocieteTierceTranspose
     {
+
         public static List<SocieteTierceViewModel> FournisseurListToSocieteTierceViewModelList(List<Fournisseur> societeTierces)
         {
             List<SocieteTierceViewModel> societeTierceViewModels = new List<SocieteTierceViewModel>();
@@ -35,7 +36,12 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Fax = societeTierce.Fax,
                 Adresse = societeTierce.Adresse,
                 SiteWeb = societeTierce.SiteWeb,
-                CreatedBy = societeTierce.CreatedBy
+                CreatedBy = societeTierce.CreatedBy,
+                CreatedDate = societeTierce.CreatedDate,
+                CreatedTime = societeTierce.CreatedTime,
+                LastUpdatedDate = societeTierce.LastUpdatedDate,
+                LastUpdatedTime = societeTierce.LastUpdatedTime,
+                LastUpdatedBy = societeTierce.LastUpdatedBy
             };
             return societeTierceViewModel;
         }
@@ -52,7 +58,12 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Fax = societeTierceViewModel.Fax,
                 SiteWeb = societeTierceViewModel.SiteWeb,
                 Type = (char)societeTierceViewModel.Type,
-                CreatedBy = user
+                CreatedBy = user,
+                CreatedDate = societeTierceViewModel.CreatedDate,
+                CreatedTime = societeTierceViewModel.CreatedTime,
+                LastUpdatedDate = societeTierceViewModel.LastUpdatedDate,
+                LastUpdatedTime = societeTierceViewModel.LastUpdatedTime,
+                LastUpdatedBy = societeTierceViewModel.LastUpdatedBy
             };
             return societeTierce;
         }
