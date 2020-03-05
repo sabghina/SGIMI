@@ -23,6 +23,10 @@ namespace BT.Stage.SGIMI.UserInterface.ViewModel
         /// </summary>
         public TypeFournisseur Type { get; set; }
         public string CreatedBy { get; set; }
-
+        public string CreatedDate { get; set; }
+        public string CreatedTime { get; set; }
+        public string LastUpdatedDate { get; set; }
+        public string LastUpdatedTime { get; set; }
+        public object LastUpdatedBy { get; set; }
     }
 }

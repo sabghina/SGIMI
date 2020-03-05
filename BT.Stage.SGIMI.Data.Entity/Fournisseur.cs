@@ -20,6 +20,11 @@ namespace BT.Stage.SGIMI.Data.Entity
         /// </summary>
         public char Type { get; set; }
         public string CreatedBy { get; set; }
+        public string CreatedDate { get; set; }
+        public string CreatedTime { get; set; }
         public string UpdatedBy { get; set; }
+        public string LastUpdatedDate { get; set; }
+        public string LastUpdatedTime { get; set; }
+        public object LastUpdatedBy { get; set; }
     }
 }

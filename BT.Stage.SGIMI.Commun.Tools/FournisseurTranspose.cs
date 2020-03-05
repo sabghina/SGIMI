@@ -35,7 +35,12 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Adresse = fournisseur.Adresse,
                 Fax = fournisseur.Fax,
                 SiteWeb = fournisseur.SiteWeb,
-                CreatedBy = fournisseur.CreatedBy
+                CreatedBy = fournisseur.CreatedBy,
+                CreatedDate = fournisseur.CreatedDate,
+                CreatedTime = fournisseur.CreatedTime,
+                LastUpdatedDate = fournisseur.LastUpdatedDate,
+                LastUpdatedTime = fournisseur.LastUpdatedTime,
+                LastUpdatedBy = fournisseur.LastUpdatedBy
             };
             return fournisseurViewModel;
         }
@@ -51,7 +56,13 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Fax = fournisseurViewModel.Fax,
                 SiteWeb = fournisseurViewModel.SiteWeb,
                 Type = (char)fournisseurViewModel.Type,
-                CreatedBy = user
+                CreatedBy = user,
+                CreatedDate = fournisseurViewModel.CreatedDate,
+                CreatedTime = fournisseurViewModel.CreatedTime,
+                LastUpdatedDate = fournisseurViewModel.LastUpdatedDate,
+                LastUpdatedTime = fournisseurViewModel.LastUpdatedTime,
+                LastUpdatedBy = fournisseurViewModel.LastUpdatedBy
+                
             };
             return fournisseur;
         }
@@ -67,7 +78,12 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Fax = fournisseurViewModel.Fax,
                 SiteWeb = fournisseurViewModel.SiteWeb,
                 Type = (char)fournisseurViewModel.Type,
-                UpdatedBy = user
+                UpdatedBy = user,
+                CreatedDate = fournisseurViewModel.CreatedDate,
+                CreatedTime = fournisseurViewModel.CreatedTime,
+                LastUpdatedDate = fournisseurViewModel.LastUpdatedDate,
+                LastUpdatedTime = fournisseurViewModel.LastUpdatedTime,
+                LastUpdatedBy = fournisseurViewModel.LastUpdatedBy
             };
             return fournisseur;
         }
