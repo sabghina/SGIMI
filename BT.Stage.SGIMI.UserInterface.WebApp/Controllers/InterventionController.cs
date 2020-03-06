@@ -83,18 +83,39 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         // GET: Intervention/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            Intervention intervention = interventionRepository.GetInterventionById(id);
+            InterventionViewModel interventionViewModel = InterventionTranspose.InterventionToInterventionViewModel(intervention);
+            return View(interventionViewModel);
         }
 
         // POST: Intervention/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, InterventionViewModel interventionViewModel)
         {
             try
             {
+                if (!ModelState.IsValid)
+                {
+                    return View(interventionViewModel);
+                }
                 // TODO: Add update logic here
+                string user = User.Identity.Name;
+                Intervention intervention = InterventionTranspose.UpdatedInterventionViewModelToUpdatedIntervention(id, interventionViewModel, user);
 
-                return RedirectToAction("Index");
+                bool interventionIsUpdated = interventionRepository.UpdatedIntervention(intervention);
+                if (interventionIsUpdated)
+                {
+                    return RedirectToAction("Details", new
+                    {
+                        id = intervention.Id
+                    });
+                }
+                else
+                {
+                    throw new InvalidOperationException("oops");
+                }
+
+
             }
             catch
             {

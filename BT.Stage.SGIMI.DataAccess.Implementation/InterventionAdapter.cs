@@ -64,6 +64,10 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
 
             return interventions;
         }
+        public bool UpdateIntervention(Intervention intervention)
+        {
+            return true;
+        }
     }
 }
 

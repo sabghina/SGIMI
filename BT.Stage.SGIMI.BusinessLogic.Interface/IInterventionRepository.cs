@@ -21,5 +21,6 @@ namespace BT.Stage.SGIMI.BusinessLogic.Interface
         /// <returns></returns>
         Intervention GetInterventionById(int id);
         bool CreateIntervention(Intervention intervention);
+        bool UpdatedIntervention(Intervention intervention);
     }
     }

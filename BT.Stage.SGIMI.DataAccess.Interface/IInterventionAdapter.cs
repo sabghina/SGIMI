@@ -22,6 +22,7 @@ namespace BT.Stage.SGIMI.DataAccess.Interface
         /// <returns></returns>
         Intervention GetInterventionById(int id);
         bool CreateIntervention(Intervention intervention);
+        bool UpdateIntervention(Intervention intervention);
     }
 }
     

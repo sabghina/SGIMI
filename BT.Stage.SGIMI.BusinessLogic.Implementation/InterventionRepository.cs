@@ -32,5 +32,9 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
             List<Intervention> interventions = interventionAdapter.GetInterventions();
             return interventions;
         }
+        public bool UpdatedIntervention(Intervention intervention)
+        {
+            return interventionAdapter.UpdateIntervention(intervention);
+        }
     }
 }
