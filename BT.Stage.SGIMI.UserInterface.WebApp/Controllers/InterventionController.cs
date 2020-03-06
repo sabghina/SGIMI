@@ -61,7 +61,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 }
                 // TODO: Add insert logic here
                 string user = User.Identity.Name;
-                Intervention intervention = InterventionTranspose.InterventionViewModelToIntervention(interventionViewModel, user);
+                Intervention intervention = InterventionTranspose.UpdatedInterventionViewModelToIntervention(interventionViewModel, user);
 
                 bool interventionIsCreated = interventionRepository.CreateIntervention(intervention);
                 if (interventionIsCreated)

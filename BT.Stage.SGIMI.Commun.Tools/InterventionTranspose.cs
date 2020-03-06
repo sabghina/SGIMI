@@ -41,10 +41,11 @@ namespace BT.Stage.SGIMI.Commun.Tools
             return interventionViewModel;
         }
 
-        public static Intervention InterventionViewModelToIntervention(InterventionViewModel interventionViewModel, string user)
+        public static Intervention UpdatedInterventionViewModelToIntervention(int id,InterventionViewModel interventionViewModel, string user)
         {
             Intervention intervention = new Intervention
             {
+               
                 Id = interventionViewModel.Id,
                 Type = interventionViewModel.Type,
                 Date = interventionViewModel.Date,
@@ -53,11 +54,6 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 CreatedBy = user
             };
             return intervention;
-        }
-
-        public static Intervention UpdatedInterventionViewModelToUpdatedIntervention(int id, InterventionViewModel interventionViewModel, string user)
-        {
-            throw new NotImplementedException();
         }
     }
 }
