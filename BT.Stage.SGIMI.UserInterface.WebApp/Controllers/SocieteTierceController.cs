@@ -68,7 +68,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 bool societeTierceIsCreated = societeTierceRepository.CreateSocieteTierce(societeTierce);
                 if (societeTierceIsCreated)
                 {
-                    return RedirectToAction("Index");
+                    return RedirectToAction("Details");
                 }
                 else
                 {
@@ -85,7 +85,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         public ActionResult Edit(int id)
         {
             Fournisseur societeTierce = societeTierceRepository.GetSocieteTierceById(id);
-            SocieteTierceViewModel societeTierceViewModel = SocieteTierceTranspose.SocieteTierceToSocieteTierceViewModel(societeTierce);
+            SocieteTierceViewModel societeTierceViewModel = SocieteTierceTranspose.FournisseurToSocieteTierceViewModel(societeTierce);
             return View(societeTierceViewModel);
         }
 
@@ -101,12 +101,12 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 }
                 // TODO: Add update logic here
                 string user = User.Identity.Name;
-                Fournisseur societeTierce = SocieteTierceTranspose.UpdatedSocieteTierceViewModelToUpdatedSocieteTierce(id, societeTierceViewModel, user);
+                Fournisseur societeTierce = SocieteTierceTranspose.UpdatedSocieteTierceViewModelToUpdatedSocieteTierce(id,societeTierceViewModel, user);
 
                 bool societeTierceIsUpdated = societeTierceRepository.UpdatedSocieteTierce(societeTierce);
                 if (societeTierceIsUpdated)
                 {
-                    return RedirectToAction("Details", new
+                    return RedirectToAction("Index", new
                     {
                         id = societeTierce.Id
                     });

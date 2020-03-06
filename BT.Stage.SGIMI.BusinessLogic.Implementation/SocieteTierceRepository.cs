@@ -38,12 +38,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
 
         public bool UpdatedSocieteTierce(Fournisseur societeTierce)
         {
-            throw new NotImplementedException();
-        }
-
-        public bool UpdateSocieteTierce ( Fournisseur societeTierce)
-        {
-            return SocieteTierceAdapter.UpdatedSocieteTierce(societeTierce);
+            return societeTierceAdapter.UpdateSocieteTierce(societeTierce);
         }
 
     }

@@ -282,6 +282,7 @@
     <Content Include="Views\SocieteTierce\Details.cshtml" />
     <Content Include="Views\SocieteTierce\Index.cshtml" />
     <Content Include="Views\Intervention\Edit.cshtml" />
+    <Content Include="Views\SocieteTierce\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
