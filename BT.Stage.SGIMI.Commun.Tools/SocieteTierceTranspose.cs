@@ -46,7 +46,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
             return societeTierceViewModel;
         }
 
-        public static Fournisseur SocieteTierceViewModelToSocieteTierce(SocieteTierceViewModel societeTierceViewModel, string user)
+        public static Fournisseur UpdatedSocieteTierceViewModelToSocieteTierce(SocieteTierceViewModel societeTierceViewModel, string user)
         {
 
             Fournisseur societeTierce = new Fournisseur
@@ -66,6 +66,21 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 LastUpdatedBy = societeTierceViewModel.LastUpdatedBy
             };
             return societeTierce;
+        }
+
+        public static Fournisseur SocieteTierceViewModelToSocieteTierce(SocieteTierceViewModel societeTierceViewModel, string user)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static SocieteTierceViewModel SocieteTierceToSocieteTierceViewModel(Fournisseur societeTierce)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static Fournisseur UpdatedSocieteTierceViewModelToUpdatedSocieteTierce(int id, SocieteTierceViewModel societeTierceViewModel, string user)
+        {
+            throw new NotImplementedException();
         }
     }
 }

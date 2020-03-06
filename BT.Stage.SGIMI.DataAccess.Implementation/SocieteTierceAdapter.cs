@@ -39,6 +39,11 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
             return societeTierce;
         }
 
+        public static bool UpdatedSocieteTierce(Fournisseur societeTierce)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Fournisseur> GetSocieteTierces()
         {
             // replace with databse access
@@ -66,7 +71,11 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
             }
             return societeTierces;
         }
+        public bool UpdateSocieteTierce(Fournisseur societeTierce)
+        {
+            return true;
 
-        
+        }
+                    
     }
 }

@@ -84,18 +84,39 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         // GET: SocieteTierce/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            Fournisseur societeTierce = societeTierceRepository.GetSocieteTierceById(id);
+            SocieteTierceViewModel societeTierceViewModel = SocieteTierceTranspose.SocieteTierceToSocieteTierceViewModel(societeTierce);
+            return View(societeTierceViewModel);
         }
 
         // POST: SocieteTierce/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, SocieteTierceViewModel societeTierceViewModel)
         {
             try
             {
+                if (!ModelState.IsValid)
+                {
+                    return View(societeTierceViewModel);
+                }
                 // TODO: Add update logic here
+                string user = User.Identity.Name;
+                Fournisseur societeTierce = SocieteTierceTranspose.UpdatedSocieteTierceViewModelToUpdatedSocieteTierce(id, societeTierceViewModel, user);
 
-                return RedirectToAction("Index");
+                bool societeTierceIsUpdated = societeTierceRepository.UpdatedSocieteTierce(societeTierce);
+                if (societeTierceIsUpdated)
+                {
+                    return RedirectToAction("Details", new
+                    {
+                        id = societeTierce.Id
+                    });
+                }
+                else
+                {
+                    throw new InvalidOperationException("oops");
+                }
+
+
             }
             catch
             {

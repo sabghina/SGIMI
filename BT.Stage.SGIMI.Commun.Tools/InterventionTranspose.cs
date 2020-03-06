@@ -55,6 +55,16 @@ namespace BT.Stage.SGIMI.Commun.Tools
             };
             return intervention;
         }
+
+        public static Intervention UpdatedInterventionViewModelToIntervention(InterventionViewModel interventionViewModel, string user)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static Intervention UpdatedInterventionViewModelToUpdatedIntervention(int id, InterventionViewModel interventionViewModel, string user)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 
