@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<BT.Stage.SGIMI.UserInterface.ViewModel.FournisseurViewModel>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Fournisseur";
 }
 
-<h2>Index</h2>
+<h2>Liste des fournisseurs</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Ajouter un nouveau fournisseur", "Create")
 </p>
 <table class="table">
     <tr>
@@ -83,9 +83,9 @@
             @Html.DisplayFor(modelItem => item.LastUpdatedTime)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("Modifier", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Détails", "Details", new { id=item.Id }) |
+            
         </td>
     </tr>
 }
