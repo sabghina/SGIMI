@@ -220,6 +220,8 @@
     <Content Include="Icon\claim.png" />
     <Content Include="Icon\intranet.png" />
     <Content Include="Icon\treaty.png" />
+    <Content Include="Images\home.jpg" />
+    <Content Include="Images\logoBT.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
