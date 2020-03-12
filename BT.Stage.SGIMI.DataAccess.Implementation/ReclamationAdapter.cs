@@ -54,5 +54,10 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
 
             return reclamations;
         }
+
+        public bool UpdateReclamation(Reclamation reclamation)
+        {
+            return true;
+        }
     }
 }

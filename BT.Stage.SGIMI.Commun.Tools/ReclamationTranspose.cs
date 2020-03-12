@@ -41,5 +41,10 @@ namespace BT.Stage.SGIMI.Commun.Tools
         {
             throw new NotImplementedException();
         }
+
+        public static Reclamation UpdatedReclamationViewModelToUpdatedReclamation(int id, ReclamationViewModel reclamationViewModel, string user)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

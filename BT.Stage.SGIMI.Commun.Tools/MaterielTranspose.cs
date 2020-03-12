@@ -59,6 +59,16 @@ namespace BT.Stage.SGIMI.Commun.Tools
             };
             return materiel;
         }
+
+        public static CreateMaterielViewModel MaterielToCreateMaterielViewModel(Materiel materiel)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static Materiel UpdatedMaterielViewModelToUpdatedMateriel(int id, CreateMaterielViewModel createMaterielViewModel, string user)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 

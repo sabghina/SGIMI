@@ -32,5 +32,10 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
             List<Reclamation> reclamations = reclamationAdapter.GetReclamations();
             return reclamations;
         }
+
+        public bool UpdatedReclamation(Reclamation reclamation)
+        {
+            return reclamationAdapter.UpdateReclamation(reclamation);
+        }
     }
 }

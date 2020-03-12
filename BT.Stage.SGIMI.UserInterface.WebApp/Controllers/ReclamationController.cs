@@ -79,25 +79,43 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         // GET: Reclamation/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            Reclamation reclamation = reclamationRepository.GetReclamationById(id);
+            ReclamationViewModel reclamationViewModel = ReclamationTranspose.ReclamationToReclamationViewModel(reclamation);
+            return View(reclamationViewModel);
         }
 
         // POST: Reclamation/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, ReclamationViewModel reclamationViewModel)
         {
             try
             {
+                if (!ModelState.IsValid)
+                {
+                    return View(reclamationViewModel);
+                }
                 // TODO: Add update logic here
+                string user = User.Identity.Name;
+                Reclamation reclamation = ReclamationTranspose.UpdatedReclamationViewModelToUpdatedReclamation(id, reclamationViewModel, user);
 
-                return RedirectToAction("Index");
+                bool reclamationIsUpdated = reclamationRepository.UpdatedReclamation(reclamation);
+                if (reclamationIsUpdated)
+                {
+                    return RedirectToAction("Details", new
+                    {
+                        id = reclamation.Id
+                    });
+                }
+                else
+                {
+                    throw new InvalidOperationException("oops");
+                }
             }
             catch
             {
                 return View();
             }
         }
-
         // GET: Reclamation/Delete/5
         public ActionResult Delete(int id)
         {

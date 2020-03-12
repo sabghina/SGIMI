@@ -21,5 +21,6 @@ namespace BT.Stage.SGIMI.DataAccess.Interface
         /// <returns></returns>
         Reclamation GetReclamationById(int id);
         bool CreateReclamation(Reclamation reclamation);
+        bool UpdateReclamation(Reclamation reclamation);
     }
 }

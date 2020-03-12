@@ -103,25 +103,45 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         // GET: Materiel/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            Materiel materiel = materielRepository.GetMaterielById(id);
+            CreateMaterielViewModel createMaterielViewModel = MaterielTranspose.MaterielToCreateMaterielViewModel(materiel);
+            return View(createMaterielViewModel);
         }
 
         // POST: Materiel/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, CreateMaterielViewModel createMaterielViewModel)
         {
             try
             {
+                if (!ModelState.IsValid)
+                {
+                    return View(createMaterielViewModel);
+                }
                 // TODO: Add update logic here
+                string user = User.Identity.Name;
+                Materiel materiel = MaterielTranspose.UpdatedMaterielViewModelToUpdatedMateriel(id, createMaterielViewModel, user);
 
-                return RedirectToAction("Index");
+                bool materielIsUpdated = materielRepository.UpdatedMateriel(materiel);
+                if (materielIsUpdated)
+                {
+                    return RedirectToAction("Details", new
+                    {
+                        id = materiel.Id
+                    });
+                }
+                else
+                {
+                    throw new InvalidOperationException("invalid");
+                }
+
+
             }
             catch
             {
                 return View();
             }
         }
-
         // GET: Materiel/Delete/5
         public ActionResult Delete(int id)
         {

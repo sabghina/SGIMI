@@ -26,5 +26,6 @@ namespace BT.Stage.SGIMI.DataAccess.Interface
         /// <param name="materiel"></param>
         /// <returns></returns> 
         bool CreateMateriel(Materiel materiel);
+        bool UpdateMateriel(Materiel materiel);
     }
 }

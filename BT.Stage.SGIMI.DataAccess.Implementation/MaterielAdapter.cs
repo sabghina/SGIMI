@@ -61,6 +61,11 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
             return materiels;
         }
 
+        public bool UpdateMateriel(Materiel materiel)
+        {
+            return true;
+        }
+
         bool IMaterielAdapter.CreateMateriel(Materiel materiel)
         {
             // ajout in database

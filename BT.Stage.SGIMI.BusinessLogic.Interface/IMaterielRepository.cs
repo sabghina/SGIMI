@@ -26,5 +26,6 @@ namespace BT.Stage.SGIMI.BusinessLogic.Interface
         /// <param name="materiel"></param>
         /// <returns></returns> 
         bool CreateMateriel(Materiel materiel);
+        bool UpdatedMateriel(Materiel materiel);
     }
 }
