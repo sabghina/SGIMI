@@ -12,11 +12,17 @@ namespace BT.Stage.SGIMI.UserInterface.ViewModel
     {
         public int Id { get; set; }
         [Required]
+        [MaxLength(30)]
         public string Nom { get; set; }
+        [MaxLength(30)]
         public string Email { get; set; }
+        [MaxLength(15)]
         public string Telephone { get; set; }
+        [MaxLength(30)]
         public string Adresse { get; set; }
+        [MaxLength(15)]
         public string Fax { get; set; }
+        [MaxLength(30)]
         public string SiteWeb { get; set; }
         /// <summary>
         /// F: Fourniseur, S: SociétéTierce

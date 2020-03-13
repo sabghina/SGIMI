@@ -71,7 +71,14 @@ namespace BT.Stage.SGIMI.Commun.Tools
 
         public static Fournisseur SocieteTierceViewModelToSocieteTierce(SocieteTierceViewModel societeTierceViewModel, string user)
         {
-            throw new NotImplementedException();
+            Fournisseur fournisseur = new Fournisseur
+            {
+                Nom = societeTierceViewModel.Nom,
+                Adresse = societeTierceViewModel.Adresse,
+                CreatedBy = user
+            };
+
+            return fournisseur;
         }
     }
 }
