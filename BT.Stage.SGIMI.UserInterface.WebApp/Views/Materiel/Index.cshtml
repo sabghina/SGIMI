@@ -4,10 +4,10 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Liste des Materiels</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Ajouter un nouveau materiel", "Create")
 </p>
 <table class="table">
     <tr>
@@ -30,24 +30,7 @@
         <th>
             @Html.DisplayNameFor(model => model.Fournisseur)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CreatedDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CreatedTime)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LastUpdatedDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LastUpdatedTime)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LastUpdatedBy)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CreatedBy)
-        </th>
+     
         <th></th>
     </tr>
 
@@ -74,24 +57,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.Fournisseur)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CreatedDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CreatedTime)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LastUpdatedDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LastUpdatedTime)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LastUpdatedBy)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CreatedBy)
-        </td>
+      
         <td>
             @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
             @Html.ActionLink("Details", "Details", new { id = item.Id }) |
