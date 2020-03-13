@@ -41,15 +41,16 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         }
 
         // GET: Reclamation/Create
-        public ActionResult Create()
+        public ActionResult Create(string materiel)
         {
             ReclamationViewModel reclamationViewModel = new ReclamationViewModel();
+            reclamationViewModel.Materiel = materiel;
             return View(reclamationViewModel);
         }
 
         // POST: Reclamation/Create
         [HttpPost]
-        public ActionResult Create(ReclamationViewModel reclamationViewModel)
+        public ActionResult Create(int materiel,ReclamationViewModel reclamationViewModel)
         {
             try
             {

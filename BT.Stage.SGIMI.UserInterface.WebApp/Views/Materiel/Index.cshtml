@@ -62,7 +62,7 @@
             @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
             @Html.ActionLink("Details", "Details", new { id = item.Id }) |
             @Html.ActionLink("Delete", "Delete", new { id = item.Id }) |
-            @Html.ActionLink("Reclamer", "Index") 
+            <a href="@Url.Action("Create","Reclamation",new { materiel = item.Id })"> Reclamer </a>
         </td>
     </tr>
 }
