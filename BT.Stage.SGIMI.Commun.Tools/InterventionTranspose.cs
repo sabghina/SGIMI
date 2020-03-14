@@ -28,9 +28,12 @@ namespace BT.Stage.SGIMI.Commun.Tools
             {
                 Id = intervention.Id,
                 Type = intervention.Type,
+                Nature = intervention.Nature,
                 Date = intervention.Date,
                 Etat = intervention.Etat,
                 Reclamation = intervention.Reclamation,
+                ProblèmeConstaté = intervention.ProblèmeConstaté,
+                TraveauxEffectués = intervention.TraveauxEffectués,
                 CreatedBy = intervention.CreatedBy,
                 CreatedDate = intervention.CreatedDate,
                 CreatedTime = intervention.CreatedTime,
@@ -48,9 +51,13 @@ namespace BT.Stage.SGIMI.Commun.Tools
 
                 Id = interventionViewModel.Id,
                 Type = interventionViewModel.Type,
+                Nature = interventionViewModel.Nature,
                 Date = interventionViewModel.Date,
                 Etat = interventionViewModel.Etat,
                 Reclamation = interventionViewModel.Reclamation,
+                ProblèmeConstaté = interventionViewModel.ProblèmeConstaté,
+                TraveauxEffectués = interventionViewModel.TraveauxEffectués,
+
                 CreatedBy = user
             };
             return intervention;
@@ -61,9 +68,13 @@ namespace BT.Stage.SGIMI.Commun.Tools
             {
                 Id = interventionViewModel.Id,
                 Type = interventionViewModel.Type,
+                Nature = interventionViewModel.Nature,
                 Date = interventionViewModel.Date,
                 Etat = interventionViewModel.Etat,
                 Reclamation = interventionViewModel.Reclamation,
+                ProblèmeConstaté = interventionViewModel.ProblèmeConstaté,
+                TraveauxEffectués = interventionViewModel.TraveauxEffectués,
+
                 CreatedBy = user
             };
             return intervention;

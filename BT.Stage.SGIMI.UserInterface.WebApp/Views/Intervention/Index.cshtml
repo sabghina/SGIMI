@@ -24,32 +24,39 @@
         <th>
             @Html.DisplayNameFor(model => model.Reclamation)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TraveauxEffectués)
+        </th>
 
         <th></th>
     </tr>
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Type)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Date)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Etat)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Reclamation)
-            </td>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Type)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Date)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Etat)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Reclamation)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TraveauxEffectués)
+    </td>
 
-            <td>
-                @Html.ActionLink("Modifier", "Edit", new { id = item.Id }) |
-                @Html.ActionLink("Détails", "Details", new { id = item.Id }) |
-                @Html.ActionLink("Annuler", "Delete", new { id = item.Id })
-            </td>
-        </tr>
+
+    <td>
+        @Html.ActionLink("Modifier", "Edit", new { id = item.Id }) |
+        @Html.ActionLink("Détails", "Details", new { id = item.Id }) |
+        @Html.ActionLink("Annuler", "Delete", new { id = item.Id })
+    </td>
+</tr>
     }
 
 </table>

@@ -12,9 +12,12 @@ namespace BT.Stage.SGIMI.UserInterface.ViewModel
         public int Id { get; set; }
         [Required]
         public string Type { get; set; }
+        public string Nature { get; set; }
         public string Date { get; set; }
         public string Etat { get; set; }
         public int Reclamation { get; set; }
+        public string ProblèmeConstaté { get; set; }
+        public string TraveauxEffectués { get; set; }
         public string CreatedBy { get; set; }
         public string CreatedDate { get; set; }
         public string CreatedTime { get; set; }

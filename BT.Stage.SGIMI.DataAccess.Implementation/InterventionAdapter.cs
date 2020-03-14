@@ -23,10 +23,12 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
             {
                 Id = id,
                 Type = "Intervention" + id,
-                Date = "0" + id + "/0" + id + "/2020",
+                Date = DateTime.Now.ToString("dddd, dd MMMM yyyy"),
                 //Exemple pour le test
                 Etat = "En cours",
                 Reclamation = id + 1,
+                ProblèmeConstaté = "Probleme"+ id,
+                TraveauxEffectués = "traveaux" + id,
                 CreatedBy = "user" + id + 1,
                 CreatedDate = DateTime.Now.ToString("dddd, dd MMMM yyyy"),
                 CreatedTime = DateTime.Now.ToString("HH:mm:ss"),
@@ -47,10 +49,13 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
                 {
                     Id = i,
                     Type = "Type" + i,
-                    Date = "0" + i + "/0" + i + "/2020",
+                    Nature = "Nature"+i,
+                    Date = DateTime.Now.ToString("dddd, dd MMMM yyyy"),
                     //Exemple pour le test
                     Etat = "En cours",
                     Reclamation = i+1,
+                    ProblèmeConstaté = "Probleme" + i,
+                    TraveauxEffectués = "traveaux" + i,
                     CreatedBy = "user" + i + 1,
                     CreatedDate = DateTime.Now.ToString("dddd, dd MMMM yyyy"),
                     CreatedTime = DateTime.Now.ToString("HH:mm:ss"),
