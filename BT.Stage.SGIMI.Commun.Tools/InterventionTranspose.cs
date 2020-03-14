@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BT.Stage.SGIMI.Commun.Tools
 {
-   public static class InterventionTranspose
+    public static class InterventionTranspose
     {
         public static List<InterventionViewModel> InterventionListToInterventionViewModelList(List<Intervention> interventions)
         {
@@ -41,11 +41,11 @@ namespace BT.Stage.SGIMI.Commun.Tools
             return interventionViewModel;
         }
 
-        public static Intervention UpdatedInterventionViewModelToIntervention(int id,InterventionViewModel interventionViewModel, string user)
+        public static Intervention UpdatedInterventionViewModelToUpdatedIntervention(int id, InterventionViewModel interventionViewModel, string user)
         {
             Intervention intervention = new Intervention
             {
-               
+
                 Id = interventionViewModel.Id,
                 Type = interventionViewModel.Type,
                 Date = interventionViewModel.Date,
@@ -55,22 +55,21 @@ namespace BT.Stage.SGIMI.Commun.Tools
             };
             return intervention;
         }
-
-        public static Intervention UpdatedInterventionViewModelToIntervention(InterventionViewModel interventionViewModel, string user)
-        {
-            throw new NotImplementedException();
-        }
-
         public static Intervention InterventionViewModelToIntervention(InterventionViewModel interventionViewModel, string user)
         {
-            throw new NotImplementedException();
-        }
-
-        public static Intervention UpdatedInterventionViewModelToUpdatedIntervention(int id, InterventionViewModel interventionViewModel, string user)
-        {
-            throw new NotImplementedException();
+            Intervention intervention = new Intervention
+            {
+                Id = interventionViewModel.Id,
+                Type = interventionViewModel.Type,
+                Date = interventionViewModel.Date,
+                Etat = interventionViewModel.Etat,
+                Reclamation = interventionViewModel.Reclamation,
+                CreatedBy = user
+            };
+            return intervention;
         }
     }
 }
+
 
     
