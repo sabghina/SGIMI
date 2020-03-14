@@ -59,7 +59,8 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                     return View(reclamationViewModel);
                 }
                 //string user = User.Identity.Name;
-                Reclamation reclamation = ReclamationTranspose.ReclamationViewModelToReclamation(reclamationViewModel);
+                string user = User.Identity.Name;
+                Reclamation reclamation = ReclamationTranspose.ReclamationViewModelToReclamation(reclamationViewModel,user);
 
                 bool reclamationIsCreated = reclamationRepository.CreateReclamation(reclamation);
                 if (reclamationIsCreated)

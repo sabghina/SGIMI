@@ -37,14 +37,35 @@ namespace BT.Stage.SGIMI.Commun.Tools
             return reclamationViewModel;
         }
 
-        public static Reclamation ReclamationViewModelToReclamation(ReclamationViewModel reclamationViewModel)
+        public static Reclamation ReclamationViewModelToReclamation( ReclamationViewModel reclamationViewModel, string user)
         {
-            throw new NotImplementedException();
+            Reclamation reclamation = new Reclamation
+            {
+                Id = reclamationViewModel.Id,
+                Materiel = reclamationViewModel.Materiel,
+                Date = reclamationViewModel.Date,
+                Probleme = reclamationViewModel.Probleme,
+                Commentaire = reclamationViewModel.Commentaire,
+                Etat = reclamationViewModel.Etat,
+                CreatedBy = reclamationViewModel.CreatedBy
+            };
+            return reclamation;
         }
-
         public static Reclamation UpdatedReclamationViewModelToUpdatedReclamation(int id, ReclamationViewModel reclamationViewModel, string user)
         {
-            throw new NotImplementedException();
+            Reclamation reclamation = new Reclamation
+            {
+                Id = reclamationViewModel.Id,
+                Materiel = reclamationViewModel.Materiel,
+                Date = reclamationViewModel.Date,
+                Probleme = reclamationViewModel.Probleme,
+                Commentaire = reclamationViewModel.Commentaire,
+                Etat = reclamationViewModel.Etat,
+                CreatedBy = reclamationViewModel.CreatedBy
+            };
+            return reclamation;
         }
+
+        
     }
 }
