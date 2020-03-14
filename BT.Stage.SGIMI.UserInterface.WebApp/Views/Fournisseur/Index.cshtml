@@ -9,6 +9,11 @@
 <p>
     @Html.ActionLink("Ajouter un nouveau fournisseur", "Create")
 </p>
+<div class="pull-right">
+
+    <button type="button">Télécharger un rapport</button>
+
+</div>
 <table class="table">
     <tr>
         <th>
@@ -58,6 +63,7 @@
             @Html.ActionLink("Détails", "Details", new { id=item.Id }) |
             
         </td>
+       
     </tr>
 }
 

@@ -3,92 +3,97 @@
     ViewBag.Title = "Détails";
 }
 
-<div>
-    <h4>Détails d'une intervention</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Type)
-        </dt>
+    <div>
+        <h4>Détails d'une intervention</h4>
+        <div class="pull-right">
 
-        <dd>
-            @Html.DisplayFor(model => model.Type)
-        </dd>
+            <button type="button">Télécharger un rapport</button>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Date)
-        </dt>
+        </div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Type)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Date)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Type)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Etat)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Date)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Etat)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Date)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Reclamation)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Etat)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Reclamation)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Etat)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CreatedBy)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Reclamation)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.CreatedBy)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Reclamation)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CreatedDate)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.CreatedBy)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.CreatedDate)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.CreatedBy)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CreatedTime)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.CreatedDate)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.CreatedTime)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.CreatedDate)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.LastUpdatedDate)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.CreatedTime)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.LastUpdatedDate)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.CreatedTime)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.LastUpdatedTime)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.LastUpdatedDate)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.LastUpdatedTime)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.LastUpdatedDate)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.LastUpdatedBy)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.LastUpdatedTime)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.LastUpdatedBy)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.LastUpdatedTime)
+            </dd>
 
-    </dl>
-</div>
+            <dt>
+                @Html.DisplayNameFor(model => model.LastUpdatedBy)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.LastUpdatedBy)
+            </dd>
+
+        </dl>
+    </div>
 <p>
     @Html.ActionLink("Modifier", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("Retour", "Index")
