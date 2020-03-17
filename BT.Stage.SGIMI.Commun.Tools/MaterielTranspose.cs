@@ -44,7 +44,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
             return materielViewModel;
         }
 
-        public static Materiel CreateMaterielViewModelToMateriel(CreateMaterielViewModel createMaterielViewModel)
+        public static Materiel CreateMaterielViewModelToMateriel(CreateMaterielViewModel createMaterielViewModel, string user)
         {
             Materiel materiel = new Materiel
             {                
@@ -54,7 +54,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 ReferenceBT = createMaterielViewModel.ReferenceBT,
                 NumeroDeSerie = createMaterielViewModel.NumeroDeSerie,
                 Fournisseur = createMaterielViewModel.Fournisseur,
-                CreatedBy = "admin" // TODO: add current connected user
+                CreatedBy = user // TODO: add current connected user
 
             };
             return materiel;
@@ -62,12 +62,35 @@ namespace BT.Stage.SGIMI.Commun.Tools
 
         public static CreateMaterielViewModel MaterielToCreateMaterielViewModel(Materiel materiel)
         {
-            throw new NotImplementedException();
+            CreateMaterielViewModel createMaterielViewModel = new CreateMaterielViewModel
+            {
+                Nom = materiel.Nom,
+                Marque = materiel.Marque,
+                Modele = materiel.Modele,
+                ReferenceBT = materiel.ReferenceBT,
+                NumeroDeSerie = materiel.NumeroDeSerie,
+                Fournisseur = materiel.Fournisseur,
+                CreatedBy = "admin" // TODO: add current connected user
+
+            };
+            return createMaterielViewModel;
         }
 
         public static Materiel UpdatedMaterielViewModelToUpdatedMateriel(int id, CreateMaterielViewModel createMaterielViewModel, string user)
         {
-            throw new NotImplementedException();
+            Materiel materiel = new Materiel
+            {
+                Id = id,
+                Nom = createMaterielViewModel.Nom,
+                Marque = createMaterielViewModel.Marque,
+                Modele = createMaterielViewModel.Modele,
+                ReferenceBT = createMaterielViewModel.ReferenceBT,
+                NumeroDeSerie = createMaterielViewModel.NumeroDeSerie,
+                Fournisseur = createMaterielViewModel.Fournisseur,
+                CreatedBy = user // TODO: add current connected user
+
+            };
+            return materiel;
         }
     }
 }
