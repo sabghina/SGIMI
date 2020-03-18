@@ -46,6 +46,7 @@
     <Compile Include="Reclamation.cs" />
     <Compile Include="Materiel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UniteGestion.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

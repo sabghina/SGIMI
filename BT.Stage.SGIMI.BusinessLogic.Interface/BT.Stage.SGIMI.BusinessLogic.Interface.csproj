@@ -46,6 +46,7 @@
     <Compile Include="IFournisseurRepository.cs" />
     <Compile Include="IMaterielRepository.cs" />
     <Compile Include="ISocieteTierceRepository.cs" />
+    <Compile Include="IUniteGestionRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

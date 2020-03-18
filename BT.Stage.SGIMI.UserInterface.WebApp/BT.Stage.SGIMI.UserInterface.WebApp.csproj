@@ -197,6 +197,7 @@
     <Compile Include="Controllers\MaterielController.cs" />
     <Compile Include="Controllers\ReclamationController.cs" />
     <Compile Include="Controllers\SocieteTierceController.cs" />
+    <Compile Include="Controllers\UniteGestionController.cs" />
     <Compile Include="Data\BTStageSGIMIUserInterfaceWebAppContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -287,6 +288,9 @@
     <Content Include="Views\SocieteTierce\Edit.cshtml" />
     <Content Include="Views\Materiel\Edit.cshtml" />
     <Content Include="Views\Reclamation\Edit.cshtml" />
+    <Content Include="Views\UniteGestion\Details.cshtml" />
+    <Content Include="Views\UniteGestion\Edit.cshtml" />
+    <Content Include="Views\UniteGestion\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
