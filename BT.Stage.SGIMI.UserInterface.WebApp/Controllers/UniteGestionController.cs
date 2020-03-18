@@ -39,6 +39,46 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             return View(uniteGestionViewModel);
         }
 
+        // GET: UniteGestion/Create
+        public ActionResult Create()
+        {
+            UniteGestionViewModel uniteGestionViewModel = new UniteGestionViewModel();
+            return View(uniteGestionViewModel);
+        }
+
+        // POST: Fournisseur/Create
+        [HttpPost]
+        public ActionResult Create(UniteGestionViewModel uniteGestionViewModel)
+        {
+            try
+            {
+                // controle existance email
+                //ModelState.AddModelError("Email", "Email existe");
+                // controle
+                if (!ModelState.IsValid)
+                {
+                    return View(uniteGestionViewModel);
+                }
+                // TODO: Add insert logic here
+                string user = User.Identity.Name;
+                UniteGestion uniteGestion = UniteGestionTranspose.UniteGestionViewModelToUniteGestion(uniteGestionViewModel, user);
+
+                bool uniteGestionIsCreated = uniteGestionRepository.CreateUniteGestion(uniteGestion);
+                if (uniteGestionIsCreated)
+                {
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    throw new InvalidOperationException("oops");
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         // GET: UniteGestion/Edit/5
         public ActionResult Edit(int id)
         {

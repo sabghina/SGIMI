@@ -291,6 +291,7 @@
     <Content Include="Views\UniteGestion\Details.cshtml" />
     <Content Include="Views\UniteGestion\Edit.cshtml" />
     <Content Include="Views\UniteGestion\Index.cshtml" />
+    <Content Include="Views\UniteGestion\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

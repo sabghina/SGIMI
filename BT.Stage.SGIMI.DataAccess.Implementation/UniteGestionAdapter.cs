@@ -10,12 +10,9 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
 {
     public class UniteGestionAdapter : IUniteGestionAdapter
     {
-        public bool CreateUniteGestion(UniteGestion uniteGestion)
-        {
-            throw new NotImplementedException();
-        }
+       
 
-        public bool CreateUniteGestionr(UniteGestion uniteGestion)
+        public bool CreateUniteGestion(UniteGestion uniteGestion)
         {
             // ajout in database
             return true;
