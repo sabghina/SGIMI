@@ -9,6 +9,12 @@
 <p>
     @Html.ActionLink("Ajouter un nouveau fournisseur", "Create")
 </p>
+<form class="navbar-form navbar-left" role="search">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Chercher un fournisseur">
+    </div>
+    <button type="submit" class="btn btn-default">OK</button>
+</form>
 <div class="pull-right">
 
     <button type="button">Télécharger un rapport</button>
@@ -34,37 +40,38 @@
         <th>
             @Html.DisplayNameFor(model => model.SiteWeb)
         </th>
-    
+
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nom)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Telephone)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Adresse)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Fax)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SiteWeb)
-        </td>
-      
-        <td>
-            @Html.ActionLink("Modifier", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Détails", "Details", new { id=item.Id }) |
-            
-        </td>
-       
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telephone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adresse)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SiteWeb)
+            </td>
+
+            <td>
+                @Html.ActionLink("Modifier", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Détails", "Details", new { id = item.Id }) |
+
+            </td>
+
+        </tr>
+    }
 
 </table>
