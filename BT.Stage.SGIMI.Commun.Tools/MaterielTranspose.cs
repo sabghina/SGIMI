@@ -92,6 +92,30 @@ namespace BT.Stage.SGIMI.Commun.Tools
             };
             return materiel;
         }
+
+        public static Materiel AffectationMaterielViewModelToMateriel(AffectationMaterielViewModel affectationMaterielViewModel, string user)
+        {
+            Materiel materiel = new Materiel
+            {
+                Agent = affectationMaterielViewModel.Agent,
+                Unité = affectationMaterielViewModel.Unité,
+                CreatedBy = user // TODO: add current connected user
+
+            };
+            return materiel;
+        }
+
+        public static AffectationMaterielViewModel MaterielToAffectationMaterielViewModel(Materiel materiel)
+        {
+            AffectationMaterielViewModel affectationMaterielViewModel = new AffectationMaterielViewModel
+            {
+                Agent = materiel.Agent,
+                Unité = materiel.Unité,
+                CreatedBy = "admin" // TODO: add current connected user
+
+            };
+            return affectationMaterielViewModel;
+        }
     }
 }
 

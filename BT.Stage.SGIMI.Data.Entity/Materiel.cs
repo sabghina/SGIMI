@@ -21,5 +21,7 @@ namespace BT.Stage.SGIMI.Data.Entity
         public string LastUpdatedTime  { get; set; }
         public string LastUpdatedBy { get; set; }
         public string CreatedBy { get; set; }
+        public string Agent { get; set; }
+        public string Unité { get; set; }
     }
 }

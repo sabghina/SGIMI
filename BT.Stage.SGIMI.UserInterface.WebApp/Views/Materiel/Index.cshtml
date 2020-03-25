@@ -3,79 +3,80 @@
 @{
     ViewBag.Title = "Index";
 }
+    <h2>Liste des Materiels</h2>
+    <p>
+        @Html.ActionLink("Ajouter un nouveau materiel", "Create")
+    </p>
+    <div class="pull-right">
 
-<h2>Liste des Materiels</h2>
-<p>
-    @Html.ActionLink("Ajouter un nouveau materiel", "Create")
-</p>
-<div class="pull-right">
+        <button type="button">Télécharger un rapport</button>
 
-    <button type="button">Télécharger un rapport</button>
-
-</div>
-<form class="navbar-form navbar-left" role="search">
-    <div class="form-group">
-        <input type="text" class="form-control" placeholder="Chercher une intervention">
     </div>
-    <button type="submit" class="btn btn-default">OK</button>
-</form>
-<table class="table">
-    <tr>
-        <th></th>
-        <th>
-            @Html.DisplayNameFor(model => model.Nom)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Marque)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Modele)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ReferenceBT)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NumeroDeSerie)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Fournisseur)
-        </th>
-
-        <th></th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
+    <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Chercher un materiel">
+        </div>
+        <button type="submit" class="btn btn-default">OK</button>
+    </form>
+    <table class="table">
         <tr>
-            <td>
-                <img src="~/Icon/intranet.png" width="25" height="25" />
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nom)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Marque)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Modele)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ReferenceBT)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NumeroDeSerie)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Fournisseur)
-            </td>
+            <th></th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Marque)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modele)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReferenceBT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumeroDeSerie)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fournisseur)
+            </th>
 
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id }) |
-                <a href="@Url.Action("Create","Reclamation",new { materiel = item.Id })"> Reclamer </a>
-            </td>
+            <th></th>
         </tr>
-    }
 
-</table>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <img src="~/Icon/intranet.png" width="25" height="25" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Marque)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Modele)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ReferenceBT)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumeroDeSerie)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fournisseur)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Affecter", "Affecter", new { id = item.Id })|
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id }) |
+
+                    <a href="@Url.Action("Create","Reclamation",new { materiel = item.Id })"> Reclamer </a>
+                </td>
+            </tr>
+        }
+
+    </table>

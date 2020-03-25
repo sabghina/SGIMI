@@ -142,6 +142,53 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 return View();
             }
         }
+
+        public ActionResult Affecter(int id)
+        {
+
+            AffectationMaterielViewModel affectationMaterielViewModel = new AffectationMaterielViewModel();
+            affectationMaterielViewModel.Id = id;
+            return View(affectationMaterielViewModel);
+            
+
+        }
+
+        // POST: Materiel/Affectr
+        [HttpPost]
+        public ActionResult Affecter(AffectationMaterielViewModel affectationMaterielViewModel)
+        {
+            try
+            {
+                // controle existance email
+                //ModelState.AddModelError("Email", "Email existe");
+                // controle
+                if (!ModelState.IsValid)
+                {
+                    return View(affectationMaterielViewModel);
+                }
+                // TODO: Add insert logic here
+                string user = User.Identity.Name;
+                Materiel materiel = MaterielTranspose.AffectationMaterielViewModelToMateriel(affectationMaterielViewModel, user);
+
+                bool materielIsCreated = materielRepository.CreateMateriel(materiel);
+                if (materielIsCreated)
+                {
+                    return RedirectToAction("Details", new
+                    {
+                        id = materiel.Id
+                    });
+                }
+                else
+                {
+                    throw new InvalidOperationException("oops");
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         // GET: Materiel/Delete/5
         public ActionResult Delete(int id)
         {

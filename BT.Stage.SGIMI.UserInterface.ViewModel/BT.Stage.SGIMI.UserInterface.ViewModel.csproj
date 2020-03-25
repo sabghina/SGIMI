@@ -63,6 +63,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AffectationMaterielViewModel.cs" />
     <Compile Include="CreateMaterielViewModel.cs" />
     <Compile Include="InterventionViewModel.cs" />
     <Compile Include="ReclamationViewModel.cs" />

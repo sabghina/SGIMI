@@ -292,6 +292,7 @@
     <Content Include="Views\UniteGestion\Edit.cshtml" />
     <Content Include="Views\UniteGestion\Index.cshtml" />
     <Content Include="Views\UniteGestion\Create.cshtml" />
+    <Content Include="Views\Materiel\Affecter.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
