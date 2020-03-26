@@ -20,8 +20,10 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Affectation du materiel @Model.Id</h4>
+        <h4>Affectation du materiel @Html.HiddenFor(model => model.Id)</h4>
         <hr />
+        
+
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
 
