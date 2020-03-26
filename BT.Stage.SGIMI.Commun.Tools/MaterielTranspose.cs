@@ -98,7 +98,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
             Materiel materiel = new Materiel
             {
                 Agent = affectationMaterielViewModel.Agent,
-                Unité = affectationMaterielViewModel.Unité,
+                Unite = affectationMaterielViewModel.Unite,
                 CreatedBy = user // TODO: add current connected user
 
             };
@@ -110,7 +110,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
             AffectationMaterielViewModel affectationMaterielViewModel = new AffectationMaterielViewModel
             {
                 Agent = materiel.Agent,
-                Unité = materiel.Unité,
+                Unite = materiel.Unite,
                 CreatedBy = "admin" // TODO: add current connected user
 
             };

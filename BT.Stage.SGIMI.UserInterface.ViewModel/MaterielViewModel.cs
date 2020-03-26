@@ -23,6 +23,6 @@ namespace BT.Stage.SGIMI.UserInterface.ViewModel
         public string LastUpdatedBy { get; set; }
         public string CreatedBy { get; set; }
         public string Agent { get; set; }
-        public string Unité { get; set; }
+        public string Unite { get; set; }
     }
 }
