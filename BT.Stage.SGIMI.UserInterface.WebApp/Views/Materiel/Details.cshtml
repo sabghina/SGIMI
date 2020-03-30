@@ -8,6 +8,11 @@
 
 <div>
     <h4>Details materiel</h4>
+    
+        <button type="button" class="btn btn-info">
+            @Html.ActionLink("Affecter", "Affecter", new { id = Model.Id })
+        </button>
+    
     <div class="pull-right">
 
         <button type="button">Télécharger un rapport</button>
@@ -127,8 +132,8 @@
 
     </dl>
 </div>
-<p>
-   
-    @Html.ActionLink("Back to List", "Index") |
-  
-</p>
+    <p>
+
+        @Html.ActionLink("Back to List", "Index") |
+
+    </p>
