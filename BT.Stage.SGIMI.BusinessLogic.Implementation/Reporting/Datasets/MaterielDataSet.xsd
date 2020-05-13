@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MaterielDataSet" targetNamespace="http://tempuri.org/MaterielDataSet.xsd" xmlns:mstns="http://tempuri.org/MaterielDataSet.xsd" xmlns="http://tempuri.org/MaterielDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="MaterielDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="MaterielDataSet" msprop:Generator_UserDSName="MaterielDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Materiel" msprop:Generator_TableClassName="MaterielDataTable" msprop:Generator_TableVarName="tableMateriel" msprop:Generator_TablePropName="Materiel" msprop:Generator_RowDeletingName="MaterielRowDeleting" msprop:Generator_RowChangingName="MaterielRowChanging" msprop:Generator_RowEvHandlerName="MaterielRowChangeEventHandler" msprop:Generator_RowDeletedName="MaterielRowDeleted" msprop:Generator_UserTableName="Materiel" msprop:Generator_RowChangedName="MaterielRowChanged" msprop:Generator_RowEvArgName="MaterielRowChangeEvent" msprop:Generator_RowClassName="MaterielRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Nom" msprop:Generator_ColumnVarNameInTable="columnNom" msprop:Generator_ColumnPropNameInRow="Nom" msprop:Generator_ColumnPropNameInTable="NomColumn" msprop:Generator_UserColumnName="Nom" type="xs:string" minOccurs="0" />
+              <xs:element name="Marque" msprop:Generator_ColumnVarNameInTable="columnMarque" msprop:Generator_ColumnPropNameInRow="Marque" msprop:Generator_ColumnPropNameInTable="MarqueColumn" msprop:Generator_UserColumnName="Marque" type="xs:string" minOccurs="0" />
+              <xs:element name="Modele" msprop:Generator_ColumnVarNameInTable="columnModele" msprop:Generator_ColumnPropNameInRow="Modele" msprop:Generator_ColumnPropNameInTable="ModeleColumn" msprop:Generator_UserColumnName="Modele" type="xs:string" minOccurs="0" />
+              <xs:element name="ReferenceBT" msprop:Generator_ColumnVarNameInTable="columnReferenceBT" msprop:Generator_ColumnPropNameInRow="ReferenceBT" msprop:Generator_ColumnPropNameInTable="ReferenceBTColumn" msprop:Generator_UserColumnName="ReferenceBT" type="xs:string" minOccurs="0" />
+              <xs:element name="NumeroDeSerie" msprop:Generator_ColumnVarNameInTable="columnNumeroDeSerie" msprop:Generator_ColumnPropNameInRow="NumeroDeSerie" msprop:Generator_ColumnPropNameInTable="NumeroDeSerieColumn" msprop:Generator_UserColumnName="NumeroDeSerie" type="xs:string" minOccurs="0" />
+              <xs:element name="Fournisseur" msprop:Generator_ColumnVarNameInTable="columnFournisseur" msprop:Generator_ColumnPropNameInRow="Fournisseur" msprop:Generator_ColumnPropNameInTable="FournisseurColumn" msprop:Generator_UserColumnName="Fournisseur" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

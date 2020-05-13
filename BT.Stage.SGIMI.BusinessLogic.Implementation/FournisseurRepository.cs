@@ -47,7 +47,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
         public byte[] StaticReports()
         {
             LocalReport localReport = new LocalReport();
-            localReport.ReportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.StaticReports.rdlc";
+            localReport.ReportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.FournisseurStaticReports.rdlc";
             localReport.DataSources.Clear();
 
             localReport.Refresh();
@@ -74,7 +74,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
         public byte[] StaticReport()
         {
             LocalReport localReport = new LocalReport();
-            localReport.ReportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.StaticReport.rdlc";
+            localReport.ReportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.FournisseurStaticReport.rdlc";
             localReport.DataSources.Clear();
 
             localReport.Refresh();
@@ -104,7 +104,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
             try
             {
                 LocalReport localReport = new LocalReport();
-                localReport.ReportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.DynamicReports.rdlc";
+                localReport.ReportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.FournisseurDynamicReports.rdlc";
                 localReport.DataSources.Clear();
 
                 localReport.DataSources.Add(new ReportDataSource("FournisseurDataSet", fournisseurReports));
@@ -133,7 +133,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
                 throw;
             }
         }
-        // Static report implementaion (un seul fournisseur)
+        // Dynamic report implementaion (un seul fournisseur)
         public byte[] DynamicReport(FournisseurReport fournisseurReport)
         {
             try
@@ -141,7 +141,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
                 List<FournisseurReport> fournisseurReports = new List<FournisseurReport>();
                 fournisseurReports.Add(fournisseurReport);
 
-                string reportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.DynamicReports.rdlc";
+                string reportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.FournisseurDynamicReports.rdlc";
                 ReportDataSource reportDataSource = new ReportDataSource("FournisseurDataSet", fournisseurReports);
 
                 return GenerateFournisseurReport(reportEmbeddedResource, reportDataSource);

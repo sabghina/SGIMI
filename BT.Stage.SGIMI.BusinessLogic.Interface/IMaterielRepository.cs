@@ -1,4 +1,5 @@
-﻿using BT.Stage.SGIMI.Data.Entity;
+﻿using BT.Stage.SGIMI.Data.DTO;
+using BT.Stage.SGIMI.Data.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,9 +28,10 @@ namespace BT.Stage.SGIMI.BusinessLogic.Interface
         /// <returns></returns> 
         bool CreateMateriel(Materiel materiel);
         bool UpdatedMateriel(Materiel materiel);
-        // byte[] StaticReports();
-        // byte[] StaticReport();
+        byte[] StaticReports();
+        byte[] StaticReport();
 
-        // byte[] DynamicReports(List<MaterielReport> materielReports);
+        byte[] DynamicReports(List<MaterielReport> materielReports);
+        byte[] DynamicReport(MaterielReport materielReport);
     }
 }

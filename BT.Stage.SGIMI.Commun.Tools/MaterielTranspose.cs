@@ -1,4 +1,5 @@
-﻿using BT.Stage.SGIMI.Data.Entity;
+﻿using BT.Stage.SGIMI.Data.DTO;
+using BT.Stage.SGIMI.Data.Entity;
 using BT.Stage.SGIMI.UserInterface.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -115,6 +116,32 @@ namespace BT.Stage.SGIMI.Commun.Tools
 
             };
             return affectationMaterielViewModel;
+        }
+        public static List<MaterielReport> MaterielListToMaterielReportList(List<Materiel> materiels)
+        {
+            List<MaterielReport> materielReports = new List<MaterielReport>();
+            foreach (Materiel materiel in materiels)
+            {
+                MaterielReport materielReport = MaterielToMaterielReport(materiel);
+
+                materielReports.Add(materielReport);
+            }
+            return materielReports;
+        }
+
+        public static MaterielReport MaterielToMaterielReport(Materiel materiel)
+        {
+            MaterielReport materielReport = new MaterielReport
+            {
+                Nom = $"{materiel.Nom}",
+                Marque = $"{materiel.Marque}",
+                Modele = $"{materiel.Modele}",
+                ReferenceBT = $"{materiel.ReferenceBT}",
+                NumeroDeSerie = $"{materiel.NumeroDeSerie}",
+                Fournisseur = $"{materiel.Fournisseur}"
+            };
+
+            return materielReport;
         }
     }
 }

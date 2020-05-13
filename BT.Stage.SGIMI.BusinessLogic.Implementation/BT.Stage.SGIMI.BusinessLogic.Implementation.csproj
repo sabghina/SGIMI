@@ -73,6 +73,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FournisseurDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Reporting\Datasets\MaterielDataSet.cs">
+      <DependentUpon>MaterielDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Datasets\MaterielDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MaterielDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SocieteTierceRepository.cs" />
     <Compile Include="UniteGestionRepository.cs" />
   </ItemGroup>
@@ -112,12 +120,27 @@
     <None Include="Reporting\Datasets\FournisseurDataSet.xss">
       <DependentUpon>FournisseurDataSet.xsd</DependentUpon>
     </None>
+    <None Include="Reporting\Datasets\MaterielDataSet.xsc">
+      <DependentUpon>MaterielDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reporting\Datasets\MaterielDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MaterielDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reporting\Datasets\MaterielDataSet.xss">
+      <DependentUpon>MaterielDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Reporting\RDLC\DynamicReports.rdlc" />
-    <EmbeddedResource Include="Reporting\RDLC\DynamicReport.rdlc" />
-    <EmbeddedResource Include="Reporting\RDLC\StaticReport.rdlc" />
-    <EmbeddedResource Include="Reporting\RDLC\StaticReports.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\MaterielDynamicReports.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\MaterielDynamicReport.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\FournisseurDynamicReports.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\FournisseurDynamicReport.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\MaterielStaticReports.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\MaterielStaticReport.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\FournisseurStaticReport.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\FournisseurStaticReports.rdlc" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

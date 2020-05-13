@@ -1,5 +1,6 @@
 ﻿using BT.Stage.SGIMI.BusinessLogic.Interface;
 using BT.Stage.SGIMI.Commun.Tools;
+using BT.Stage.SGIMI.Data.DTO;
 using BT.Stage.SGIMI.Data.Entity;
 using BT.Stage.SGIMI.UserInterface.ViewModel;
 using System;
@@ -209,6 +210,42 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             {
                 return View();
             }
+        }
+        // Static Reports (tous les materiels)
+        public FileResult StaticReports()
+        {
+            byte[] file = fournisseurRepository.StaticReports();
+            string filename = $"static_reports_{DateTime.Now}.pdf";
+            return File(file, "application/pdf", filename);
+        }
+
+
+        // Static Report (un seul materiel)
+        public FileResult StaticReport(int id)
+        {
+            byte[] file = materielRepository.StaticReport();
+            string filename = $"static_report_{id}_{DateTime.Now}.pdf";
+            return File(file, "application/pdf", filename);
+        }
+
+        // Dynamic Reports (tous les materiels)
+        public FileResult DynamicReports()
+        {
+            List<Materiel> materiels = materielRepository.GetMateriels();
+            List<MaterielReport> materielReports = MaterielTranspose.MaterielListToMaterielReportList(materiels);
+            byte[] file = materielRepository.DynamicReports(materielReports);
+            string filename = $"dynamic_reports_{DateTime.Now}.pdf";
+            return File(file, "application/pdf", filename);
+        }
+
+        // Dynamic Report (un seul materiel)
+        public FileResult DynamicReport(int id)
+        {
+            Materiel materiel = materielRepository.GetMaterielById(id);
+            MaterielReport materielReport = MaterielTranspose.MaterielToMaterielReport(materiel);
+            byte[] file = materielRepository.DynamicReport(materielReport);
+            string filename = $"dynamic_report_{id}_{DateTime.Now}.pdf";
+            return File(file, "application/pdf", filename);
         }
     }
 }

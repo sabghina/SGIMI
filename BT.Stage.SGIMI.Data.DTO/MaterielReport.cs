@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace BT.Stage.SGIMI.Data.DTO
 {
-    class MaterielReport
+    public class MaterielReport
     {
         public string Nom { get; set; }
         public string Marque { get; set; }
         public string Modele { get; set; }
         public string ReferenceBT { get; set; }
-        public int NumeroDeSerie { get; set; }
-        public int Fournisseur { get; set; }
+        public string NumeroDeSerie { get; set; }
+        public string Fournisseur { get; set; }
+
     }
 }
