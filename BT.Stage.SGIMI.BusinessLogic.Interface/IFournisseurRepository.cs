@@ -1,4 +1,5 @@
-﻿using BT.Stage.SGIMI.Data.Entity;
+﻿using BT.Stage.SGIMI.Data.DTO;
+using BT.Stage.SGIMI.Data.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,5 +28,10 @@ namespace BT.Stage.SGIMI.BusinessLogic.Interface
         /// <returns></returns>
         bool CreateFournisseur(Fournisseur fournisseur);
         bool UpdatedFournisseur(Fournisseur fournisseur);
+
+        byte[] StaticReports();
+        byte[] StaticReport();
+        byte[] DynamicReports(List<FournisseurReport> FournisseurReports);
+        byte[] DynamicReport(FournisseurReport fournisseurReport);
     }
 }

@@ -54,6 +54,10 @@
       <Project>{3350BA2A-2E27-44BB-A700-72390DAD7CEE}</Project>
       <Name>BT.Stage.SGIMI.Commun.Tools</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BT.Stage.SGIMI.Data.DTO\BT.Stage.SGIMI.Data.DTO.csproj">
+      <Project>{6EB189F6-B2BE-4B6A-850A-101C6FC2EB5E}</Project>
+      <Name>BT.Stage.SGIMI.Data.DTO</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BT.Stage.SGIMI.Data.Entity\BT.Stage.SGIMI.Data.Entity.csproj">
       <Project>{9D473CFB-2BCB-4A7A-8810-6335B4FBF0EA}</Project>
       <Name>BT.Stage.SGIMI.Data.Entity</Name>

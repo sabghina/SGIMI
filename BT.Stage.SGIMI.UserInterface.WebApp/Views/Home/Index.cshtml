@@ -3,12 +3,77 @@
 }
 
     <div class="jumbotron">
-        <h1>SGIMI</h1>
+        <script>
+window.onload = function () {
 
-        
-        <img src="~/Images/logoBT.png" width="200" height="250" />
-        <p class="lead">Systéme de Gestion des Interventions Maintenance Informatique de la Banque de Tunisie.</p>
+var chart = new CanvasJS.Chart("chartContainer", {
+	theme: "light1", // "light1", "light2", "dark1", "dark2"
+	exportEnabled: true,
+	animationEnabled: true,
+	title: {
+		text: "Statistiques des reclamations"
+	},
+	subtitles: [{
+		text: "Banque de tunisie, 2020"
+	}],
+	data: [{
+		type: "bar",
+		startAngle: 180,
+		toolTipContent: "<b>{label}</b>:{y}%",
+		showInLegend: "true",
+		legendText: "{label}",
+		indexLabel: "{label} - {y}%",
+		dataPoints: @Html.Raw(ViewBag.DataPoints)
+	}]
+});
+chart.render();
+
+var chart2 = new CanvasJS.Chart("chartContainer2", {
+	theme: "light2", // "light1", "light2", "dark1", "dark2"
+	exportEnabled: true,
+	animationEnabled: true,
+	subtitles: [{
+		text: "Banque de tunisie, 2020"
+	}],
+	data: [{
+		type: "line",
+		startAngle: 180,
+		toolTipContent: "<b>{label}</b>:{y}%",
+		showInLegend: "true",
+		legendText: "{label}",
+		indexLabel: "{label} - {y}%",
+		dataPoints: @Html.Raw(ViewBag.DataPoints)
+	}]
+});
+chart2.render();
+var chart3 = new CanvasJS.Chart("chartContainer3", {
+	theme: "light3", // "light1", "light2", "dark1", "dark2"
+	exportEnabled: true,
+	animationEnabled: true,
+	subtitles: [{
+		text: "Banque de tunisie, 2020"
+	}],
+	data: [{
+		type: "pie",
+		startAngle: 180,
+		toolTipContent: "<b>{label}</b>: {y}%",
+		showInLegend: "true",
+		legendText: "{label}",
+		indexLabel: "{label} - {y}%",
+		dataPoints: @Html.Raw(ViewBag.DataPoints)
+	}]
+});
+chart3.render();
+
+}
+        </script>
+
+        <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+        <div id="chartContainer2" style="height: 370px; width: 100%;"></div>
+        <div id="chartContainer3" style="height: 370px; width: 100%;"></div>
+        <script src="~/Scripts/canvajs-2.3.2/canvasjs.min.js"></script>
     </div>
+
 
       
 

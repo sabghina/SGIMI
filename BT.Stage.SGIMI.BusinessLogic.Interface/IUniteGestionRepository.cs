@@ -28,5 +28,9 @@ namespace BT.Stage.SGIMI.BusinessLogic.Interface
         bool CreateUniteGestion(UniteGestion uniteGestion);
         bool UpdateUniteGestion(UniteGestion uniteGestion);
         bool UpdatedUniteGestion(UniteGestion uniteGestion);
+        // byte[] StaticReports();
+        // byte[] StaticReport();
+
+        // byte[] DynamicReports(List<UniteGestionReport> uniteGestionReports);
     }
 }

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace BT.Stage.SGIMI.BusinessLogic.Interface
 {
     public interface IInterventionRepository
@@ -22,5 +23,9 @@ namespace BT.Stage.SGIMI.BusinessLogic.Interface
         Intervention GetInterventionById(int id);
         bool CreateIntervention(Intervention intervention);
         bool UpdatedIntervention(Intervention intervention);
+       // byte[] StaticReports();
+       // byte[] StaticReport();
+
+       // byte[] DynamicReports(List<InterventionReport> interventionReports);
     }
     }

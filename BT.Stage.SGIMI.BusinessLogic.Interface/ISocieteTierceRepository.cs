@@ -24,6 +24,10 @@ namespace BT.Stage.SGIMI.BusinessLogic.Interface
         Fournisseur GetSocieteTierceById(int id);
         bool CreateSocieteTierce(Fournisseur societeTierce);
         bool UpdatedSocieteTierce(Fournisseur societeTierce);
+        // byte[] StaticReports();
+        // byte[] StaticReport();
+
+        // byte[] DynamicReports(List<SocieteTierceReport> societeTierceReports);
 
     }
 

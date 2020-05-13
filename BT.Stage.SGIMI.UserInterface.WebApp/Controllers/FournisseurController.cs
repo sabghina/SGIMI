@@ -1,5 +1,7 @@
-﻿using BT.Stage.SGIMI.BusinessLogic.Interface;
+﻿using BT.Stage.SGIMI.BusinessLogic.Implementation;
+using BT.Stage.SGIMI.BusinessLogic.Interface;
 using BT.Stage.SGIMI.Commun.Tools;
+using BT.Stage.SGIMI.Data.DTO;
 using BT.Stage.SGIMI.Data.Entity;
 using BT.Stage.SGIMI.UserInterface.ViewModel;
 using System;
@@ -62,7 +64,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 // TODO: Add insert logic here
                 string user = User.Identity.Name;
                 Fournisseur fournisseur = FournisseurTranspose.FournisseurViewModelToFournisseur(fournisseurViewModel, user);
-                
+
                 bool fournisseurIsCreated = fournisseurRepository.CreateFournisseur(fournisseur);
                 if (fournisseurIsCreated)
                 {
@@ -99,12 +101,12 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 }
                 // TODO: Add update logic here
                 string user = User.Identity.Name;
-                Fournisseur fournisseur = FournisseurTranspose.UpdatedFournisseurViewModelToUpdatedFournisseur(id,fournisseurViewModel, user);
+                Fournisseur fournisseur = FournisseurTranspose.UpdatedFournisseurViewModelToUpdatedFournisseur(id, fournisseurViewModel, user);
 
                 bool fournisseurIsUpdated = fournisseurRepository.UpdatedFournisseur(fournisseur);
                 if (fournisseurIsUpdated)
                 {
-                    return RedirectToAction("Details",new
+                    return RedirectToAction("Details", new
                     {
                         id = fournisseur.Id
                     });
@@ -114,7 +116,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                     throw new InvalidOperationException("oops");
                 }
 
-                
+
             }
             catch
             {
@@ -143,5 +145,45 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 return View();
             }
         }
+
+
+        // Static Reports (tous les fournisseurs)
+        public FileResult StaticReports()
+        {
+            byte[] file = fournisseurRepository.StaticReports();
+            string filename = $"static_reports_{DateTime.Now}.pdf";
+            return File(file, "application/pdf", filename);
+        }
+
+
+        // Static Report (un seul fournisseur)
+        public FileResult StaticReport(int id)
+        {
+            byte[] file = fournisseurRepository.StaticReport();
+            string filename = $"static_report_{id}_{DateTime.Now}.pdf";
+            return File(file, "application/pdf", filename);
+        }
+
+        // Dynamic Reports (tous les fournisseurs)
+        public FileResult DynamicReports()
+        {
+            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
+            List<FournisseurReport> fournisseurReports = FournisseurTranspose.FournisseurListToFournisseurReportList(fournisseurs);
+            byte[] file = fournisseurRepository.DynamicReports(fournisseurReports);
+            string filename = $"dynamic_reports_{DateTime.Now}.pdf";
+            return File(file, "application/pdf", filename);
+        }
+
+        // Dynamic Report (un seul fournisseur)
+        public FileResult DynamicReport(int id)
+        {
+            Fournisseur fournisseur = fournisseurRepository.GetFournisseurById(id);
+            FournisseurReport fournisseurReport = FournisseurTranspose.FournisseurToFournisseurReport(fournisseur);
+            byte[] file = fournisseurRepository.DynamicReport(fournisseurReport);
+            string filename = $"dynamic_report_{id}_{DateTime.Now}.pdf";
+            return File(file, "application/pdf", filename);
+        }
     }
 }
+
+

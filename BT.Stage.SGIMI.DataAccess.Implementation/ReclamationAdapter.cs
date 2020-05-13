@@ -27,6 +27,7 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
                 Probleme = "Problème" + id,
                 Commentaire = "Commentaire" + id,
                 Etat = "En cours",
+                UniteGestion="",
                 CreatedBy = id + 1
             };
 
@@ -46,6 +47,7 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
                     Probleme ="Problème" + i,
                     Commentaire = "Commentaire"+i,
                     Etat = "En cours",
+                    UniteGestion = "",
                     CreatedBy = i + 1
                 };
 

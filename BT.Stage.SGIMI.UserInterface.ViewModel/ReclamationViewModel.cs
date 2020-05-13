@@ -25,6 +25,7 @@ namespace BT.Stage.SGIMI.UserInterface.ViewModel
         [Display(Name = "Commentaire")]
         public string Commentaire { get; set; }
         public string Etat { get; set; }
+        public string UniteGestion { get; set; }
         public int CreatedBy { get; set; }
     }
 }

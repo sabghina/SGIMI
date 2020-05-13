@@ -22,5 +22,9 @@ namespace BT.Stage.SGIMI.BusinessLogic.Interface
         Reclamation GetReclamationById(int id);
         bool CreateReclamation(Reclamation reclamation);
         bool UpdatedReclamation(Reclamation reclamation);
+        // byte[] StaticReports();
+        // byte[] StaticReport();
+
+        // byte[] DynamicReports(List<ReclamationReport> reclamationReports);
     }
 }

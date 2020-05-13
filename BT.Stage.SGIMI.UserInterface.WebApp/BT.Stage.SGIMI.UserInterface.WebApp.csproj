@@ -55,6 +55,7 @@
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -67,6 +68,7 @@
     <Reference Include="System.Web.Http.WebHost, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -203,6 +205,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\DataPoint.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -226,6 +229,108 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\canvajs-2.3.2\canvasjs.min.js" />
+    <Content Include="Scripts\canvajs-2.3.2\canvasjs.react.js" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\01-overview\animated-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\01-overview\chart-from-json-data.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\01-overview\chart-with-axis-scale-breaks.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\01-overview\chart-with-crosshair.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\01-overview\chart-with-custom-legend-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\01-overview\chart-with-image-overlay.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\01-overview\chart-with-index-data-label.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\01-overview\chart-with-inverted-reversed-axis.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\01-overview\chart-with-logarithmic-axis.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\01-overview\chart-with-secondary-axis.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\01-overview\chart-with-zoom-pan.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\01-overview\dynamic-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\01-overview\interactive-draggable-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\01-overview\multi-series-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\01-overview\null-data-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\01-overview\performance-demo.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\02-line-spline-step-line-charts\dashed-line-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\02-line-spline-step-line-charts\dynamic-spline-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\02-line-spline-step-line-charts\line-chart-with-axis-scale-breaks.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\02-line-spline-step-line-charts\line-chart-with-data-markers.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\02-line-spline-step-line-charts\line-chart-with-logarithmic-axis.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\02-line-spline-step-line-charts\line-chart-with-multiple-axis.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\02-line-spline-step-line-charts\line-chart-with-zoom-pan.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\02-line-spline-step-line-charts\line-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\02-line-spline-step-line-charts\multi-series-line-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\02-line-spline-step-line-charts\multi-series-spline-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\02-line-spline-step-line-charts\multi-series-step-line-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\02-line-spline-step-line-charts\spline-chart-with-legends.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\02-line-spline-step-line-charts\spline-chart-with-secondary-axis.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\02-line-spline-step-line-charts\spline-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\02-line-spline-step-line-charts\step-line-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\03-stacked-spline-range-area-charts\area-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\03-stacked-spline-range-area-charts\multi-series-area-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\03-stacked-spline-range-area-charts\multi-series-range-area-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\03-stacked-spline-range-area-charts\multi-series-spline-area-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\03-stacked-spline-range-area-charts\range-area-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\03-stacked-spline-range-area-charts\range-spline-area-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\03-stacked-spline-range-area-charts\spline-area-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\03-stacked-spline-range-area-charts\stacked-area-100-chart-with-date-time-axis.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\03-stacked-spline-range-area-charts\stacked-area-100-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\03-stacked-spline-range-area-charts\stacked-area-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\03-stacked-spline-range-area-charts\step-area-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\04-column-stacked-range-waterfall-charts\bar-chart-with-axis-scale-break.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\04-column-stacked-range-waterfall-charts\bar-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\04-column-stacked-range-waterfall-charts\column-chart-with-multiple-axis.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\04-column-stacked-range-waterfall-charts\column-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\04-column-stacked-range-waterfall-charts\multi-series-bar-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\04-column-stacked-range-waterfall-charts\multi-series-range-column-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\04-column-stacked-range-waterfall-charts\multi-series-waterfall-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\04-column-stacked-range-waterfall-charts\range-bar-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\04-column-stacked-range-waterfall-charts\range-column-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\04-column-stacked-range-waterfall-charts\stacked-bar-100-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\04-column-stacked-range-waterfall-charts\stacked-bar-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\04-column-stacked-range-waterfall-charts\stacked-column-100-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\04-column-stacked-range-waterfall-charts\stacked-column-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\04-column-stacked-range-waterfall-charts\waterfall-chart-with-custom-color.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\04-column-stacked-range-waterfall-charts\waterfall-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\05-pie-doughnut-funnel-pyramid-charts\doughnut-chart-with-custom-inner-radius.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\05-pie-doughnut-funnel-pyramid-charts\doughnut-Chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\05-pie-doughnut-funnel-pyramid-charts\funnel-chart-with-custom-neck.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\05-pie-doughnut-funnel-pyramid-charts\funnel-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\05-pie-doughnut-funnel-pyramid-charts\inverted-reversed-funnel-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\05-pie-doughnut-funnel-pyramid-charts\pie-chart-with-custom-radius.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\05-pie-doughnut-funnel-pyramid-charts\pie-chart-with-legends.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\05-pie-doughnut-funnel-pyramid-charts\pie-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\05-pie-doughnut-funnel-pyramid-charts\pyramid-chart-where-area-represents-value.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\05-pie-doughnut-funnel-pyramid-charts\pyramid-chart-with-index-label-placed-Inside.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\05-pie-doughnut-funnel-pyramid-charts\pyramid-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\06-candlestick-ohlc-charts\candlestick-line-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\06-candlestick-ohlc-charts\multi-series-candlestick-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\06-candlestick-ohlc-charts\ohlc-chart-from-json-data.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\06-candlestick-ohlc-charts\ohlc-stock-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\07-scatter-bubble-charts\bubble-chart-with-data-marker.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\07-scatter-bubble-charts\bubble-chart-with-zoom-pan.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\07-scatter-bubble-charts\bubble-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\07-scatter-bubble-charts\multi-series-scatter-point-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\07-scatter-bubble-charts\scatter-point-chart-with-custom-marker.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\07-scatter-bubble-charts\scatter-point-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\08-box-and-whisker-charts\box-and-whisker-chart-with-custom-color.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\08-box-and-whisker-charts\box-and-whisker-chart-with-outliers.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\08-box-and-whisker-charts\box-and-whisker-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\09-combination-charts\column-line-area-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\09-combination-charts\error-bar-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\09-combination-charts\error-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\09-combination-charts\error-line-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\09-combination-charts\ohlc-line-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\09-combination-charts\pareto-chart-with-index-data-label.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\09-combination-charts\pareto-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\09-combination-charts\range-area-line-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\10-dynamic-charts\dynamic-column-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\10-dynamic-charts\dynamic-line-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\10-dynamic-charts\dynamic-multi-series-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\11-integration\jquery-charts.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\11-integration\jquery-line-chart-with-zoom-pan.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\11-integration\jquery-resizable-chart.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\11-integration\jquery-spline-area-chart-in-tab.html" />
+    <Content Include="Scripts\canvajs-2.3.2\examples\11-integration\jquery-spline-chart-with-image-export.html" />
+    <Content Include="Scripts\canvajs-2.3.2\instruction.txt" />
+    <Content Include="Scripts\canvajs-2.3.2\jquery.canvasjs.min.js" />
+    <Content Include="Scripts\canvajs-2.3.2\license.txt" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
@@ -311,6 +416,10 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BT.Stage.SGIMI.BusinessLogic.Implementation\BT.Stage.SGIMI.BusinessLogic.Implementation.csproj">
+      <Project>{E62DD37D-DBAB-46BD-8102-585985CA2B56}</Project>
+      <Name>BT.Stage.SGIMI.BusinessLogic.Implementation</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BT.Stage.SGIMI.BusinessLogic.Interface\BT.Stage.SGIMI.BusinessLogic.Interface.csproj">
       <Project>{33EDBC04-EABF-4A50-A024-08DCE2D3F0D7}</Project>
       <Name>BT.Stage.SGIMI.BusinessLogic.Interface</Name>
@@ -322,6 +431,10 @@
     <ProjectReference Include="..\BT.Stage.SGIMI.Commun.Tools\BT.Stage.SGIMI.Commun.Tools.csproj">
       <Project>{3350BA2A-2E27-44BB-A700-72390DAD7CEE}</Project>
       <Name>BT.Stage.SGIMI.Commun.Tools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BT.Stage.SGIMI.Data.DTO\BT.Stage.SGIMI.Data.DTO.csproj">
+      <Project>{6EB189F6-B2BE-4B6A-850A-101C6FC2EB5E}</Project>
+      <Name>BT.Stage.SGIMI.Data.DTO</Name>
     </ProjectReference>
     <ProjectReference Include="..\BT.Stage.SGIMI.Data.Entity\BT.Stage.SGIMI.Data.Entity.csproj">
       <Project>{9D473CFB-2BCB-4A7A-8810-6335B4FBF0EA}</Project>

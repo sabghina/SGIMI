@@ -1,4 +1,5 @@
-﻿using BT.Stage.SGIMI.Data.Entity;
+﻿using BT.Stage.SGIMI.Data.DTO;
+using BT.Stage.SGIMI.Data.Entity;
 using BT.Stage.SGIMI.UserInterface.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -78,7 +79,6 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Fax = fournisseurViewModel.Fax,
                 SiteWeb = fournisseurViewModel.SiteWeb,
                 Type = (char)fournisseurViewModel.Type,
-                UpdatedBy = user,
                 CreatedDate = fournisseurViewModel.CreatedDate,
                 CreatedTime = fournisseurViewModel.CreatedTime,
                 LastUpdatedDate = fournisseurViewModel.LastUpdatedDate,
@@ -86,6 +86,32 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 LastUpdatedBy = fournisseurViewModel.LastUpdatedBy
             };
             return fournisseur;
+        }
+
+        public static List<FournisseurReport> FournisseurListToFournisseurReportList(List<Fournisseur> fournisseurs)
+        {
+            List<FournisseurReport> fournisseurReports = new List<FournisseurReport>();
+            foreach (Fournisseur fournisseur in fournisseurs)
+            {
+                FournisseurReport fournisseurReport = FournisseurToFournisseurReport(fournisseur);
+
+                fournisseurReports.Add(fournisseurReport);
+            }
+            return fournisseurReports;
+        }
+
+        public static FournisseurReport FournisseurToFournisseurReport(Fournisseur fournisseur)
+        {
+            FournisseurReport fournisseurReport = new FournisseurReport
+            {
+                Nom = $"{fournisseur.Nom}",
+                Contact = $"Telephone :{fournisseur.Telephone}/Fax: {fournisseur.Fax}",
+                Email = $"{fournisseur.Email}",
+                Adresse = $"{fournisseur.Adresse}",
+                SiteWeb = $"{fournisseur.SiteWeb}"
+            };
+
+            return fournisseurReport;
         }
     }
 }
