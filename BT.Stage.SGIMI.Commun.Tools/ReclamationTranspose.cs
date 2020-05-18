@@ -1,4 +1,5 @@
-﻿using BT.Stage.SGIMI.Data.Entity;
+﻿using BT.Stage.SGIMI.Data.DTO;
+using BT.Stage.SGIMI.Data.Entity;
 using BT.Stage.SGIMI.UserInterface.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -65,7 +66,32 @@ namespace BT.Stage.SGIMI.Commun.Tools
             };
             return reclamation;
         }
+        public static List<ReclamationReport> ReclamationListToReclamationReportList(List<Reclamation> reclamations)
+        {
+            List<ReclamationReport> reclamationReports = new List<ReclamationReport>();
+            foreach (Reclamation reclamation in reclamations)
+            {
+                ReclamationReport reclamationReport = ReclamationToReclamationReport(reclamation);
 
-        
+                reclamationReports.Add(reclamationReport);
+            }
+            return reclamationReports;
+        }
+
+        public static ReclamationReport ReclamationToReclamationReport(Reclamation reclamation)
+        {
+            ReclamationReport reclamationReport = new ReclamationReport
+            {
+                Materiel= $"{reclamation.Materiel}",
+                Date = $"{reclamation.Date}",
+                Probleme = $"{reclamation.Probleme}",
+                Commentaire = $"{reclamation.Commentaire}",
+                Etat = $"{reclamation.Etat}",
+                UniteGestion = $"{reclamation.UniteGestion}"
+    };
+
+            return reclamationReport;
+        }
+
     }
 }

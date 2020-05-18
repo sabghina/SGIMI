@@ -1,5 +1,6 @@
 ﻿using BT.Stage.SGIMI.BusinessLogic.Interface;
 using BT.Stage.SGIMI.Commun.Tools;
+using BT.Stage.SGIMI.Data.DTO;
 using BT.Stage.SGIMI.Data.Entity;
 using BT.Stage.SGIMI.UserInterface.ViewModel;
 using System;
@@ -142,6 +143,44 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             {
                 return View();
             }
+
+        }
+
+        // Static Reports (tous les unités de gestion)
+        public FileResult StaticReports()
+        {
+              byte[] file = uniteGestionRepository.StaticReports();
+              string filename = $"static_reports_{DateTime.Now}.pdf";
+              return File(file, "application/pdf", filename);
+        }
+
+
+         // Static Report (une seule unités de gestion)
+        public FileResult StaticReport(int id)
+        {
+              byte[] file = uniteGestionRepository.StaticReport();
+              string filename = $"static_report_{id}_{DateTime.Now}.pdf";
+              return File(file, "application/pdf", filename);
+        }
+
+        // Dynamic Reports (tous les unités de gestion)
+        public FileResult DynamicReports()
+            {
+                List<UniteGestion> uniteGestions = uniteGestionRepository.GetUniteGestions();
+                List<UniteGestionReport> uniteGestionReports = UniteGestionTranspose.UniteGestionListToUniteGestionReportList(uniteGestions);
+                byte[] file = uniteGestionRepository.DynamicReports(uniteGestionReports);
+                string filename = $"dynamic_reports_{DateTime.Now}.pdf";
+                return File(file, "application/pdf", filename);
+            }
+
+        // Dynamic Report (une seule unités de gestion)
+         public FileResult DynamicReport(int id)
+         {
+                UniteGestion uniteGestion = uniteGestionRepository.GetUniteGestionById(id);
+                UniteGestionReport uniteGestionReport = UniteGestionTranspose.UniteGestionToUniteGestionReport(uniteGestion);
+                byte[] file = uniteGestionRepository.DynamicReport(uniteGestionReport);
+                string filename = $"dynamic_report_{id}_{DateTime.Now}.pdf";
+                return File(file, "application/pdf", filename);
+         }
         }
     }
-}

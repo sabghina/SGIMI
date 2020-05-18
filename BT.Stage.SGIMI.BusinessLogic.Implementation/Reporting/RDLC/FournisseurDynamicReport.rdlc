@@ -333,7 +333,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Static Report</Value>
+                  <Value>Fournisseur Dynamic Report</Value>
                   <Style>
                     <FontSize>12pt</FontSize>
                     <FontWeight>Bold</FontWeight>
@@ -347,7 +347,7 @@
           <Top>1.07583cm</Top>
           <Left>5.69531cm</Left>
           <Height>0.6cm</Height>
-          <Width>5.70146cm</Width>
+          <Width>6.07188cm</Width>
           <Style>
             <Border>
               <Style>None</Style>

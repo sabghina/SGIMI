@@ -27,8 +27,8 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
                 //Exemple pour le test
                 Etat = "En cours",
                 Reclamation = id + 1,
-                ProblèmeConstaté = "Probleme"+ id,
-                TraveauxEffectués = "traveaux" + id,
+                ProblemeConstate = "Probleme"+ id,
+                TraveauxEffectues = "traveaux" + id,
                 CreatedBy = "user" + id + 1,
                 CreatedDate = DateTime.Now.ToString("dddd, dd MMMM yyyy"),
                 CreatedTime = DateTime.Now.ToString("HH:mm:ss"),
@@ -54,8 +54,8 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
                     //Exemple pour le test
                     Etat = "En cours",
                     Reclamation = i+1,
-                    ProblèmeConstaté = "Probleme" + i,
-                    TraveauxEffectués = "traveaux" + i,
+                    ProblemeConstate = "Probleme" + i,
+                    TraveauxEffectues = "traveaux" + i,
                     CreatedBy = "user" + i + 1,
                     CreatedDate = DateTime.Now.ToString("dddd, dd MMMM yyyy"),
                     CreatedTime = DateTime.Now.ToString("HH:mm:ss"),

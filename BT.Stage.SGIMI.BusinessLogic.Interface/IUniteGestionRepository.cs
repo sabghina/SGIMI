@@ -1,4 +1,5 @@
-﻿using BT.Stage.SGIMI.Data.Entity;
+﻿using BT.Stage.SGIMI.Data.DTO;
+using BT.Stage.SGIMI.Data.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,9 +29,11 @@ namespace BT.Stage.SGIMI.BusinessLogic.Interface
         bool CreateUniteGestion(UniteGestion uniteGestion);
         bool UpdateUniteGestion(UniteGestion uniteGestion);
         bool UpdatedUniteGestion(UniteGestion uniteGestion);
-        // byte[] StaticReports();
-        // byte[] StaticReport();
 
-        // byte[] DynamicReports(List<UniteGestionReport> uniteGestionReports);
+        byte[] StaticReports();
+        byte[] StaticReport();
+
+        byte[] DynamicReports(List<UniteGestionReport> uniteGestionReports);
+        byte[] DynamicReport(UniteGestionReport uniteGestionReport);
     }
 }

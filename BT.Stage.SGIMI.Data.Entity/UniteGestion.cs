@@ -20,3 +20,4 @@ namespace BT.Stage.SGIMI.Data.Entity
         public string LastUpdatedTime { get; set; }
     }
 }
+

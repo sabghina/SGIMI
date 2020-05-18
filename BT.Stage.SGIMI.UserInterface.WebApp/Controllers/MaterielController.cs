@@ -214,7 +214,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         // Static Reports (tous les materiels)
         public FileResult StaticReports()
         {
-            byte[] file = fournisseurRepository.StaticReports();
+            byte[] file = materielRepository.StaticReports();
             string filename = $"static_reports_{DateTime.Now}.pdf";
             return File(file, "application/pdf", filename);
         }

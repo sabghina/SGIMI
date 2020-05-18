@@ -1,5 +1,6 @@
 ﻿using BT.Stage.SGIMI.BusinessLogic.Interface;
 using BT.Stage.SGIMI.Commun.Tools;
+using BT.Stage.SGIMI.Data.DTO;
 using BT.Stage.SGIMI.Data.Entity;
 using BT.Stage.SGIMI.UserInterface.ViewModel;
 using System;
@@ -145,5 +146,44 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 return View();
             }
         }
+
+
+        // Static Reports (tous les materiels)
+        public FileResult StaticReports()
+        {
+            byte[] file = interventionRepository.StaticReports();
+            string filename = $"static_reports_{DateTime.Now}.pdf";
+            return File(file, "application/pdf", filename);
+        }
+
+
+        // Static Report (une seul intervention)
+        public FileResult StaticReport(int id)
+        {
+            byte[] file = interventionRepository.StaticReport();
+            string filename = $"static_report_{id}_{DateTime.Now}.pdf";
+            return File(file, "application/pdf", filename);
+        }
+
+        // Dynamic Reports (tous les interventions)
+        public FileResult DynamicReports()
+        {
+            List<Intervention> interventions = interventionRepository.GetInterventions();
+            List<InterventionReport> interventionReports = InterventionTranspose.InterventionListToInterventionReportList(interventions);
+            byte[] file = interventionRepository.DynamicReports(interventionReports);
+            string filename = $"dynamic_reports_{DateTime.Now}.pdf";
+            return File(file, "application/pdf", filename);
+        }
+
+        // Dynamic Report (une seul intervention)
+        public FileResult DynamicReport(int id)
+        {
+            Intervention intervention = interventionRepository.GetInterventionById(id);
+            InterventionReport interventionReport = InterventionTranspose.InterventionToInterventionReport(intervention);
+            byte[] file = interventionRepository.DynamicReport(interventionReport);
+            string filename = $"dynamic_report_{id}_{DateTime.Now}.pdf";
+            return File(file, "application/pdf", filename);
+        }
+
     }
-}
+    }

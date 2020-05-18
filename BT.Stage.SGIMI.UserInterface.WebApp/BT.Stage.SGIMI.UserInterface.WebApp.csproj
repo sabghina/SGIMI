@@ -384,7 +384,6 @@
     <Content Include="Views\Fournisseur\Edit.cshtml" />
     <Content Include="Views\Fournisseur\Index.cshtml" />
     <Content Include="Views\Intervention\Details.cshtml" />
-    <Content Include="Views\Intervention\Index.cshtml" />
     <Content Include="Views\Intervention\Create.cshtml" />
     <Content Include="Views\SocieteTierce\Create.cshtml" />
     <Content Include="Views\SocieteTierce\Details.cshtml" />
@@ -398,6 +397,7 @@
     <Content Include="Views\UniteGestion\Index.cshtml" />
     <Content Include="Views\UniteGestion\Create.cshtml" />
     <Content Include="Views\Materiel\Affecter.cshtml" />
+    <Content Include="Views\Intervention\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

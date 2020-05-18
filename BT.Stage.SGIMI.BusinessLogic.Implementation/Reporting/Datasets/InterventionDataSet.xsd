@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="InterventionDataSet" targetNamespace="http://tempuri.org/InterventionDataSet.xsd" xmlns:mstns="http://tempuri.org/InterventionDataSet.xsd" xmlns="http://tempuri.org/InterventionDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="InterventionDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="InterventionDataSet" msprop:Generator_UserDSName="InterventionDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Intervention" msprop:Generator_TableClassName="InterventionDataTable" msprop:Generator_TableVarName="tableIntervention" msprop:Generator_TablePropName="Intervention" msprop:Generator_RowDeletingName="InterventionRowDeleting" msprop:Generator_RowChangingName="InterventionRowChanging" msprop:Generator_RowEvHandlerName="InterventionRowChangeEventHandler" msprop:Generator_RowDeletedName="InterventionRowDeleted" msprop:Generator_UserTableName="Intervention" msprop:Generator_RowChangedName="InterventionRowChanged" msprop:Generator_RowEvArgName="InterventionRowChangeEvent" msprop:Generator_RowClassName="InterventionRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Date" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_UserColumnName="Date" type="xs:string" minOccurs="0" />
+              <xs:element name="Etat" msprop:Generator_ColumnVarNameInTable="columnEtat" msprop:Generator_ColumnPropNameInRow="Etat" msprop:Generator_ColumnPropNameInTable="EtatColumn" msprop:Generator_UserColumnName="Etat" type="xs:string" minOccurs="0" />
+              <xs:element name="Nature" msprop:Generator_ColumnVarNameInTable="columnNature" msprop:Generator_ColumnPropNameInRow="Nature" msprop:Generator_ColumnPropNameInTable="NatureColumn" msprop:Generator_UserColumnName="Nature" type="xs:string" minOccurs="0" />
+              <xs:element name="Reclamation" msprop:Generator_ColumnVarNameInTable="columnReclamation" msprop:Generator_ColumnPropNameInRow="Reclamation" msprop:Generator_ColumnPropNameInTable="ReclamationColumn" msprop:Generator_UserColumnName="Reclamation" type="xs:string" minOccurs="0" />
+              <xs:element name="ProblemeConstate" msprop:Generator_ColumnVarNameInTable="columnProblemeConstate" msprop:Generator_ColumnPropNameInRow="ProblemeConstate" msprop:Generator_ColumnPropNameInTable="ProblemeConstateColumn" msprop:Generator_UserColumnName="ProblemeConstate" type="xs:string" minOccurs="0" />
+              <xs:element name="TraveauxEffectues" msprop:Generator_ColumnVarNameInTable="columnTraveauxEffectues" msprop:Generator_ColumnPropNameInRow="TraveauxEffectues" msprop:Generator_ColumnPropNameInTable="TraveauxEffectuesColumn" msprop:Generator_UserColumnName="TraveauxEffectues" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

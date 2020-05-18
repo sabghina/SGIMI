@@ -1,4 +1,5 @@
 ﻿using BT.Stage.SGIMI.Data.Entity;
+using BT.Stage.SGIMI.Data.DTO;
 using BT.Stage.SGIMI.UserInterface.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -32,8 +33,8 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Date = intervention.Date,
                 Etat = intervention.Etat,
                 Reclamation = intervention.Reclamation,
-                ProblèmeConstaté = intervention.ProblèmeConstaté,
-                TraveauxEffectués = intervention.TraveauxEffectués,
+                ProblemeConstate = intervention.ProblemeConstate,
+                TraveauxEffectues = intervention.TraveauxEffectues,
                 CreatedBy = intervention.CreatedBy,
                 CreatedDate = intervention.CreatedDate,
                 CreatedTime = intervention.CreatedTime,
@@ -55,8 +56,8 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Date = interventionViewModel.Date,
                 Etat = interventionViewModel.Etat,
                 Reclamation = interventionViewModel.Reclamation,
-                ProblèmeConstaté = interventionViewModel.ProblèmeConstaté,
-                TraveauxEffectués = interventionViewModel.TraveauxEffectués,
+                ProblemeConstate = interventionViewModel.ProblemeConstate,
+                TraveauxEffectues = interventionViewModel.TraveauxEffectues,
 
                 CreatedBy = user
             };
@@ -72,12 +73,42 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Date = interventionViewModel.Date,
                 Etat = interventionViewModel.Etat,
                 Reclamation = interventionViewModel.Reclamation,
-                ProblèmeConstaté = interventionViewModel.ProblèmeConstaté,
-                TraveauxEffectués = interventionViewModel.TraveauxEffectués,
+                ProblemeConstate = interventionViewModel.ProblemeConstate,
+                TraveauxEffectues = interventionViewModel.TraveauxEffectues,
 
                 CreatedBy = user
             };
             return intervention;
+
+        }
+
+        public static List<InterventionReport> InterventionListToInterventionReportList(List<Intervention> interventions)
+        {
+            List<InterventionReport> interventionReports = new List<InterventionReport>();
+            foreach (Intervention intervention in interventions)
+            {
+                InterventionReport interventionReport = InterventionToInterventionReport(intervention);
+
+                interventionReports.Add(interventionReport);
+            }
+            return interventionReports;
+        }
+
+        public static InterventionReport InterventionToInterventionReport(Intervention intervention)
+        {
+            
+                InterventionReport interventionReport = new InterventionReport
+                {
+                    Date = $"{intervention.Date}",
+                    Etat = $"{ intervention.Etat}",
+                    Nature = $"{intervention.Nature}",
+                    Reclamation = $"{intervention.Reclamation}",
+                    ProblemeConstate = $"{intervention.ProblemeConstate}",
+                    TraveauxEffectues = $"{intervention.TraveauxEffectues}"
+                    
+                };
+
+                return interventionReport;
         }
     }
 }

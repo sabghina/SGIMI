@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BT.Stage.SGIMI.Data.DTO
 {
-    class ReclamationReport
+    public class ReclamationReport
     {
         public string Materiel { get; set; }
         public string Date { get; set; }

@@ -3,7 +3,6 @@ using BT.Stage.SGIMI.Data.DTO;
 using BT.Stage.SGIMI.Data.Entity;
 using BT.Stage.SGIMI.DataAccess.Interface;
 using Microsoft.Reporting.WebForms;
-using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
 using System.Linq;

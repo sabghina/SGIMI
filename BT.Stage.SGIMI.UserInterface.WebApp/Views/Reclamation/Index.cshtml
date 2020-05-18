@@ -5,9 +5,11 @@
 }
 
 <h2>Liste des reclamations</h2>
+<p>
+    @Html.ActionLink("Telecharger un rapport statique", "StaticReports")|
+    @Html.ActionLink("Telecharger un rapport dynamique", "DynamicReports")
+</p>
 <div class="pull-right">
-
-    <button type="button">Télécharger un rapport</button>
 
 </div>
 <form class="navbar-form navbar-left" role="search">
@@ -64,6 +66,8 @@
                 @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
                 @Html.ActionLink("Details", "Details", new { id = item.Id }) |
                 @Html.ActionLink("Delete", "Delete", new { id = item.Id }) |
+                @Html.ActionLink("Télecharger un rapport static ", "StaticReport", new { id = item.Id }) |
+                @Html.ActionLink("Télecharger un rapport dynamique ", "DynamicReport", new { id = item.Id })|
                 <a href="@Url.Action("Create","Intervention",new { reclamation = item.Id })"> intervenir </a>
 
 

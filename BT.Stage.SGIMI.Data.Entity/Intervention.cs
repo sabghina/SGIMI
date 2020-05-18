@@ -31,7 +31,7 @@ namespace BT.Stage.SGIMI.Data.Entity
         [Required(ErrorMessage = "Veuillez exprimer le problème constaté")]
         [MaxLength(100)]
         [Display(Name = " Problème Constaté")]
-        public string ProblèmeConstaté { get; set; }
+        public string ProblemeConstate { get; set; }
 
 
 
@@ -39,7 +39,7 @@ namespace BT.Stage.SGIMI.Data.Entity
         [Required(ErrorMessage = "Veuillez exprimer les traveaux effectués")]
         [MaxLength(100)]
         [Display(Name = " Les traveaux effectués")]
-        public string TraveauxEffectués { get; set; }
+        public string TraveauxEffectues { get; set; }
 
 
         public string CreatedBy { get; set; }

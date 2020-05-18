@@ -1,4 +1,5 @@
-﻿using BT.Stage.SGIMI.Data.Entity;
+﻿using BT.Stage.SGIMI.Data.DTO;
+using BT.Stage.SGIMI.Data.Entity;
 using BT.Stage.SGIMI.UserInterface.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -74,6 +75,33 @@ namespace BT.Stage.SGIMI.Commun.Tools
 
             return uniteGestion;
         }
+
+        public static List<UniteGestionReport> UniteGestionListToUniteGestionReportList(List<UniteGestion> uniteGestions)
+        {
+            List<UniteGestionReport> uniteGestionReports = new List<UniteGestionReport>();
+            foreach (UniteGestion uniteGestion in uniteGestions)
+            {
+                UniteGestionReport uniteGestionReport = UniteGestionToUniteGestionReport(uniteGestion);
+
+                uniteGestionReports.Add(uniteGestionReport);
+            }
+            return uniteGestionReports;
+        }
+
+        public static UniteGestionReport UniteGestionToUniteGestionReport(UniteGestion uniteGestion)
+        {
+            UniteGestionReport uniteGestionReport = new UniteGestionReport
+            {
+                Nom = $"{uniteGestion.Nom}",
+                Contact = $"Telephone :{uniteGestion.Telephone}/Fax: {uniteGestion.Fax}",
+                Email = $"{uniteGestion.Email}",
+                Adresse = $"{uniteGestion.Adresse}",
+                Type = $"{uniteGestion.Type}"
+            };
+
+            return uniteGestionReport;
+        }
+
     }
 }
     

@@ -1,4 +1,5 @@
-﻿using BT.Stage.SGIMI.Data.Entity;
+﻿using BT.Stage.SGIMI.Data.DTO;
+using BT.Stage.SGIMI.Data.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,9 +23,10 @@ namespace BT.Stage.SGIMI.BusinessLogic.Interface
         Reclamation GetReclamationById(int id);
         bool CreateReclamation(Reclamation reclamation);
         bool UpdatedReclamation(Reclamation reclamation);
-        // byte[] StaticReports();
-        // byte[] StaticReport();
+        byte[] StaticReports();
+        byte[] StaticReport();
 
-        // byte[] DynamicReports(List<ReclamationReport> reclamationReports);
+        byte[] DynamicReports(List<ReclamationReport> reclamationReports);
+        byte[] DynamicReport(ReclamationReport reclamationReport);
     }
 }

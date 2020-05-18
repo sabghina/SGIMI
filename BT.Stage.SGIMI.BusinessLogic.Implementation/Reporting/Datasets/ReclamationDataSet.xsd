@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ReclamationDataSet" targetNamespace="http://tempuri.org/ReclamationDataSet.xsd" xmlns:mstns="http://tempuri.org/ReclamationDataSet.xsd" xmlns="http://tempuri.org/ReclamationDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ReclamationDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ReclamationDataSet" msprop:Generator_UserDSName="ReclamationDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Reclamation" msprop:Generator_TableClassName="ReclamationDataTable" msprop:Generator_TableVarName="tableReclamation" msprop:Generator_TablePropName="Reclamation" msprop:Generator_RowDeletingName="ReclamationRowDeleting" msprop:Generator_RowChangingName="ReclamationRowChanging" msprop:Generator_RowEvHandlerName="ReclamationRowChangeEventHandler" msprop:Generator_RowDeletedName="ReclamationRowDeleted" msprop:Generator_UserTableName="Reclamation" msprop:Generator_RowChangedName="ReclamationRowChanged" msprop:Generator_RowEvArgName="ReclamationRowChangeEvent" msprop:Generator_RowClassName="ReclamationRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Materiel" msprop:Generator_ColumnVarNameInTable="columnMateriel" msprop:Generator_ColumnPropNameInRow="Materiel" msprop:Generator_ColumnPropNameInTable="MaterielColumn" msprop:Generator_UserColumnName="Materiel" type="xs:string" minOccurs="0" />
+              <xs:element name="Date" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_UserColumnName="Date" type="xs:string" minOccurs="0" />
+              <xs:element name="Probleme" msprop:Generator_ColumnVarNameInTable="columnProbleme" msprop:Generator_ColumnPropNameInRow="Probleme" msprop:Generator_ColumnPropNameInTable="ProblemeColumn" msprop:Generator_UserColumnName="Probleme" type="xs:string" minOccurs="0" />
+              <xs:element name="Commentaire" msprop:Generator_ColumnVarNameInTable="columnCommentaire" msprop:Generator_ColumnPropNameInRow="Commentaire" msprop:Generator_ColumnPropNameInTable="CommentaireColumn" msprop:Generator_UserColumnName="Commentaire" type="xs:string" minOccurs="0" />
+              <xs:element name="Etat" msprop:Generator_ColumnVarNameInTable="columnEtat" msprop:Generator_ColumnPropNameInRow="Etat" msprop:Generator_ColumnPropNameInTable="EtatColumn" msprop:Generator_UserColumnName="Etat" type="xs:string" minOccurs="0" />
+              <xs:element name="UniteGestion" msprop:Generator_ColumnVarNameInTable="columnUniteGestion" msprop:Generator_ColumnPropNameInRow="UniteGestion" msprop:Generator_ColumnPropNameInTable="UniteGestionColumn" msprop:Generator_UserColumnName="UniteGestion" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

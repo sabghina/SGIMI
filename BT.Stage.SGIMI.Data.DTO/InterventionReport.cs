@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace BT.Stage.SGIMI.Data.DTO
 {
-    class InterventionReport
+    public class InterventionReport
     {
         public string Date { get; set; }
         public string Etat { get; set; }
-        public int Reclamation { get; set; }
-        public string ProblèmeConstaté { get; set; }
-        public string TraveauxEffectués { get; set; }
+        public string Nature { get; set; }
+        public string Reclamation { get; set; }
+        public string ProblemeConstate { get; set; }
+        public string TraveauxEffectues { get; set; }
     }
 }

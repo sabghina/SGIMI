@@ -12,6 +12,21 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,27 +46,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
-    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Data.Services.Design" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.DataVisualization.Design" />
+    <Reference Include="System.Web.DynamicData.Design" />
+    <Reference Include="System.Web.Entity.Design" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Windows.Forms.DataVisualization.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -73,6 +78,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FournisseurDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Reporting\Datasets\InterventionDataSet.cs">
+      <DependentUpon>InterventionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Datasets\InterventionDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InterventionDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Reporting\Datasets\MaterielDataSet.cs">
       <DependentUpon>MaterielDataSet.xsd</DependentUpon>
     </Compile>
@@ -80,6 +93,22 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MaterielDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Datasets\ReclamationDataSet.cs">
+      <DependentUpon>ReclamationDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Datasets\ReclamationDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReclamationDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Datasets\UniteGestionDataSet.cs">
+      <DependentUpon>UniteGestionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Datasets\UniteGestionDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UniteGestionDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="SocieteTierceRepository.cs" />
     <Compile Include="UniteGestionRepository.cs" />
@@ -107,8 +136,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\BT.Stage.SGIMI.Data.DTO.FournisseurReport.datasource" />
+    <None Include="Properties\DataSources\BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets.InterventionDataSet.datasource" />
     <None Include="Reporting\Datasets\FournisseurDataSet.xsc">
       <DependentUpon>FournisseurDataSet.xsd</DependentUpon>
     </None>
@@ -119,6 +149,17 @@
     </None>
     <None Include="Reporting\Datasets\FournisseurDataSet.xss">
       <DependentUpon>FournisseurDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reporting\Datasets\InterventionDataSet.xsc">
+      <DependentUpon>InterventionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reporting\Datasets\InterventionDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InterventionDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reporting\Datasets\InterventionDataSet.xss">
+      <DependentUpon>InterventionDataSet.xsd</DependentUpon>
     </None>
     <None Include="Reporting\Datasets\MaterielDataSet.xsc">
       <DependentUpon>MaterielDataSet.xsd</DependentUpon>
@@ -131,8 +172,34 @@
     <None Include="Reporting\Datasets\MaterielDataSet.xss">
       <DependentUpon>MaterielDataSet.xsd</DependentUpon>
     </None>
+    <None Include="Reporting\Datasets\ReclamationDataSet.xsc">
+      <DependentUpon>ReclamationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reporting\Datasets\ReclamationDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReclamationDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reporting\Datasets\ReclamationDataSet.xss">
+      <DependentUpon>ReclamationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reporting\Datasets\UniteGestionDataSet.xsc">
+      <DependentUpon>UniteGestionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reporting\Datasets\UniteGestionDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UniteGestionDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reporting\Datasets\UniteGestionDataSet.xss">
+      <DependentUpon>UniteGestionDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Reporting\RDLC\InterventionDynamicReport.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\InterventionDynamicReports.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\InterventionStaticReport.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\InterventionStaticReports.rdlc" />
     <EmbeddedResource Include="Reporting\RDLC\MaterielDynamicReports.rdlc" />
     <EmbeddedResource Include="Reporting\RDLC\MaterielDynamicReport.rdlc" />
     <EmbeddedResource Include="Reporting\RDLC\FournisseurDynamicReports.rdlc" />
@@ -141,6 +208,26 @@
     <EmbeddedResource Include="Reporting\RDLC\MaterielStaticReport.rdlc" />
     <EmbeddedResource Include="Reporting\RDLC\FournisseurStaticReport.rdlc" />
     <EmbeddedResource Include="Reporting\RDLC\FournisseurStaticReports.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\ReclamationReport\ReclamationDynamicReport.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\ReclamationReport\ReclamationDynamicReports.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\ReclamationReport\ReclamationStaticReport.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\ReclamationReport\ReclamationStaticReports.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\UniteGestionReport\UniteGestionDynamicReports.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\UniteGestionReport\UniteGestionDynamicReport.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\UniteGestionReport\UniteGestionStaticReport.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\UniteGestionReport\UniteGestionStaticReports.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
