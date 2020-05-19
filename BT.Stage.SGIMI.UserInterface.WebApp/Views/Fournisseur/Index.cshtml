@@ -8,7 +8,6 @@
 
 <p>
     @Html.ActionLink("Ajouter un nouveau fournisseur", "Create")|
-    @Html.ActionLink("Telecharger un rapport statique", "StaticReports")|
     @Html.ActionLink("Telecharger un rapport dynamique ", "DynamicReports")
 
 </p>
@@ -18,11 +17,7 @@
     </div>
     <button type="submit" class="glyphicon glyphicon-search" aria-hidden="true"></button>
 </form>
-<div class="pull-right">
 
-    <button type="button">Télécharger un rapport</button>
-
-</div>
 <table class="table">
     <tr>
         <th>
@@ -71,7 +66,6 @@
             <td>
                 @Html.ActionLink("Modifier", "Edit", new { id = item.Id }) |
                 @Html.ActionLink("Détails", "Details", new { id = item.Id }) |
-                @Html.ActionLink("Télecharger un rapport static ", "StaticReport", new { id = item.Id }) |
                 @Html.ActionLink("Télecharger un rapport dynamique ", "DynamicReport", new { id = item.Id })
 
             </td>

@@ -102,6 +102,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ReclamationDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Reporting\Datasets\SocieteTierceDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SocieteTierceDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Reporting\Datasets\UniteGestionDataSet.cs">
       <DependentUpon>UniteGestionDataSet.xsd</DependentUpon>
     </Compile>
@@ -183,6 +188,17 @@
     <None Include="Reporting\Datasets\ReclamationDataSet.xss">
       <DependentUpon>ReclamationDataSet.xsd</DependentUpon>
     </None>
+    <None Include="Reporting\Datasets\SocieteTierceDataSet.xsc">
+      <DependentUpon>SocieteTierceDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reporting\Datasets\SocieteTierceDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SocieteTierceDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reporting\Datasets\SocieteTierceDataSet.xss">
+      <DependentUpon>SocieteTierceDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Reporting\Datasets\UniteGestionDataSet.xsc">
       <DependentUpon>UniteGestionDataSet.xsd</DependentUpon>
     </None>
@@ -196,22 +212,26 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Reporting\RDLC\InterventionDynamicReport.rdlc" />
-    <EmbeddedResource Include="Reporting\RDLC\InterventionDynamicReports.rdlc" />
-    <EmbeddedResource Include="Reporting\RDLC\InterventionStaticReport.rdlc" />
-    <EmbeddedResource Include="Reporting\RDLC\InterventionStaticReports.rdlc" />
-    <EmbeddedResource Include="Reporting\RDLC\MaterielDynamicReports.rdlc" />
-    <EmbeddedResource Include="Reporting\RDLC\MaterielDynamicReport.rdlc" />
-    <EmbeddedResource Include="Reporting\RDLC\FournisseurDynamicReports.rdlc" />
-    <EmbeddedResource Include="Reporting\RDLC\FournisseurDynamicReport.rdlc" />
-    <EmbeddedResource Include="Reporting\RDLC\MaterielStaticReports.rdlc" />
-    <EmbeddedResource Include="Reporting\RDLC\MaterielStaticReport.rdlc" />
-    <EmbeddedResource Include="Reporting\RDLC\FournisseurStaticReport.rdlc" />
-    <EmbeddedResource Include="Reporting\RDLC\FournisseurStaticReports.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\InterventionReport\InterventionDynamicReport.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\InterventionReport\InterventionDynamicReports.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\InterventionReport\InterventionStaticReport.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\InterventionReport\InterventionStaticReports.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\MaterielReport\MaterielDynamicReports.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\MaterielReport\MaterielDynamicReport.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\FournisseurReport\FournisseurDynamicReports.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\FournisseurReport\FournisseurDynamicReport.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\MaterielReport\MaterielStaticReports.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\MaterielReport\MaterielStaticReport.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\FournisseurReport\FournisseurStaticReport.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\FournisseurReport\FournisseurStaticReports.rdlc" />
     <EmbeddedResource Include="Reporting\RDLC\ReclamationReport\ReclamationDynamicReport.rdlc" />
     <EmbeddedResource Include="Reporting\RDLC\ReclamationReport\ReclamationDynamicReports.rdlc" />
     <EmbeddedResource Include="Reporting\RDLC\ReclamationReport\ReclamationStaticReport.rdlc" />
     <EmbeddedResource Include="Reporting\RDLC\ReclamationReport\ReclamationStaticReports.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\SocieteTierceReport\SocieteTierceDynamicReport.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\SocieteTierceReport\SocieteTierceDynamicReports.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\SocieteTierceReport\SocieteTierceStaticReports.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\SocieteTierceReport\SocieteTierceStaticReport.rdlc" />
     <EmbeddedResource Include="Reporting\RDLC\UniteGestionReport\UniteGestionDynamicReports.rdlc" />
     <EmbeddedResource Include="Reporting\RDLC\UniteGestionReport\UniteGestionDynamicReport.rdlc" />
     <EmbeddedResource Include="Reporting\RDLC\UniteGestionReport\UniteGestionStaticReport.rdlc" />

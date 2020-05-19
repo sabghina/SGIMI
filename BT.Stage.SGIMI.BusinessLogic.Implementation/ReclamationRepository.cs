@@ -125,36 +125,11 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
         {
             try
             {
-                //string reportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.InterventionDynamicReports.rdlc";
-                //string reportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.ReclamationReport.ReclamationDynamicReports.rdlc";
                 string reportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.ReclamationReport.ReclamationDynamicReports.rdlc";
                 ReportDataSource reportDataSource = new ReportDataSource("ReclamationDataSet", reclamationReports);
 
                 return GenerateReclamationReport(reportEmbeddedResource, reportDataSource);
-                //LocalReport localReport = new LocalReport();
-                //localReport.ReportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.ReclamationReport.ReclamationDynamicReports.rdlc";
-                //localReport.DataSources.Clear();
-
-                //localReport.DataSources.Add(new ReportDataSource("ReclamationDataSet", reclamationReports));
-
-                //localReport.Refresh();
-
-                /////Orientation Portrait
-                /////Report properties -> Paper size: A4, Width: 21cm, Height: 29.7cm
-                /////Report ruler width: 24
-                //string deviceInfo = "<DeviceInfo>" + "  <OutputFormat>PDF</OutputFormat>" + "  <PageWidth>10in</PageWidth>" + "  <PageHeight>12in</PageHeight>" +
-                //  "  <MarginTop>0.2in</MarginTop>" + "  <MarginLeft>0.2in</MarginLeft>" + "  <MarginRight>0.2in</MarginRight>" + "  <MarginBottom>0.2in</MarginBottom>" + "</DeviceInfo>";
-                //string reportType = "pdf";
-                //string mimeType;
-                //string encoding;
-                //string fileNameExtension;
-                //Warning[] warnings;
-
-                //string[] streams;
-
-                ////Render the report
-                //byte[] file = localReport.Render(reportType, deviceInfo, out mimeType, out encoding, out fileNameExtension, out streams, out warnings);
-                //return file;
+                
             }
             catch (Exception)
             {

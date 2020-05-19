@@ -43,7 +43,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
         public byte[] StaticReports()
         {
             LocalReport localReport = new LocalReport();
-            localReport.ReportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.MaterielStaticReports.rdlc";
+            localReport.ReportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.MaterielReport.MaterielStaticReports.rdlc";
             localReport.DataSources.Clear();
 
             localReport.Refresh();
@@ -70,7 +70,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
         public byte[] StaticReport()
         {
             LocalReport localReport = new LocalReport();
-            localReport.ReportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.MaterielStaticReport.rdlc";
+            localReport.ReportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.MaterielReport.MaterielStaticReport.rdlc";
             localReport.DataSources.Clear();
 
             localReport.Refresh();
@@ -99,35 +99,17 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
         {
             try
             {
-                LocalReport localReport = new LocalReport();
-                localReport.ReportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.MaterielDynamicReports.rdlc";
-                localReport.DataSources.Clear();
+                string reportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.MaterielReport.MaterielDynamicReports.rdlc";
+                ReportDataSource reportDataSource = new ReportDataSource("MaterielDataSet", materielReports);
 
-                localReport.DataSources.Add(new ReportDataSource("MaterielDataSet", materielReports));
+                return GenerateMaterielReport(reportEmbeddedResource, reportDataSource);
 
-                localReport.Refresh();
-
-                ///Orientation Portrait
-                ///Report properties -> Paper size: A4, Width: 21cm, Height: 29.7cm
-                ///Report ruler width: 24
-                string deviceInfo = "<DeviceInfo>" + "  <OutputFormat>PDF</OutputFormat>" + "  <PageWidth>10in</PageWidth>" + "  <PageHeight>12in</PageHeight>" +
-                  "  <MarginTop>0.2in</MarginTop>" + "  <MarginLeft>0.2in</MarginLeft>" + "  <MarginRight>0.2in</MarginRight>" + "  <MarginBottom>0.2in</MarginBottom>" + "</DeviceInfo>";
-                string reportType = "pdf";
-                string mimeType;
-                string encoding;
-                string fileNameExtension;
-                Warning[] warnings;
-
-                string[] streams;
-
-                //Render the report
-                byte[] file = localReport.Render(reportType, deviceInfo, out mimeType, out encoding, out fileNameExtension, out streams, out warnings);
-                return file;
             }
             catch (Exception)
             {
                 throw;
             }
+           
         }
         // Dynamic report implementaion (un seul fournisseur)
         public byte[] DynamicReport(MaterielReport materielReport)
@@ -137,7 +119,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
                 List<MaterielReport> materielReports = new List<MaterielReport>();
                 materielReports.Add(materielReport);
 
-                string reportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.MaterielDynamicReports.rdlc";
+                string reportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.MaterielReport.MaterielDynamicReports.rdlc";
                 ReportDataSource reportDataSource = new ReportDataSource("MaterielDataSet", materielReports);
 
                 return GenerateMaterielReport(reportEmbeddedResource, reportDataSource);

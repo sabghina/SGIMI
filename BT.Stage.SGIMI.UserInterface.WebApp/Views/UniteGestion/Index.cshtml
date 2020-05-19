@@ -2,14 +2,9 @@
 
 
 <h2>Liste des unités de gestion</h2>
-<div class="pull-right">
-
-    <button type="button">Télécharger un rapport</button>
-
-</div>
 
 <p>
-    @Html.ActionLink("Telecharger un rapport statique", "StaticReports")|
+   
     @Html.ActionLink("Telecharger un rapport Dynamique", "DynamicReports")|
 
 </p>
@@ -69,7 +64,6 @@
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
                 @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                @Html.ActionLink("Télecharger un rapport static ", "StaticReport", new { id = item.Id }) |
                 @Html.ActionLink("Télecharger un rapport Dynamique ", "DynamicReport", new { id = item.Id }) |
 
             </td>

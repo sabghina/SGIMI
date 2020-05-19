@@ -1,5 +1,6 @@
 ﻿using BT.Stage.SGIMI.BusinessLogic.Interface;
 using BT.Stage.SGIMI.Commun.Tools;
+using BT.Stage.SGIMI.Data.DTO;
 using BT.Stage.SGIMI.Data.Entity;
 using BT.Stage.SGIMI.UserInterface.ViewModel;
 using System;
@@ -44,7 +45,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         public ActionResult Create()
         {
 
-           SocieteTierceViewModel societeTierceViewModel = new SocieteTierceViewModel();
+            SocieteTierceViewModel societeTierceViewModel = new SocieteTierceViewModel();
             return View(societeTierceViewModel);
         }
 
@@ -57,7 +58,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 // controle existance email
                 //ModelState.AddModelError("Email", "Email existe");
                 // controle
-                 if (!ModelState.IsValid)
+                if (!ModelState.IsValid)
                 {
                     return View(societeTierceViewModel);
                 }
@@ -102,7 +103,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 }
                 // TODO: Add update logic here
                 string user = User.Identity.Name;
-                Fournisseur societeTierce = SocieteTierceTranspose.UpdatedSocieteTierceViewModelToUpdatedSocieteTierce(id,societeTierceViewModel, user);
+                Fournisseur societeTierce = SocieteTierceTranspose.UpdatedSocieteTierceViewModelToUpdatedSocieteTierce(id, societeTierceViewModel, user);
 
                 bool societeTierceIsUpdated = societeTierceRepository.UpdatedSocieteTierce(societeTierce);
                 if (societeTierceIsUpdated)
@@ -145,6 +146,45 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             {
                 return View();
             }
+
+        }
+
+
+        // Static Reports (tous les st tierces)
+        public FileResult StaticReports()
+        {
+            byte[] file = societeTierceRepository.StaticReports();
+            string filename = $"static_reports_{DateTime.Now}.pdf";
+            return File(file, "application/pdf", filename);
+        }
+
+
+        // Static Report (une seule st)
+        public FileResult StaticReport(int id)
+        {
+            byte[] file = societeTierceRepository.StaticReport();
+            string filename = $"static_report_{id}_{DateTime.Now}.pdf";
+            return File(file, "application/pdf", filename);
+        }
+
+        // Dynamic Reports (tous les st tierces)
+        public FileResult DynamicReports()
+        {
+            List<Fournisseur> societeTierces = societeTierceRepository.GetSocieteTierces();
+            List<SocieteTierceReport> societeTierceReports = SocieteTierceTranspose.SocieteTierceListToSocieteTierceReportList(societeTierces);
+            byte[] file = societeTierceRepository.DynamicReports(societeTierceReports);
+            string filename = $"dynamic_reports_{DateTime.Now}.pdf";
+            return File(file, "application/pdf", filename);
+        }
+
+        // Dynamic Report (une seule st tierce)
+        public FileResult DynamicReport(int id)
+        {
+            Fournisseur societeTierce = societeTierceRepository.GetSocieteTierceById(id);
+            SocieteTierceReport societeTierceReport = SocieteTierceTranspose.SocieteTierceToSocieteTierceReport(societeTierce);
+            byte[] file = societeTierceRepository.DynamicReport(societeTierceReport);
+            string filename = $"dynamic_report_{id}_{DateTime.Now}.pdf";
+            return File(file, "application/pdf", filename);
         }
     }
-}
+    } 

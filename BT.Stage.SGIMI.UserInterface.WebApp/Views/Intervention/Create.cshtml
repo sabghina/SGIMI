@@ -69,7 +69,9 @@
 
 }
 <h2>Intervention sur reclamation @Model.Reclamation</h2>
-
+<p>
+    @Html.ActionLink("Telecharger un formulaire", "StaticReports")
+</p>
 
 @using (Html.BeginForm("Create", "Intervention", FormMethod.Post))
 {

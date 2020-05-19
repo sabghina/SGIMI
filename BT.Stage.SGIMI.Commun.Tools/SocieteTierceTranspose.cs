@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using BT.Stage.SGIMI.Data.DTO;
 namespace BT.Stage.SGIMI.Commun.Tools
 {
     public static class SocieteTierceTranspose
@@ -79,6 +79,32 @@ namespace BT.Stage.SGIMI.Commun.Tools
             };
 
             return fournisseur;
+        }
+
+        public static List<SocieteTierceReport> SocieteTierceListToSocieteTierceReportList(List<Fournisseur> societeTierces)
+        {
+            List<SocieteTierceReport> societeTierceReports = new List<SocieteTierceReport>();
+            foreach (Fournisseur societeTierce in societeTierces)
+            {
+                SocieteTierceReport societeTierceReport = SocieteTierceToSocieteTierceReport(societeTierce);
+
+                societeTierceReports.Add(societeTierceReport);
+            }
+            return societeTierceReports;
+        }
+
+        public static SocieteTierceReport SocieteTierceToSocieteTierceReport(Fournisseur societeTierce)
+        {
+            SocieteTierceReport societeTierceReport = new SocieteTierceReport
+            {
+                Nom = $"{societeTierce.Nom}",
+                Contact = $"Telephone :{societeTierce.Telephone}/Fax: {societeTierce.Fax}",
+                Email = $"{societeTierce.Email}",
+                Adresse = $"{societeTierce.Adresse}",
+                SiteWeb = $"{societeTierce.SiteWeb}"
+            };
+
+            return societeTierceReport;
         }
     }
 }

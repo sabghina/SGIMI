@@ -45,12 +45,39 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
         {
             throw new NotImplementedException();
         }
+        public byte[] GenerateUniteGestionReport(string reportEmbeddedResource, ReportDataSource reportDataSource)
+        {
+            LocalReport localReport = new LocalReport();
+            localReport.ReportEmbeddedResource = reportEmbeddedResource;
+            localReport.DataSources.Clear();
 
-        // Static reports implementation (tous les UnitésGestion gestion)
+            localReport.DataSources.Add(reportDataSource);
+
+            localReport.Refresh();
+
+            ///Orientation Portrait
+            ///Report properties -> Paper size: A4, Width: 21cm, Height: 29.7cm
+            ///Report ruler width: 24
+            string deviceInfo = "<DeviceInfo>" + "  <OutputFormat>PDF</OutputFormat>" + "  <PageWidth>10in</PageWidth>" + "  <PageHeight>12in</PageHeight>" +
+              "  <MarginTop>0.2in</MarginTop>" + "  <MarginLeft>0.2in</MarginLeft>" + "  <MarginRight>0.2in</MarginRight>" + "  <MarginBottom>0.2in</MarginBottom>" + "</DeviceInfo>";
+            string reportType = "pdf";
+            string mimeType;
+            string encoding;
+            string fileNameExtension;
+            Warning[] warnings;
+
+            string[] streams;
+
+            //Render the report
+            byte[] file = localReport.Render(reportType, deviceInfo, out mimeType, out encoding, out fileNameExtension, out streams, out warnings);
+            return file;
+        }
+
+        // Static reports implementation (tous les Unités gestion)
         public byte[] StaticReports()
         {
             LocalReport localReport = new LocalReport();
-            localReport.ReportEmbeddedResource = "Demo.ReportingImplementation.BusinessLogic.Implementation.Reporting.RDLC.UniteGestionReport.UniteGestionStaticReports.rdlc";
+            localReport.ReportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.UniteGestionReport.UniteGestionStaticReports.rdlc";
             localReport.DataSources.Clear();
 
             localReport.Refresh();
@@ -77,7 +104,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
         public byte[] StaticReport()
         {
             LocalReport localReport = new LocalReport();
-            localReport.ReportEmbeddedResource = "Demo.ReportingImplementation.BusinessLogic.Implementation.Reporting.RDLC.UniteGestionReport.UniteGestionStaticReport.rdlc";
+            localReport.ReportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.RDLC.UniteGestionReport.UniteGestionStaticReport.rdlc";
             localReport.DataSources.Clear();
 
             localReport.Refresh();
@@ -106,86 +133,36 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
         {
             try
             {
-                LocalReport localReport = new LocalReport();
-                localReport.ReportEmbeddedResource = "Demo.ReportingImplementation.BusinessLogic.Implementation.Reporting.RDLC.UniteGestionDynamicReports.rdlc";
-                localReport.DataSources.Clear();
+                string reportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.UniteGestionReport.UniteGestionDynamicReports.rdlc";
+                ReportDataSource reportDataSource = new ReportDataSource("UniteGestionDataSet", uniteGestionReports);
 
-                localReport.DataSources.Add(new ReportDataSource("UniteGestionDataSet", uniteGestionReports));
+                return GenerateUniteGestionReport(reportEmbeddedResource, reportDataSource);
 
-                localReport.Refresh();
-
-                ///Orientation Portrait
-                ///Report properties -> Paper size: A4, Width: 21cm, Height: 29.7cm
-                ///Report ruler width: 24
-                string deviceInfo = "<DeviceInfo>" + "  <OutputFormat>PDF</OutputFormat>" + "  <PageWidth>10in</PageWidth>" + "  <PageHeight>12in</PageHeight>" +
-                  "  <MarginTop>0.2in</MarginTop>" + "  <MarginLeft>0.2in</MarginLeft>" + "  <MarginRight>0.2in</MarginRight>" + "  <MarginBottom>0.2in</MarginBottom>" + "</DeviceInfo>";
-                string reportType = "pdf";
-                string mimeType;
-                string encoding;
-                string fileNameExtension;
-                Warning[] warnings;
-
-                string[] streams;
-
-                //Render the report
-                byte[] file = localReport.Render(reportType, deviceInfo, out mimeType, out encoding, out fileNameExtension, out streams, out warnings);
-                return file;
             }
             catch (Exception)
             {
                 throw;
             }
-
         }
-            // Dynamic report implementaion (une seule unité de gestion)
+        // Dynamic report implementaion (une seule unité de gestion)
 
-            public byte[] DynamicReport(UniteGestionReport uniteGestionReport)
+        public byte[] DynamicReport(UniteGestionReport uniteGestionReport)
+        {
+            try
             {
-                try
-                {
-                    List<UniteGestionReport> uniteGestionReports = new List<UniteGestionReport>();
-                     uniteGestionReports.Add(uniteGestionReport);
+                List<UniteGestionReport> uniteGestionReports = new List<UniteGestionReport>();
+                uniteGestionReports.Add(uniteGestionReport);
 
-                    string reportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.UniteGestionReport.UniteGestionDynamicReports.rdlc";
-                    ReportDataSource reportDataSource = new ReportDataSource("UniteGestionDataSet", uniteGestionReports);
+                string reportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.UniteGestionReport.UniteGestionDynamicReports.rdlc";
+                ReportDataSource reportDataSource = new ReportDataSource("UniteGestionDataSet", uniteGestionReports);
 
-                    return GenerateUniteGestionReport(reportEmbeddedResource, reportDataSource);
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
+                return GenerateUniteGestionReport(reportEmbeddedResource, reportDataSource);
             }
-
-            public byte[] GenerateUniteGestionReport(string reportEmbeddedResource, ReportDataSource reportDataSource)
+            catch (Exception)
             {
-                LocalReport localReport = new LocalReport();
-                localReport.ReportEmbeddedResource = reportEmbeddedResource;
-                localReport.DataSources.Clear();
-
-                localReport.DataSources.Add(reportDataSource);
-
-                localReport.Refresh();
-
-                ///Orientation Portrait
-                ///Report properties -> Paper size: A4, Width: 21cm, Height: 29.7cm
-                ///Report ruler width: 24
-                string deviceInfo = "<DeviceInfo>" + "  <OutputFormat>PDF</OutputFormat>" + "  <PageWidth>10in</PageWidth>" + "  <PageHeight>12in</PageHeight>" +
-                  "  <MarginTop>0.2in</MarginTop>" + "  <MarginLeft>0.2in</MarginLeft>" + "  <MarginRight>0.2in</MarginRight>" + "  <MarginBottom>0.2in</MarginBottom>" + "</DeviceInfo>";
-                string reportType = "pdf";
-                string mimeType;
-                string encoding;
-                string fileNameExtension;
-                Warning[] warnings;
-
-                string[] streams;
-
-                //Render the report
-                byte[] file = localReport.Render(reportType, deviceInfo, out mimeType, out encoding, out fileNameExtension, out streams, out warnings);
-                return file;
+                throw;
             }
         }
-
-
     }
+}
 

@@ -43,7 +43,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
         public byte[] StaticReports()
         {
             LocalReport localReport = new LocalReport();
-            localReport.ReportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.InterventionStaticReports.rdlc";
+            localReport.ReportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.InterventionReport.InterventionStaticReports.rdlc";
             localReport.DataSources.Clear();
 
             localReport.Refresh();
@@ -70,7 +70,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
         public byte[] StaticReport()
         {
             LocalReport localReport = new LocalReport();
-            localReport.ReportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.InterventionStaticReport.rdlc";
+            localReport.ReportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.InterventionReport.InterventionStaticReport.rdlc";
             localReport.DataSources.Clear();
 
             localReport.Refresh();
@@ -97,36 +97,18 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
         {
             try
             {
-                LocalReport localReport = new LocalReport();
-                localReport.ReportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.InterventionDynamicReports.rdlc";
-                localReport.DataSources.Clear();
+                string reportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.InterventionReport.InterventionDynamicReports.rdlc";
+                ReportDataSource reportDataSource = new ReportDataSource("InterventionDataSet", interventionReports);
 
-                localReport.DataSources.Add(new ReportDataSource("InterventionDataSet", interventionReports));
+                return GenerateInterventionReport(reportEmbeddedResource, reportDataSource);
 
-                localReport.Refresh();
-
-                ///Orientation Portrait
-                ///Report properties -> Paper size: A4, Width: 21cm, Height: 29.7cm
-                ///Report ruler width: 24
-                string deviceInfo = "<DeviceInfo>" + "  <OutputFormat>PDF</OutputFormat>" + "  <PageWidth>10in</PageWidth>" + "  <PageHeight>12in</PageHeight>" +
-                  "  <MarginTop>0.2in</MarginTop>" + "  <MarginLeft>0.2in</MarginLeft>" + "  <MarginRight>0.2in</MarginRight>" + "  <MarginBottom>0.2in</MarginBottom>" + "</DeviceInfo>";
-                string reportType = "pdf";
-                string mimeType;
-                string encoding;
-                string fileNameExtension;
-                Warning[] warnings;
-
-                string[] streams;
-
-                //Render the report
-                byte[] file = localReport.Render(reportType, deviceInfo, out mimeType, out encoding, out fileNameExtension, out streams, out warnings);
-                return file;
             }
             catch (Exception)
             {
                 throw;
             }
         }
+
         // Dynamic report implementaion (une seule intervention)
         public byte[] DynamicReport(InterventionReport interventionReport)
         {
@@ -135,7 +117,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
                 List<InterventionReport> interventionReports = new List<InterventionReport>();
                 interventionReports.Add(interventionReport);
 
-                string reportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.InterventionDynamicReports.rdlc";
+                string reportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.InterventionReport.InterventionDynamicReports.rdlc";
                 ReportDataSource reportDataSource = new ReportDataSource("InterventionDataSet", interventionReports);
 
                 return GenerateInterventionReport(reportEmbeddedResource, reportDataSource);
