@@ -21,7 +21,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("SGIMIDbContext", throwIfV1Schema: false)
         {
         }
 

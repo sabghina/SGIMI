@@ -1,7 +1,10 @@
 ﻿using BT.Stage.SGIMI.Data.Entity;
+using BT.Stage.SGIMI.DataAccess.Implementation.DatabaseConnection;
 using BT.Stage.SGIMI.DataAccess.Interface;
+using BT.Stage.SGIMI.DataAccess.Interface.DatabaseConnection;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,74 +12,52 @@ using System.Threading.Tasks;
 namespace BT.Stage.SGIMI.DataAccess.Implementation
 {
     public class FournisseurAdapter : IFournisseurAdapter
-    {
+    { 
+        private readonly ISGIMIDbContext sGIMIDbContext;
+        public FournisseurAdapter(ISGIMIDbContext _sGIMIDbContext)
+        {
+            sGIMIDbContext = _sGIMIDbContext;
+        }
+
         public bool CreateFournisseur(Fournisseur fournisseur)
         {
-            // ajout in database
-            return true;
+            sGIMIDbContext.Fournisseurs.Add(fournisseur);
+            Task<int> nbRowsAffected = sGIMIDbContext.ObjectContext.SaveChangesAsync();
+            if (nbRowsAffected != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public Fournisseur GetFournisseurById(int id)
         {
-            // replace with database access
-            Fournisseur fournisseur = new Fournisseur
-            {
-                Id = id,
-                Nom = "Fournisseur" + id,
-                Email = "fourniseuremail" + id,
-                Telephone = "+216xxxxx",
-                Fax = "7xxxxxx",
-                Type = 'F',
-                Adresse = "Rue xxxxxxxx",
-                SiteWeb = "www.societe.com",
-                CreatedBy = "user" + id + 1,
-                CreatedDate = DateTime.Now.ToString("dddd, dd MMMM yyyy"),
-                CreatedTime = DateTime.Now.ToString("HH:mm:ss"),
-                LastUpdatedBy = "admin",
-                LastUpdatedDate = DateTime.Now.ToString("dddd, dd MMMM yyyy"),
-                LastUpdatedTime = DateTime.Now.ToString("HH:mm:ss")
-                
-               
-            };
-
+            Fournisseur fournisseur = sGIMIDbContext.Fournisseurs.Find(id);
             return fournisseur;
         }
 
         public List<Fournisseur> GetFournisseurs()
         {
-            // replace with databse access
-            List<Fournisseur> fournisseurs = new List<Fournisseur>();
-            for (int i = 1; i < 10; i++)
-            {
-                Fournisseur fournisseur = new Fournisseur
-                {
-                    Id = i,
-                    Nom = "Fournisseur" + i,
-                    Email = "fourniseuremail" + i,
-                    Type = 'F',
-                    Telephone = "+216xxxxx",
-                    Fax = "7xxxxxx",
-                    Adresse = "Rue xxxxxxxx",
-                    SiteWeb = "www.fournisseur.com",
-                    CreatedBy = "admin",
-                    CreatedDate = DateTime.Now.ToString("dddd, dd MMMM yyyy"),
-                    CreatedTime = DateTime.Now.ToString("HH:mm:ss"),
-                    LastUpdatedBy = "admin",
-                    LastUpdatedDate = DateTime.Now.ToString("dddd, dd MMMM yyyy"),
-                    LastUpdatedTime = DateTime.Now.ToString("HH:mm:ss")
-                   
-                   
-                };
-
-                fournisseurs.Add(fournisseur);
-            }
+            List<Fournisseur> fournisseurs = sGIMIDbContext.Fournisseurs.ToList();
 
             return fournisseurs;
         }
 
         public bool UpdateFournisseur(Fournisseur fournisseur)
         {
-            return true;
+            sGIMIDbContext.Fournisseurs.AddOrUpdate(fournisseur);
+            Task<int> nbRowsAffected = sGIMIDbContext.ObjectContext.SaveChangesAsync();
+            if (nbRowsAffected != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

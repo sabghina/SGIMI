@@ -67,7 +67,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
             };
             return fournisseur;
         }
-        public static Fournisseur UpdatedFournisseurViewModelToUpdatedFournisseur(int id,FournisseurViewModel fournisseurViewModel, string user)
+        public static Fournisseur UpdatedFournisseurViewModelToUpdatedFournisseur(int id,FournisseurViewModel fournisseurViewModel)
         {
             Fournisseur fournisseur = new Fournisseur
             {

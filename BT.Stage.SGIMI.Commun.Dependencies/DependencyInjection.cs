@@ -1,7 +1,9 @@
 ﻿using BT.Stage.SGIMI.BusinessLogic.Implementation;
 using BT.Stage.SGIMI.BusinessLogic.Interface;
 using BT.Stage.SGIMI.DataAccess.Implementation;
+using BT.Stage.SGIMI.DataAccess.Implementation.DatabaseConnection;
 using BT.Stage.SGIMI.DataAccess.Interface;
+using BT.Stage.SGIMI.DataAccess.Interface.DatabaseConnection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +18,10 @@ namespace BT.Stage.SGIMI.Commun.Dependencies
         public static UnityContainer DependencyResolve()
         {
             UnityContainer unityContainer = new UnityContainer();
+
+
+            unityContainer.RegisterType<ISGIMIDbContext, SGIMIDbContext>();
+          
 
             unityContainer.RegisterType<IFournisseurAdapter, FournisseurAdapter>();
             unityContainer.RegisterType<IFournisseurRepository, FournisseurRepository>();

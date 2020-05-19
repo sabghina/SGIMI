@@ -60,6 +60,10 @@
     <Compile Include="UniteGestionAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BT.Stage.SGIMI.Commun.Tools\BT.Stage.SGIMI.Commun.Tools.csproj">
+      <Project>{3350BA2A-2E27-44BB-A700-72390DAD7CEE}</Project>
+      <Name>BT.Stage.SGIMI.Commun.Tools</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BT.Stage.SGIMI.Data.Entity\BT.Stage.SGIMI.Data.Entity.csproj">
       <Project>{9D473CFB-2BCB-4A7A-8810-6335B4FBF0EA}</Project>
       <Name>BT.Stage.SGIMI.Data.Entity</Name>
@@ -67,6 +71,10 @@
     <ProjectReference Include="..\BT.Stage.SGIMI.DataAccess.Interface\BT.Stage.SGIMI.DataAccess.Interface.csproj">
       <Project>{9EF0E5D3-F826-4EF3-8A39-B6024A6D7089}</Project>
       <Name>BT.Stage.SGIMI.DataAccess.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BT.Stage.SGIMI.UserInterface.ViewModel\BT.Stage.SGIMI.UserInterface.ViewModel.csproj">
+      <Project>{753F3014-9A39-42D9-A24F-5C530B590F1F}</Project>
+      <Name>BT.Stage.SGIMI.UserInterface.ViewModel</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
