@@ -99,7 +99,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 }
                 // TODO: Add update logic here
                 string user = User.Identity.Name;
-                Reclamation reclamation = ReclamationTranspose.UpdatedReclamationViewModelToUpdatedReclamation(id, reclamationViewModel, user);
+                Reclamation reclamation = ReclamationTranspose.UpdatedReclamationViewModelToUpdatedReclamation(reclamationViewModel, user);
 
                 bool reclamationIsUpdated = reclamationRepository.UpdatedReclamation(reclamation);
                 if (reclamationIsUpdated)

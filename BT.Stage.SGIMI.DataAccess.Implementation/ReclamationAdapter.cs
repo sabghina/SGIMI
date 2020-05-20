@@ -1,65 +1,62 @@
 ﻿using BT.Stage.SGIMI.Data.Entity;
 using BT.Stage.SGIMI.DataAccess.Interface;
+using BT.Stage.SGIMI.DataAccess.Interface.DatabaseConnection;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BT.Stage.SGIMI.DataAccess.Implementation
 {
-    public class ReclamationAdapter : IReclamationAdapter 
+    public class ReclamationAdapter : IReclamationAdapter
     {
+        private readonly ISGIMIDbContext sGIMIDbContext;
+        public ReclamationAdapter(ISGIMIDbContext _sGIMIDbContext)
+        {
+            sGIMIDbContext = _sGIMIDbContext;
+        }
         public bool CreateReclamation(Reclamation reclamation)
         {
-            // ajout in database
-            return true;
+            sGIMIDbContext.Reclamations.Add(reclamation);
+            Task<int> nbRowsAffected = sGIMIDbContext.ObjectContext.SaveChangesAsync();
+            if (nbRowsAffected != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public Reclamation GetReclamationById(int id)
         {
-            // replace with database access
-            Reclamation reclamation = new Reclamation
-            {
-                Id = id,
-                Materiel = "Matériel" + id,
-                Date = "0" + id + "/0" + id + "/2020",
-                Probleme = "Problème" + id,
-                Commentaire = "Commentaire" + id,
-                Etat = "En cours",
-                UniteGestion="",
-                CreatedBy = id + 1
-            };
-
+            Reclamation reclamation = sGIMIDbContext.Reclamations.Find(id);
+     
             return reclamation;
         }
         public List<Reclamation> GetReclamations()
         {
             // replace with databse access
-            List<Reclamation> reclamations = new List<Reclamation>();
-            for (int i = 1; i < 10; i++)
-            {
-                Reclamation reclamation = new Reclamation
-                {
-                    Id = i,
-                    Materiel = "Matériel" + i,
-                    Date = "0" + i + "/0" + i + "/2020",
-                    Probleme ="Problème" + i,
-                    Commentaire = "Commentaire"+i,
-                    Etat = "En cours",
-                    UniteGestion = "",
-                    CreatedBy = i + 1
-                };
-
-                reclamations.Add(reclamation);
-            }
+            List<Reclamation> reclamations = sGIMIDbContext.Reclamations.ToList();
 
             return reclamations;
         }
 
         public bool UpdateReclamation(Reclamation reclamation)
         {
-            return true;
+            sGIMIDbContext.Reclamations.AddOrUpdate(reclamation);
+            Task<int> nbRowsAffected = sGIMIDbContext.ObjectContext.SaveChangesAsync();
+            if (nbRowsAffected != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

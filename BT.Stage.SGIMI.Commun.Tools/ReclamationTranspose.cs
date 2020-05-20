@@ -29,12 +29,14 @@ namespace BT.Stage.SGIMI.Commun.Tools
             {
                 Id = reclamation.Id,
                 Materiel = reclamation.Materiel,
-                Date = reclamation.Date,
                 Probleme = reclamation.Probleme,
                 Commentaire = reclamation.Commentaire,
                 Etat = reclamation.Etat,
-                CreatedBy = reclamation.CreatedBy
-    };
+                CreatedBy = reclamation.CreatedBy,
+                CreatedDate = reclamation.CreatedDate,
+                UniteGestion=reclamation.UniteGestion
+
+            };
             return reclamationViewModel;
         }
 
@@ -44,25 +46,29 @@ namespace BT.Stage.SGIMI.Commun.Tools
             {
                 Id = reclamationViewModel.Id,
                 Materiel = reclamationViewModel.Materiel,
-                Date = reclamationViewModel.Date,
                 Probleme = reclamationViewModel.Probleme,
                 Commentaire = reclamationViewModel.Commentaire,
-                Etat = reclamationViewModel.Etat,
-                CreatedBy = reclamationViewModel.CreatedBy
+                UniteGestion=reclamationViewModel.UniteGestion,
+                Etat = "en cours",
+                CreatedBy = user,
+                CreatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
+                CreatedTime = DateTime.Now.ToString("HH:mm:ss")
             };
             return reclamation;
         }
-        public static Reclamation UpdatedReclamationViewModelToUpdatedReclamation(int id, ReclamationViewModel reclamationViewModel, string user)
+        public static Reclamation UpdatedReclamationViewModelToUpdatedReclamation(ReclamationViewModel reclamationViewModel, string user)
         {
             Reclamation reclamation = new Reclamation
             {
                 Id = reclamationViewModel.Id,
                 Materiel = reclamationViewModel.Materiel,
-                Date = reclamationViewModel.Date,
                 Probleme = reclamationViewModel.Probleme,
                 Commentaire = reclamationViewModel.Commentaire,
                 Etat = reclamationViewModel.Etat,
-                CreatedBy = reclamationViewModel.CreatedBy
+                UniteGestion=reclamationViewModel.UniteGestion,
+                CreatedBy = user,
+                LastUpdatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
+                LastUpdatedTime = DateTime.Now.ToString("HH:mm:ss"),
             };
             return reclamation;
         }
@@ -83,7 +89,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
             ReclamationReport reclamationReport = new ReclamationReport
             {
                 Materiel= $"{reclamation.Materiel}",
-                Date = $"{reclamation.Date}",
+                Date = $"{reclamation.CreatedDate}",
                 Probleme = $"{reclamation.Probleme}",
                 Commentaire = $"{reclamation.Commentaire}",
                 Etat = $"{reclamation.Etat}",

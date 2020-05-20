@@ -10,7 +10,6 @@ namespace BT.Stage.SGIMI.Data.Entity
     {
         public int Id { get; set; }
         public string Materiel { get; set; }
-        public string Date { get; set; }
 
         [RegularExpression(@"^[A - Z] +[a - zA - Z'\s]*$")]
         [Required(ErrorMessage = "Veuillez exprimer votre problème")]
@@ -23,7 +22,12 @@ namespace BT.Stage.SGIMI.Data.Entity
         public string Commentaire { get; set; }
         public string Etat { get; set; }
         public string UniteGestion { get; set; }
-        public int CreatedBy { get; set; }
+        public string CreatedBy { get; set; }
+        public string CreatedDate { get; set; }
+        public string CreatedTime { get; set; }
+        public string LastUpdatedDate { get; set; }
+        public string LastUpdatedTime { get; set; }
+        public string LastUpdatedBy { get; set; }
     }
 }
 
