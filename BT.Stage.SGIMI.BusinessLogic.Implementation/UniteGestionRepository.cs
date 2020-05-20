@@ -41,10 +41,6 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
             return uniteGestionAdapter.UpdateUniteGestion(uniteGestion);
         }
 
-        public bool UpdateUniteGestion(UniteGestion uniteGestion)
-        {
-            throw new NotImplementedException();
-        }
         public byte[] GenerateUniteGestionReport(string reportEmbeddedResource, ReportDataSource reportDataSource)
         {
             LocalReport localReport = new LocalReport();

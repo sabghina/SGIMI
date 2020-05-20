@@ -1,7 +1,9 @@
 ﻿using BT.Stage.SGIMI.Data.Entity;
 using BT.Stage.SGIMI.DataAccess.Interface;
+using BT.Stage.SGIMI.DataAccess.Interface.DatabaseConnection;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,67 +12,54 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
 {
     public class UniteGestionAdapter : IUniteGestionAdapter
     {
-       
+        private readonly ISGIMIDbContext sGIMIDbContext;
+        public UniteGestionAdapter(ISGIMIDbContext _sGIMIDbContext)
+        {
+            sGIMIDbContext = _sGIMIDbContext;
+        }
+
 
         public bool CreateUniteGestion(UniteGestion uniteGestion)
         {
-            // ajout in database
-            return true;
+            sGIMIDbContext.UniteGestions.Add(uniteGestion);
+            Task<int> nbRowsAffected = sGIMIDbContext.ObjectContext.SaveChangesAsync();
+            if (nbRowsAffected != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public UniteGestion GetUniteGestionById(int id)
         {
-            // replace with database access
-            UniteGestion uniteGestion = new UniteGestion
-            {
-                Id = id,
-                Nom = "UniteGestion" + id,
-                Email = "UniteGestion" + id,
-                Telephone = "+216xxxxx",
-                Fax = "7xxxxxx",
-                Type = "Agence",
-                Adresse = "Rue xxxxxxxx",
-                LastUpdatedBy = "admin",
-                LastUpdatedDate = DateTime.Now.ToString("dddd, dd MMMM yyyy"),
-                LastUpdatedTime = DateTime.Now.ToString("HH:mm:ss")
-
-
-            };
-
+          
+            UniteGestion uniteGestion = sGIMIDbContext.UniteGestions.Find(id);
+          
             return uniteGestion;
         }
 
         public List<UniteGestion> GetUniteGestions()
         {
-            // replace with databse access
-            List<UniteGestion> uniteGestions = new List<UniteGestion>();
-            for (int i = 1; i < 10; i++)
-            {
-                UniteGestion uniteGestion = new UniteGestion
-                {
-                    Id = i,
-                    Nom = "UniteGestion" + i,
-                    Email = "UniteGestion" + i,
-                    Telephone = "+216xxxxx",
-                    Fax = "7xxxxxx",
-                    Type = "Agence",
-                    Adresse = "Rue xxxxxxxx",
-                    LastUpdatedBy = "admin",
-                    LastUpdatedDate = DateTime.Now.ToString("dddd, dd MMMM yyyy"),
-                    LastUpdatedTime = DateTime.Now.ToString("HH:mm:ss")
-
-
-                };
-
-                uniteGestions.Add(uniteGestion);
-            }
+            List<UniteGestion> uniteGestions = sGIMIDbContext.UniteGestions.ToList();
 
             return uniteGestions;
         }
 
         public bool UpdateUniteGestion(UniteGestion uniteGestion)
         {
-            return true;
+            sGIMIDbContext.UniteGestions.AddOrUpdate(uniteGestion);
+            Task<int> nbRowsAffected = sGIMIDbContext.ObjectContext.SaveChangesAsync();
+            if (nbRowsAffected != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

@@ -20,7 +20,7 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation.DatabaseConnection
         public virtual DbSet<Materiel> Materiels { get; set; }
         public virtual DbSet<Reclamation> Reclamations { get; set; }
         //public virtual DbSet<Intervention> Interventions { get; set; }
-        //public virtual DbSet<UniteGestion> UniteGestions { get; set; }
+        public virtual DbSet<UniteGestion> UniteGestions { get; set; }
 
     }
 

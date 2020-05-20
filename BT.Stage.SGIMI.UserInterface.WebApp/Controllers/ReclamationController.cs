@@ -61,7 +61,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 }
                 //string user = User.Identity.Name;
                 string user = User.Identity.Name;
-                Reclamation reclamation = ReclamationTranspose.ReclamationViewModelToReclamation(reclamationViewModel,user);
+                Reclamation reclamation = ReclamationTranspose.CreateReclamationViewModelToReclamation(reclamationViewModel,user);
 
                 bool reclamationIsCreated = reclamationRepository.CreateReclamation(reclamation);
                 if (reclamationIsCreated)
@@ -104,10 +104,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 bool reclamationIsUpdated = reclamationRepository.UpdatedReclamation(reclamation);
                 if (reclamationIsUpdated)
                 {
-                    return RedirectToAction("Details", new
-                    {
-                        id = reclamation.Id
-                    });
+                    return RedirectToAction("Index");
                 }
                 else
                 {

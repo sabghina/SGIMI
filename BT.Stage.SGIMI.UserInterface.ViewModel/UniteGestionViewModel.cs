@@ -15,6 +15,9 @@ namespace BT.Stage.SGIMI.UserInterface.ViewModel
         public string Adresse { get; set; }
         public string Fax { get; set; }
         public string Type { get; set; }
+        public string CreatedBy { get; set; }
+        public string CreatedDate { get; set; }
+        public string CreatedTime { get; set; }
         public string LastUpdatedDate { get; set; }
         public string LastUpdatedTime { get; set; }
         public object LastUpdatedBy { get; set; }

@@ -1,88 +1,99 @@
 ﻿@model BT.Stage.SGIMI.UserInterface.ViewModel.UniteGestionViewModel
 
-    <div>
-        <h4>UniteGestionViewModel</h4>
-        <div class="pull-right">
+<div>
+    <h4>UniteGestionViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nom)
+        </dt>
 
-            <button type="button">Télécharger un rapport</button>
+        <dd>
+            @Html.DisplayFor(model => model.Nom)
+        </dd>
 
-        </div>
-        <hr />
-        <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.Nom)
-            </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.Nom)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.Email)
-            </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Telephone)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.Email)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.Telephone)
+        </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.Telephone)
-            </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Adresse)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.Telephone)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.Adresse)
+        </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.Adresse)
-            </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Fax)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.Adresse)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.Fax)
+        </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.Fax)
-            </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.Fax)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.Type)
-            </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.Type)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.CreatedBy)
+        </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.LastUpdatedBy)
-            </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.LastUpdatedBy)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.LastUpdatedDate)
-            </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedTime)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.LastUpdatedDate)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.CreatedTime)
+        </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.LastUpdatedTime)
-            </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastUpdatedDate)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.LastUpdatedTime)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.LastUpdatedDate)
+        </dd>
 
-        </dl>
-    </div>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastUpdatedTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastUpdatedTime)
+        </dd>
+
+    </dl>
+</div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("Back to List", "Index")

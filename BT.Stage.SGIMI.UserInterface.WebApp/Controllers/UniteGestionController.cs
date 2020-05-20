@@ -100,15 +100,12 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 }
                 // TODO: Add update logic here
                 string user = User.Identity.Name;
-                UniteGestion uniteGestion = UniteGestionTranspose.UpdatedUniteGestionViewModelToUpdatedUniteGestion(id, uniteGestionViewModel, user);
+                UniteGestion uniteGestion = UniteGestionTranspose.UpdatedUniteGestionViewModelToUpdatedUniteGestion(uniteGestionViewModel, user);
 
                 bool uniteGestionIsUpdated = uniteGestionRepository.UpdatedUniteGestion(uniteGestion);
                 if (uniteGestionIsUpdated)
                 {
-                    return RedirectToAction("Details", new
-                    {
-                        id = uniteGestion.Id
-                    });
+                    return RedirectToAction("Index");
                 }
                 else
                 {

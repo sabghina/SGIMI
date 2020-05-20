@@ -32,15 +32,19 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Probleme = reclamation.Probleme,
                 Commentaire = reclamation.Commentaire,
                 Etat = reclamation.Etat,
+                UniteGestion = reclamation.UniteGestion,
                 CreatedBy = reclamation.CreatedBy,
                 CreatedDate = reclamation.CreatedDate,
-                UniteGestion=reclamation.UniteGestion
+                CreatedTime = reclamation.CreatedTime,
+                LastUpdatedBy = reclamation.LastUpdatedBy,
+                LastUpdatedDate = reclamation.LastUpdatedDate,
+                LastUpdatedTime = reclamation.LastUpdatedTime,
 
             };
             return reclamationViewModel;
         }
 
-        public static Reclamation ReclamationViewModelToReclamation( ReclamationViewModel reclamationViewModel, string user)
+        public static Reclamation CreateReclamationViewModelToReclamation( ReclamationViewModel reclamationViewModel, string user)
         {
             Reclamation reclamation = new Reclamation
             {
@@ -66,9 +70,9 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Commentaire = reclamationViewModel.Commentaire,
                 Etat = reclamationViewModel.Etat,
                 UniteGestion=reclamationViewModel.UniteGestion,
-                CreatedBy = user,
                 LastUpdatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
                 LastUpdatedTime = DateTime.Now.ToString("HH:mm:ss"),
+                LastUpdatedBy = user
             };
             return reclamation;
         }

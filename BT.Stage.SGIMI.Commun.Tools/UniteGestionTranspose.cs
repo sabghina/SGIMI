@@ -34,6 +34,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Email = uniteGestion.Email,
                 Telephone = uniteGestion.Telephone,
                 Adresse = uniteGestion.Adresse,
+                Type = uniteGestion.Type,
                 Fax = uniteGestion.Fax,
                 LastUpdatedDate = uniteGestion.LastUpdatedDate,
                 LastUpdatedTime = uniteGestion.LastUpdatedTime,
@@ -51,26 +52,28 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Telephone = uniteGestionViewModel.Telephone,
                 Adresse = uniteGestionViewModel.Adresse,
                 Fax = uniteGestionViewModel.Fax,
-                LastUpdatedDate = uniteGestionViewModel.LastUpdatedDate,
-                LastUpdatedTime = uniteGestionViewModel.LastUpdatedTime,
-                LastUpdatedBy = uniteGestionViewModel.LastUpdatedBy
+                Type = uniteGestionViewModel.Type,
+                CreatedBy = user,
+                CreatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
+                CreatedTime = DateTime.Now.ToString("HH:mm:ss")
 
             };
             return uniteGestion;
         }
-        public static UniteGestion UpdatedUniteGestionViewModelToUpdatedUniteGestion(int id, UniteGestionViewModel uniteGestionViewModel, string user)
+        public static UniteGestion UpdatedUniteGestionViewModelToUpdatedUniteGestion(UniteGestionViewModel uniteGestionViewModel, string user)
         {
             UniteGestion uniteGestion = new UniteGestion
             {
-                Id = id,
+                Id = uniteGestionViewModel.Id,
                 Nom = uniteGestionViewModel.Nom,
                 Email = uniteGestionViewModel.Email,
                 Telephone = uniteGestionViewModel.Telephone,
                 Adresse = uniteGestionViewModel.Adresse,
                 Fax = uniteGestionViewModel.Fax,
-                LastUpdatedDate = uniteGestionViewModel.LastUpdatedDate,
-                LastUpdatedTime = uniteGestionViewModel.LastUpdatedTime,
-                LastUpdatedBy = uniteGestionViewModel.LastUpdatedBy
+                Type = uniteGestionViewModel.Type,
+                LastUpdatedBy = user,
+                LastUpdatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
+                LastUpdatedTime = DateTime.Now.ToString("HH:mm:ss")
             };
 
             return uniteGestion;
