@@ -27,7 +27,7 @@ namespace BT.Stage.SGIMI.UserInterface.ViewModel
         public int Reclamation { get; set; }
         
 
-        [RegularExpression(@"^[A - Z] +[a - zA - Z'\s]*$")]
+        
         [Required(ErrorMessage = "Veuillez exprimer le problème constaté")]
         [MaxLength(100)]
         [Display(Name = " Problème Constaté")]
@@ -35,7 +35,6 @@ namespace BT.Stage.SGIMI.UserInterface.ViewModel
 
 
 
-        [RegularExpression(@"^[A - Z] +[a - zA - Z'\s]*$")]
         [Required(ErrorMessage = "Veuillez exprimer les traveaux effectués")]
         [MaxLength(100)]
         [Display(Name = " Les traveaux effectués")]

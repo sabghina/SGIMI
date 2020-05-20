@@ -14,7 +14,7 @@ namespace BT.Stage.SGIMI.DataAccess.Interface.DatabaseConnection
         DbSet<Fournisseur> Fournisseurs { get; set; }
         DbSet<Materiel> Materiels { get; set; }
         DbSet<Reclamation> Reclamations { get; set; }
-        //DbSet<Intervention> Interventions { get; set; }
+        DbSet<Intervention> Interventions { get; set; }
         DbSet<UniteGestion> UniteGestions { get; set; }
         
     }

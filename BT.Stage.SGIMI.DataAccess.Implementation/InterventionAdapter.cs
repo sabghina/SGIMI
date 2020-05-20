@@ -1,7 +1,9 @@
 ﻿using BT.Stage.SGIMI.Data.Entity;
 using BT.Stage.SGIMI.DataAccess.Interface;
+using BT.Stage.SGIMI.DataAccess.Interface.DatabaseConnection;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,67 +13,49 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
    public class InterventionAdapter : IInterventionAdapter
 
     {
+        private readonly ISGIMIDbContext sGIMIDbContext;
+        public InterventionAdapter(ISGIMIDbContext _sGIMIDbContext)
+        {
+            sGIMIDbContext = _sGIMIDbContext;
+        }
         public bool CreateIntervention(Intervention intervention)
         {
-            return true;
+            sGIMIDbContext.Interventions.Add(intervention);
+            Task<int> nbRowsAffected = sGIMIDbContext.ObjectContext.SaveChangesAsync();
+            if (nbRowsAffected != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public Intervention GetInterventionById(int id)
         {
-            // replace with database access
-            Intervention intervention = new Intervention
-            {
-                Id = id,
-                Type = "Intervention" + id,
-                Date = DateTime.Now.ToString("dddd, dd MMMM yyyy"),
-                //Exemple pour le test
-                Etat = "En cours",
-                Reclamation = id + 1,
-                ProblemeConstate = "Probleme"+ id,
-                TraveauxEffectues = "traveaux" + id,
-                CreatedBy = "user" + id + 1,
-                CreatedDate = DateTime.Now.ToString("dddd, dd MMMM yyyy"),
-                CreatedTime = DateTime.Now.ToString("HH:mm:ss"),
-                LastUpdatedBy = "admin",
-                LastUpdatedDate = DateTime.Now.ToString("dddd, dd MMMM yyyy"),
-                LastUpdatedTime = DateTime.Now.ToString("HH:mm:ss")
-            };
-
+            Intervention intervention = sGIMIDbContext.Interventions.Find(id);
+       
             return intervention;
         }
         public List<Intervention> GetInterventions()
         {
             // replace with databse access
-            List<Intervention> interventions = new List<Intervention>();
-            for (int i = 1; i < 10; i++)
-            {
-                Intervention intervention = new Intervention
-                {
-                    Id = i,
-                    Type = "Type" + i,
-                    Nature = "Nature"+i,
-                    Date = DateTime.Now.ToString("dddd, dd MMMM yyyy"),
-                    //Exemple pour le test
-                    Etat = "En cours",
-                    Reclamation = i+1,
-                    ProblemeConstate = "Probleme" + i,
-                    TraveauxEffectues = "traveaux" + i,
-                    CreatedBy = "user" + i + 1,
-                    CreatedDate = DateTime.Now.ToString("dddd, dd MMMM yyyy"),
-                    CreatedTime = DateTime.Now.ToString("HH:mm:ss"),
-                    LastUpdatedBy = "admin",
-                    LastUpdatedDate = DateTime.Now.ToString("dddd, dd MMMM yyyy"),
-                    LastUpdatedTime = DateTime.Now.ToString("HH:mm:ss")
-                };
-
-                interventions.Add(intervention);
-            }
-
+            List<Intervention> interventions = sGIMIDbContext.Interventions.ToList();
             return interventions;
         }
         public bool UpdateIntervention(Intervention intervention)
         {
-            return true;
+            sGIMIDbContext.Interventions.AddOrUpdate(intervention);
+            Task<int> nbRowsAffected = sGIMIDbContext.ObjectContext.SaveChangesAsync();
+            if (nbRowsAffected != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

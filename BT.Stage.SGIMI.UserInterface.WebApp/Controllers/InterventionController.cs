@@ -102,15 +102,12 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 }
                 // TODO: Add update logic here
                 string user = User.Identity.Name;
-                Intervention intervention = InterventionTranspose.UpdatedInterventionViewModelToUpdatedIntervention(id, interventionViewModel, user);
+                Intervention intervention = InterventionTranspose.UpdatedInterventionViewModelToUpdatedIntervention(interventionViewModel, user);
 
                 bool interventionIsUpdated = interventionRepository.UpdatedIntervention(intervention);
                 if (interventionIsUpdated)
                 {
-                    return RedirectToAction("Details", new
-                    {
-                        id = intervention.Id
-                    });
+                    return RedirectToAction("Index");
                 }
                 else
                 {

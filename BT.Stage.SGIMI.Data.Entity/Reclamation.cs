@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
+
 namespace BT.Stage.SGIMI.Data.Entity
 {
     public class Reclamation
@@ -28,6 +30,7 @@ namespace BT.Stage.SGIMI.Data.Entity
         public string LastUpdatedDate { get; set; }
         public string LastUpdatedTime { get; set; }
         public string LastUpdatedBy { get; set; }
+        public IEnumerable<SelectListItem> UniteGestions { get; set; }
     }
 }
 

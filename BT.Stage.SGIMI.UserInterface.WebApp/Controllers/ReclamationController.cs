@@ -1,4 +1,5 @@
-﻿using BT.Stage.SGIMI.BusinessLogic.Interface;
+﻿using BT.Stage.SGIMI.BusinessLogic.Implementation;
+using BT.Stage.SGIMI.BusinessLogic.Interface;
 using BT.Stage.SGIMI.Commun.Tools;
 using BT.Stage.SGIMI.Data.DTO;
 using BT.Stage.SGIMI.Data.Entity;
@@ -15,9 +16,11 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
     public class ReclamationController : Controller
     {
         readonly IReclamationRepository reclamationRepository;
-        public ReclamationController(IReclamationRepository _reclamationRepository)
+        readonly IUniteGestionRepository uniteGestionRepository;
+        public ReclamationController(IReclamationRepository _reclamationRepository, IUniteGestionRepository _uniteGestionRepository)
         {
             reclamationRepository = _reclamationRepository;
+            uniteGestionRepository = _uniteGestionRepository;
         }
 
         // GET: Reclamation
@@ -42,10 +45,20 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         }
 
         // GET: Reclamation/Create
-        public ActionResult Create(string materiel)
+        public ActionResult Create()
         {
-            ReclamationViewModel reclamationViewModel = new ReclamationViewModel();
-            reclamationViewModel.Materiel = materiel;
+            List<UniteGestion> uniteGestions = uniteGestionRepository.GetUniteGestions();
+            IEnumerable<SelectListItem> uniteGestionsSelectListItem = new SelectList(uniteGestions.Select(
+                uniteGestion => new
+                {
+                    Id = uniteGestion.Id,
+                    Text = uniteGestion.Nom
+                }).AsEnumerable(), "Text", "Text");
+
+            ReclamationViewModel reclamationViewModel = new ReclamationViewModel
+            {
+                UniteGestions = uniteGestionsSelectListItem
+            };
             return View(reclamationViewModel);
         }
 
@@ -57,7 +70,16 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             {
                 if (!ModelState.IsValid)
                 {
+                    List<UniteGestion> uniteGestions = uniteGestionRepository.GetUniteGestions();
+                    IEnumerable<SelectListItem> uniteGestionsSelectListItem = new SelectList(uniteGestions.Select(
+                        uniteGestion => new
+                        {
+                            Id = uniteGestion.Id,
+                            Text = uniteGestion.Nom
+                        }).AsEnumerable(), "Text", "Text");
+                    reclamationViewModel.UniteGestions = uniteGestionsSelectListItem;
                     return View(reclamationViewModel);
+                   
                 }
                 //string user = User.Identity.Name;
                 string user = User.Identity.Name;
@@ -82,8 +104,20 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         // GET: Reclamation/Edit/5
         public ActionResult Edit(int id)
         {
+            List<UniteGestion> uniteGestions = uniteGestionRepository.GetUniteGestions();
+            IEnumerable<SelectListItem> uniteGestionsSelectListItem = new SelectList(uniteGestions.Select(
+                uniteGestion => new
+                {
+                    Id = uniteGestion.Id,
+                    Text = uniteGestion.Nom
+                }).AsEnumerable(), "Text", "Text");
+
+            ReclamationViewModel reclamationViewModel = new ReclamationViewModel
+            {
+                UniteGestions = uniteGestionsSelectListItem
+            };
             Reclamation reclamation = reclamationRepository.GetReclamationById(id);
-            ReclamationViewModel reclamationViewModel = ReclamationTranspose.ReclamationToReclamationViewModel(reclamation);
+            reclamationViewModel = ReclamationTranspose.ReclamationToReclamationViewModel(reclamation);
             return View(reclamationViewModel);
         }
 
@@ -95,6 +129,14 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             {
                 if (!ModelState.IsValid)
                 {
+                    List<UniteGestion> uniteGestions = uniteGestionRepository.GetUniteGestions();
+                    IEnumerable<SelectListItem> uniteGestionsSelectListItem = new SelectList(uniteGestions.Select(
+                        uniteGestion => new
+                        {
+                            Id = uniteGestion.Id,
+                            Text = uniteGestion.Nom
+                        }).AsEnumerable(), "Text", "Text");
+                    reclamationViewModel.UniteGestions = uniteGestionsSelectListItem;
                     return View(reclamationViewModel);
                 }
                 // TODO: Add update logic here
