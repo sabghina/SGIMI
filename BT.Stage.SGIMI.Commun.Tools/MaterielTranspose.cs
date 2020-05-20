@@ -33,7 +33,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Modele = materiel.Modele,
                 ReferenceBT = materiel.ReferenceBT,
                 NumeroDeSerie = materiel.NumeroDeSerie,
-                Fournisseur = materiel.Fournisseur.ToString(),
+                Fournisseur = materiel.Fournisseur,
                 CreatedDate = materiel.CreatedDate,
                 CreatedTime = materiel.CreatedTime,
                 LastUpdatedDate = materiel.LastUpdatedDate,
@@ -55,9 +55,11 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 ReferenceBT = createMaterielViewModel.ReferenceBT,
                 NumeroDeSerie = createMaterielViewModel.NumeroDeSerie,
                 Fournisseur = createMaterielViewModel.Fournisseur,
-                CreatedBy = user // TODO: add current connected user
+                CreatedBy = user,
+                CreatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
+                CreatedTime = DateTime.Now.ToString("HH:mm:ss")
 
-            };
+    };
             return materiel;
         }
 
@@ -71,24 +73,26 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 ReferenceBT = materiel.ReferenceBT,
                 NumeroDeSerie = materiel.NumeroDeSerie,
                 Fournisseur = materiel.Fournisseur,
-                CreatedBy = "admin" // TODO: add current connected user
+                CreatedBy = materiel.CreatedBy 
 
             };
             return createMaterielViewModel;
         }
 
-        public static Materiel UpdatedMaterielViewModelToUpdatedMateriel(int id, CreateMaterielViewModel createMaterielViewModel, string user)
+        public static Materiel UpdatedMaterielViewModelToUpdatedMateriel(CreateMaterielViewModel createMaterielViewModel, string user)
         {
             Materiel materiel = new Materiel
             {
-                Id = id,
+                Id = createMaterielViewModel.Id,
                 Nom = createMaterielViewModel.Nom,
                 Marque = createMaterielViewModel.Marque,
                 Modele = createMaterielViewModel.Modele,
                 ReferenceBT = createMaterielViewModel.ReferenceBT,
                 NumeroDeSerie = createMaterielViewModel.NumeroDeSerie,
                 Fournisseur = createMaterielViewModel.Fournisseur,
-                CreatedBy = user // TODO: add current connected user
+                CreatedBy = user,
+                LastUpdatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
+                LastUpdatedTime = DateTime.Now.ToString("HH:mm:ss")
 
             };
             return materiel;
@@ -100,7 +104,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
             {
                 Agent = affectationMaterielViewModel.Agent,
                 Unite = affectationMaterielViewModel.Unite,
-                CreatedBy = user // TODO: add current connected user
+                CreatedBy = user
 
             };
             return materiel;
@@ -112,7 +116,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
             {
                 Agent = materiel.Agent,
                 Unite = materiel.Unite,
-                CreatedBy = "admin" // TODO: add current connected user
+                CreatedBy = materiel.CreatedBy
 
             };
             return affectationMaterielViewModel;

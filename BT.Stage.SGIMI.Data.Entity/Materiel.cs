@@ -35,13 +35,10 @@ namespace BT.Stage.SGIMI.Data.Entity
         [Display(Name = " Réference BT")]
         public string ReferenceBT { get; set; }
 
-        [RegularExpression(@"[0-9]{2}|0)([0-9]{9}|[0-9\-\s]{9,18})")]
-        [Required(ErrorMessage = "Veuillez saisir le nom du fournisseur")]
-        [MaxLength(30)]
-        [Display(Name = " Num de Serie")]
-        public int NumeroDeSerie { get; set; }
+        
+        public string NumeroDeSerie { get; set; }
 
-        public int Fournisseur { get; set; }
+        public string Fournisseur { get; set; }
         public string CreatedDate { get; set; }
         public string CreatedTime { get; set; }
         public string LastUpdatedDate { get; set; }

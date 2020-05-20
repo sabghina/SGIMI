@@ -11,7 +11,6 @@ namespace BT.Stage.SGIMI.Data.Entity
     {
         public int Id { get; set; }
 
-        [RegularExpression(@"^[A-Z]+[a-zA-Z'\s]*$")]
         [Required(ErrorMessage = "Veuillez saisir le nom du fournisseur")]
         [MaxLength(30)]
         [Display(Name = " Nom")]

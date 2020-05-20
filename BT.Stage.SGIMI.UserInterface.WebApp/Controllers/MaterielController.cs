@@ -53,8 +53,8 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 fournisseur => new
                 {
                     Id = fournisseur.Id,
-                    Text = fournisseur.Nom + " (" + fournisseur.Type + ")"
-                }).AsEnumerable(), "Id", "Text");
+                    Text = fournisseur.Nom 
+                }).AsEnumerable(), "Text", "Text");
 
             CreateMaterielViewModel createMatrielViewModel = new CreateMaterielViewModel
             {
@@ -76,11 +76,12 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                     fournisseur => new
                     {
                         Id = fournisseur.Id,
-                        Text = fournisseur.Nom + " (" + fournisseur.Type + ")"
-                    }).AsEnumerable(), "Id", "Text");
+                        Text = fournisseur.Nom 
+                    }).AsEnumerable(), "Text", "Text");
                     createMatrielViewModel.Fournisseurs = fournisseursSelectListItem;
 
                     return View(createMatrielViewModel);
+
                 }
                 string user = User.Identity.Name;
                 Materiel materiel = MaterielTranspose.CreateMaterielViewModelToMateriel(createMatrielViewModel, user);
@@ -103,10 +104,11 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
 
         // GET: Materiel/Edit/5
         public ActionResult Edit(int id)
-        {
+        {   
             Materiel materiel = materielRepository.GetMaterielById(id);
             CreateMaterielViewModel createMaterielViewModel = MaterielTranspose.MaterielToCreateMaterielViewModel(materiel);
             return View(createMaterielViewModel);
+
         }
 
         // POST: Materiel/Edit/5
@@ -121,15 +123,12 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 }
                 // TODO: Add update logic here
                 string user = User.Identity.Name;
-                Materiel materiel = MaterielTranspose.UpdatedMaterielViewModelToUpdatedMateriel(id, createMaterielViewModel, user);
+                Materiel materiel = MaterielTranspose.UpdatedMaterielViewModelToUpdatedMateriel(createMaterielViewModel, user);
 
                 bool materielIsUpdated = materielRepository.UpdatedMateriel(materiel);
                 if (materielIsUpdated)
                 {
-                    return RedirectToAction("Details", new
-                    {
-                        id = materiel.Id
-                    });
+                    return RedirectToAction("Index");
                 }
                 else
                 {

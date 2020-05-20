@@ -27,5 +27,6 @@ namespace BT.Stage.SGIMI.DataAccess.Interface
         /// <returns></returns>
         bool CreateFournisseur(Fournisseur fournisseur);
         bool UpdateFournisseur(Fournisseur fournisseur);
+        string GetNameFournisseurById(int id);
     }
 }

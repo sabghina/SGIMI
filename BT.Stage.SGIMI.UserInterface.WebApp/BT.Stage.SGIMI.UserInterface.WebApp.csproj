@@ -440,6 +440,10 @@
       <Project>{9D473CFB-2BCB-4A7A-8810-6335B4FBF0EA}</Project>
       <Name>BT.Stage.SGIMI.Data.Entity</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BT.Stage.SGIMI.DataAccess.Implementation\BT.Stage.SGIMI.DataAccess.Implementation.csproj">
+      <Project>{CEF0D6F2-B066-4DB4-B7AD-933D35E07BA1}</Project>
+      <Name>BT.Stage.SGIMI.DataAccess.Implementation</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BT.Stage.SGIMI.UserInterface.ViewModel\BT.Stage.SGIMI.UserInterface.ViewModel.csproj">
       <Project>{753F3014-9A39-42D9-A24F-5C530B590F1F}</Project>
       <Name>BT.Stage.SGIMI.UserInterface.ViewModel</Name>

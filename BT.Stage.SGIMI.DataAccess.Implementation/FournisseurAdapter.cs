@@ -46,6 +46,12 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
             return fournisseurs;
         }
 
+        public string GetNameFournisseurById(int id)
+        {
+            Fournisseur fournisseur = sGIMIDbContext.Fournisseurs.Find(id);
+            return fournisseur.Nom;
+        }
+
         public bool UpdateFournisseur(Fournisseur fournisseur)
         {            
             sGIMIDbContext.Fournisseurs.AddOrUpdate(fournisseur);

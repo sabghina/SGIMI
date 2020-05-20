@@ -12,7 +12,7 @@ namespace BT.Stage.SGIMI.DataAccess.Interface.DatabaseConnection
     public interface ISGIMIDbContext : IObjectContextAdapter
     {
         DbSet<Fournisseur> Fournisseurs { get; set; }
-        //DbSet<Materiel> Materiels { get; set; }
+        DbSet<Materiel> Materiels { get; set; }
         //DbSet<Reclamation> Reclamations { get; set; }
         //DbSet<Intervention> Interventions { get; set; }
         //DbSet<UniteGestion> UniteGestions { get; set; }

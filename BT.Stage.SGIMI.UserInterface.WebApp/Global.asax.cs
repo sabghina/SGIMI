@@ -1,5 +1,7 @@
+using BT.Stage.SGIMI.DataAccess.Implementation.DatabaseConnection;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -12,6 +14,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp
     {
         protected void Application_Start()
         {
+            Database.SetInitializer<SGIMIDbContext>(new DropCreateDatabaseIfModelChanges<SGIMIDbContext>());
             AreaRegistration.RegisterAllAreas();
             UnityConfig.RegisterComponents();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
