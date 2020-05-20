@@ -17,7 +17,6 @@ namespace BT.Stage.SGIMI.Data.Entity
         [Display(Name = "Problème à réclamer")]
         public string Probleme { get; set; }
 
-
         [RegularExpression(@"^[A - Z] +[a - zA - Z'\s]*$")]
         [Required(ErrorMessage = "Veuillez saisir un commentaire")]
         [Display(Name = "Commentaire")]

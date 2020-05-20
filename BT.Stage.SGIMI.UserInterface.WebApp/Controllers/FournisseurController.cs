@@ -63,7 +63,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 }
                 // TODO: Add insert logic here
                 string user = User.Identity.Name;
-                Fournisseur fournisseur = FournisseurTranspose.FournisseurViewModelToFournisseur(fournisseurViewModel, user);
+                Fournisseur fournisseur = FournisseurTranspose.CreateFournisseurViewModelToFournisseur(fournisseurViewModel, user);
 
                 bool fournisseurIsCreated = fournisseurRepository.CreateFournisseur(fournisseur);
                 if (fournisseurIsCreated)
@@ -84,9 +84,16 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         // GET: Fournisseur/Edit/5
         public ActionResult Edit(int id)
         {
-            Fournisseur fournisseur = fournisseurRepository.GetFournisseurById(id);
-            FournisseurViewModel fournisseurViewModel = FournisseurTranspose.FournisseurToFournisseurViewModel(fournisseur);
-            return View(fournisseurViewModel);
+            try
+            {
+                Fournisseur fournisseur = fournisseurRepository.GetFournisseurById(id);
+                FournisseurViewModel fournisseurViewModel = FournisseurTranspose.FournisseurToFournisseurViewModel(fournisseur);
+                return View(fournisseurViewModel);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         // POST: Fournisseur/Edit/5
@@ -100,7 +107,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                     return View(fournisseurViewModel);
                 }
                 string user = User.Identity.Name;
-                Fournisseur fournisseur = FournisseurTranspose.FournisseurViewModelToFournisseur(fournisseurViewModel,user);
+                Fournisseur fournisseur = FournisseurTranspose.UpdatedFournisseurViewModelToUpdatedFournisseur(fournisseurViewModel, user);
                 bool fournisseurIsUpdated = fournisseurRepository.UpdatedFournisseur(fournisseur);
                 if (!fournisseurIsUpdated)
                 {
@@ -114,8 +121,8 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             }
 
         }
-           
-        
+
+
 
         // GET: Fournisseur/Delete/5
         public ActionResult Delete(int id)

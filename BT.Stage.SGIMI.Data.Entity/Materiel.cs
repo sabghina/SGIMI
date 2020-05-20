@@ -9,8 +9,6 @@ namespace BT.Stage.SGIMI.Data.Entity
 {
     public class Materiel
     {
-          
-
         public int Id { get; set; }
 
         [RegularExpression(@"^[A-Z]+[a-zA-Z'\s]*$")]
@@ -47,7 +45,7 @@ namespace BT.Stage.SGIMI.Data.Entity
         public string CreatedDate { get; set; }
         public string CreatedTime { get; set; }
         public string LastUpdatedDate { get; set; }
-        public string LastUpdatedTime  { get; set; }
+        public string LastUpdatedTime { get; set; }
         public string LastUpdatedBy { get; set; }
         public string CreatedBy { get; set; }
         public string Agent { get; set; }

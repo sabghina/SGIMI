@@ -2,8 +2,17 @@
     ViewBag.Title = "Home Page";
 }
 
-    <div class="jumbotron">
-        <script>
+<div class="jumbotron">
+
+
+    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+    <div id="chartContainer2" style="height: 370px; width: 100%;"></div>
+    <div id="chartContainer3" style="height: 370px; width: 100%;"></div>
+</div>
+
+@section scripts{
+    <script type="text/javascript" src="~/Scripts/canvajs-2.3.2/canvasjs.min.js"></script>
+    <script type="text/javascript">
 window.onload = function () {
 
 var chart = new CanvasJS.Chart("chartContainer", {
@@ -23,7 +32,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		showInLegend: "true",
 		legendText: "{label}",
 		indexLabel: "{label} - {y}%",
-		dataPoints: @Html.Raw(ViewBag.DataPoints)
+		dataPoints: @Html.Raw(ViewBag.ReclamationParService)
 	}]
 });
 chart.render();
@@ -33,7 +42,7 @@ var chart2 = new CanvasJS.Chart("chartContainer2", {
 	exportEnabled: true,
 	animationEnabled: true,
 	subtitles: [{
-		text: "Banque de tunisie, 2020"
+        text: "Etat materiel"
 	}],
 	data: [{
 		type: "line",
@@ -42,7 +51,7 @@ var chart2 = new CanvasJS.Chart("chartContainer2", {
 		showInLegend: "true",
 		legendText: "{label}",
 		indexLabel: "{label} - {y}%",
-		dataPoints: @Html.Raw(ViewBag.DataPoints)
+		dataPoints: @Html.Raw(ViewBag.EtatMateriel)
 	}]
 });
 chart2.render();
@@ -51,7 +60,7 @@ var chart3 = new CanvasJS.Chart("chartContainer3", {
 	exportEnabled: true,
 	animationEnabled: true,
 	subtitles: [{
-		text: "Banque de tunisie, 2020"
+		text: "Reclamation par unité gestion"
 	}],
 	data: [{
 		type: "pie",
@@ -60,20 +69,11 @@ var chart3 = new CanvasJS.Chart("chartContainer3", {
 		showInLegend: "true",
 		legendText: "{label}",
 		indexLabel: "{label} - {y}%",
-		dataPoints: @Html.Raw(ViewBag.DataPoints)
+		dataPoints: @Html.Raw(ViewBag.ReclamationParUniteGestion)
 	}]
 });
 chart3.render();
 
 }
-        </script>
-
-        <div id="chartContainer" style="height: 370px; width: 100%;"></div>
-        <div id="chartContainer2" style="height: 370px; width: 100%;"></div>
-        <div id="chartContainer3" style="height: 370px; width: 100%;"></div>
-        <script src="~/Scripts/canvajs-2.3.2/canvasjs.min.js"></script>
-    </div>
-
-
-      
-
+    </script>
+}

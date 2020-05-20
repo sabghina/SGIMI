@@ -83,7 +83,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                     return View(createMatrielViewModel);
                 }
                 string user = User.Identity.Name;
-                Materiel materiel = MaterielTranspose.CreateMaterielViewModelToMateriel(createMatrielViewModel,user);
+                Materiel materiel = MaterielTranspose.CreateMaterielViewModelToMateriel(createMatrielViewModel, user);
 
                 bool materielIsCreated = materielRepository.CreateMateriel(materiel);
                 if (materielIsCreated)
@@ -150,7 +150,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             AffectationMaterielViewModel affectationMaterielViewModel = new AffectationMaterielViewModel();
             affectationMaterielViewModel.Id = id;
             return View(affectationMaterielViewModel);
-            
+
 
         }
 

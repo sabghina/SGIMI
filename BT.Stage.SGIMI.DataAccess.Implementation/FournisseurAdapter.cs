@@ -47,7 +47,7 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
         }
 
         public bool UpdateFournisseur(Fournisseur fournisseur)
-        {
+        {            
             sGIMIDbContext.Fournisseurs.AddOrUpdate(fournisseur);
             Task<int> nbRowsAffected = sGIMIDbContext.ObjectContext.SaveChangesAsync();
             if (nbRowsAffected != null)

@@ -46,7 +46,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
             return fournisseurViewModel;
         }
 
-        public static Fournisseur FournisseurViewModelToFournisseur(FournisseurViewModel fournisseurViewModel, string user)
+        public static Fournisseur CreateFournisseurViewModelToFournisseur(FournisseurViewModel fournisseurViewModel, string user)
         {
             Fournisseur fournisseur = new Fournisseur
             {
@@ -58,20 +58,17 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 SiteWeb = fournisseurViewModel.SiteWeb,
                 Type = (char)fournisseurViewModel.Type,
                 CreatedBy = user,
-                CreatedDate = fournisseurViewModel.CreatedDate,
-                CreatedTime = fournisseurViewModel.CreatedTime,
-                LastUpdatedDate = fournisseurViewModel.LastUpdatedDate,
-                LastUpdatedTime = fournisseurViewModel.LastUpdatedTime,
-                LastUpdatedBy = fournisseurViewModel.LastUpdatedBy
-                
+                CreatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
+                CreatedTime = DateTime.Now.ToString("HH:mm:ss")
             };
             return fournisseur;
         }
-        public static Fournisseur UpdatedFournisseurViewModelToUpdatedFournisseur(int id,FournisseurViewModel fournisseurViewModel)
+
+        public static Fournisseur UpdatedFournisseurViewModelToUpdatedFournisseur(FournisseurViewModel fournisseurViewModel, string user)
         {
             Fournisseur fournisseur = new Fournisseur
             {
-                Id = id,
+                Id = fournisseurViewModel.Id,
                 Nom = fournisseurViewModel.Nom,
                 Email = fournisseurViewModel.Email,
                 Telephone = fournisseurViewModel.Telephone,
@@ -79,11 +76,9 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Fax = fournisseurViewModel.Fax,
                 SiteWeb = fournisseurViewModel.SiteWeb,
                 Type = (char)fournisseurViewModel.Type,
-                CreatedDate = fournisseurViewModel.CreatedDate,
-                CreatedTime = fournisseurViewModel.CreatedTime,
-                LastUpdatedDate = fournisseurViewModel.LastUpdatedDate,
-                LastUpdatedTime = fournisseurViewModel.LastUpdatedTime,
-                LastUpdatedBy = fournisseurViewModel.LastUpdatedBy
+                LastUpdatedBy = user,
+                LastUpdatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
+                LastUpdatedTime = DateTime.Now.ToString("HH:mm:ss"),                
             };
             return fournisseur;
         }
