@@ -14,6 +14,7 @@ namespace BT.Stage.SGIMI.Data.DTO
         public string Commentaire { get; set; }
         public string Etat { get; set; }
         public string UniteGestion { get; set; }
+        public string Rec_By { get; set; }
 
     }
 }

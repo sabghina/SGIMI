@@ -97,7 +97,9 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Probleme = $"{reclamation.Probleme}",
                 Commentaire = $"{reclamation.Commentaire}",
                 Etat = $"{reclamation.Etat}",
-                UniteGestion = $"{reclamation.UniteGestion}"
+                UniteGestion = $"{reclamation.UniteGestion}",
+                Rec_By =$"{reclamation.CreatedBy}"
+
     };
 
             return reclamationReport;

@@ -12,7 +12,7 @@
   <xs:element name="ReclamationDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ReclamationDataSet" msprop:Generator_UserDSName="ReclamationDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Reclamation" msprop:Generator_TableClassName="ReclamationDataTable" msprop:Generator_TableVarName="tableReclamation" msprop:Generator_TablePropName="Reclamation" msprop:Generator_RowDeletingName="ReclamationRowDeleting" msprop:Generator_RowChangingName="ReclamationRowChanging" msprop:Generator_RowEvHandlerName="ReclamationRowChangeEventHandler" msprop:Generator_RowDeletedName="ReclamationRowDeleted" msprop:Generator_UserTableName="Reclamation" msprop:Generator_RowChangedName="ReclamationRowChanged" msprop:Generator_RowEvArgName="ReclamationRowChangeEvent" msprop:Generator_RowClassName="ReclamationRow">
+        <xs:element name="Reclamation" msprop:Generator_TableClassName="ReclamationDataTable" msprop:Generator_TableVarName="tableReclamation" msprop:Generator_RowChangedName="ReclamationRowChanged" msprop:Generator_TablePropName="Reclamation" msprop:Generator_RowDeletingName="ReclamationRowDeleting" msprop:Generator_RowChangingName="ReclamationRowChanging" msprop:Generator_RowEvHandlerName="ReclamationRowChangeEventHandler" msprop:Generator_RowDeletedName="ReclamationRowDeleted" msprop:Generator_RowClassName="ReclamationRow" msprop:Generator_UserTableName="Reclamation" msprop:Generator_RowEvArgName="ReclamationRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Materiel" msprop:Generator_ColumnVarNameInTable="columnMateriel" msprop:Generator_ColumnPropNameInRow="Materiel" msprop:Generator_ColumnPropNameInTable="MaterielColumn" msprop:Generator_UserColumnName="Materiel" type="xs:string" minOccurs="0" />
@@ -21,6 +21,7 @@
               <xs:element name="Commentaire" msprop:Generator_ColumnVarNameInTable="columnCommentaire" msprop:Generator_ColumnPropNameInRow="Commentaire" msprop:Generator_ColumnPropNameInTable="CommentaireColumn" msprop:Generator_UserColumnName="Commentaire" type="xs:string" minOccurs="0" />
               <xs:element name="Etat" msprop:Generator_ColumnVarNameInTable="columnEtat" msprop:Generator_ColumnPropNameInRow="Etat" msprop:Generator_ColumnPropNameInTable="EtatColumn" msprop:Generator_UserColumnName="Etat" type="xs:string" minOccurs="0" />
               <xs:element name="UniteGestion" msprop:Generator_ColumnVarNameInTable="columnUniteGestion" msprop:Generator_ColumnPropNameInRow="UniteGestion" msprop:Generator_ColumnPropNameInTable="UniteGestionColumn" msprop:Generator_UserColumnName="UniteGestion" type="xs:string" minOccurs="0" />
+              <xs:element name="Rec_By" msprop:Generator_ColumnVarNameInTable="columnRec_By" msprop:Generator_ColumnPropNameInRow="Rec_By" msprop:Generator_ColumnPropNameInTable="Rec_ByColumn" msprop:Generator_UserColumnName="Rec_By" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

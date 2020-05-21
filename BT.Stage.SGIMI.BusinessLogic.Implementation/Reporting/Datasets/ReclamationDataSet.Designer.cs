@@ -291,6 +291,8 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             
             private global::System.Data.DataColumn columnUniteGestion;
             
+            private global::System.Data.DataColumn columnRec_By;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public ReclamationDataTable() {
@@ -374,6 +376,14 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Rec_ByColumn {
+                get {
+                    return this.columnRec_By;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -409,7 +419,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ReclamationRow AddReclamationRow(string Materiel, string Date, string Probleme, string Commentaire, string Etat, string UniteGestion) {
+            public ReclamationRow AddReclamationRow(string Materiel, string Date, string Probleme, string Commentaire, string Etat, string UniteGestion, string Rec_By) {
                 ReclamationRow rowReclamationRow = ((ReclamationRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Materiel,
@@ -417,7 +427,8 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
                         Probleme,
                         Commentaire,
                         Etat,
-                        UniteGestion};
+                        UniteGestion,
+                        Rec_By};
                 rowReclamationRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowReclamationRow);
                 return rowReclamationRow;
@@ -446,6 +457,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
                 this.columnCommentaire = base.Columns["Commentaire"];
                 this.columnEtat = base.Columns["Etat"];
                 this.columnUniteGestion = base.Columns["UniteGestion"];
+                this.columnRec_By = base.Columns["Rec_By"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -463,6 +475,8 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
                 base.Columns.Add(this.columnEtat);
                 this.columnUniteGestion = new global::System.Data.DataColumn("UniteGestion", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnUniteGestion);
+                this.columnRec_By = new global::System.Data.DataColumn("Rec_By", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRec_By);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -701,6 +715,22 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Rec_By {
+                get {
+                    try {
+                        return ((string)(this[this.tableReclamation.Rec_ByColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Rec_By\' in table \'Reclamation\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableReclamation.Rec_ByColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsMaterielNull() {
                 return this.IsNull(this.tableReclamation.MaterielColumn);
             }
@@ -769,6 +799,18 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetUniteGestionNull() {
                 this[this.tableReclamation.UniteGestionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsRec_ByNull() {
+                return this.IsNull(this.tableReclamation.Rec_ByColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetRec_ByNull() {
+                this[this.tableReclamation.Rec_ByColumn] = global::System.Convert.DBNull;
             }
         }
         
