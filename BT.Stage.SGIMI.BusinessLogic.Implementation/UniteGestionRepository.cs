@@ -149,7 +149,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
                 List<UniteGestionReport> uniteGestionReports = new List<UniteGestionReport>();
                 uniteGestionReports.Add(uniteGestionReport);
 
-                string reportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.UniteGestionReport.UniteGestionDynamicReports.rdlc";
+                string reportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.UniteGestionReport.UniteGestionDynamicReport.rdlc";
                 ReportDataSource reportDataSource = new ReportDataSource("UniteGestionDataSet", uniteGestionReports);
 
                 return GenerateUniteGestionReport(reportEmbeddedResource, reportDataSource);
