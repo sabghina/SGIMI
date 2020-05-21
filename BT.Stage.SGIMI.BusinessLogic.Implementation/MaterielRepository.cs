@@ -119,7 +119,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
                 List<MaterielReport> materielReports = new List<MaterielReport>();
                 materielReports.Add(materielReport);
 
-                string reportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.MaterielReport.MaterielDynamicReports.rdlc";
+                string reportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.MaterielReport.MaterielDynamicReport.rdlc";
                 ReportDataSource reportDataSource = new ReportDataSource("MaterielDataSet", materielReports);
 
                 return GenerateMaterielReport(reportEmbeddedResource, reportDataSource);

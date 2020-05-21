@@ -117,7 +117,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
                 List<InterventionReport> interventionReports = new List<InterventionReport>();
                 interventionReports.Add(interventionReport);
 
-                string reportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.InterventionReport.InterventionDynamicReports.rdlc";
+                string reportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.InterventionReport.InterventionDynamicReport.rdlc";
                 ReportDataSource reportDataSource = new ReportDataSource("InterventionDataSet", interventionReports);
 
                 return GenerateInterventionReport(reportEmbeddedResource, reportDataSource);

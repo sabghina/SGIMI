@@ -142,7 +142,8 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Modele = $"{materiel.Modele}",
                 ReferenceBT = $"{materiel.ReferenceBT}",
                 NumeroDeSerie = $"{materiel.NumeroDeSerie}",
-                Fournisseur = $"{materiel.Fournisseur}"
+                Fournisseur = $"{materiel.Fournisseur}",
+                DateContrat= $"{materiel.CreatedDate}"
             };
 
             return materielReport;

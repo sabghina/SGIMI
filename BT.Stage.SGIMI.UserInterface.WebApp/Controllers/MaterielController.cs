@@ -243,7 +243,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             Materiel materiel = materielRepository.GetMaterielById(id);
             MaterielReport materielReport = MaterielTranspose.MaterielToMaterielReport(materiel);
             byte[] file = materielRepository.DynamicReport(materielReport);
-            string filename = $"dynamic_report_{id}_{DateTime.Now}.pdf";
+            string filename = $"ContratMateriel_{id}_{DateTime.Now}.pdf";
             return File(file, "application/pdf", filename);
         }
     }

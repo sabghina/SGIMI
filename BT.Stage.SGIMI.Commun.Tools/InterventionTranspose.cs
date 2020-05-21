@@ -106,7 +106,8 @@ namespace BT.Stage.SGIMI.Commun.Tools
                     Nature = $"{intervention.Nature}",
                     Reclamation = $"{intervention.Reclamation}",
                     ProblemeConstate = $"{intervention.ProblemeConstate}",
-                    TraveauxEffectues = $"{intervention.TraveauxEffectues}"
+                    TraveauxEffectues = $"{intervention.TraveauxEffectues}",
+                    InterventionBy = $"{intervention.CreatedBy}" 
                     
                 };
 

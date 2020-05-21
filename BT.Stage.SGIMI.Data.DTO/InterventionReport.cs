@@ -14,5 +14,6 @@ namespace BT.Stage.SGIMI.Data.DTO
         public string Reclamation { get; set; }
         public string ProblemeConstate { get; set; }
         public string TraveauxEffectues { get; set; }
+        public string InterventionBy { get; set; }
     }
 }

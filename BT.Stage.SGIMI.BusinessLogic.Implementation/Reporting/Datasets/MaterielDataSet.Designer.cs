@@ -291,6 +291,8 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             
             private global::System.Data.DataColumn columnFournisseur;
             
+            private global::System.Data.DataColumn columnDateConrtrat;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public MaterielDataTable() {
@@ -374,6 +376,14 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn DateConrtratColumn {
+                get {
+                    return this.columnDateConrtrat;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -409,7 +419,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public MaterielRow AddMaterielRow(string Nom, string Marque, string Modele, string ReferenceBT, string NumeroDeSerie, string Fournisseur) {
+            public MaterielRow AddMaterielRow(string Nom, string Marque, string Modele, string ReferenceBT, string NumeroDeSerie, string Fournisseur, string DateConrtrat) {
                 MaterielRow rowMaterielRow = ((MaterielRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Nom,
@@ -417,7 +427,8 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
                         Modele,
                         ReferenceBT,
                         NumeroDeSerie,
-                        Fournisseur};
+                        Fournisseur,
+                        DateConrtrat};
                 rowMaterielRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowMaterielRow);
                 return rowMaterielRow;
@@ -446,6 +457,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
                 this.columnReferenceBT = base.Columns["ReferenceBT"];
                 this.columnNumeroDeSerie = base.Columns["NumeroDeSerie"];
                 this.columnFournisseur = base.Columns["Fournisseur"];
+                this.columnDateConrtrat = base.Columns["DateConrtrat"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -463,6 +475,8 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
                 base.Columns.Add(this.columnNumeroDeSerie);
                 this.columnFournisseur = new global::System.Data.DataColumn("Fournisseur", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFournisseur);
+                this.columnDateConrtrat = new global::System.Data.DataColumn("DateConrtrat", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDateConrtrat);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -701,6 +715,22 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string DateConrtrat {
+                get {
+                    try {
+                        return ((string)(this[this.tableMateriel.DateConrtratColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DateConrtrat\' in table \'Materiel\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMateriel.DateConrtratColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsNomNull() {
                 return this.IsNull(this.tableMateriel.NomColumn);
             }
@@ -769,6 +799,18 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetFournisseurNull() {
                 this[this.tableMateriel.FournisseurColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDateConrtratNull() {
+                return this.IsNull(this.tableMateriel.DateConrtratColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDateConrtratNull() {
+                this[this.tableMateriel.DateConrtratColumn] = global::System.Convert.DBNull;
             }
         }
         

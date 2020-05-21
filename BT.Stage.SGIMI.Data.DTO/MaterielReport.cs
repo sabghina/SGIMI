@@ -14,6 +14,7 @@ namespace BT.Stage.SGIMI.Data.DTO
         public string ReferenceBT { get; set; }
         public string NumeroDeSerie { get; set; }
         public string Fournisseur { get; set; }
+        public string DateContrat { get; set; }
 
     }
 }

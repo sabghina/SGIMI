@@ -291,6 +291,8 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             
             private global::System.Data.DataColumn columnTraveauxEffectues;
             
+            private global::System.Data.DataColumn columnInterventionBy;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public InterventionDataTable() {
@@ -374,6 +376,14 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn InterventionByColumn {
+                get {
+                    return this.columnInterventionBy;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -409,7 +419,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public InterventionRow AddInterventionRow(string Date, string Etat, string Nature, string Reclamation, string ProblemeConstate, string TraveauxEffectues) {
+            public InterventionRow AddInterventionRow(string Date, string Etat, string Nature, string Reclamation, string ProblemeConstate, string TraveauxEffectues, string InterventionBy) {
                 InterventionRow rowInterventionRow = ((InterventionRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Date,
@@ -417,7 +427,8 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
                         Nature,
                         Reclamation,
                         ProblemeConstate,
-                        TraveauxEffectues};
+                        TraveauxEffectues,
+                        InterventionBy};
                 rowInterventionRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowInterventionRow);
                 return rowInterventionRow;
@@ -446,6 +457,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
                 this.columnReclamation = base.Columns["Reclamation"];
                 this.columnProblemeConstate = base.Columns["ProblemeConstate"];
                 this.columnTraveauxEffectues = base.Columns["TraveauxEffectues"];
+                this.columnInterventionBy = base.Columns["InterventionBy"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -463,6 +475,8 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
                 base.Columns.Add(this.columnProblemeConstate);
                 this.columnTraveauxEffectues = new global::System.Data.DataColumn("TraveauxEffectues", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTraveauxEffectues);
+                this.columnInterventionBy = new global::System.Data.DataColumn("InterventionBy", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnInterventionBy);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -701,6 +715,22 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string InterventionBy {
+                get {
+                    try {
+                        return ((string)(this[this.tableIntervention.InterventionByColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'InterventionBy\' in table \'Intervention\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableIntervention.InterventionByColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsDateNull() {
                 return this.IsNull(this.tableIntervention.DateColumn);
             }
@@ -769,6 +799,18 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetTraveauxEffectuesNull() {
                 this[this.tableIntervention.TraveauxEffectuesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsInterventionByNull() {
+                return this.IsNull(this.tableIntervention.InterventionByColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetInterventionByNull() {
+                this[this.tableIntervention.InterventionByColumn] = global::System.Convert.DBNull;
             }
         }
         

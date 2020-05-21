@@ -21,6 +21,7 @@
               <xs:element name="ReferenceBT" msprop:Generator_ColumnVarNameInTable="columnReferenceBT" msprop:Generator_ColumnPropNameInRow="ReferenceBT" msprop:Generator_ColumnPropNameInTable="ReferenceBTColumn" msprop:Generator_UserColumnName="ReferenceBT" type="xs:string" minOccurs="0" />
               <xs:element name="NumeroDeSerie" msprop:Generator_ColumnVarNameInTable="columnNumeroDeSerie" msprop:Generator_ColumnPropNameInRow="NumeroDeSerie" msprop:Generator_ColumnPropNameInTable="NumeroDeSerieColumn" msprop:Generator_UserColumnName="NumeroDeSerie" type="xs:string" minOccurs="0" />
               <xs:element name="Fournisseur" msprop:Generator_ColumnVarNameInTable="columnFournisseur" msprop:Generator_ColumnPropNameInRow="Fournisseur" msprop:Generator_ColumnPropNameInTable="FournisseurColumn" msprop:Generator_UserColumnName="Fournisseur" type="xs:string" minOccurs="0" />
+              <xs:element name="DateConrtrat" msprop:Generator_ColumnVarNameInTable="columnDateConrtrat" msprop:Generator_ColumnPropNameInRow="DateConrtrat" msprop:Generator_ColumnPropNameInTable="DateConrtratColumn" msprop:Generator_UserColumnName="DateConrtrat" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
