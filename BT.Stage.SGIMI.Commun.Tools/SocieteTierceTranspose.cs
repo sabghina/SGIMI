@@ -108,7 +108,8 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Contact = $"Telephone :{societeTierce.Telephone}/Fax: {societeTierce.Fax}",
                 Email = $"{societeTierce.Email}",
                 Adresse = $"{societeTierce.Adresse}",
-                SiteWeb = $"{societeTierce.SiteWeb}"
+                SiteWeb = $"{societeTierce.SiteWeb}",
+                DateContrat = $"{societeTierce.CreatedDate}"
             };
 
             return societeTierceReport;
