@@ -20,6 +20,7 @@ namespace BT.Stage.SGIMI.DataAccess.Interface
         /// <param name="id"></param>
         /// <returns></returns>
         Fournisseur GetSocieteTierceById(int id);
+        //bool GetSocieteTierceTypeById(int id);
         /// <summary>
         /// Create new SocieteTierce
         /// </summary>
@@ -27,6 +28,8 @@ namespace BT.Stage.SGIMI.DataAccess.Interface
         /// <returns></returns>
         bool CreateSocieteTierce(Fournisseur societeTierce);
         bool UpdateSocieteTierce(Fournisseur societeTierce);
+
+       
     }
 }
 

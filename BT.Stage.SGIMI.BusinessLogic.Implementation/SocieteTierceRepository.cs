@@ -161,6 +161,11 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
             byte[] file = localReport.Render(reportType, deviceInfo, out mimeType, out encoding, out fileNameExtension, out streams, out warnings);
             return file;
         }
+
+        //public bool GetSocieteTierceTypeById(int id)
+        //{
+        //    return societeTierceAdapter.GetSocieteTierceTypeById(id);
+        //}
     }
 }
 

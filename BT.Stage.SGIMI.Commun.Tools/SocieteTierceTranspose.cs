@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BT.Stage.SGIMI.Data.DTO;
+using BT.Stage.SGIMI.Data.Enum;
+
 namespace BT.Stage.SGIMI.Commun.Tools
 {
     public static class SocieteTierceTranspose
@@ -35,6 +37,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Telephone = societeTierce.Telephone,
                 Fax = societeTierce.Fax,
                 Adresse = societeTierce.Adresse,
+                Type = (TypeFournisseur)societeTierce.Type,
                 SiteWeb = societeTierce.SiteWeb,
                 CreatedBy = societeTierce.CreatedBy,
                 CreatedDate = societeTierce.CreatedDate,
@@ -46,12 +49,12 @@ namespace BT.Stage.SGIMI.Commun.Tools
             return societeTierceViewModel;
         }
 
-        public static Fournisseur UpdatedSocieteTierceViewModelToUpdatedSocieteTierce(int id, SocieteTierceViewModel societeTierceViewModel, string user)
+        public static Fournisseur UpdatedSocieteTierceViewModelToUpdatedSocieteTierce(SocieteTierceViewModel societeTierceViewModel, string user)
         {
 
             Fournisseur societeTierce = new Fournisseur
             {
-                Id = id,
+                Id = societeTierceViewModel.Id,
                 Nom = societeTierceViewModel.Nom,
                 Email = societeTierceViewModel.Email,
                 Telephone = societeTierceViewModel.Telephone,
@@ -59,23 +62,27 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Fax = societeTierceViewModel.Fax,
                 SiteWeb = societeTierceViewModel.SiteWeb,
                 Type = (char)societeTierceViewModel.Type,
-                CreatedBy = user,
-                CreatedDate = societeTierceViewModel.CreatedDate,
-                CreatedTime = societeTierceViewModel.CreatedTime,
-                LastUpdatedDate = societeTierceViewModel.LastUpdatedDate,
-                LastUpdatedTime = societeTierceViewModel.LastUpdatedTime,
-                LastUpdatedBy = societeTierceViewModel.LastUpdatedBy
+                LastUpdatedBy = user,
+                LastUpdatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
+                LastUpdatedTime = DateTime.Now.ToString("HH:mm:ss")
             };
             return societeTierce;
         }
 
-        public static Fournisseur SocieteTierceViewModelToSocieteTierce(SocieteTierceViewModel societeTierceViewModel, string user)
+        public static Fournisseur CreateSocieteTierceViewModelToSocieteTierce(SocieteTierceViewModel societeTierceViewModel, string user)
         {
             Fournisseur fournisseur = new Fournisseur
             {
                 Nom = societeTierceViewModel.Nom,
+                Email = societeTierceViewModel.Email,
+                Telephone = societeTierceViewModel.Telephone,
                 Adresse = societeTierceViewModel.Adresse,
-                CreatedBy = user
+                Fax = societeTierceViewModel.Fax,
+                SiteWeb = societeTierceViewModel.SiteWeb,
+                Type = 'S',
+                CreatedBy = user,
+                CreatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
+                CreatedTime = DateTime.Now.ToString("HH:mm:ss")
             };
 
             return fournisseur;

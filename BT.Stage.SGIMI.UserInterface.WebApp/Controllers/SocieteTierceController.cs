@@ -64,14 +64,11 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 }
                 // TODO: Add insert logic here
                 string user = User.Identity.Name;
-                Fournisseur societeTierce = SocieteTierceTranspose.SocieteTierceViewModelToSocieteTierce(societeTierceViewModel, user);
+                Fournisseur societeTierce = SocieteTierceTranspose.CreateSocieteTierceViewModelToSocieteTierce(societeTierceViewModel, user);
 
                 bool societeTierceIsCreated = societeTierceRepository.CreateSocieteTierce(societeTierce);
                 if (societeTierceIsCreated)
-                    return RedirectToAction("Details", new
-                    {
-                        id = societeTierce.Id
-                    });
+                    return RedirectToAction("Index");
                 else
                 {
                     throw new InvalidOperationException("oops");
@@ -103,15 +100,12 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 }
                 // TODO: Add update logic here
                 string user = User.Identity.Name;
-                Fournisseur societeTierce = SocieteTierceTranspose.UpdatedSocieteTierceViewModelToUpdatedSocieteTierce(id, societeTierceViewModel, user);
+                Fournisseur societeTierce = SocieteTierceTranspose.UpdatedSocieteTierceViewModelToUpdatedSocieteTierce(societeTierceViewModel, user);
 
                 bool societeTierceIsUpdated = societeTierceRepository.UpdatedSocieteTierce(societeTierce);
                 if (societeTierceIsUpdated)
                 {
-                    return RedirectToAction("Index", new
-                    {
-                        id = societeTierce.Id
-                    });
+                    return RedirectToAction("Index");
                 }
                 else
                 {

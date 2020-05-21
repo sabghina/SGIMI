@@ -16,6 +16,7 @@ namespace BT.Stage.SGIMI.DataAccess.Interface.DatabaseConnection
         DbSet<Reclamation> Reclamations { get; set; }
         DbSet<Intervention> Interventions { get; set; }
         DbSet<UniteGestion> UniteGestions { get; set; }
+       
         
     }
 }
