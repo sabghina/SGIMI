@@ -20,8 +20,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>0.99645cm</Top>
-        <Left>0.66146cm</Left>
+        <Top>1.3404cm</Top>
+        <Left>1.32353cm</Left>
         <Height>0.6cm</Height>
         <Width>16.51cm</Width>
         <Style>
@@ -441,10 +441,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>FournisseurDataSet</DataSetName>
-        <Top>2.431cm</Top>
-        <Left>0.66146cm</Left>
+        <Top>2.43099cm</Top>
+        <Left>1.32353cm</Left>
         <Height>2.44354cm</Height>
-        <Width>22.15411cm</Width>
+        <Width>22.15413cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -456,10 +456,10 @@
     <Height>1.91911in</Height>
     <Style />
   </Body>
-  <Width>10.94109in</Width>
+  <Width>12.18067in</Width>
   <Page>
     <PageHeader>
-      <Height>7.30071cm</Height>
+      <Height>5.65093cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -472,7 +472,7 @@
                 <TextRun>
                   <Value>Rapport des fournisseurs</Value>
                   <Style>
-                    <FontSize>18pt</FontSize>
+                    <FontSize>16pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                   </Style>
                 </TextRun>
@@ -483,14 +483,15 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>2.79563cm</Top>
-          <Left>5.92419cm</Left>
-          <Height>1.20854cm</Height>
-          <Width>16.51cm</Width>
+          <Top>0.14111cm</Top>
+          <Left>10.08993cm</Left>
+          <Height>1.3407cm</Height>
+          <Width>8.47959cm</Width>
           <Style>
             <Border>
               <Style>Solid</Style>
             </Border>
+            <VerticalAlign>Middle</VerticalAlign>
             <PaddingLeft>2pt</PaddingLeft>
             <PaddingRight>2pt</PaddingRight>
             <PaddingTop>2pt</PaddingTop>
@@ -501,10 +502,10 @@
           <Source>Embedded</Source>
           <Value>Logo_BT</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>0.34396cm</Top>
-          <Left>1.24037cm</Left>
-          <Height>5.09516cm</Height>
-          <Width>4.64854cm</Width>
+          <Top>0.14111cm</Top>
+          <Left>3.11499cm</Left>
+          <Height>4.29273cm</Height>
+          <Width>3.61667cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -512,33 +513,111 @@
             </Border>
           </Style>
         </Image>
-        <Textbox Name="Textbox7">
+        <Textbox Name="Textbox14">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>SIÈGE SOCIAL</Value>
+                  <Value>DIRECTION : </Value>
                   <Style>
                     <FontFamily>Calibri Light</FontFamily>
+                    <FontSize>12pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                   </Style>
                 </TextRun>
+                <TextRun>
+                  <Value>Informatique </Value>
+                  <Style>
+                    <FontFamily>Calibri Light</FontFamily>
+                    <FontSize>12pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <Color>DarkRed</Color>
+                  </Style>
+                </TextRun>
               </TextRuns>
-              <Style />
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
             </Paragraph>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Adresse : 2 RUE DE TURQUIE</Value>
+                  <Value>SERVICE : </Value>
                   <Style>
                     <FontFamily>Calibri Light</FontFamily>
+                    <FontSize>12pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value>Maintenance Informatique</Value>
+                  <Style>
+                    <FontFamily>Calibri Light</FontFamily>
+                    <FontSize>12pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <Color>DarkRed</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>TEL : </Value>
+                  <Style>
+                    <FontFamily>Calibri Light</FontFamily>
+                    <FontSize>12pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value>71 125 500</Value>
+                  <Style>
+                    <FontFamily>Calibri Light</FontFamily>
+                    <FontSize>12pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <Color>DarkRed</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Adresse : SIÈGE SOCIAL,</Value>
+                  <Style>
+                    <FontFamily>Calibri Light</FontFamily>
+                    <FontSize>12pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                   </Style>
                 </TextRun>
               </TextRuns>
-              <Style />
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>2 RUE DE TURQUIE</Value>
+                  <Style>
+                    <FontFamily>Calibri Light</FontFamily>
+                    <FontSize>12pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
             </Paragraph>
             <Paragraph>
               <TextRuns>
@@ -546,45 +625,27 @@
                   <Value>Fax: 71 125 479</Value>
                   <Style>
                     <FontFamily>Calibri Light</FontFamily>
+                    <FontSize>12pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                   </Style>
                 </TextRun>
               </TextRuns>
-              <Style />
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value />
-                  <Style>
-                    <FontFamily>Calibri Light</FontFamily>
-                    <FontWeight>Bold</FontWeight>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value />
-                  <Style>
-                    <FontFamily>Calibri Light</FontFamily>
-                    <FontWeight>Bold</FontWeight>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox7</rd:DefaultName>
-          <Top>5.61551cm</Top>
-          <Left>1.24037cm</Left>
-          <Height>1.68521cm</Height>
-          <Width>5.14583cm</Width>
+          <rd:DefaultName>Textbox14</rd:DefaultName>
+          <Top>2.03426cm</Top>
+          <Left>10.08993cm</Left>
+          <Height>3.61667cm</Height>
+          <Width>8.47959cm</Width>
           <ZIndex>2</ZIndex>
           <Style>
-            <Border />
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+            <VerticalAlign>Middle</VerticalAlign>
             <PaddingLeft>2pt</PaddingLeft>
             <PaddingRight>2pt</PaddingRight>
             <PaddingTop>2pt</PaddingTop>
@@ -599,7 +660,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>7.07016cm</Height>
+      <Height>2.28119cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -618,8 +679,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>6.47016cm</Top>
-          <Left>10.21102cm</Left>
+          <Top>0.07056cm</Top>
+          <Left>11.3758cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
           <Style>
@@ -665,31 +726,38 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="Adresse">
-          <DataField>Adresse</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Contact">
-          <DataField>Contact</DataField>
+        <Field Name="Nom">
+          <DataField>Nom</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Email">
           <DataField>Email</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Nom">
-          <DataField>Nom</DataField>
+        <Field Name="Contact">
+          <DataField>Contact</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Adresse">
+          <DataField>Adresse</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="SiteWeb">
           <DataField>SiteWeb</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="DateContrat">
+          <DataField>DateContrat</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>BT.Stage.SGIMI.Data.DTO</rd:DataSetName>
-        <rd:TableName>FournisseurReport</rd:TableName>
-        <rd:ObjectDataSourceType>BT.Stage.SGIMI.Data.DTO.FournisseurReport, BT.Stage.SGIMI.Data.DTO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:DataSetName>FournisseurDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Sabrina\source\repos\SGIMI\BT.Stage.SGIMI.BusinessLogic.Implementation\Reporting\Datasets\FournisseurDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>Fournisseur</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

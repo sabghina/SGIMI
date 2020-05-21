@@ -16,5 +16,6 @@ namespace BT.Stage.SGIMI.Data.DTO
         public string Contact { get; set; }
         public string Adresse { get; set; }
         public string SiteWeb { get; set; }
+        public string DateContrat { get; set; }
     }
 }

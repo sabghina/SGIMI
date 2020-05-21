@@ -11,6 +11,7 @@
               <TextRun>
                 <Value>Nom : </Value>
                 <Style>
+                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -19,8 +20,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>0.30854cm</Top>
-        <Left>0.51594cm</Left>
+        <Top>2.37849cm</Top>
+        <Left>5.51657cm</Left>
         <Height>0.6cm</Height>
         <Width>2.03729cm</Width>
         <Style>
@@ -42,6 +43,7 @@
               <TextRun>
                 <Value>SiteWeb : </Value>
                 <Style>
+                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -50,10 +52,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>3.4141cm</Top>
-        <Left>0.51594cm</Left>
+        <Top>5.63245cm</Top>
+        <Left>5.51657cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.03729cm</Width>
+        <Width>3.22792cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -72,24 +74,21 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Adresse :</Value>
+                <Value>Adresse : </Value>
                 <Style>
+                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
-              </TextRun>
-              <TextRun>
-                <Value xml:space="preserve"> </Value>
-                <Style />
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>2.63771cm</Top>
-        <Left>0.51594cm</Left>
+        <Top>6.66433cm</Top>
+        <Left>5.51657cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.03729cm</Width>
+        <Width>2.83104cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -110,6 +109,7 @@
               <TextRun>
                 <Value>Contact : </Value>
                 <Style>
+                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -118,8 +118,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>1.86132cm</Top>
-        <Left>0.51594cm</Left>
+        <Top>4.56655cm</Top>
+        <Left>5.51657cm</Left>
         <Height>0.6cm</Height>
         <Width>2.03729cm</Width>
         <ZIndex>3</ZIndex>
@@ -142,6 +142,7 @@
               <TextRun>
                 <Value>Email : </Value>
                 <Style>
+                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -150,8 +151,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>1.08493cm</Top>
-        <Left>0.51594cm</Left>
+        <Top>3.5253cm</Top>
+        <Left>5.51657cm</Left>
         <Height>0.6cm</Height>
         <Width>2.03729cm</Width>
         <ZIndex>4</ZIndex>
@@ -173,15 +174,17 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!Nom.Value, "FournisseurDataSet")</Value>
-                <Style />
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>0.34382cm</Top>
-        <Left>3.42635cm</Left>
+        <Top>2.37849cm</Top>
+        <Left>9.77635cm</Left>
         <Height>0.6cm</Height>
         <Width>4.445cm</Width>
         <ZIndex>5</ZIndex>
@@ -203,15 +206,17 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!SiteWeb.Value, "FournisseurDataSet")</Value>
-                <Style />
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>3.4141cm</Top>
-        <Left>3.42635cm</Left>
+        <Top>5.63245cm</Top>
+        <Left>9.77635cm</Left>
         <Height>0.6cm</Height>
         <Width>4.445cm</Width>
         <ZIndex>6</ZIndex>
@@ -233,15 +238,17 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!Adresse.Value, "FournisseurDataSet")</Value>
-                <Style />
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>2.63771cm</Top>
-        <Left>3.42636cm</Left>
+        <Top>6.66433cm</Top>
+        <Left>9.77635cm</Left>
         <Height>0.6cm</Height>
         <Width>4.445cm</Width>
         <ZIndex>7</ZIndex>
@@ -263,17 +270,19 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!Contact.Value, "FournisseurDataSet")</Value>
-                <Style />
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>1.86132cm</Top>
-        <Left>3.42636cm</Left>
+        <Top>4.56655cm</Top>
+        <Left>9.77635cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.445cm</Width>
+        <Width>13.57313cm</Width>
         <ZIndex>8</ZIndex>
         <Style>
           <Border>
@@ -293,15 +302,17 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!Email.Value, "FournisseurDataSet")</Value>
-                <Style />
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>1.12021cm</Top>
-        <Left>3.42635cm</Left>
+        <Top>3.5253cm</Top>
+        <Left>9.77635cm</Left>
         <Height>0.6cm</Height>
         <Width>4.445cm</Width>
         <ZIndex>9</ZIndex>
@@ -315,14 +326,123 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
+      <Textbox Name="Textbox2">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Date Contrat:</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>7.72266cm</Top>
+        <Left>5.51657cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.51896cm</Width>
+        <ZIndex>10</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox13">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!DateContrat.Value, "FournisseurDataSet")</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox13</rd:DefaultName>
+        <Top>7.72266cm</Top>
+        <Left>9.77635cm</Left>
+        <Height>0.6cm</Height>
+        <Width>4.445cm</Width>
+        <ZIndex>11</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Line Name="Line3">
+        <Top>1.3141cm</Top>
+        <Height>0cm</Height>
+        <Width>24.34168cm</Width>
+        <ZIndex>12</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Textbox Name="Textbox18">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Signature </Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox18</rd:DefaultName>
+        <Top>8.32266cm</Top>
+        <Left>17.64453cm</Left>
+        <Height>0.75875cm</Height>
+        <Width>3.92875cm</Width>
+        <ZIndex>13</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>2in</Height>
+    <Height>3.57536in</Height>
     <Style />
   </Body>
-  <Width>10.47917in</Width>
+  <Width>9.58334in</Width>
   <Page>
     <PageHeader>
-      <Height>2.54cm</Height>
+      <Height>6.27696cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -333,25 +453,182 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Fournisseur Dynamic Report</Value>
+                  <Value>Contrat du fournisseur</Value>
                   <Style>
+                    <FontSize>16pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox1</rd:DefaultName>
+          <Top>0.59076cm</Top>
+          <Left>8.69156cm</Left>
+          <Height>1.3407cm</Height>
+          <Width>8.47959cm</Width>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+            <VerticalAlign>Middle</VerticalAlign>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Image Name="Image1">
+          <Source>Embedded</Source>
+          <Value>Logo_BT</Value>
+          <Sizing>FitProportional</Sizing>
+          <Top>0.59076cm</Top>
+          <Left>1.71662cm</Left>
+          <Height>4.29273cm</Height>
+          <Width>3.61667cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Image>
+        <Textbox Name="Textbox14">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>DIRECTION : </Value>
+                  <Style>
+                    <FontFamily>Calibri Light</FontFamily>
+                    <FontSize>12pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value>Informatique </Value>
+                  <Style>
+                    <FontFamily>Calibri Light</FontFamily>
+                    <FontSize>12pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <Color>DarkRed</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>SERVICE : </Value>
+                  <Style>
+                    <FontFamily>Calibri Light</FontFamily>
+                    <FontSize>12pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value>Maintenance Informatique</Value>
+                  <Style>
+                    <FontFamily>Calibri Light</FontFamily>
+                    <FontSize>12pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <Color>DarkRed</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>TEL : </Value>
+                  <Style>
+                    <FontFamily>Calibri Light</FontFamily>
+                    <FontSize>12pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value>71 125 500</Value>
+                  <Style>
+                    <FontFamily>Calibri Light</FontFamily>
+                    <FontSize>12pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <Color>DarkRed</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Adresse : SIÈGE SOCIAL,</Value>
+                  <Style>
+                    <FontFamily>Calibri Light</FontFamily>
                     <FontSize>12pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                   </Style>
                 </TextRun>
               </TextRuns>
-              <Style />
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>2 RUE DE TURQUIE</Value>
+                  <Style>
+                    <FontFamily>Calibri Light</FontFamily>
+                    <FontSize>12pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Fax: 71 125 479</Value>
+                  <Style>
+                    <FontFamily>Calibri Light</FontFamily>
+                    <FontSize>12pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>1.07583cm</Top>
-          <Left>5.69531cm</Left>
-          <Height>0.6cm</Height>
-          <Width>6.07188cm</Width>
+          <rd:DefaultName>Textbox14</rd:DefaultName>
+          <Top>2.48391cm</Top>
+          <Left>8.69156cm</Left>
+          <Height>3.61667cm</Height>
+          <Width>8.47959cm</Width>
+          <ZIndex>2</ZIndex>
           <Style>
             <Border>
-              <Style>None</Style>
+              <Style>Solid</Style>
             </Border>
+            <VerticalAlign>Middle</VerticalAlign>
             <PaddingLeft>2pt</PaddingLeft>
             <PaddingRight>2pt</PaddingRight>
             <PaddingTop>2pt</PaddingTop>
@@ -366,30 +643,29 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>2.54cm</Height>
+      <Height>4.55083cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
-        <Textbox Name="Textbox2">
+        <Textbox Name="Textbox15">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=Globals!PageNumber+" / "+Globals!TotalPages</Value>
+                  <Value>=Globals!PageNumber</Value>
                   <Style />
                 </TextRun>
               </TextRuns>
-              <Style>
-                <TextAlign>Right</TextAlign>
-              </Style>
+              <Style />
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>0.89062cm</Top>
+          <rd:DefaultName>Textbox15</rd:DefaultName>
+          <Top>3.95083cm</Top>
+          <Left>9.77635cm</Left>
           <Height>0.6cm</Height>
-          <Width>16.51cm</Width>
+          <Width>2.5cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -453,10 +729,14 @@
           <DataField>SiteWeb</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="DateContrat">
+          <DataField>DateContrat</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>FournisseurDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Asus\source\repos\SGIMI\BT.Stage.SGIMI.BusinessLogic.Implementation\Reporting\Datasets\FournisseurDataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\Sabrina\source\repos\SGIMI\BT.Stage.SGIMI.BusinessLogic.Implementation\Reporting\Datasets\FournisseurDataSet.xsd</rd:SchemaPath>
         <rd:TableName>Fournisseur</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />

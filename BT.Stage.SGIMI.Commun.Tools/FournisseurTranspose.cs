@@ -103,7 +103,8 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Contact = $"Telephone :{fournisseur.Telephone}/Fax: {fournisseur.Fax}",
                 Email = $"{fournisseur.Email}",
                 Adresse = $"{fournisseur.Adresse}",
-                SiteWeb = $"{fournisseur.SiteWeb}"
+                SiteWeb = $"{fournisseur.SiteWeb}",
+                DateContrat = $"{fournisseur.CreatedDate}"
             };
 
             return fournisseurReport;
