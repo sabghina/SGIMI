@@ -107,7 +107,8 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                     return View(fournisseurViewModel);
                 }
                 string user = User.Identity.Name;
-                Fournisseur fournisseur = FournisseurTranspose.UpdatedFournisseurViewModelToUpdatedFournisseur(fournisseurViewModel, user);
+                Fournisseur oldFourniseur = fournisseurRepository.GetFournisseurById(id);
+                Fournisseur fournisseur = FournisseurTranspose.UpdatedFournisseurViewModelToUpdatedFournisseur(oldFourniseur, fournisseurViewModel, user);
                 bool fournisseurIsUpdated = fournisseurRepository.UpdatedFournisseur(fournisseur);
                 if (!fournisseurIsUpdated)
                 {

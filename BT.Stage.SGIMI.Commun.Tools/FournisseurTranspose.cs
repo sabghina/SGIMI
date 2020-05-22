@@ -59,12 +59,15 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Type = (char)fournisseurViewModel.Type,
                 CreatedBy = user,
                 CreatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
-                CreatedTime = DateTime.Now.ToString("HH:mm:ss")
+                CreatedTime = DateTime.Now.ToString("HH:mm:ss"),
+                LastUpdatedBy = fournisseurViewModel.LastUpdatedBy,
+                LastUpdatedDate =  fournisseurViewModel.LastUpdatedDate,
+                LastUpdatedTime = fournisseurViewModel.LastUpdatedTime,
             };
             return fournisseur;
         }
 
-        public static Fournisseur UpdatedFournisseurViewModelToUpdatedFournisseur(FournisseurViewModel fournisseurViewModel, string user)
+        public static Fournisseur UpdatedFournisseurViewModelToUpdatedFournisseur(Fournisseur oldFournisseur, FournisseurViewModel fournisseurViewModel, string user)
         {
             Fournisseur fournisseur = new Fournisseur
             {
@@ -76,6 +79,9 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Fax = fournisseurViewModel.Fax,
                 SiteWeb = fournisseurViewModel.SiteWeb,
                 Type = (char)fournisseurViewModel.Type,
+                CreatedBy= oldFournisseur.CreatedBy,
+                CreatedDate = oldFournisseur.CreatedDate,
+                CreatedTime= oldFournisseur.CreatedTime,
                 LastUpdatedBy = user,
                 LastUpdatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
                 LastUpdatedTime = DateTime.Now.ToString("HH:mm:ss"),                
