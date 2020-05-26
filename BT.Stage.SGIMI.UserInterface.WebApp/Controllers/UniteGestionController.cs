@@ -1,4 +1,5 @@
-﻿using BT.Stage.SGIMI.BusinessLogic.Interface;
+﻿using BT.Stage.SGIMI.BusinessLogic.Implementation;
+using BT.Stage.SGIMI.BusinessLogic.Interface;
 using BT.Stage.SGIMI.Commun.Tools;
 using BT.Stage.SGIMI.Data.DTO;
 using BT.Stage.SGIMI.Data.Entity;
@@ -62,7 +63,8 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 }
                 // TODO: Add insert logic here
                 string user = User.Identity.Name;
-                UniteGestion uniteGestion = UniteGestionTranspose.UniteGestionViewModelToUniteGestion(uniteGestionViewModel, user);
+               
+                UniteGestion uniteGestion = UniteGestionTranspose.CreateUniteGestionViewModelToUniteGestion(uniteGestionViewModel, user);
 
                 bool uniteGestionIsCreated = uniteGestionRepository.CreateUniteGestion(uniteGestion);
                 if (uniteGestionIsCreated)
@@ -100,7 +102,8 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 }
                 // TODO: Add update logic here
                 string user = User.Identity.Name;
-                UniteGestion uniteGestion = UniteGestionTranspose.UpdatedUniteGestionViewModelToUpdatedUniteGestion(uniteGestionViewModel, user);
+                UniteGestion oldUniteGestion = uniteGestionRepository.GetUniteGestionById(id);
+                UniteGestion uniteGestion = UniteGestionTranspose.UpdatedUniteGestionViewModelToUpdatedUniteGestion(oldUniteGestion,uniteGestionViewModel, user);
 
                 bool uniteGestionIsUpdated = uniteGestionRepository.UpdatedUniteGestion(uniteGestion);
                 if (uniteGestionIsUpdated)

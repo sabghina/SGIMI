@@ -36,6 +36,9 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Adresse = uniteGestion.Adresse,
                 Type = uniteGestion.Type,
                 Fax = uniteGestion.Fax,
+                CreatedBy = uniteGestion.CreatedBy,
+                CreatedDate = uniteGestion.CreatedDate,
+                CreatedTime = uniteGestion.CreatedTime,
                 LastUpdatedDate = uniteGestion.LastUpdatedDate,
                 LastUpdatedTime = uniteGestion.LastUpdatedTime,
                 LastUpdatedBy = uniteGestion.LastUpdatedBy
@@ -43,7 +46,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
             return uniteGestionViewModel;
         }
 
-        public static UniteGestion UniteGestionViewModelToUniteGestion(UniteGestionViewModel uniteGestionViewModel, string user)
+        public static UniteGestion CreateUniteGestionViewModelToUniteGestion(UniteGestionViewModel uniteGestionViewModel, string user)
         {
             UniteGestion uniteGestion = new UniteGestion
             {
@@ -55,12 +58,13 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Type = uniteGestionViewModel.Type,
                 CreatedBy = user,
                 CreatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
-                CreatedTime = DateTime.Now.ToString("HH:mm:ss")
+                CreatedTime = DateTime.Now.ToString("HH:mm:ss"),
+              
 
             };
             return uniteGestion;
         }
-        public static UniteGestion UpdatedUniteGestionViewModelToUpdatedUniteGestion(UniteGestionViewModel uniteGestionViewModel, string user)
+        public static UniteGestion UpdatedUniteGestionViewModelToUpdatedUniteGestion(UniteGestion oldUniteGestion,UniteGestionViewModel uniteGestionViewModel, string user)
         {
             UniteGestion uniteGestion = new UniteGestion
             {
@@ -70,7 +74,10 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Telephone = uniteGestionViewModel.Telephone,
                 Adresse = uniteGestionViewModel.Adresse,
                 Fax = uniteGestionViewModel.Fax,
-                Type = uniteGestionViewModel.Type,
+                Type = oldUniteGestion.Type,
+                CreatedBy = oldUniteGestion.CreatedBy,
+                CreatedDate = oldUniteGestion.CreatedDate,
+                CreatedTime = oldUniteGestion.CreatedTime,
                 LastUpdatedBy = user,
                 LastUpdatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
                 LastUpdatedTime = DateTime.Now.ToString("HH:mm:ss")
