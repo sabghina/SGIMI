@@ -56,11 +56,11 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                     Text = fournisseur.Nom 
                 }).AsEnumerable(), "Text", "Text");
 
-            CreateMaterielViewModel createMatrielViewModel = new CreateMaterielViewModel
+            CreateMaterielViewModel createMaterielViewModel = new CreateMaterielViewModel
             {
                 Fournisseurs = fournisseursSelectListItem
             };
-            return View(createMatrielViewModel);
+            return View(createMaterielViewModel);
         }
 
         // POST: Materiel/Create
@@ -104,9 +104,19 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
 
         // GET: Materiel/Edit/5
         public ActionResult Edit(int id)
-        {   
+        {
             Materiel materiel = materielRepository.GetMaterielById(id);
             CreateMaterielViewModel createMaterielViewModel = MaterielTranspose.MaterielToCreateMaterielViewModel(materiel);
+            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
+            IEnumerable<SelectListItem> fournisseursSelectListItem = new SelectList(fournisseurs.Select(
+                fournisseur => new
+                {
+                    Id = fournisseur.Id,
+                    Text = fournisseur.Nom
+                }).AsEnumerable(), "Text", "Text");
+
+            createMaterielViewModel.Fournisseurs = fournisseursSelectListItem;
+            
             return View(createMaterielViewModel);
 
         }
@@ -119,6 +129,14 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             {
                 if (!ModelState.IsValid)
                 {
+                    List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
+                    IEnumerable<SelectListItem> fournisseursSelectListItem = new SelectList(fournisseurs.Select(
+                    fournisseur => new
+                    {
+                        Id = fournisseur.Id,
+                        Text = fournisseur.Nom
+                    }).AsEnumerable(), "Text", "Text");
+                    createMaterielViewModel.Fournisseurs = fournisseursSelectListItem;
                     return View(createMaterielViewModel);
                 }
                 // TODO: Add update logic here
