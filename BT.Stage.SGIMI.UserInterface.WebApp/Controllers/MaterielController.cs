@@ -123,7 +123,8 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 }
                 // TODO: Add update logic here
                 string user = User.Identity.Name;
-                Materiel materiel = MaterielTranspose.UpdatedMaterielViewModelToUpdatedMateriel(createMaterielViewModel, user);
+                Materiel oldMateriel = materielRepository.GetMaterielById(id);
+                Materiel materiel = MaterielTranspose.UpdatedMaterielViewModelToUpdatedMateriel(oldMateriel, createMaterielViewModel, user);
 
                 bool materielIsUpdated = materielRepository.UpdatedMateriel(materiel);
                 if (materielIsUpdated)
@@ -142,7 +143,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 return View();
             }
         }
-
+        // GET: Materiel/Affecter/5
         public ActionResult Affecter(int id)
         {
 
@@ -153,9 +154,9 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
 
         }
 
-        // POST: Materiel/Affectr
+        // POST: Materiel/Affecter
         [HttpPost]
-        public ActionResult Affecter(AffectationMaterielViewModel affectationMaterielViewModel)
+        public ActionResult Affecter(int id,AffectationMaterielViewModel affectationMaterielViewModel)
         {
             try
             {
@@ -168,9 +169,10 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 }
                 // TODO: Add insert logic here
                 string user = User.Identity.Name;
-                Materiel materiel = MaterielTranspose.AffectationMaterielViewModelToMateriel(affectationMaterielViewModel, user);
+                Materiel oldMateriel = materielRepository.GetMaterielById(id);
+                Materiel materiel = MaterielTranspose.AffectationMaterielViewModelToMateriel(oldMateriel, affectationMaterielViewModel, user);
 
-                bool materielIsCreated = materielRepository.CreateMateriel(materiel);
+                bool materielIsCreated = materielRepository.AffecterMateriel(materiel);
                 if (materielIsCreated)
                 {
                     return RedirectToAction("Details", new

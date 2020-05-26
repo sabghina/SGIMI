@@ -58,6 +58,19 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
                 return false;
             }
         }
+        public bool AffecterMateriel(Materiel materiel)
+        {
+            sGIMIDbContext.Materiels.AddOrUpdate(materiel);
+            Task<int> nbRowsAffected = sGIMIDbContext.ObjectContext.SaveChangesAsync();
+            if (nbRowsAffected != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
 

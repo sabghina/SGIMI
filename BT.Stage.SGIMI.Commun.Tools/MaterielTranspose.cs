@@ -39,7 +39,9 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 LastUpdatedDate = materiel.LastUpdatedDate,
                 LastUpdatedTime = materiel.LastUpdatedTime,
                 LastUpdatedBy = materiel.LastUpdatedBy,
-                CreatedBy = materiel.CreatedBy
+                CreatedBy = materiel.CreatedBy,
+                Agent = materiel.Agent,
+                Unite = materiel.Unite
 
             };
             return materielViewModel;
@@ -73,13 +75,15 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 ReferenceBT = materiel.ReferenceBT,
                 NumeroDeSerie = materiel.NumeroDeSerie,
                 Fournisseur = materiel.Fournisseur,
-                CreatedBy = materiel.CreatedBy 
+                CreatedBy = materiel.CreatedBy,
+                CreatedDate = materiel.CreatedDate,
+                CreatedTime = materiel.CreatedTime
 
             };
             return createMaterielViewModel;
         }
 
-        public static Materiel UpdatedMaterielViewModelToUpdatedMateriel(CreateMaterielViewModel createMaterielViewModel, string user)
+        public static Materiel UpdatedMaterielViewModelToUpdatedMateriel(Materiel oldMateriel, CreateMaterielViewModel createMaterielViewModel, string user)
         {
             Materiel materiel = new Materiel
             {
@@ -90,21 +94,36 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 ReferenceBT = createMaterielViewModel.ReferenceBT,
                 NumeroDeSerie = createMaterielViewModel.NumeroDeSerie,
                 Fournisseur = createMaterielViewModel.Fournisseur,
-                CreatedBy = user,
+                LastUpdatedBy = user,
                 LastUpdatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
-                LastUpdatedTime = DateTime.Now.ToString("HH:mm:ss")
+                LastUpdatedTime = DateTime.Now.ToString("HH:mm:ss"),
+                CreatedBy = oldMateriel.CreatedBy,
+                CreatedDate = oldMateriel.CreatedDate,
+                CreatedTime = oldMateriel.CreatedTime
 
             };
             return materiel;
         }
 
-        public static Materiel AffectationMaterielViewModelToMateriel(AffectationMaterielViewModel affectationMaterielViewModel, string user)
+        public static Materiel AffectationMaterielViewModelToMateriel(Materiel oldMateriel, AffectationMaterielViewModel affectationMaterielViewModel, string user)
         {
             Materiel materiel = new Materiel
             {
+                Id = oldMateriel.Id,
+                Nom = oldMateriel.Nom,
+                Marque = oldMateriel.Marque,
+                Modele = oldMateriel.Modele,
+                ReferenceBT = oldMateriel.ReferenceBT,
+                NumeroDeSerie = oldMateriel.NumeroDeSerie,
+                Fournisseur = oldMateriel.Fournisseur,
+                LastUpdatedBy = oldMateriel.LastUpdatedBy,
+                LastUpdatedDate = oldMateriel.LastUpdatedDate,
+                LastUpdatedTime = oldMateriel.LastUpdatedTime,
+                CreatedBy = oldMateriel.CreatedBy,
+                CreatedDate = oldMateriel.CreatedDate,
+                CreatedTime = oldMateriel.CreatedTime,
                 Agent = affectationMaterielViewModel.Agent,
-                Unite = affectationMaterielViewModel.Unite,
-                CreatedBy = user
+                Unite = affectationMaterielViewModel.Unite
 
             };
             return materiel;
@@ -114,9 +133,21 @@ namespace BT.Stage.SGIMI.Commun.Tools
         {
             AffectationMaterielViewModel affectationMaterielViewModel = new AffectationMaterielViewModel
             {
+                Id = materiel.Id,
+                Nom = materiel.Nom,
+                Marque = materiel.Marque,
+                Modele = materiel.Modele,
+                ReferenceBT = materiel.ReferenceBT,
+                NumeroDeSerie = materiel.NumeroDeSerie,
+                Fournisseur = materiel.Fournisseur,
+                CreatedDate = materiel.CreatedDate,
+                CreatedTime = materiel.CreatedTime,
+                LastUpdatedDate = materiel.LastUpdatedDate,
+                LastUpdatedTime = materiel.LastUpdatedTime,
+                LastUpdatedBy = materiel.LastUpdatedBy,
                 Agent = materiel.Agent,
                 Unite = materiel.Unite,
-                CreatedBy = materiel.CreatedBy
+                CreatedBy = materiel.CreatedBy,
 
             };
             return affectationMaterielViewModel;
