@@ -1,5 +1,6 @@
 ﻿using BT.Stage.SGIMI.Data.DTO;
 using BT.Stage.SGIMI.Data.Entity;
+using BT.Stage.SGIMI.Data.Enum;
 using BT.Stage.SGIMI.UserInterface.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -35,6 +36,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Telephone = fournisseur.Telephone,
                 Adresse = fournisseur.Adresse,
                 Fax = fournisseur.Fax,
+                Type= (TypeFournisseur)fournisseur.Type,
                 SiteWeb = fournisseur.SiteWeb,
                 CreatedBy = fournisseur.CreatedBy,
                 CreatedDate = fournisseur.CreatedDate,
@@ -56,7 +58,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Adresse = fournisseurViewModel.Adresse,
                 Fax = fournisseurViewModel.Fax,
                 SiteWeb = fournisseurViewModel.SiteWeb,
-                Type = (char)fournisseurViewModel.Type,
+                Type = 'F',
                 CreatedBy = user,
                 CreatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
                 CreatedTime = DateTime.Now.ToString("HH:mm:ss"),

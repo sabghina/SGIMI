@@ -49,7 +49,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
             return societeTierceViewModel;
         }
 
-        public static Fournisseur UpdatedSocieteTierceViewModelToUpdatedSocieteTierce(SocieteTierceViewModel societeTierceViewModel, string user)
+        public static Fournisseur UpdatedSocieteTierceViewModelToUpdatedSocieteTierce(Fournisseur oldSocieteTierce, SocieteTierceViewModel societeTierceViewModel, string user)
         {
 
             Fournisseur societeTierce = new Fournisseur
@@ -62,6 +62,9 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Fax = societeTierceViewModel.Fax,
                 SiteWeb = societeTierceViewModel.SiteWeb,
                 Type = (char)societeTierceViewModel.Type,
+                CreatedBy = oldSocieteTierce.CreatedBy,
+                CreatedDate = oldSocieteTierce.CreatedDate,
+                CreatedTime = oldSocieteTierce.CreatedTime,
                 LastUpdatedBy = user,
                 LastUpdatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
                 LastUpdatedTime = DateTime.Now.ToString("HH:mm:ss")

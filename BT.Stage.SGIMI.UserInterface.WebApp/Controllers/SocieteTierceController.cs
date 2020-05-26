@@ -100,7 +100,8 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 }
                 // TODO: Add update logic here
                 string user = User.Identity.Name;
-                Fournisseur societeTierce = SocieteTierceTranspose.UpdatedSocieteTierceViewModelToUpdatedSocieteTierce(societeTierceViewModel, user);
+                Fournisseur oldSocieteTierce = societeTierceRepository.GetSocieteTierceById(id);
+                Fournisseur societeTierce = SocieteTierceTranspose.UpdatedSocieteTierceViewModelToUpdatedSocieteTierce(oldSocieteTierce,societeTierceViewModel, user);
 
                 bool societeTierceIsUpdated = societeTierceRepository.UpdatedSocieteTierce(societeTierce);
                 if (societeTierceIsUpdated)
