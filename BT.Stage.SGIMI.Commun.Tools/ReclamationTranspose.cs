@@ -60,16 +60,19 @@ namespace BT.Stage.SGIMI.Commun.Tools
             };
             return reclamation;
         }
-        public static Reclamation UpdatedReclamationViewModelToUpdatedReclamation(ReclamationViewModel reclamationViewModel, string user)
+        public static Reclamation UpdatedReclamationViewModelToUpdatedReclamation(Reclamation oldReclamation,ReclamationViewModel reclamationViewModel, string user)
         {
             Reclamation reclamation = new Reclamation
             {
                 Id = reclamationViewModel.Id,
-                Materiel = reclamationViewModel.Materiel,
+                Materiel = oldReclamation.Materiel,
                 Probleme = reclamationViewModel.Probleme,
                 Commentaire = reclamationViewModel.Commentaire,
                 Etat = reclamationViewModel.Etat,
                 UniteGestion=reclamationViewModel.UniteGestion,
+                CreatedBy = oldReclamation.CreatedBy,
+                CreatedDate = oldReclamation.CreatedDate,
+                CreatedTime = oldReclamation.CreatedTime,
                 LastUpdatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
                 LastUpdatedTime = DateTime.Now.ToString("HH:mm:ss"),
                 LastUpdatedBy = user

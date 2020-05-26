@@ -30,7 +30,7 @@ namespace BT.Stage.SGIMI.Data.Entity
         public string LastUpdatedDate { get; set; }
         public string LastUpdatedTime { get; set; }
         public string LastUpdatedBy { get; set; }
-        public IEnumerable<SelectListItem> UniteGestions { get; set; }
+        
     }
 }
 
