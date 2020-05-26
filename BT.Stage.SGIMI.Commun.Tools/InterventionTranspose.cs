@@ -45,7 +45,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
             return interventionViewModel;
         }
 
-        public static Intervention UpdatedInterventionViewModelToUpdatedIntervention(InterventionViewModel interventionViewModel, string user)
+        public static Intervention UpdatedInterventionViewModelToUpdatedIntervention(Intervention oldIntervention,InterventionViewModel interventionViewModel, string user)
         {
             Intervention intervention = new Intervention
             {
@@ -53,11 +53,13 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Id = interventionViewModel.Id,
                 Type = interventionViewModel.Type,
                 Nature = interventionViewModel.Nature,
-                Date = interventionViewModel.Date,
                 Etat = interventionViewModel.Etat,
-                Reclamation = interventionViewModel.Reclamation,
+                Reclamation = oldIntervention.Reclamation,
                 ProblemeConstate = interventionViewModel.ProblemeConstate,
                 TraveauxEffectues = interventionViewModel.TraveauxEffectues,
+                CreatedBy = oldIntervention.CreatedBy,
+                CreatedDate = oldIntervention.CreatedDate,
+                CreatedTime = oldIntervention.CreatedTime,
                 LastUpdatedBy = user,
                 LastUpdatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
                 LastUpdatedTime = DateTime.Now.ToString("HH:mm:ss")
