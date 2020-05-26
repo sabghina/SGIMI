@@ -39,35 +39,6 @@
     });
 
 }
-@{
-    List<SelectListItem> listEtat = new List<SelectListItem>();
-   @* listEtat.Add(new SelectListItem
-    
-    {
-        Text = "Choisir Etat",
-        Value = "Choisir Etat",
-        Selected = true
-    }); *@
-    listEtat.Add(new SelectListItem
-    {
-        Text = "En cours",
-        Value = "En cours",
-        Selected = true
-    });
-    listEtat.Add(new SelectListItem
-    {
-        Text = "Terminé",
-        Value = "Terminé",
-
-    });
-    listEtat.Add(new SelectListItem
-    {
-        Text = "Annuler",
-        Value = "Annuler",
-        Selected = true
-    });
-
-}
 <h2>Intervention sur reclamation @Model.Reclamation</h2>
 <p>
     @Html.ActionLink("Telecharger un formulaire", "StaticReports")
@@ -96,15 +67,6 @@
             </div>
         </div>
 
-
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Etat, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownListFor(model => model.Etat, listEtat, new { @class = "form-control", required = "required" })
-                @Html.ValidationMessageFor(model => model.Etat, "", new { @class = "text-danger" })
-            </div>
-        </div>
         <div class="form-group">
             @Html.LabelFor(model => model.ProblemeConstate, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">

@@ -66,7 +66,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
             };
             return intervention;
         }
-        public static Intervention InterventionViewModelToIntervention(InterventionViewModel interventionViewModel, string user)
+        public static Intervention CreateInterventionViewModelToIntervention(InterventionViewModel interventionViewModel, string user)
         {
             Intervention intervention = new Intervention
             {
@@ -74,7 +74,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Type = interventionViewModel.Type,
                 Nature = interventionViewModel.Nature,
                 Date = interventionViewModel.Date,
-                Etat = interventionViewModel.Etat,
+                Etat = "En cours",
                 Reclamation = interventionViewModel.Reclamation,
                 ProblemeConstate = interventionViewModel.ProblemeConstate,
                 TraveauxEffectues = interventionViewModel.TraveauxEffectues,
