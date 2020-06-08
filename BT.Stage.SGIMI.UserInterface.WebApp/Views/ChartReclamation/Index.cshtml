@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Chart Reclamation";
 }
 <div class="jumbotron">
 
@@ -7,14 +7,13 @@
         <p>
             <center>
                 <label> Date Debut   </label>
-                html.<input type="date" name="datedebut" value="datedebut" />
+                <input type="date" name="datedebut" value="datedebut" />
 
                 <label> Date Fin    </label>
                 <input type="date" name="datedebut" value="datefin" />
 
             </center>
-            <a href="@Url.Action("Index","ChartReclamation")"> filtrer </a>
-
+            @Html.ActionLink("Filter", "ChartRec");
             @*,new { datedebut = Model.datedebut }, new { datefin = Model.datefin }*@
         </p>
     </div>

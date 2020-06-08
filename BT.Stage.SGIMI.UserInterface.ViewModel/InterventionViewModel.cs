@@ -12,22 +12,14 @@ namespace BT.Stage.SGIMI.UserInterface.ViewModel
         public int Id { get; set; }
         [Required]
         public string Type { get; set; }
-
-
         public string Nature { get; set; }
-        [Display(Name = "Date")]
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-        public string Date { get; set; }
-
-
         public string Etat { get; set; }
 
     
         public int Reclamation { get; set; }
-        
 
-        
+
+        public string Probleme { get; set; }
         [Required(ErrorMessage = "Veuillez exprimer le problème constaté")]
         [MaxLength(100)]
         [Display(Name = " Problème Constaté")]
@@ -44,8 +36,10 @@ namespace BT.Stage.SGIMI.UserInterface.ViewModel
         public string CreatedBy { get; set; }
         public string CreatedDate { get; set; }
         public string CreatedTime { get; set; }
+
+        public string LastUpdatedBy { get; set; }
         public string LastUpdatedDate { get; set; }
         public string LastUpdatedTime { get; set; }
-        public string LastUpdatedBy { get; set; }
+        
     }
 }

@@ -17,10 +17,12 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
     {
         readonly IReclamationRepository reclamationRepository;
         readonly IUniteGestionRepository uniteGestionRepository;
-        public ReclamationController(IReclamationRepository _reclamationRepository, IUniteGestionRepository _uniteGestionRepository)
+        readonly IMaterielRepository materielRepository;
+        public ReclamationController(IReclamationRepository _reclamationRepository, IUniteGestionRepository _uniteGestionRepository, IMaterielRepository _materielRepository)
         {
             reclamationRepository = _reclamationRepository;
             uniteGestionRepository = _uniteGestionRepository;
+            materielRepository = _materielRepository;
         }
 
         // GET: Reclamation
@@ -64,7 +66,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
 
         // POST: Reclamation/Create
         [HttpPost]
-        public ActionResult Create(ReclamationViewModel reclamationViewModel)
+        public ActionResult Create(int materielId, ReclamationViewModel reclamationViewModel)
         {
             try
             {
@@ -82,8 +84,9 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                    
                 }
                 //string user = User.Identity.Name;
+                // Materiel materiel = materielRepository.GetMaterielById(materielId);
                 string user = User.Identity.Name;
-                Reclamation reclamation = ReclamationTranspose.CreateReclamationViewModelToReclamation(reclamationViewModel,user);
+                Reclamation reclamation = ReclamationTranspose.CreateReclamationViewModelToReclamation(materielId, reclamationViewModel, user);
 
                 bool reclamationIsCreated = reclamationRepository.CreateReclamation(reclamation);
                 if (reclamationIsCreated)

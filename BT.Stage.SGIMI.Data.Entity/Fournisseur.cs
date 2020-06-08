@@ -31,16 +31,19 @@ namespace BT.Stage.SGIMI.Data.Entity
         public string Telephone { get; set; }
 
 
-        [Required(ErrorMessage = "Veuillez saisir l'adresse du fournisseur")]
-        [MaxLength(30)]
-        [Display(Name = " Adresse")]
-        public string Adresse { get; set; }
-
         [RegularExpression(@"(\+00216[0-9]{2}|0)([0-9]{9}|[0-9\-\s]{9,18})")]
         [Required(ErrorMessage = "Veuillez saisir le fax du fournisseur")]
         [MaxLength(15)]
         [Display(Name = " Fax")]
         public string Fax { get; set; }
+
+
+        [Required(ErrorMessage = "Veuillez saisir l'adresse du fournisseur")]
+        [MaxLength(30)]
+        [Display(Name = " Adresse")]
+        public string Adresse { get; set; }
+
+        
 
         [Required(ErrorMessage = "Veuillez saisir le site web du fournisseur")]
         [MaxLength(30)]
@@ -51,11 +54,14 @@ namespace BT.Stage.SGIMI.Data.Entity
         /// F: Fourniseur, S: SociétéTierce
         /// </summary>
         public char Type { get; set; }
+        public string Etat { get; set; }
         public string CreatedBy { get; set; }
         public string CreatedDate { get; set; }
         public string CreatedTime { get; set; }
+
+        public string LastUpdatedBy { get; set; }
         public string LastUpdatedDate { get; set; }
         public string LastUpdatedTime { get; set; }
-        public object LastUpdatedBy { get; set; }
+        
     }
 }

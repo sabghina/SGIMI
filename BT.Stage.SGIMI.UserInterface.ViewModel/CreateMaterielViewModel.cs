@@ -39,11 +39,12 @@ namespace BT.Stage.SGIMI.UserInterface.ViewModel
        
         public string NumeroDeSerie { get; set; }
 
-        public string Fournisseur { get; set; }
+        public int Fournisseur { get; set; }
 
         public IEnumerable<SelectListItem> Fournisseurs { get; set; }
+        public string CreatedBy { get; set; }
         public string CreatedDate { get; set; }
         public string CreatedTime { get; set; }
-        public string CreatedBy { get; set; }
+        
     }
 }

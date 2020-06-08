@@ -71,6 +71,12 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
                 return false;
             }
         }
+
+        public string GetReferenceMaterielById(int id)
+        {
+            Materiel materiel = sGIMIDbContext.Materiels.Find(id);
+            return materiel.ReferenceBT;
+        }
     }
 }
 

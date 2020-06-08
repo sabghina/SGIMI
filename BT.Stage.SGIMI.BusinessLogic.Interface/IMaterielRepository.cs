@@ -20,7 +20,8 @@ namespace BT.Stage.SGIMI.BusinessLogic.Interface
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-       Materiel GetMaterielById(int id);
+        Materiel GetMaterielById(int id);
+        string GetReferenceMaterielById(int id);
         /// <summary>
         /// Create new materiel.
         /// </summary>

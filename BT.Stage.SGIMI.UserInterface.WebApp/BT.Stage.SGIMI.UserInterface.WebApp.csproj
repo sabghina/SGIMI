@@ -193,6 +193,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ChartReclamationController.cs" />
     <Compile Include="Controllers\FournisseurController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InterventionController.cs" />
@@ -207,6 +208,7 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\DataPoint.cs" />
+    <Compile Include="Models\DateFilter.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -399,6 +401,7 @@
     <Content Include="Views\UniteGestion\Details.cshtml" />
     <Content Include="Views\Reclamation\Details.cshtml" />
     <Content Include="Views\Reclamation\Edit.cshtml" />
+    <Content Include="Views\ChartReclamation\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
