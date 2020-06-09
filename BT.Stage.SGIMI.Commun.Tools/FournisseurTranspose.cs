@@ -118,6 +118,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Email = $"{fournisseur.Email}",
                 Adresse = $"{fournisseur.Adresse}",
                 SiteWeb = $"{fournisseur.SiteWeb}",
+                Etat = $"{fournisseur.Etat}", 
                 DateContrat = $"{fournisseur.CreatedDate}"
             };
 

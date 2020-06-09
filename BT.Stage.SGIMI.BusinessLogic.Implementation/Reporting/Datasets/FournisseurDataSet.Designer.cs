@@ -289,6 +289,8 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             
             private global::System.Data.DataColumn columnSiteWeb;
             
+            private global::System.Data.DataColumn columnEtat;
+            
             private global::System.Data.DataColumn columnDateContrat;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -366,6 +368,14 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn EtatColumn {
+                get {
+                    return this.columnEtat;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn DateContratColumn {
                 get {
                     return this.columnDateContrat;
@@ -409,7 +419,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FournisseurRow AddFournisseurRow(string Nom, string Email, string Contact, string Adresse, string SiteWeb, string DateContrat) {
+            public FournisseurRow AddFournisseurRow(string Nom, string Email, string Contact, string Adresse, string SiteWeb, string Etat, string DateContrat) {
                 FournisseurRow rowFournisseurRow = ((FournisseurRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Nom,
@@ -417,6 +427,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
                         Contact,
                         Adresse,
                         SiteWeb,
+                        Etat,
                         DateContrat};
                 rowFournisseurRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFournisseurRow);
@@ -445,6 +456,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
                 this.columnContact = base.Columns["Contact"];
                 this.columnAdresse = base.Columns["Adresse"];
                 this.columnSiteWeb = base.Columns["SiteWeb"];
+                this.columnEtat = base.Columns["Etat"];
                 this.columnDateContrat = base.Columns["DateContrat"];
             }
             
@@ -461,6 +473,8 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
                 base.Columns.Add(this.columnAdresse);
                 this.columnSiteWeb = new global::System.Data.DataColumn("SiteWeb", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSiteWeb);
+                this.columnEtat = new global::System.Data.DataColumn("Etat", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEtat);
                 this.columnDateContrat = new global::System.Data.DataColumn("DateContrat", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDateContrat);
             }
@@ -685,6 +699,22 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Etat {
+                get {
+                    try {
+                        return ((string)(this[this.tableFournisseur.EtatColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Etat\' in table \'Fournisseur\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFournisseur.EtatColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string DateContrat {
                 get {
                     try {
@@ -757,6 +787,18 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetSiteWebNull() {
                 this[this.tableFournisseur.SiteWebColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsEtatNull() {
+                return this.IsNull(this.tableFournisseur.EtatColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetEtatNull() {
+                this[this.tableFournisseur.EtatColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
