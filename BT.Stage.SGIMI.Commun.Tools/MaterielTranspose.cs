@@ -34,14 +34,18 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 ReferenceBT = materiel.ReferenceBT,
                 NumeroDeSerie = materiel.NumeroDeSerie,
                 Fournisseur = materiel.Fournisseur,
+                Agent = materiel.Agent,
+                Etat = materiel.Etat,
+                AffectedBy = materiel.AffectedBy,
+                AffectedDate = materiel.AffectedDate,
+                AffectedTime = materiel.AffectedTime,
                 CreatedDate = materiel.CreatedDate,
                 CreatedTime = materiel.CreatedTime,
                 LastUpdatedDate = materiel.LastUpdatedDate,
                 LastUpdatedTime = materiel.LastUpdatedTime,
                 LastUpdatedBy = materiel.LastUpdatedBy,
                 CreatedBy = materiel.CreatedBy,
-                Agent = materiel.Agent,
-                Unite = materiel.Unite
+                
 
             };
             return materielViewModel;
@@ -57,6 +61,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 ReferenceBT = createMaterielViewModel.ReferenceBT,
                 NumeroDeSerie = createMaterielViewModel.NumeroDeSerie,
                 Fournisseur = createMaterielViewModel.Fournisseur,
+                Etat = "NonAffecte",
                 CreatedBy = user,
                 CreatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
                 CreatedTime = DateTime.Now.ToString("HH:mm:ss")
@@ -94,12 +99,17 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 ReferenceBT = createMaterielViewModel.ReferenceBT,
                 NumeroDeSerie = createMaterielViewModel.NumeroDeSerie,
                 Fournisseur = createMaterielViewModel.Fournisseur,
+                Agent = oldMateriel.Agent,
+                Etat = oldMateriel.Etat,
                 LastUpdatedBy = user,
                 LastUpdatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
                 LastUpdatedTime = DateTime.Now.ToString("HH:mm:ss"),
                 CreatedBy = oldMateriel.CreatedBy,
                 CreatedDate = oldMateriel.CreatedDate,
-                CreatedTime = oldMateriel.CreatedTime
+                CreatedTime = oldMateriel.CreatedTime,
+                AffectedBy = oldMateriel.AffectedBy,
+                AffectedDate = oldMateriel.AffectedDate,
+                AffectedTime = oldMateriel.AffectedTime,
 
             };
             return materiel;
@@ -116,14 +126,19 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 ReferenceBT = oldMateriel.ReferenceBT,
                 NumeroDeSerie = oldMateriel.NumeroDeSerie,
                 Fournisseur = oldMateriel.Fournisseur,
+                Etat = "Affecte",
+                Agent = affectationMaterielViewModel.Agent,
+                AffectedBy = user,
+                AffectedDate = DateTime.Now.ToString("dd/MM/yyyy"),
+                AffectedTime = DateTime.Now.ToString("HH:mm:ss"),
                 LastUpdatedBy = oldMateriel.LastUpdatedBy,
                 LastUpdatedDate = oldMateriel.LastUpdatedDate,
                 LastUpdatedTime = oldMateriel.LastUpdatedTime,
                 CreatedBy = oldMateriel.CreatedBy,
                 CreatedDate = oldMateriel.CreatedDate,
                 CreatedTime = oldMateriel.CreatedTime,
-                Agent = affectationMaterielViewModel.Agent,
-                Unite = affectationMaterielViewModel.Unite
+                
+                
 
             };
             return materiel;
@@ -134,20 +149,11 @@ namespace BT.Stage.SGIMI.Commun.Tools
             AffectationMaterielViewModel affectationMaterielViewModel = new AffectationMaterielViewModel
             {
                 Id = materiel.Id,
-                Nom = materiel.Nom,
-                Marque = materiel.Marque,
-                Modele = materiel.Modele,
-                ReferenceBT = materiel.ReferenceBT,
-                NumeroDeSerie = materiel.NumeroDeSerie,
-                Fournisseur = materiel.Fournisseur,
-                CreatedDate = materiel.CreatedDate,
-                CreatedTime = materiel.CreatedTime,
-                LastUpdatedDate = materiel.LastUpdatedDate,
-                LastUpdatedTime = materiel.LastUpdatedTime,
-                LastUpdatedBy = materiel.LastUpdatedBy,
+                Etat = materiel.Etat,
                 Agent = materiel.Agent,
-                Unite = materiel.Unite,
-                CreatedBy = materiel.CreatedBy,
+                AffectedBy = materiel.AffectedBy,
+                AffectedDate = materiel.AffectedDate,
+                AffectedTime = materiel.AffectedTime,
 
             };
             return affectationMaterielViewModel;
@@ -174,7 +180,10 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 ReferenceBT = $"{materiel.ReferenceBT}",
                 NumeroDeSerie = $"{materiel.NumeroDeSerie}",
                 Fournisseur = $"{materiel.Fournisseur}",
-                DateContrat= $"{materiel.CreatedDate}"
+                Etat = $"{materiel.Etat}",
+                Agent = $"{materiel.Agent}",
+                DateContrat = $"{materiel.CreatedDate}",
+                DateAffectation = $"{materiel.AffectedDate}"
             };
 
             return materielReport;
