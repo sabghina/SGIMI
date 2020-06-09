@@ -10,10 +10,12 @@ namespace BT.Stage.SGIMI.DataAccess.Interface
     public interface IFournisseurAdapter
     {
         /// <summary>
-        /// Returns List Fournissuers.
+        /// Returns Active List Fournissuers.
         /// </summary>
         /// <returns></returns>
         List<Fournisseur> GetFournisseurs();
+        /// Returns Archived List Fournissuers.
+        List<Fournisseur> GetArchivedFournisseurs();
         /// <summary>
         /// Return fournisseur by id.
         /// </summary>
@@ -28,5 +30,6 @@ namespace BT.Stage.SGIMI.DataAccess.Interface
         bool CreateFournisseur(Fournisseur fournisseur);
         bool UpdateFournisseur(Fournisseur fournisseur);
         string GetNameFournisseurById(int id);
+        bool ArchiveFournisseur(Fournisseur fournisseur);
     }
 }

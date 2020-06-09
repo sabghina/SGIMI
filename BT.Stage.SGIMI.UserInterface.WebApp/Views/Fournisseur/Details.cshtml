@@ -1,18 +1,11 @@
 ﻿@model BT.Stage.SGIMI.UserInterface.ViewModel.FournisseurViewModel
-
 @{
-    ViewBag.Title = "Détails";
+    ViewBag.Title = "Détails d'un fournisseur";
 }
 
-<h2>Détails</h2>
-
+<h2>Détails </h2>
 <div>
     <h4>Détails d'un fournisseur</h4>
-    <div class="pull-right">
-      
-            <button type="button">Télécharger un rapport</button>
-        
-    </div>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -64,6 +57,38 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.Etat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Etat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArchivedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArchivedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArchivedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArchivedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArchivedTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArchivedTime)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.CreatedBy)
         </dt>
 
@@ -88,6 +113,14 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.LastUpdatedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastUpdatedBy)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.LastUpdatedDate)
         </dt>
 
@@ -105,9 +138,7 @@
 
     </dl>
 </div>
-
-    
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Modifier", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("Retour", "Index")
 </p>

@@ -54,6 +54,10 @@ namespace BT.Stage.SGIMI.UserInterface.ViewModel
         public TypeFournisseur Type { get; set; }
         public string Etat { get; set; }
 
+        public string ArchivedBy { get; set; }
+        public string ArchivedDate { get; set; }
+        public string ArchivedTime { get; set; }
+
         public string CreatedBy { get; set; }
         public string CreatedDate { get; set; }
         public string CreatedTime { get; set; }

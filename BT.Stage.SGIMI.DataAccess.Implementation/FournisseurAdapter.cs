@@ -19,6 +19,20 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
             sGIMIDbContext = _sGIMIDbContext;
         }
 
+        public bool ArchiveFournisseur(Fournisseur fournisseur)
+        {
+            sGIMIDbContext.Fournisseurs.AddOrUpdate(fournisseur);
+            Task<int> nbRowsAffected = sGIMIDbContext.ObjectContext.SaveChangesAsync();
+            if (nbRowsAffected != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public bool CreateFournisseur(Fournisseur fournisseur)
         {
             sGIMIDbContext.Fournisseurs.Add(fournisseur);
@@ -41,9 +55,32 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
 
         public List<Fournisseur> GetFournisseurs()
         {
-            List<Fournisseur> fournisseurs = sGIMIDbContext.Fournisseurs.ToList();
+            List<Fournisseur> listFournisseurs = sGIMIDbContext.Fournisseurs.ToList();
+            List<Fournisseur> fournisseurs = new List<Fournisseur>();
+            foreach (Fournisseur fournisseur in listFournisseurs)
+            {
+                if (fournisseur.Etat == "Active")
+                {
+                    fournisseurs.Add(fournisseur);
+                }
+            }
 
             return fournisseurs;
+        }
+
+        public List<Fournisseur> GetArchivedFournisseurs()
+        {
+            List<Fournisseur> fournisseurs = sGIMIDbContext.Fournisseurs.ToList();
+            List<Fournisseur> archivedfournisseurs = new List<Fournisseur>();
+            foreach (Fournisseur fournisseur in fournisseurs)
+            {
+                if (fournisseur.Etat == "Archiver")
+                {
+                    archivedfournisseurs.Add(fournisseur);
+                }
+            }
+
+            return archivedfournisseurs;
         }
 
         public string GetNameFournisseurById(int id)

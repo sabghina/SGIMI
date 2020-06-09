@@ -381,9 +381,6 @@
     <Content Include="Views\Materiel\Create.cshtml" />
     <Content Include="Views\Materiel\Index.cshtml" />
     <Content Include="Views\Materiel\Details.cshtml" />
-    <Content Include="Views\Fournisseur\Create.cshtml" />
-    <Content Include="Views\Fournisseur\Details.cshtml" />
-    <Content Include="Views\Fournisseur\Edit.cshtml" />
     <Content Include="Views\Fournisseur\Index.cshtml" />
     <Content Include="Views\Intervention\Details.cshtml" />
     <Content Include="Views\Intervention\Create.cshtml" />
@@ -402,6 +399,10 @@
     <Content Include="Views\Reclamation\Details.cshtml" />
     <Content Include="Views\Reclamation\Edit.cshtml" />
     <Content Include="Views\ChartReclamation\Index.cshtml" />
+    <Content Include="Views\Fournisseur\Archived.cshtml" />
+    <Content Include="Views\Fournisseur\Details.cshtml" />
+    <Content Include="Views\Fournisseur\Edit.cshtml" />
+    <Content Include="Views\Fournisseur\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

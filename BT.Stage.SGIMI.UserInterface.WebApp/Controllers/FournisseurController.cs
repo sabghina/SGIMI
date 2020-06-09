@@ -31,6 +31,18 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
 
             return View(fournisseurViewModels);
         }
+        // GET: Fournisseur
+        public ActionResult Archived()
+        {
+            // 1.get service list fournisseur 
+            
+            List<Fournisseur> archivedFournisseurs = fournisseurRepository.GetArchivedFournisseurs();
+
+            // 2. transpose entity -> view model
+            List<FournisseurViewModel> archivedFournisseurViewModels = FournisseurTranspose.FournisseurListToFournisseurViewModelList(archivedFournisseurs);
+
+            return View(archivedFournisseurViewModels);
+        }
 
         // GET: Fournisseur/Details/5
         public ActionResult Details(int id)
@@ -107,8 +119,8 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                     return View(fournisseurViewModel);
                 }
                 string user = User.Identity.Name;
-                Fournisseur oldFourniseur = fournisseurRepository.GetFournisseurById(id);
-                Fournisseur fournisseur = FournisseurTranspose.UpdatedFournisseurViewModelToUpdatedFournisseur(oldFourniseur, fournisseurViewModel, user);
+                Fournisseur oldFournisseur = fournisseurRepository.GetFournisseurById(id);
+                Fournisseur fournisseur = FournisseurTranspose.UpdatedFournisseurViewModelToUpdatedFournisseur(oldFournisseur, fournisseurViewModel, user);
                 bool fournisseurIsUpdated = fournisseurRepository.UpdatedFournisseur(fournisseur);
                 if (!fournisseurIsUpdated)
                 {
@@ -123,7 +135,70 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
 
         }
 
+        //// GET: Fournisseur/Archiver/5
+        //public ActionResult Archiver(int id)
+        //{
+        //    try
+        //    {
+        //        Fournisseur fournisseur = fournisseurRepository.GetFournisseurById(id);
+        //        FournisseurViewModel fournisseurViewModel = FournisseurTranspose.FournisseurToFournisseurViewModel(fournisseur);
+        //        return View(fournisseurViewModel);
+        //    }
+        //    catch (Exception)
+        //    {
+        //        throw;
+        //    }
+        //}
 
+        //// POST: Fournisseur/Archiver/5
+        //[HttpPost]
+        //public ActionResult Archiver(int id, FournisseurViewModel fournisseurViewModel)
+        //{
+        //    try
+        //    {
+        //        if (!ModelState.IsValid)
+        //        {
+        //            return View(fournisseurViewModel);
+        //        }
+        //        string user = User.Identity.Name;
+        //        Fournisseur oldFournisseur = fournisseurRepository.GetFournisseurById(id);
+        //        Fournisseur fournisseur = FournisseurTranspose.ArchiverFournisseurViewModelToArchiverFournisseur(oldFournisseur, user);
+        //        bool fournisseurIsUpdated = fournisseurRepository.ArchivedFournisseur(fournisseur);
+        //        if (!fournisseurIsUpdated)
+        //        {
+        //            throw new Exception("oops");
+        //        }
+        //        return RedirectToAction("Index");
+        //    }
+        //    catch
+        //    {
+        //        throw;
+        //    }
+
+        //}
+
+        // POST: Fournisseur/Archiver/5
+        [HttpPost]
+        public ActionResult Archiver(int id)
+        {
+            try
+            {
+                string user = User.Identity.Name;
+                Fournisseur oldFournisseur = fournisseurRepository.GetFournisseurById(id);
+                Fournisseur fournisseur = FournisseurTranspose.ArchiverFournisseurViewModelToArchiverFournisseur(oldFournisseur, user);
+                bool fournisseurIsUpdated = fournisseurRepository.ArchivedFournisseur(fournisseur);
+                if (!fournisseurIsUpdated)
+                {
+                    throw new Exception("oops");
+                }
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                throw;
+            }
+
+        }
 
         // GET: Fournisseur/Delete/5
         public ActionResult Delete(int id)

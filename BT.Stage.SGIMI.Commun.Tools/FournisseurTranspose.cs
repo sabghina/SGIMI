@@ -38,6 +38,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Fax = fournisseur.Fax,
                 Type= (TypeFournisseur)fournisseur.Type,
                 SiteWeb = fournisseur.SiteWeb,
+                Etat = fournisseur.Etat,
                 CreatedBy = fournisseur.CreatedBy,
                 CreatedDate = fournisseur.CreatedDate,
                 CreatedTime = fournisseur.CreatedTime,
@@ -59,6 +60,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Fax = fournisseurViewModel.Fax,
                 SiteWeb = fournisseurViewModel.SiteWeb,
                 Type = 'F',
+                Etat = "Active",
                 CreatedBy = user,
                 CreatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
                 CreatedTime = DateTime.Now.ToString("HH:mm:ss"),
@@ -81,6 +83,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Fax = fournisseurViewModel.Fax,
                 SiteWeb = fournisseurViewModel.SiteWeb,
                 Type = (char)fournisseurViewModel.Type,
+                Etat = oldFournisseur.Etat,
                 CreatedBy= oldFournisseur.CreatedBy,
                 CreatedDate = oldFournisseur.CreatedDate,
                 CreatedTime= oldFournisseur.CreatedTime,
@@ -116,6 +119,34 @@ namespace BT.Stage.SGIMI.Commun.Tools
             };
 
             return fournisseurReport;
+        }
+
+        public static Fournisseur ArchiverFournisseurViewModelToArchiverFournisseur(Fournisseur oldFournisseur, string user)
+        {
+            Fournisseur fournisseur = new Fournisseur
+            {
+                Id = oldFournisseur.Id,
+                Nom = oldFournisseur.Nom,
+                Email = oldFournisseur.Email,
+                Telephone = oldFournisseur.Telephone,
+                Adresse = oldFournisseur.Adresse,
+                Fax = oldFournisseur.Fax,
+                SiteWeb = oldFournisseur.SiteWeb,
+                Type = (char)oldFournisseur.Type,
+                Etat = "Archivé",
+                ArchivedBy = user,
+                ArchivedDate = DateTime.Now.ToString("dd/MM/yyyy"),
+                ArchivedTime = DateTime.Now.ToString("HH:mm:ss"),
+                CreatedBy = oldFournisseur.CreatedBy,
+                CreatedDate = oldFournisseur.CreatedDate,
+                CreatedTime = oldFournisseur.CreatedTime,
+                LastUpdatedBy = oldFournisseur.LastUpdatedBy,
+                LastUpdatedDate = oldFournisseur.LastUpdatedDate,
+                LastUpdatedTime = oldFournisseur.LastUpdatedTime,
+
+
+            };
+            return fournisseur;
         }
     }
 }
