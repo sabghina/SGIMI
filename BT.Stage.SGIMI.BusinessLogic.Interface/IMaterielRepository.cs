@@ -35,5 +35,6 @@ namespace BT.Stage.SGIMI.BusinessLogic.Interface
 
         byte[] DynamicReports(List<MaterielReport> materielReports);
         byte[] DynamicReport(MaterielReport materielReport);
+        List<Materiel> GetAffectedMateriels();
     }
 }

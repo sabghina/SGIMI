@@ -4,10 +4,8 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
-<p>       
-    @Html.ActionLink("Telecharger un formulaire", "StaticReports") 
-</p>
+<h2>Ajouter un nouveau matériel</h2>
+
 
 @using (Html.BeginForm("Create", "Materiel", FormMethod.Post))
 {
@@ -75,7 +73,7 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Retour", "Index")
 </div>
 
 @section Scripts {

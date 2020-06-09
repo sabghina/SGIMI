@@ -26,7 +26,15 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
         }
         public List<Materiel> GetMateriels()
         {
-            List<Materiel> materiels = sGIMIDbContext.Materiels.ToList();
+            List<Materiel> Listmateriels = sGIMIDbContext.Materiels.ToList();
+            List<Materiel> materiels = new List<Materiel>();
+            foreach (Materiel materiel in Listmateriels)
+            {
+                if ((materiel.Agent==null)||(materiel.Agent==""))
+                {
+                    materiels.Add(materiel);
+                }
+            }
       
             return materiels;
         }
@@ -76,6 +84,21 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
         {
             Materiel materiel = sGIMIDbContext.Materiels.Find(id);
             return materiel.ReferenceBT;
+        }
+
+        public List<Materiel> GetAffectedMateriels()
+        {
+            List<Materiel> Listmateriels = sGIMIDbContext.Materiels.ToList();
+            List<Materiel> materiels = new List<Materiel>();
+            foreach (Materiel materiel in Listmateriels)
+            {
+                if ((materiel.Agent != null) || (materiel.Agent != ""))
+                {
+                    materiels.Add(materiel);
+                }
+            }
+
+            return materiels;
         }
     }
 }

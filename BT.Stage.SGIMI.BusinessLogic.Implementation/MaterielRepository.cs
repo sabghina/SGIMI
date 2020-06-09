@@ -167,6 +167,12 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
         {
             return materielAdapter.GetReferenceMaterielById(id);
         }
+
+        public List<Materiel> GetAffectedMateriels()
+        {
+            List<Materiel> affectedMateriels = materielAdapter.GetAffectedMateriels();
+            return affectedMateriels;
+        }
     }
 }
 

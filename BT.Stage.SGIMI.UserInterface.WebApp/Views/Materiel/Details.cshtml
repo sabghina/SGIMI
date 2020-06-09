@@ -9,16 +9,10 @@
 <div>
     <h4>Details materiel</h4>
     
-        <button type="button" class="btn btn-info">
+        @*<button type="button" class="btn btn-info">
             @Html.ActionLink("Affecter", "Affecter", new { id = Model.Id })
-        </button>
+        </button>*@
     
-    <div class="pull-right">
-
-        <button type="button">Télécharger un rapport</button>
-
-    </div>
-    <hr />
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.Nom)
@@ -122,18 +116,11 @@
         <dd>
             @Html.DisplayFor(model => model.Agent)
         </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Unite)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Unite)
-        </dd>
 
     </dl>
 </div>
     <p>
 
-        @Html.ActionLink("Back to List", "Index") |
+        @Html.ActionLink("Retour", "Index") |
 
     </p>

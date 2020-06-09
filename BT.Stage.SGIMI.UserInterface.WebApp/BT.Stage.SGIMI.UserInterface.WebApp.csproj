@@ -404,6 +404,7 @@
     <Content Include="Views\Fournisseur\Create.cshtml" />
     <Content Include="Views\SocieteTierce\Details.cshtml" />
     <Content Include="Views\SocieteTierce\Archived.cshtml" />
+    <Content Include="Views\Materiel\Affected.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -24,7 +24,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             fournisseurRepository = _fournisseurRepository;
         }
 
-        // GET: Materiel
+        // GET: Materiel non affecté
         public ActionResult Index()
         {
             // 1.get service list materiel 
@@ -34,6 +34,17 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             List<MaterielViewModel> materielViewModels = MaterielTranspose.MaterielListToMaterielViewModelList(materiels);
 
             return View(materielViewModels);
+        }
+        // GET: Materiel affecté
+        public ActionResult Affected()
+        {
+            // 1.get service list materiel 
+            List<Materiel> affectedMateriels = materielRepository.GetAffectedMateriels();
+
+            // 2. transpose entity -> view model
+            List<MaterielViewModel> affectedMaterielViewModels = MaterielTranspose.MaterielListToMaterielViewModelList(affectedMateriels);
+
+            return View(affectedMaterielViewModels);
         }
 
         // GET: Materiel/Details/5
@@ -169,7 +180,19 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             affectationMaterielViewModel.Id = id;
             return View(affectationMaterielViewModel);
 
+            //Materiel materiel = materielRepository.GetMaterielById(id);
+            //CreateMaterielViewModel createMaterielViewModel = MaterielTranspose.MaterielToCreateMaterielViewModel(materiel);
+            //List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
+            //IEnumerable<SelectListItem> fournisseursSelectListItem = new SelectList(fournisseurs.Select(
+            //    fournisseur => new
+            //    {
+            //        Id = fournisseur.Id,
+            //        Text = fournisseur.Nom
+            //    }).AsEnumerable(), "Text", "Text");
 
+            //createMaterielViewModel.Fournisseurs = fournisseursSelectListItem;
+
+            //return View(createMaterielViewModel);
         }
 
         // POST: Materiel/Affecter
