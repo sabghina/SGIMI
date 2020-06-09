@@ -36,7 +36,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         {
             // 1.get service list fournisseur 
 
-            List<Fournisseur> archivedSocieteTierces = societeTierceRepository.GetArchivedFournisseurs();
+            List<Fournisseur> archivedSocieteTierces = societeTierceRepository.GetArchivedSocieteTierces();
 
             // 2. transpose entity -> view model
             List<FournisseurViewModel> archivedSocieteTierceViewModels = FournisseurTranspose.FournisseurListToFournisseurViewModelList(archivedSocieteTierces);

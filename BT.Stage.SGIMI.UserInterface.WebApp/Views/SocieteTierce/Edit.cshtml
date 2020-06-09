@@ -1,10 +1,14 @@
 ﻿@model BT.Stage.SGIMI.UserInterface.ViewModel.SocieteTierceViewModel
 
+@{
+    ViewBag.Title = "Modification";
+}
 
-@using (Html.BeginForm("Edit","SocieteTierce",FormMethod.Post))
+<h2>Modifier une société Tierce</h2>
+@using (Html.BeginForm("Edit", "SocieteTierce", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>SocieteTierceViewModel</h4>
         <hr />
@@ -59,7 +63,7 @@
             </div>
         </div>
 
-       
+
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
@@ -70,7 +74,7 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Retour", "Index")
 </div>
 
 @section Scripts {
