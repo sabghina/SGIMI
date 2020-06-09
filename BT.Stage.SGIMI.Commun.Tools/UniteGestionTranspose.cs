@@ -39,9 +39,6 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 CreatedBy = uniteGestion.CreatedBy,
                 CreatedDate = uniteGestion.CreatedDate,
                 CreatedTime = uniteGestion.CreatedTime,
-                LastUpdatedDate = uniteGestion.LastUpdatedDate,
-                LastUpdatedTime = uniteGestion.LastUpdatedTime,
-                LastUpdatedBy = uniteGestion.LastUpdatedBy
             };
             return uniteGestionViewModel;
         }
@@ -78,9 +75,9 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 CreatedBy = oldUniteGestion.CreatedBy,
                 CreatedDate = oldUniteGestion.CreatedDate,
                 CreatedTime = oldUniteGestion.CreatedTime,
-                LastUpdatedBy = user,
-                LastUpdatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
-                LastUpdatedTime = DateTime.Now.ToString("HH:mm:ss")
+                //LastUpdatedBy = user,
+                //LastUpdatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
+                //LastUpdatedTime = DateTime.Now.ToString("HH:mm:ss")
             };
 
             return uniteGestion;
