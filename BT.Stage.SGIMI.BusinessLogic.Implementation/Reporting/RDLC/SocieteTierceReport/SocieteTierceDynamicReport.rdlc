@@ -339,7 +339,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Fields!DateContrat.Value</Value>
+                <Value>=First(Fields!DateContrat.Value, "SocieteTierceDataSet")</Value>
                 <Style>
                   <FontSize>11pt</FontSize>
                 </Style>
@@ -349,8 +349,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox15</rd:DefaultName>
-        <Top>5.30846cm</Top>
-        <Left>8.53282cm</Left>
+        <Top>6.06693cm</Top>
+        <Left>8.53281cm</Left>
         <Height>0.6cm</Height>
         <Width>4.445cm</Width>
         <ZIndex>10</ZIndex>
@@ -382,7 +382,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox16</rd:DefaultName>
-        <Top>5.34374cm</Top>
+        <Top>6.03166cm</Top>
         <Left>4.77573cm</Left>
         <Height>0.6cm</Height>
         <Width>3.16146cm</Width>
@@ -420,6 +420,69 @@
         <Height>0.63528cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>12</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox17">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Etat :</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox16</rd:DefaultName>
+        <Top>5.32582cm</Top>
+        <Left>4.77573cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.5cm</Width>
+        <ZIndex>13</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox13">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!Etat.Value, "SocieteTierceDataSet")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox13</rd:DefaultName>
+        <Top>5.32582cm</Top>
+        <Left>8.53281cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.5cm</Width>
+        <ZIndex>14</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -734,6 +797,10 @@
         </Field>
         <Field Name="SiteWeb">
           <DataField>SiteWeb</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Etat">
+          <DataField>Etat</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="DateContrat">

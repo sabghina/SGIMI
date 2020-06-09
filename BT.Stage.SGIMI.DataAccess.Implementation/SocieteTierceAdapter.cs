@@ -46,34 +46,16 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
         public List<Fournisseur> GetSocieteTierces()
         {
             List<Fournisseur> fournisseurs = sGIMIDbContext.Fournisseurs.ToList();
-            List<Fournisseur> societeTierces = new List<Fournisseur> { };
+            List<Fournisseur> societeTierces = new List<Fournisseur>();
 
-            //Parcourir la liste avec foreach
-            //foreach (Fournisseur fournisseur in fournisseurs)
-            //{
-            //    if (GetSocieteTierceTypeById(fournisseur.Id) == true)
-            //    {
-            //        //foreach (Fournisseur societeTierce in societeTierces)
-            //        //{
-            //        //    societeTierce.=fournisseur;
-            //        //}
-            //        societeTierces = new List<Fournisseur>() { fournisseur };
-            //    }
-            //}
-            for (int i=0; i<=fournisseurs.Count();i++)
+            foreach (Fournisseur societeTierce in fournisseurs)
             {
-
-                if (fournisseurs[i].Type == 'S')
+                if ((societeTierce.Etat == "Active") && (societeTierce.Type == 'S'))
                 {
-                    societeTierces.Add(fournisseurs[i]);
-                }
-
-                else
-                {
-                    return fournisseurs;
+                    societeTierces.Add(societeTierce);
                 }
             }
-           
+
             return societeTierces;
         }
 
@@ -97,19 +79,36 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
             }
         }
 
-        //public bool GetSocieteTierceTypeById(int id)
-        //{
-        //    Fournisseur fournisseur = sGIMIDbContext.Fournisseurs.Find(id);
+        public List<Fournisseur> GetArchivedSocieteTierces()
+        {
+            List<Fournisseur> fournisseurs = sGIMIDbContext.Fournisseurs.ToList();
+            List<Fournisseur> archivedSocieteTierces = new List<Fournisseur>();
 
-        //    if (fournisseur.Type == 'S')
-        //    {
-        //        return true;
-        //    }
-        //    else
-        //    {
-        //        return false;
-        //    }
-        //}
+            foreach (Fournisseur societeTierce in fournisseurs)
+            {
+                if ((societeTierce.Etat == "Archivé") && (societeTierce.Type == 'S'))
+                {
+                    archivedSocieteTierces.Add(societeTierce);
+                }
+            }
+
+            return archivedSocieteTierces;
+        }
+
+        public bool ArchiveSocieteTierce(Fournisseur societeTierce)
+        {
+            sGIMIDbContext.Fournisseurs.AddOrUpdate(societeTierce);
+            Task<int> nbRowsAffected = sGIMIDbContext.ObjectContext.SaveChangesAsync();
+            if (nbRowsAffected != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
     }
 }
 

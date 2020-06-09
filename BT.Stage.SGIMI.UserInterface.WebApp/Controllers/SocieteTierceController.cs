@@ -31,6 +31,18 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
 
             return View(societeTierceViewModels);
         }
+        // GET: Fournisseur Archived
+        public ActionResult Archived()
+        {
+            // 1.get service list fournisseur 
+
+            List<Fournisseur> archivedSocieteTierces = societeTierceRepository.GetArchivedFournisseurs();
+
+            // 2. transpose entity -> view model
+            List<FournisseurViewModel> archivedSocieteTierceViewModels = FournisseurTranspose.FournisseurListToFournisseurViewModelList(archivedSocieteTierces);
+
+            return View(archivedSocieteTierceViewModels);
+        }
 
         // GET: SocieteTierce/Details/5
         public ActionResult Details(int id)
@@ -119,6 +131,31 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             {
                 return View();
             }
+        }
+        // POST: Fournisseur/Archiver/5
+        [HttpPost]
+        public ActionResult Archiver(int id)
+        {
+            try
+            {
+                string user = User.Identity.Name;
+                Fournisseur oldSocieteTierce = societeTierceRepository.GetSocieteTierceById(id);
+                Fournisseur societeTierce = SocieteTierceTranspose.ArchiverFournisseurViewModelToArchiverFournisseur(oldSocieteTierce, user);
+                bool societeTierceIsArchived = societeTierceRepository.ArchivedSocieteTierce(societeTierce);
+                if (societeTierceIsArchived)
+                {
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    throw new InvalidOperationException("oops");
+                }
+            }
+            catch
+            {
+                throw;
+            }
+
         }
 
         // GET: SocieteTierce/Delete/5

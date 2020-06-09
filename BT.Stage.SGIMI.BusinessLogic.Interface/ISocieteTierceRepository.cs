@@ -18,6 +18,10 @@ namespace BT.Stage.SGIMI.BusinessLogic.Interface
         /// <returns></returns>
         List<Fournisseur> GetSocieteTierces();
         /// <summary>
+        /// Returns Archived List SocieteTierce.
+        /// </summary>
+        /// <returns></returns>
+        List<Fournisseur> GetArchivedSocieteTierces();
         /// Returns societe tierce .
         /// </summary>
         /// <param name="societeTierce"></param>
@@ -32,6 +36,6 @@ namespace BT.Stage.SGIMI.BusinessLogic.Interface
 
         byte[] DynamicReports(List<SocieteTierceReport> societeTierceReports);
         byte[] DynamicReport(SocieteTierceReport societeTierceReport);
-
+        bool ArchivedSocieteTierce(Fournisseur societeTierce);
     }
 }

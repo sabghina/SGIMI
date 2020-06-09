@@ -15,6 +15,11 @@ namespace BT.Stage.SGIMI.DataAccess.Interface
         /// <returns></returns>
         List<Fournisseur> GetSocieteTierces();
         /// <summary>
+        /// Returns Archived List SocieteTierce.
+        /// </summary>
+        /// <returns></returns>
+        List<Fournisseur> GetArchivedSocieteTierces();
+        /// <summary>
         /// Return SocieteTierce by id.
         /// </summary>
         /// <param name="id"></param>
@@ -28,8 +33,7 @@ namespace BT.Stage.SGIMI.DataAccess.Interface
         /// <returns></returns>
         bool CreateSocieteTierce(Fournisseur societeTierce);
         bool UpdateSocieteTierce(Fournisseur societeTierce);
-
-       
+        bool ArchiveSocieteTierce(Fournisseur societeTierce);
     }
 }
 

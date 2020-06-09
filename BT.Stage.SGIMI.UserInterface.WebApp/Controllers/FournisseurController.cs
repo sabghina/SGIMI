@@ -20,7 +20,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         {
             fournisseurRepository = _fournisseurRepository;
         }
-        // GET: Fournisseur
+        // GET: Fournisseur Active
         public ActionResult Index()
         {
             // 1.get service list fournisseur 
@@ -31,7 +31,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
 
             return View(fournisseurViewModels);
         }
-        // GET: Fournisseur
+        // GET: Fournisseur Archived
         public ActionResult Archived()
         {
             // 1.get service list fournisseur 
@@ -186,8 +186,8 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 string user = User.Identity.Name;
                 Fournisseur oldFournisseur = fournisseurRepository.GetFournisseurById(id);
                 Fournisseur fournisseur = FournisseurTranspose.ArchiverFournisseurViewModelToArchiverFournisseur(oldFournisseur, user);
-                bool fournisseurIsUpdated = fournisseurRepository.ArchivedFournisseur(fournisseur);
-                if (!fournisseurIsUpdated)
+                bool fournisseurIsArchived = fournisseurRepository.ArchivedFournisseur(fournisseur);
+                if (!fournisseurIsArchived)
                 {
                     throw new Exception("oops");
                 }

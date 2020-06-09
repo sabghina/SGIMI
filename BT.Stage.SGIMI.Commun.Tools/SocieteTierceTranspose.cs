@@ -39,6 +39,10 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Adresse = societeTierce.Adresse,
                 Type = (TypeFournisseur)societeTierce.Type,
                 SiteWeb = societeTierce.SiteWeb,
+                Etat = societeTierce.Etat,
+                ArchivedBy = societeTierce.ArchivedBy,
+                ArchivedDate = societeTierce.ArchivedDate,
+                ArchivedTime = societeTierce.ArchivedTime,
                 CreatedBy = societeTierce.CreatedBy,
                 CreatedDate = societeTierce.CreatedDate,
                 CreatedTime = societeTierce.CreatedTime,
@@ -61,13 +65,17 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Adresse = societeTierceViewModel.Adresse,
                 Fax = societeTierceViewModel.Fax,
                 SiteWeb = societeTierceViewModel.SiteWeb,
-                Type = (char)societeTierceViewModel.Type,
+                Type = oldSocieteTierce.Type,
+                Etat = oldSocieteTierce.Etat,
+                ArchivedBy = oldSocieteTierce.ArchivedBy,
+                ArchivedDate = oldSocieteTierce.ArchivedDate,
+                ArchivedTime = oldSocieteTierce.ArchivedTime,
                 CreatedBy = oldSocieteTierce.CreatedBy,
                 CreatedDate = oldSocieteTierce.CreatedDate,
                 CreatedTime = oldSocieteTierce.CreatedTime,
                 LastUpdatedBy = user,
                 LastUpdatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
-                LastUpdatedTime = DateTime.Now.ToString("HH:mm:ss")
+                LastUpdatedTime = DateTime.Now.ToString("HH:mm:ss"),
             };
             return societeTierce;
         }
@@ -83,9 +91,13 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Fax = societeTierceViewModel.Fax,
                 SiteWeb = societeTierceViewModel.SiteWeb,
                 Type = 'S',
+                Etat = "Active",
                 CreatedBy = user,
                 CreatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
-                CreatedTime = DateTime.Now.ToString("HH:mm:ss")
+                CreatedTime = DateTime.Now.ToString("HH:mm:ss"),
+                LastUpdatedBy = societeTierceViewModel.LastUpdatedBy,
+                LastUpdatedDate = societeTierceViewModel.LastUpdatedDate,
+                LastUpdatedTime = societeTierceViewModel.LastUpdatedTime,
             };
 
             return fournisseur;
@@ -112,10 +124,40 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Email = $"{societeTierce.Email}",
                 Adresse = $"{societeTierce.Adresse}",
                 SiteWeb = $"{societeTierce.SiteWeb}",
+                Etat = $"{societeTierce.Etat}",
                 DateContrat = $"{societeTierce.CreatedDate}"
             };
 
             return societeTierceReport;
         }
+
+        public static Fournisseur ArchiverFournisseurViewModelToArchiverFournisseur(Fournisseur oldSocieteTierce, string user)
+        {
+            Fournisseur societeTierce = new Fournisseur
+            {
+                Id = oldSocieteTierce.Id,
+                Nom = oldSocieteTierce.Nom,
+                Email = oldSocieteTierce.Email,
+                Telephone = oldSocieteTierce.Telephone,
+                Adresse = oldSocieteTierce.Adresse,
+                Fax = oldSocieteTierce.Fax,
+                SiteWeb = oldSocieteTierce.SiteWeb,
+                Type = oldSocieteTierce.Type,
+                Etat = "Archivé",
+                ArchivedBy = user,
+                ArchivedDate = DateTime.Now.ToString("dd/MM/yyyy"),
+                ArchivedTime = DateTime.Now.ToString("HH:mm:ss"),
+                CreatedBy = oldSocieteTierce.CreatedBy,
+                CreatedDate = oldSocieteTierce.CreatedDate,
+                CreatedTime = oldSocieteTierce.CreatedTime,
+                LastUpdatedBy = oldSocieteTierce.LastUpdatedBy,
+                LastUpdatedDate = oldSocieteTierce.LastUpdatedDate,
+                LastUpdatedTime = oldSocieteTierce.LastUpdatedTime,
+
+
+            };
+            return societeTierce;
+        }
+
     }
 }

@@ -162,10 +162,16 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
             return file;
         }
 
-        //public bool GetSocieteTierceTypeById(int id)
-        //{
-        //    return societeTierceAdapter.GetSocieteTierceTypeById(id);
-        //}
+        public List<Fournisseur> GetArchivedSocieteTierces()
+        {
+            List<Fournisseur> archivedSocieteTierces = societeTierceAdapter.GetArchivedSocieteTierces();
+            return archivedSocieteTierces;
+        }
+
+        public bool ArchivedSocieteTierce(Fournisseur societeTierce)
+        {
+            return societeTierceAdapter.ArchiveSocieteTierce(societeTierce);
+        }
     }
 }
 
