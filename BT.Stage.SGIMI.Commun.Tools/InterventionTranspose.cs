@@ -30,7 +30,6 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Id = intervention.Id,
                 Type = intervention.Type,
                 Nature = intervention.Nature,
-                Date = intervention.Date,
                 Etat = intervention.Etat,
                 Reclamation = intervention.Reclamation,
                 ProblemeConstate = intervention.ProblemeConstate,
@@ -73,7 +72,6 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Id = interventionViewModel.Id,
                 Type = interventionViewModel.Type,
                 Nature = interventionViewModel.Nature,
-                Date = interventionViewModel.Date,
                 Etat = "En cours",
                 Reclamation = interventionViewModel.Reclamation,
                 ProblemeConstate = interventionViewModel.ProblemeConstate,
@@ -103,7 +101,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
             
                 InterventionReport interventionReport = new InterventionReport
                 {
-                    Date = $"{intervention.Date}",
+                    Date = $"{intervention.CreatedDate}",
                     Etat = $"{ intervention.Etat}",
                     Nature = $"{intervention.Nature}",
                     Reclamation = $"{intervention.Reclamation}",

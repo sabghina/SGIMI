@@ -53,7 +53,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Probleme = reclamationViewModel.Probleme,
                 Commentaire = reclamationViewModel.Commentaire,
                 UniteGestion=reclamationViewModel.UniteGestion,
-                Etat = "en cours",
+                Etat = "en attente",
                 CreatedBy = user,
                 CreatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
                 CreatedTime = DateTime.Now.ToString("HH:mm:ss")

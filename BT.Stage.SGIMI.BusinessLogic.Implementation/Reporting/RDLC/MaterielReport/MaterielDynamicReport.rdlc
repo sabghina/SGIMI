@@ -481,7 +481,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!DateConrtrat.Value, "MaterielDataSet")</Value>
+                <Value>=First(Fields!DateContrat.Value, "MaterielDataSet")</Value>
                 <Style>
                   <FontSize>12pt</FontSize>
                 </Style>

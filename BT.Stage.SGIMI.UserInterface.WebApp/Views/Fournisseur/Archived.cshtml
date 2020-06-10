@@ -6,7 +6,7 @@
 <h2>Liste des fournisseurs archivés</h2>
 
 <p>
-    @Html.ActionLink("Retour", "Index")
+    @Html.ActionLink("Retour", "Index")|
     @Html.ActionLink("Telecharger la liste des fournisseurs archivés ", "DynamicReports")|
 
 </p>
@@ -36,37 +36,7 @@
         <th>
             @Html.DisplayNameFor(model => model.SiteWeb)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Etat)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ArchivedBy)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ArchivedDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ArchivedTime)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CreatedBy)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CreatedDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CreatedTime)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LastUpdatedBy)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LastUpdatedDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LastUpdatedTime)
-        </th>
-        <th></th>
+        
     </tr>
 
     @foreach (var item in Model)
@@ -90,36 +60,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.SiteWeb)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Etat)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ArchivedBy)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ArchivedDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ArchivedTime)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CreatedBy)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CreatedDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CreatedTime)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastUpdatedBy)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastUpdatedDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastUpdatedTime)
-            </td>
+            
             <td>
                 @Html.ActionLink("Modifier", "Edit", new { id = item.Id }) |
                 @Html.ActionLink("Détails", "Details", new { id = item.Id }) |

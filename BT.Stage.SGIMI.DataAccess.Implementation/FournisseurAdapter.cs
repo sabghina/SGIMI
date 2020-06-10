@@ -74,7 +74,7 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
             List<Fournisseur> archivedfournisseurs = new List<Fournisseur>();
             foreach (Fournisseur fournisseur in fournisseurs)
             {
-                if (fournisseur.Etat == "Archiver")
+                if (fournisseur.Etat == "Archivé")
                 {
                     archivedfournisseurs.Add(fournisseur);
                 }

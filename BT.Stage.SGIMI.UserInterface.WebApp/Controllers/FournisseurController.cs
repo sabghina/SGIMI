@@ -177,9 +177,26 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
 
         //}
 
+
+
+        // GET: Fournisseur/Archiver/5
+        public ActionResult Archiver(int id)
+        {
+            try
+            {
+                Fournisseur fournisseur = fournisseurRepository.GetFournisseurById(id);
+                FournisseurViewModel fournisseurViewModel = FournisseurTranspose.FournisseurToFournisseurViewModel(fournisseur);
+                return View(fournisseurViewModel);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         // POST: Fournisseur/Archiver/5
         [HttpPost]
-        public ActionResult Archiver(int id)
+        public ActionResult Archiver(int id, FournisseurViewModel fournisseurViewModel)
         {
             try
             {

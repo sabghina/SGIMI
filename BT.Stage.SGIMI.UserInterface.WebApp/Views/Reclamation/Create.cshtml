@@ -1,9 +1,7 @@
 ﻿@model BT.Stage.SGIMI.UserInterface.ViewModel.ReclamationViewModel
 
     <h2>Reclamation sur le materiel @Model.Materiel</h2>
-    <p>
-        @Html.ActionLink("Telecharger un rapport statique", "StaticReports")|
-    </p>
+    
 
 @using (Html.BeginForm("Create", "Reclamation", FormMethod.Post))
 {
@@ -45,7 +43,7 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Retour", "Index")
 </div>
 
 @section Scripts {

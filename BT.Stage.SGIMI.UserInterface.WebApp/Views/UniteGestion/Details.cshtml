@@ -76,25 +76,12 @@
             @Html.DisplayFor(model => model.CreatedTime)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.LastUpdatedDate)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.LastUpdatedDate)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.LastUpdatedTime)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.LastUpdatedTime)
-        </dd>
+ 
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Modifier", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Retour", "Index")
 </p>

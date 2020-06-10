@@ -65,7 +65,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 {
                     Id = fournisseur.Id,
                     Text = fournisseur.Nom 
-                }).AsEnumerable(), "Text", "Text");
+                }).AsEnumerable(), "Id", "Text");
 
             CreateMaterielViewModel createMaterielViewModel = new CreateMaterielViewModel
             {
@@ -88,7 +88,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                     {
                         Id = fournisseur.Id,
                         Text = fournisseur.Nom 
-                    }).AsEnumerable(), "Text", "Text");
+                    }).AsEnumerable(), "Id", "Text");
                     createMatrielViewModel.Fournisseurs = fournisseursSelectListItem;
 
                     return View(createMatrielViewModel);
