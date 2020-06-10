@@ -60,6 +60,11 @@ namespace BT.Stage.SGIMI.Data.Entity
         public string ArchivedDate { get; set; }
         public string ArchivedTime { get; set; }
 
+        public string ActivatedBy { get; set; }
+        public string ActivatedDate { get; set; }
+        public string ActivatedTime { get; set; }
+
+
         public string CreatedBy { get; set; }
         public string CreatedDate { get; set; }
         public string CreatedTime { get; set; }

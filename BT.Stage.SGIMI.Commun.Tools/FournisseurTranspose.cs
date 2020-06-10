@@ -42,6 +42,9 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 ArchivedBy = fournisseur.ArchivedBy,
                 ArchivedDate = fournisseur.ArchivedDate,
                 ArchivedTime = fournisseur.ArchivedTime,
+                ActivatedBy = fournisseur.ActivatedBy,
+                ActivatedDate = fournisseur.ActivatedDate,
+                ActivatedTime = fournisseur.ActivatedTime,
                 CreatedBy = fournisseur.CreatedBy,
                 CreatedDate = fournisseur.CreatedDate,
                 CreatedTime = fournisseur.CreatedTime,
@@ -90,6 +93,9 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 ArchivedBy = oldFournisseur.ArchivedBy,
                 ArchivedDate = oldFournisseur.ArchivedDate,
                 ArchivedTime = oldFournisseur.ArchivedTime,
+                ActivatedBy = oldFournisseur.ActivatedBy,
+                ActivatedDate = oldFournisseur.ActivatedDate,
+                ActivatedTime = oldFournisseur.ActivatedTime,
                 CreatedBy = oldFournisseur.CreatedBy,
                 CreatedDate = oldFournisseur.CreatedDate,
                 CreatedTime= oldFournisseur.CreatedTime,
@@ -144,6 +150,40 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 ArchivedBy = user,
                 ArchivedDate = DateTime.Now.ToString("dd/MM/yyyy"),
                 ArchivedTime = DateTime.Now.ToString("HH:mm:ss"),
+                ActivatedBy = oldFournisseur.ActivatedBy,
+                ActivatedDate = oldFournisseur.ActivatedDate,
+                ActivatedTime = oldFournisseur.ActivatedTime,
+                CreatedBy = oldFournisseur.CreatedBy,
+                CreatedDate = oldFournisseur.CreatedDate,
+                CreatedTime = oldFournisseur.CreatedTime,
+                LastUpdatedBy = oldFournisseur.LastUpdatedBy,
+                LastUpdatedDate = oldFournisseur.LastUpdatedDate,
+                LastUpdatedTime = oldFournisseur.LastUpdatedTime,
+
+
+            };
+            return fournisseur;
+        }
+
+        public static Fournisseur ActiverFournisseurViewModelToActiverFournisseur(Fournisseur oldFournisseur, string user)
+        {
+            Fournisseur fournisseur = new Fournisseur
+            {
+                Id = oldFournisseur.Id,
+                Nom = oldFournisseur.Nom,
+                Email = oldFournisseur.Email,
+                Telephone = oldFournisseur.Telephone,
+                Adresse = oldFournisseur.Adresse,
+                Fax = oldFournisseur.Fax,
+                SiteWeb = oldFournisseur.SiteWeb,
+                Type = oldFournisseur.Type,
+                Etat = "Active",
+                ActivatedBy = user,
+                ActivatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
+                ActivatedTime = DateTime.Now.ToString("HH:mm:ss"),
+                ArchivedBy = oldFournisseur.ArchivedBy,
+                ArchivedDate = oldFournisseur.ArchivedDate,
+                ArchivedTime = oldFournisseur.ArchivedTime,
                 CreatedBy = oldFournisseur.CreatedBy,
                 CreatedDate = oldFournisseur.CreatedDate,
                 CreatedTime = oldFournisseur.CreatedTime,

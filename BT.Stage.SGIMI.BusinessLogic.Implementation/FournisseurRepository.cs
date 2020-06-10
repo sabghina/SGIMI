@@ -169,6 +169,12 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
             return fournisseurAdapter.ArchiveFournisseur(fournisseur);
         }
 
+        public bool ActivatedFournisseur(Fournisseur fournisseur)
+        {
+            return fournisseurAdapter.ActiveFournisseur(fournisseur);
+        }
+
+
         public List<Fournisseur> GetArchivedFournisseurs()
         {
             List<Fournisseur> archivedFournisseurs = fournisseurAdapter.GetArchivedFournisseurs();

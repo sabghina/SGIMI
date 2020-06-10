@@ -217,6 +217,44 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
 
         }
 
+        // GET: Fournisseur/Archiver/5
+        public ActionResult Activer(int id)
+        {
+            try
+            {
+                Fournisseur fournisseur = fournisseurRepository.GetFournisseurById(id);
+                FournisseurViewModel fournisseurViewModel = FournisseurTranspose.FournisseurToFournisseurViewModel(fournisseur);
+                return View(fournisseurViewModel);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        // POST: Fournisseur/Archiver/5
+        [HttpPost]
+        public ActionResult Activer(int id, FournisseurViewModel fournisseurViewModel)
+        {
+            try
+            {
+                string user = User.Identity.Name;
+                Fournisseur oldFournisseur = fournisseurRepository.GetFournisseurById(id);
+                Fournisseur fournisseur = FournisseurTranspose.ActiverFournisseurViewModelToActiverFournisseur(oldFournisseur, user);
+                bool fournisseurIsActivated = fournisseurRepository.ActivatedFournisseur(fournisseur);
+                if (!fournisseurIsActivated)
+                {
+                    throw new Exception("oops");
+                }
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                throw;
+            }
+
+        }
+
         // GET: Fournisseur/Delete/5
         public ActionResult Delete(int id)
         {

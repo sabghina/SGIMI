@@ -406,6 +406,7 @@
     <Content Include="Views\SocieteTierce\Archived.cshtml" />
     <Content Include="Views\Materiel\Affected.cshtml" />
     <Content Include="Views\Fournisseur\Archiver.cshtml" />
+    <Content Include="Views\Fournisseur\Activer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
