@@ -29,9 +29,10 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         {
             // 1.get service list materiel 
             List<Materiel> materiels = materielRepository.GetMateriels();
+            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
 
             // 2. transpose entity -> view model
-            List<MaterielViewModel> materielViewModels = MaterielTranspose.MaterielListToMaterielViewModelList(materiels);
+            List<MaterielViewModel> materielViewModels = MaterielTranspose.MaterielListToMaterielViewModelList(materiels,fournisseurs);
 
             return View(materielViewModels);
         }
@@ -40,9 +41,9 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         {
             // 1.get service list materiel 
             List<Materiel> affectedMateriels = materielRepository.GetAffectedMateriels();
-
+            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
             // 2. transpose entity -> view model
-            List<MaterielViewModel> affectedMaterielViewModels = MaterielTranspose.MaterielListToMaterielViewModelList(affectedMateriels);
+            List<MaterielViewModel> affectedMaterielViewModels = MaterielTranspose.MaterielListToMaterielViewModelList(affectedMateriels, fournisseurs);
 
             return View(affectedMaterielViewModels);
         }
@@ -51,8 +52,8 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         public ActionResult Details(int id)
         {
             Materiel materiel = materielRepository.GetMaterielById(id);
-
-            MaterielViewModel materielViewModel = MaterielTranspose.MaterielToMaterielViewModel(materiel);
+            Fournisseur fournisseur = fournisseurRepository.GetFournisseurById(materiel.Fournisseur);
+            MaterielViewModel materielViewModel = MaterielTranspose.MaterielToMaterielViewModel(materiel,fournisseur);
             return View(materielViewModel);
         }
 

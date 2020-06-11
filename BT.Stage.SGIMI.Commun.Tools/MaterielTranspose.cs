@@ -11,19 +11,25 @@ namespace BT.Stage.SGIMI.Commun.Tools
 {
     public static class MaterielTranspose
     {
-        public static List<MaterielViewModel> MaterielListToMaterielViewModelList(List<Materiel> materiels)
+        public static List<MaterielViewModel> MaterielListToMaterielViewModelList(List<Materiel> materiels,List<Fournisseur> fournisseurs)
         {
             List<MaterielViewModel> materielViewModels = new List<MaterielViewModel>();
             foreach (Materiel materiel in materiels)
             {
-                MaterielViewModel materielViewModel = MaterielToMaterielViewModel(materiel);
+                foreach (Fournisseur fournisseur in fournisseurs)
+                {
+                    if (materiel.Fournisseur == fournisseur.Id)
+                    {
+                        MaterielViewModel materielViewModel = MaterielToMaterielViewModel(materiel,fournisseur);
 
-                materielViewModels.Add(materielViewModel);
+                        materielViewModels.Add(materielViewModel);
+                    }
+                }
             }
 
             return materielViewModels;
         }
-        public static MaterielViewModel MaterielToMaterielViewModel(Materiel materiel)
+        public static MaterielViewModel MaterielToMaterielViewModel(Materiel materiel, Fournisseur fournisseur)
         {
             MaterielViewModel materielViewModel = new MaterielViewModel
             {
@@ -33,7 +39,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Modele = materiel.Modele,
                 ReferenceBT = materiel.ReferenceBT,
                 NumeroDeSerie = materiel.NumeroDeSerie,
-                Fournisseur = materiel.Fournisseur.ToString(),
+                Fournisseur = fournisseur.Nom,
                 Agent = materiel.Agent,
                 Etat = materiel.Etat,
                 AffectedBy = materiel.AffectedBy,
