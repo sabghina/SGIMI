@@ -173,6 +173,11 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
             List<Materiel> affectedMateriels = materielAdapter.GetAffectedMateriels();
             return affectedMateriels;
         }
+
+        public bool RevokeMateriel(Materiel materiel)
+        {
+            return materielAdapter.RevokeMateriel(materiel);
+        }
     }
 }
 

@@ -45,6 +45,9 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 AffectedBy = materiel.AffectedBy,
                 AffectedDate = materiel.AffectedDate,
                 AffectedTime = materiel.AffectedTime,
+                RevokedBy = materiel.RevokedBy,
+                RevokedDate = materiel.RevokedDate,
+                RevokedTime = materiel.RevokedTime,
                 CreatedDate = materiel.CreatedDate,
                 CreatedTime = materiel.CreatedTime,
                 LastUpdatedDate = materiel.LastUpdatedDate,
@@ -67,7 +70,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 ReferenceBT = createMaterielViewModel.ReferenceBT,
                 NumeroDeSerie = createMaterielViewModel.NumeroDeSerie,
                 Fournisseur = createMaterielViewModel.Fournisseur,
-                Etat = "NonAffecte",
+                Etat = "Non affecté",
                 CreatedBy = user,
                 CreatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
                 CreatedTime = DateTime.Now.ToString("HH:mm:ss")
@@ -150,6 +153,44 @@ namespace BT.Stage.SGIMI.Commun.Tools
             return materiel;
         }
 
+        public static Materiel RetirerMaterielViewModelToRetirerMateriel(Materiel oldMateriel, string user)
+        {
+            Materiel materiel = new Materiel
+            {
+                Id = oldMateriel.Id,
+                Nom = oldMateriel.Nom,
+                Marque = oldMateriel.Marque,
+                Modele = oldMateriel.Modele,
+                ReferenceBT = oldMateriel.ReferenceBT,
+                NumeroDeSerie = oldMateriel.NumeroDeSerie,
+                Fournisseur = oldMateriel.Fournisseur,
+                Etat = "Non affecté",
+                RevokedBy = user,
+                RevokedDate = DateTime.Now.ToString("dd/MM/yyyy"),
+                RevokedTime = DateTime.Now.ToString("HH:mm:ss"),
+                AffectedBy = user,
+                AffectedDate = oldMateriel.AffectedDate,
+                AffectedTime = oldMateriel.AffectedTime,
+                LastUpdatedBy = oldMateriel.LastUpdatedBy,
+                LastUpdatedDate = oldMateriel.LastUpdatedDate,
+                LastUpdatedTime = oldMateriel.LastUpdatedTime,
+                CreatedBy = oldMateriel.CreatedBy,
+                CreatedDate = oldMateriel.CreatedDate,
+                CreatedTime = oldMateriel.CreatedTime,
+
+
+
+            };
+            return materiel;
+
+
+        }
+
+
+
+
+
+
         public static AffectationMaterielViewModel MaterielToAffectationMaterielViewModel(Materiel materiel)
         {
             AffectationMaterielViewModel affectationMaterielViewModel = new AffectationMaterielViewModel
@@ -194,6 +235,8 @@ namespace BT.Stage.SGIMI.Commun.Tools
 
             return materielReport;
         }
+
+       
     }
 }
 

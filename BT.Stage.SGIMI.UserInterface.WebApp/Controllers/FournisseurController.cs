@@ -217,7 +217,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
 
         }
 
-        // GET: Fournisseur/Archiver/5
+        // GET: Fournisseur/Activer/5
         public ActionResult Activer(int id)
         {
             try
@@ -232,7 +232,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             }
         }
 
-        // POST: Fournisseur/Archiver/5
+        // POST: Fournisseur/Activer/5
         [HttpPost]
         public ActionResult Activer(int id, FournisseurViewModel fournisseurViewModel)
         {

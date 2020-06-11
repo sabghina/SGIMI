@@ -45,6 +45,10 @@ namespace BT.Stage.SGIMI.Data.Entity
         public string AffectedDate { get; set; }
         public string AffectedTime { get; set; }
 
+        public string RevokedBy { get; set; }
+        public string RevokedDate { get; set; }
+        public string RevokedTime { get; set; }
+
         public string CreatedBy { get; set; }
         public string CreatedDate { get; set; }
         public string CreatedTime { get; set; }
@@ -52,6 +56,8 @@ namespace BT.Stage.SGIMI.Data.Entity
         public string LastUpdatedBy { get; set; }
         public string LastUpdatedDate { get; set; }
         public string LastUpdatedTime { get; set; }
+
+
        
 
         

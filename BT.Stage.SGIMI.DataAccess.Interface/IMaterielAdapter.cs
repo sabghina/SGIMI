@@ -30,5 +30,6 @@ namespace BT.Stage.SGIMI.DataAccess.Interface
         bool UpdateMateriel(Materiel materiel);
         bool AffecterMateriel(Materiel materiel);
         List<Materiel> GetAffectedMateriels();
+        bool RevokeMateriel(Materiel materiel);
     }
 }

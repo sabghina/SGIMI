@@ -23,6 +23,10 @@ namespace BT.Stage.SGIMI.UserInterface.ViewModel
         public string AffectedDate { get; set; }
         public string AffectedTime { get; set; }
 
+        public string RevokedBy { get; set; }
+        public string RevokedDate { get; set; }
+        public string RevokedTime { get; set; }
+
         public string CreatedBy { get; set; }
         public string CreatedDate { get; set; }
         public string CreatedTime { get; set; }

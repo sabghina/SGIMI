@@ -407,6 +407,7 @@
     <Content Include="Views\Materiel\Affected.cshtml" />
     <Content Include="Views\Fournisseur\Archiver.cshtml" />
     <Content Include="Views\Fournisseur\Activer.cshtml" />
+    <Content Include="Views\Materiel\Retirer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

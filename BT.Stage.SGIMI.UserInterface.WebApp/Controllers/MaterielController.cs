@@ -217,10 +217,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 bool materielIsCreated = materielRepository.AffecterMateriel(materiel);
                 if (materielIsCreated)
                 {
-                    return RedirectToAction("Details", new
-                    {
-                        id = materiel.Id
-                    });
+                    return RedirectToAction("Affected");
                 }
                 else
                 {
@@ -231,6 +228,46 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             {
                 throw;
             }
+        }
+
+
+        // GET: Materiel/Retirer
+        public ActionResult Retirer(int id)
+        {
+            try
+            {
+                Materiel materiel = materielRepository.GetMaterielById(id);
+                Fournisseur fournisseur = fournisseurRepository.GetFournisseurById(materiel.Fournisseur);
+                MaterielViewModel materielViewModel = MaterielTranspose.MaterielToMaterielViewModel(materiel,fournisseur);
+                return View(materielViewModel);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        // POST: Materiel/Retirer
+        [HttpPost]
+        public ActionResult Retirer(int id,     MaterielViewModel materielViewModel)
+        {
+            try
+            {
+                string user = User.Identity.Name;
+                Materiel oldMateriel = materielRepository.GetMaterielById(id);
+                Materiel materiel = MaterielTranspose.RetirerMaterielViewModelToRetirerMateriel(oldMateriel, user);
+                bool materielIsRevoked = materielRepository.RevokeMateriel(materiel);
+                if (!materielIsRevoked)
+                {
+                    throw new Exception("oops");
+                }
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                throw;
+            }
+
         }
 
         // GET: Materiel/Delete/5

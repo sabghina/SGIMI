@@ -30,6 +30,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Interface
         bool CreateMateriel(Materiel materiel);
         bool UpdatedMateriel(Materiel materiel);
         bool AffecterMateriel(Materiel materiel);
+        bool RevokeMateriel(Materiel materiel);
         byte[] StaticReports();
         byte[] StaticReport();
 

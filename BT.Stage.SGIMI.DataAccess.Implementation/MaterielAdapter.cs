@@ -30,7 +30,7 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
             List<Materiel> materiels = new List<Materiel>();
             foreach (Materiel materiel in Listmateriels)
             {
-                if ((materiel.Agent==null)||(materiel.Agent==""))
+                if (materiel.Etat == "Non affecté")
                 {
                     materiels.Add(materiel);
                 }
@@ -92,13 +92,27 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
             List<Materiel> materiels = new List<Materiel>();
             foreach (Materiel materiel in Listmateriels)
             {
-                if ((materiel.Agent != null) || (materiel.Agent != ""))
+               if (materiel.Etat == "Affecte")
                 {
                     materiels.Add(materiel);
                 }
             }
 
             return materiels;
+        }
+
+        public bool RevokeMateriel(Materiel materiel)
+        {
+            sGIMIDbContext.Materiels.AddOrUpdate(materiel);
+            Task<int> nbRowsRevoked = sGIMIDbContext.ObjectContext.SaveChangesAsync();
+            if (nbRowsRevoked != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
