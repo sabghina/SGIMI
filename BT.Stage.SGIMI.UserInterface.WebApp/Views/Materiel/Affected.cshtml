@@ -65,6 +65,7 @@
                 @Html.ActionLink("Modifier", "Edit", new { id = item.Id }) |
                 @Html.ActionLink("Détails", "Details", new { id = item.Id }) ||
                 @Html.ActionLink("Retirer", "Retirer", new { id = item.Id }) ||
+                <a href="@Url.Action("Create","Reclamation",new { materiel = item.Id })"> Reclamer </a>|
                 @Html.ActionLink("Télecharger Contrat ", "DynamicReport", new { id = item.Id })
             </td>
         </tr>
