@@ -7,6 +7,7 @@
     <p>
         @Html.ActionLink("Ajouter un nouveau materiel", "Create")|
         @Html.ActionLink("liste des matériels affectés", "Affected")|
+        @Html.ActionLink("liste des matériels supprimés", "Archived")|
         @Html.ActionLink("Telecharger la liste des matériels non affectés", "DynamicReports")
     </p>
     
@@ -70,9 +71,10 @@
                     @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
                     @Html.ActionLink("Details", "Details", new { id = item.Id }) |
                     @Html.ActionLink("Affecter", "Affecter", new { id = item.Id }) |
+                    @Html.ActionLink("Supprimer", "Archiver", new { id = item.Id }) |
                     @Html.ActionLink("Télecharger Contrat ", "DynamicReport", new { id = item.Id })|
 
-                   
+
                 </td>
             </tr>
         }

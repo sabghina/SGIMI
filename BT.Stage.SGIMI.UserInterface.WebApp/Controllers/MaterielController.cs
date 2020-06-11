@@ -48,6 +48,18 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             return View(affectedMaterielViewModels);
         }
 
+        // GET: Materiel supprimé
+        public ActionResult Archived()
+        {
+            // 1.get service list materiel 
+            List<Materiel> archivedMateriels = materielRepository.GetArchivedMateriels();
+            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
+            // 2. transpose entity -> view model
+            List<MaterielViewModel> archivedMaterielViewModels = MaterielTranspose.MaterielListToMaterielViewModelList(archivedMateriels, fournisseurs);
+
+            return View(archivedMaterielViewModels);
+        }
+
         // GET: Materiel/Details/5
         public ActionResult Details(int id)
         {
@@ -262,6 +274,45 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                     throw new Exception("oops");
                 }
                 return RedirectToAction("Index");
+            }
+            catch
+            {
+                throw;
+            }
+
+        }
+
+        // GET: Materiel/Archiver
+        public ActionResult Archiver(int id)
+        {
+            try
+            {
+                Materiel materiel = materielRepository.GetMaterielById(id);
+                Fournisseur fournisseur = fournisseurRepository.GetFournisseurById(materiel.Fournisseur);
+                MaterielViewModel materielViewModel = MaterielTranspose.MaterielToMaterielViewModel(materiel,fournisseur);
+                return View(materielViewModel);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        // POST: Materiel/Archiver
+        [HttpPost]
+        public ActionResult Archiver(int id, MaterielViewModel materielViewModel)
+        {
+            try
+            {
+                string user = User.Identity.Name;
+                Materiel oldMateriel = materielRepository.GetMaterielById(id);
+                Materiel materiel = MaterielTranspose.ArchiverMaterielViewModelToArchiverMateriel(oldMateriel, user);
+                bool materielIsArchived = materielRepository.ArchivedMateriel(materiel);
+                if (!materielIsArchived)
+                {
+                    throw new Exception("oops");
+                }
+                return RedirectToAction("Archived");
             }
             catch
             {

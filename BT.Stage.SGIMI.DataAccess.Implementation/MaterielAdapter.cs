@@ -114,6 +114,35 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
                 return false;
             }
         }
+
+        public bool ArchivedMateriel(Materiel materiel)
+        {
+            sGIMIDbContext.Materiels.AddOrUpdate(materiel);
+            Task<int> nbRowsArchived = sGIMIDbContext.ObjectContext.SaveChangesAsync();
+            if (nbRowsArchived != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public List<Materiel> GetArchivedMateriels()
+        {
+            List<Materiel> Listmateriels = sGIMIDbContext.Materiels.ToList();
+            List<Materiel> materiels = new List<Materiel>();
+            foreach (Materiel materiel in Listmateriels)
+            {
+                if (materiel.Etat == "Supprimé")
+                {
+                    materiels.Add(materiel);
+                }
+            }
+
+            return materiels;
+        }
     }
 }
 

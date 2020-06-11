@@ -11,7 +11,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
 {
     public static class MaterielTranspose
     {
-        public static List<MaterielViewModel> MaterielListToMaterielViewModelList(List<Materiel> materiels,List<Fournisseur> fournisseurs)
+        public static List<MaterielViewModel> MaterielListToMaterielViewModelList(List<Materiel> materiels, List<Fournisseur> fournisseurs)
         {
             List<MaterielViewModel> materielViewModels = new List<MaterielViewModel>();
             foreach (Materiel materiel in materiels)
@@ -20,7 +20,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 {
                     if (materiel.Fournisseur == fournisseur.Id)
                     {
-                        MaterielViewModel materielViewModel = MaterielToMaterielViewModel(materiel,fournisseur);
+                        MaterielViewModel materielViewModel = MaterielToMaterielViewModel(materiel, fournisseur);
 
                         materielViewModels.Add(materielViewModel);
                     }
@@ -54,7 +54,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 LastUpdatedTime = materiel.LastUpdatedTime,
                 LastUpdatedBy = materiel.LastUpdatedBy,
                 CreatedBy = materiel.CreatedBy,
-                
+
 
             };
             return materielViewModel;
@@ -63,7 +63,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
         public static Materiel CreateMaterielViewModelToMateriel(CreateMaterielViewModel createMaterielViewModel, string user)
         {
             Materiel materiel = new Materiel
-            {                
+            {
                 Nom = createMaterielViewModel.Nom,
                 Marque = createMaterielViewModel.Marque,
                 Modele = createMaterielViewModel.Modele,
@@ -75,7 +75,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 CreatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
                 CreatedTime = DateTime.Now.ToString("HH:mm:ss")
 
-    };
+            };
             return materiel;
         }
 
@@ -146,8 +146,8 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 CreatedBy = oldMateriel.CreatedBy,
                 CreatedDate = oldMateriel.CreatedDate,
                 CreatedTime = oldMateriel.CreatedTime,
-                
-                
+
+
 
             };
             return materiel;
@@ -236,7 +236,39 @@ namespace BT.Stage.SGIMI.Commun.Tools
             return materielReport;
         }
 
-       
+        public static Materiel ArchiverMaterielViewModelToArchiverMateriel(Materiel oldMateriel, string user)
+        {
+            Materiel materiel = new Materiel
+            {
+                Id = oldMateriel.Id,
+                Nom = oldMateriel.Nom,
+                Marque = oldMateriel.Marque,
+                Modele = oldMateriel.Modele,
+                ReferenceBT = oldMateriel.ReferenceBT,
+                NumeroDeSerie = oldMateriel.NumeroDeSerie,
+                Fournisseur = oldMateriel.Fournisseur,
+                Etat = "Supprimé",
+                RevokedBy = user,
+                RevokedDate = oldMateriel.RevokedDate,
+                RevokedTime = oldMateriel.RevokedTime,
+                ArchivedBy = user,
+                ArchivedDate = DateTime.Now.ToString("dd/MM/yyyy"),
+                ArchivedTime = DateTime.Now.ToString("HH:mm:ss"),
+                AffectedBy = user,
+                AffectedDate = oldMateriel.AffectedDate,
+                AffectedTime = oldMateriel.AffectedTime,
+                LastUpdatedBy = oldMateriel.LastUpdatedBy,
+                LastUpdatedDate = oldMateriel.LastUpdatedDate,
+                LastUpdatedTime = oldMateriel.LastUpdatedTime,
+                CreatedBy = oldMateriel.CreatedBy,
+                CreatedDate = oldMateriel.CreatedDate,
+                CreatedTime = oldMateriel.CreatedTime,
+
+
+
+            };
+            return materiel;
+        }
     }
 }
 

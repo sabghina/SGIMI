@@ -178,6 +178,17 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
         {
             return materielAdapter.RevokeMateriel(materiel);
         }
+
+        public bool ArchivedMateriel(Materiel materiel)
+        {
+            return materielAdapter.ArchivedMateriel(materiel);
+        }
+
+        public List<Materiel> GetArchivedMateriels()
+        {
+            List<Materiel> archivedMateriels = materielAdapter.GetArchivedMateriels();
+            return archivedMateriels;
+        }
     }
 }
 
