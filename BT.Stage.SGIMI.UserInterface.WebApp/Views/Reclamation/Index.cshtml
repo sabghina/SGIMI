@@ -1,10 +1,8 @@
 ﻿@model IEnumerable<BT.Stage.SGIMI.UserInterface.ViewModel.ReclamationViewModel>
-
 @{
     ViewBag.Title = "Index";
 }
-
-<h2>Liste des reclamations</h2>
+    <h2>Liste des réclamations </h2>
 <p>
     @Html.ActionLink("Telecharger la liste des réclamations", "DynamicReports")
 </p>
@@ -17,21 +15,19 @@
     </div>
     <button type="submit" class="glyphicon glyphicon-search" aria-hidden="true"></button>
 </form>
-
 <table class="table">
     <tr>
-        <th></th>
         <th>
             @Html.DisplayNameFor(model => model.Materiel)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.CreatedDate)
+            @Html.DisplayNameFor(model => model.Etat)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Probleme)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Etat)
+            @Html.DisplayNameFor(model => model.Commentaire)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.UniteGestion)
@@ -39,24 +35,20 @@
         <th></th>
     </tr>
 
-    @foreach (var item in Model.OrderByDescending(item => item.CreatedDate))
+    @foreach (var item in Model)
     {
         <tr>
-            <td>
-                <img src="~/Icon/claim.png" width="25" height="25" />
-            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Materiel)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CreatedDate)
+                @Html.DisplayFor(modelItem => item.Etat)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Probleme)
             </td>
-            
             <td>
-                @Html.DisplayFor(modelItem => item.Etat)
+                @Html.DisplayFor(modelItem => item.Commentaire)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.UniteGestion)
@@ -67,8 +59,6 @@
                 @Html.ActionLink("Delete", "Delete", new { id = item.Id }) |
                 @Html.ActionLink("Télecharger Détails ", "DynamicReport", new { id = item.Id })|
                 <a href="@Url.Action("Create","Intervention",new { reclamation = item.Id })"> intervenir </a>
-
-
             </td>
         </tr>
     }

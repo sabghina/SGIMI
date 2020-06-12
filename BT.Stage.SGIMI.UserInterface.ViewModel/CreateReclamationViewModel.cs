@@ -8,14 +8,17 @@ using System.Web.Mvc;
 
 namespace BT.Stage.SGIMI.UserInterface.ViewModel
 {
-    public class ReclamationViewModel
+    public class CreateReclamationViewModel
     {
         public int Id { get; set; }
-        public string Materiel { get; set; }
+        public int Materiel { get; set; }
         public string Etat { get; set; }
 
+        [Required(ErrorMessage = "Veuillez exprimer votre problème")]
+        [Display(Name = "Problème à réclamer")]
         public string Probleme { get; set; }
-        
+        [Required(ErrorMessage = "Veuillez saisir un commentaire")]
+        [Display(Name = "Commentaire")]
         public string Commentaire { get; set; }
         
         public string CreatedBy { get; set; }
@@ -27,5 +30,6 @@ namespace BT.Stage.SGIMI.UserInterface.ViewModel
         public string LastUpdatedTime { get; set; }
         
         public string UniteGestion { get; set; }
+        public IEnumerable<SelectListItem> UniteGestions { get; set; }
     }
 }

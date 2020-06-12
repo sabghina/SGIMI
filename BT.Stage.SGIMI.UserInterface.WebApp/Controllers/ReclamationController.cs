@@ -30,9 +30,9 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         {
             // 1.get service list reclamation 
             List<Reclamation> reclamations = reclamationRepository.GetReclamations();
-
+            List<Materiel> materiels = materielRepository.GetAffectedMateriels();
             // 2. transpose entity -> view model
-            List<ReclamationViewModel> reclamationViewModels = ReclamationTranspose.ReclamationListToReclamationViewModelList(reclamations);
+            List<ReclamationViewModel> reclamationViewModels = ReclamationTranspose.ReclamationListToReclamationViewModelList(reclamations, materiels);
 
             return View(reclamationViewModels);
         }
@@ -41,8 +41,8 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         public ActionResult Details(int id)
         {
             Reclamation reclamation = reclamationRepository.GetReclamationById(id);
-
-            ReclamationViewModel reclamationViewModel = ReclamationTranspose.ReclamationToReclamationViewModel(reclamation);
+            Materiel materiel = materielRepository.GetMaterielById(reclamation.Materiel);
+            ReclamationViewModel reclamationViewModel = ReclamationTranspose.ReclamationToReclamationViewModel(reclamation, materiel);
             return View(reclamationViewModel);
         }
 
@@ -57,17 +57,17 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                     Text = uniteGestion.Nom
                 }).AsEnumerable(), "Text", "Text");
 
-            ReclamationViewModel reclamationViewModel = new ReclamationViewModel
+            CreateReclamationViewModel createReclamationViewModel = new CreateReclamationViewModel
             {
                 UniteGestions = uniteGestionsSelectListItem
             };
-            reclamationViewModel.Materiel = materiel;
-            return View(reclamationViewModel);
+            createReclamationViewModel.Materiel = materiel;
+            return View(createReclamationViewModel);
         }
 
         // POST: Reclamation/Create
         [HttpPost]
-        public ActionResult Create(int materiel, ReclamationViewModel reclamationViewModel)
+        public ActionResult Create(int materiel, CreateReclamationViewModel createReclamationViewModel)
         {
             try
             {
@@ -80,15 +80,14 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                             Id = uniteGestion.Id,
                             Text = uniteGestion.Nom
                         }).AsEnumerable(), "Text", "Text");
-                    reclamationViewModel.UniteGestions = uniteGestionsSelectListItem;
-                    return View(reclamationViewModel);
+                    createReclamationViewModel.UniteGestions = uniteGestionsSelectListItem;
+                    return View(createReclamationViewModel);
                    
                 }
                 //string user = User.Identity.Name;
                 // Materiel materiel = materielRepository.GetMaterielById(materielId);
                 string user = User.Identity.Name;
-                Materiel materielId = materielRepository.GetMaterielById(materiel);
-                Reclamation reclamation = ReclamationTranspose.ReclamationViewModelToReclamation(materielId,reclamationViewModel, user);
+                Reclamation reclamation = ReclamationTranspose.CreateReclamationViewModelToReclamation(createReclamationViewModel, user);
 
                 bool reclamationIsCreated = reclamationRepository.CreateReclamation(reclamation);
                 if (reclamationIsCreated)
@@ -106,11 +105,13 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             }
         }
 
+
         // GET: Reclamation/Edit/5
         public ActionResult Edit(int id)
         {
             Reclamation reclamation = reclamationRepository.GetReclamationById(id);
-            ReclamationViewModel reclamationViewModel = ReclamationTranspose.ReclamationToReclamationViewModel(reclamation);
+            Materiel materiel = materielRepository.GetMaterielById(reclamation.Materiel);
+            CreateReclamationViewModel createReclamationViewModel = ReclamationTranspose.ReclamationToCreateReclamationViewModel(reclamation, materiel);
             List<UniteGestion> uniteGestions = uniteGestionRepository.GetUniteGestions();
             IEnumerable<SelectListItem> uniteGestionsSelectListItem = new SelectList(uniteGestions.Select(
                 uniteGestion => new
@@ -119,14 +120,14 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                     Text = uniteGestion.Nom
                 }).AsEnumerable(), "Text", "Text");
 
-             reclamationViewModel.UniteGestions = uniteGestionsSelectListItem;
+            createReclamationViewModel.UniteGestions = uniteGestionsSelectListItem;
             
-            return View(reclamationViewModel);
+            return View(createReclamationViewModel);
         }
 
         // POST: Reclamation/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, ReclamationViewModel reclamationViewModel)
+        public ActionResult Edit(int id, CreateReclamationViewModel createReclamationViewModel)
         {
             try
             {
@@ -139,13 +140,13 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                             Id = uniteGestion.Id,
                             Text = uniteGestion.Nom
                         }).AsEnumerable(), "Text", "Text");
-                    reclamationViewModel.UniteGestions = uniteGestionsSelectListItem;
-                    return View(reclamationViewModel);
+                    createReclamationViewModel.UniteGestions = uniteGestionsSelectListItem;
+                    return View(createReclamationViewModel);
                 }
                 // TODO: Add update logic here
                 string user = User.Identity.Name;
                 Reclamation oldReclamation = reclamationRepository.GetReclamationById(id);
-                Reclamation reclamation = ReclamationTranspose.UpdatedReclamationViewModelToUpdatedReclamation(oldReclamation, reclamationViewModel, user);
+                Reclamation reclamation = ReclamationTranspose.UpdatedReclamationViewModelToUpdatedReclamation(oldReclamation, createReclamationViewModel, user);
 
                 bool reclamationIsUpdated = reclamationRepository.UpdatedReclamation(reclamation);
                 if (reclamationIsUpdated)

@@ -4,7 +4,21 @@
     <h4>ReclamationViewModel</h4>
     <hr />
     <dl class="dl-horizontal">
-        
+        <dt>
+            @Html.DisplayNameFor(model => model.Materiel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Materiel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Etat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Etat)
+        </dd>
 
         <dt>
             @Html.DisplayNameFor(model => model.Probleme)
@@ -20,22 +34,6 @@
 
         <dd>
             @Html.DisplayFor(model => model.Commentaire)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Etat)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Etat)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.UniteGestion)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.UniteGestion)
         </dd>
 
         <dt>
@@ -63,6 +61,14 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.LastUpdatedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastUpdatedBy)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.LastUpdatedDate)
         </dt>
 
@@ -77,13 +83,15 @@
         <dd>
             @Html.DisplayFor(model => model.LastUpdatedTime)
         </dd>
+
         <dt>
-            @Html.DisplayNameFor(model => model.LastUpdatedBy)
+            @Html.DisplayNameFor(model => model.UniteGestion)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.LastUpdatedBy)
+            @Html.DisplayFor(model => model.UniteGestion)
         </dd>
+
     </dl>
 </div>
 <p>

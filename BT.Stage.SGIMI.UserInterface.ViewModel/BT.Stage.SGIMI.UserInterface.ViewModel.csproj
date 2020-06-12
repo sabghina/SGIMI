@@ -67,6 +67,7 @@
     <Compile Include="CreateMaterielViewModel.cs" />
     <Compile Include="InterventionViewModel.cs" />
     <Compile Include="ReclamationViewModel.cs" />
+    <Compile Include="CreateReclamationViewModel.cs" />
     <Compile Include="FournisseurViewModel.cs" />
     <Compile Include="MaterielViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
