@@ -34,11 +34,29 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
             List<Intervention> interventions = interventionAdapter.GetInterventions();
             return interventions;
         }
+        public List<Intervention> GetFinishedInterventions()
+        {
+            List<Intervention> interventions = interventionAdapter.GetFinishedInterventions();
+            return interventions;
+        }
+        public List<Intervention> GetCanceledInterventions()
+        {
+            List<Intervention> interventions = interventionAdapter.GetCanceledInterventions();
+            return interventions;
+        }
         public bool UpdatedIntervention(Intervention intervention)
         {
             return interventionAdapter.UpdateIntervention(intervention);
         }
+        public bool FinishedIntervention(Intervention intervention)
+        {
+            return interventionAdapter.FinishedIntervention(intervention);
+        }
 
+        public bool CanceledIntervention(Intervention intervention)
+        {
+            return interventionAdapter.CanceledIntervention(intervention);
+        }
         // Static reports implementation (tous les interventions)
         public byte[] StaticReports()
         {
@@ -155,6 +173,8 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
             byte[] file = localReport.Render(reportType, deviceInfo, out mimeType, out encoding, out fileNameExtension, out streams, out warnings);
             return file;
         }
+
+        
     }
 }
 

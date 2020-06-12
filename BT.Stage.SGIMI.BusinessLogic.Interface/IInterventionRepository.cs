@@ -31,5 +31,9 @@ namespace BT.Stage.SGIMI.BusinessLogic.Interface
 
         byte[] DynamicReports(List<InterventionReport> interventionlReports);
         byte[] DynamicReport(InterventionReport interventionReport);
-}
+        List<Intervention> GetFinishedInterventions();
+        List<Intervention> GetCanceledInterventions();
+        bool FinishedIntervention(Intervention intervention);
+        bool CanceledIntervention(Intervention intervention);
+    }
     }

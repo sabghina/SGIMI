@@ -48,6 +48,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
             };
             return interventionViewModel;
         }
+
         public static Intervention CreateInterventionViewModelToIntervention(CreateInterventionViewModel createInterventionViewModel, string user)
         {
             Intervention intervention = new Intervention
@@ -136,7 +137,48 @@ namespace BT.Stage.SGIMI.Commun.Tools
             return interventionReport;
         }
 
-        
+        public static Intervention TerminerInterventionViewModelToterminerIntervention(Intervention oldIntervention, string user)
+        {
+            Intervention intervention = new Intervention
+            {
+
+                Id = oldIntervention.Id,
+                Type = oldIntervention.Type,
+                Nature = oldIntervention.Nature,
+                Etat = "Terminée",
+                Reclamation = oldIntervention.Reclamation,
+                ProblemeConstate = oldIntervention.ProblemeConstate,
+                TraveauxEffectues = oldIntervention.TraveauxEffectues,
+                CreatedBy = oldIntervention.CreatedBy,
+                CreatedDate = oldIntervention.CreatedDate,
+                CreatedTime = oldIntervention.CreatedTime,
+                LastUpdatedBy = user,
+                LastUpdatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
+                LastUpdatedTime = DateTime.Now.ToString("HH:mm:ss")
+            };
+            return intervention;
+        }
+
+        public static Intervention AnnulerInterventionViewModelToAnnulerIntervention(Intervention oldIntervention, string user)
+        {
+            Intervention intervention = new Intervention
+            { 
+            Id = oldIntervention.Id,
+                Type = oldIntervention.Type,
+                Nature = oldIntervention.Nature,
+                Etat = "Annulée",
+                Reclamation = oldIntervention.Reclamation,
+                ProblemeConstate = oldIntervention.ProblemeConstate,
+                TraveauxEffectues = oldIntervention.TraveauxEffectues,
+                CreatedBy = oldIntervention.CreatedBy,
+                CreatedDate = oldIntervention.CreatedDate,
+                CreatedTime = oldIntervention.CreatedTime,
+                LastUpdatedBy = user,
+                LastUpdatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
+                LastUpdatedTime = DateTime.Now.ToString("HH:mm:ss")
+            };
+            return intervention;
+        }
     }
 }
 

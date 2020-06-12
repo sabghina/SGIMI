@@ -90,7 +90,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
 
         }
 
-        public static Reclamation ChangeReclamationEtat(Reclamation reclamationById, string user)
+        public static Reclamation ChangeReclamationEtat(Reclamation reclamationById, string user,string Etat)
         {
             Reclamation reclamation = new Reclamation
             {
@@ -99,7 +99,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Probleme = reclamationById.Probleme,
                 Commentaire = reclamationById.Commentaire,
                 UniteGestion = reclamationById.UniteGestion,
-                Etat = "en cours",
+                Etat = Etat,
                 LastUpdatedBy = user,
                 LastUpdatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
                 LastUpdatedTime = DateTime.Now.ToString("HH:mm:ss"),

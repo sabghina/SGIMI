@@ -34,6 +34,29 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             return View(interventionViewModels);
         }
 
+        // GET: Intervention
+        public ActionResult Finished()
+        {
+            // 1.get service list intervention 
+            List<Intervention> interventions = interventionRepository.GetFinishedInterventions();
+            List<Reclamation> reclamations = reclamationRepository.GetReclamations();
+            // 2. transpose entity -> view model
+            List<InterventionViewModel> interventionViewModels = InterventionTranspose.InterventionListToInterventionViewModelList(interventions, reclamations);
+
+            return View(interventionViewModels);
+        }
+        // GET: Intervention
+        public ActionResult Canceled()
+        {
+            // 1.get service list intervention 
+            List<Intervention> interventions = interventionRepository.GetCanceledInterventions();
+            List<Reclamation> reclamations = reclamationRepository.GetReclamations();
+            // 2. transpose entity -> view model
+            List<InterventionViewModel> interventionViewModels = InterventionTranspose.InterventionListToInterventionViewModelList(interventions, reclamations);
+
+            return View(interventionViewModels);
+        }
+
         // GET: Intervention/Details/5
         public ActionResult Details(int id)
         {
@@ -67,13 +90,14 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 string user = User.Identity.Name;
                 Intervention intervention = InterventionTranspose.CreateInterventionViewModelToIntervention(createInterventionViewModel, user);
                 Reclamation reclamationById = reclamationRepository.GetReclamationById(reclamation);
-                Reclamation reclamationEtat = ReclamationTranspose.ChangeReclamationEtat(reclamationById, user);
-                bool reclamationIsChanged = reclamationRepository.ChangeReclamation(reclamationEtat);
                 bool interventionIsCreated = interventionRepository.CreateIntervention(intervention);
-                if (reclamationIsChanged)
-                {
-                    if (interventionIsCreated)
+                if (interventionIsCreated)
                     {
+                     Reclamation reclamationEtat = ReclamationTranspose.ChangeReclamationEtat(reclamationById, user,intervention.Etat);
+                     bool reclamationIsChanged = reclamationRepository.ChangeReclamation(reclamationEtat);
+                    if (reclamationIsChanged)
+                    {
+
                         return RedirectToAction("Index");
                     }
                     else
@@ -133,6 +157,98 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             {
                 return View();
             }
+        }
+
+        // GET: Intervention/Terminer
+        public ActionResult Terminer(int id)
+        {
+            try
+            {
+                Intervention intervention = interventionRepository.GetInterventionById(id);
+                Reclamation reclamation = reclamationRepository.GetReclamationById(intervention.Reclamation);
+                InterventionViewModel interventionViewModel = InterventionTranspose.InterventionToInterventionViewModel(intervention, reclamation);
+                return View(interventionViewModel);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        // POST: Intervention/Terminer
+        [HttpPost]
+        public ActionResult Terminer(int id, InterventionViewModel interventionViewModel)
+        {
+            try
+            {
+                string user = User.Identity.Name;
+                Intervention oldIntervention = interventionRepository.GetInterventionById(id);
+                Intervention intervention = InterventionTranspose.TerminerInterventionViewModelToterminerIntervention(oldIntervention, user);
+                Reclamation reclamationById = reclamationRepository.GetReclamationById(intervention.Reclamation);
+                bool interventionIsFinished = interventionRepository.FinishedIntervention(intervention);
+                if (interventionIsFinished)
+                {
+                    Reclamation reclamationEtat = ReclamationTranspose.ChangeReclamationEtat(reclamationById, user, intervention.Etat);
+                    bool reclamationIsChanged = reclamationRepository.ChangeReclamation(reclamationEtat);
+                    if (reclamationIsChanged)
+                    {
+                        return RedirectToAction("Finished");
+                    }
+                    else
+                    {
+                        throw new InvalidOperationException("oops");
+                    }
+
+                }
+                else
+                {
+                    throw new InvalidOperationException("oops");
+                }
+            }
+            catch
+            {
+                throw;
+            }
+
+        }
+        // GET: Intervention/Annuler
+        public ActionResult Annuler(int id)
+        {
+            try
+            {
+                Intervention intervention = interventionRepository.GetInterventionById(id);
+                Reclamation reclamation = reclamationRepository.GetReclamationById(intervention.Reclamation);
+                InterventionViewModel interventionViewModel = InterventionTranspose.InterventionToInterventionViewModel(intervention, reclamation);
+                return View(interventionViewModel);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        // POST: Intervention/Annuler
+        [HttpPost]
+        public ActionResult Annuler(int id, InterventionViewModel interventionViewModel)
+        {
+            try
+            {
+                string user = User.Identity.Name;
+                Intervention oldIntervention = interventionRepository.GetInterventionById(id);
+                Intervention intervention = InterventionTranspose.AnnulerInterventionViewModelToAnnulerIntervention(oldIntervention, user);
+                bool interventionIsCanceled = interventionRepository.CanceledIntervention(intervention);
+                if (interventionIsCanceled)
+                {
+                    return RedirectToAction("Canceled");
+                }
+                else
+                {
+                    throw new InvalidOperationException("oops");
+                }
+            }
+            catch
+            {
+                throw;
+            }
+
         }
 
         // GET: Intervention/Delete/5
