@@ -47,7 +47,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         }
 
         // GET: Reclamation/Create
-        public ActionResult Create()
+        public ActionResult Create(int materiel)
         {
             List<UniteGestion> uniteGestions = uniteGestionRepository.GetUniteGestions();
             IEnumerable<SelectListItem> uniteGestionsSelectListItem = new SelectList(uniteGestions.Select(
@@ -61,12 +61,13 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             {
                 UniteGestions = uniteGestionsSelectListItem
             };
+            reclamationViewModel.Materiel = materiel;
             return View(reclamationViewModel);
         }
 
         // POST: Reclamation/Create
         [HttpPost]
-        public ActionResult Create(int materielId, ReclamationViewModel reclamationViewModel)
+        public ActionResult Create(int materiel, ReclamationViewModel reclamationViewModel)
         {
             try
             {
@@ -86,7 +87,8 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 //string user = User.Identity.Name;
                 // Materiel materiel = materielRepository.GetMaterielById(materielId);
                 string user = User.Identity.Name;
-                Reclamation reclamation = ReclamationTranspose.CreateReclamationViewModelToReclamation(materielId, reclamationViewModel, user);
+                Materiel materielId = materielRepository.GetMaterielById(materiel);
+                Reclamation reclamation = ReclamationTranspose.ReclamationViewModelToReclamation(materielId,reclamationViewModel, user);
 
                 bool reclamationIsCreated = reclamationRepository.CreateReclamation(reclamation);
                 if (reclamationIsCreated)

@@ -28,7 +28,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
             ReclamationViewModel reclamationViewModel = new ReclamationViewModel
             {
                 Id = reclamation.Id,
-                //Materiel = reclamation.Materiel,
+                Materiel = reclamation.Materiel,
                 Probleme = reclamation.Probleme,
                 Commentaire = reclamation.Commentaire,
                 Etat = reclamation.Etat,
@@ -44,12 +44,12 @@ namespace BT.Stage.SGIMI.Commun.Tools
             return reclamationViewModel;
         }
 
-        public static Reclamation CreateReclamationViewModelToReclamation(int materielId, ReclamationViewModel reclamationViewModel, string user)
+        public static Reclamation ReclamationViewModelToReclamation(Materiel materiel, ReclamationViewModel reclamationViewModel, string user)
         {
             Reclamation reclamation = new Reclamation
             {
                 Id = reclamationViewModel.Id,
-                //Materiel = materielId,
+                Materiel = materiel.Id,
                 Probleme = reclamationViewModel.Probleme,
                 Commentaire = reclamationViewModel.Commentaire,
                 UniteGestion=reclamationViewModel.UniteGestion,
