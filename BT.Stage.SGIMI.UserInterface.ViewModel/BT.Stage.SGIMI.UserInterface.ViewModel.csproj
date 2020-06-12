@@ -65,7 +65,8 @@
   <ItemGroup>
     <Compile Include="AffectationMaterielViewModel.cs" />
     <Compile Include="CreateMaterielViewModel.cs" />
-    <Compile Include="InterventionViewModel.cs" />
+    <Compile Include=".cs" />
+    <Compile Include="CreateInterventionViewModel.cs" />
     <Compile Include="ReclamationViewModel.cs" />
     <Compile Include="CreateReclamationViewModel.cs" />
     <Compile Include="FournisseurViewModel.cs" />

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BT.Stage.SGIMI.UserInterface.ViewModel
 {
-    public class InterventionViewModel
+    public class CreateInterventionViewModel
     {
         public int Id { get; set; }
         [Required]

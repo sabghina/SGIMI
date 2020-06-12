@@ -15,9 +15,11 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
     public class InterventionController : Controller
     {
         readonly IInterventionRepository interventionRepository;
-        public InterventionController(IInterventionRepository _interventionRepository)
+        readonly IReclamationRepository reclamationRepository;
+        public InterventionController(IInterventionRepository _interventionRepository, IReclamationRepository _reclamationRepository)
         {
             interventionRepository = _interventionRepository;
+            reclamationRepository = _reclamationRepository;
         }
 
         // GET: Intervention
@@ -25,9 +27,9 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         {
             // 1.get service list intervention 
             List<Intervention> interventions = interventionRepository.GetInterventions();
-
+            List<Reclamation> reclamations = reclamationRepository.GetReclamations();
             // 2. transpose entity -> view model
-            List<InterventionViewModel> interventionViewModels = InterventionTranspose.InterventionListToInterventionViewModelList(interventions);
+            List<InterventionViewModel> interventionViewModels = InterventionTranspose.InterventionListToInterventionViewModelList(interventions, reclamations);
 
             return View(interventionViewModels);
         }
@@ -36,21 +38,21 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         public ActionResult Details(int id)
         {
             Intervention intervention = interventionRepository.GetInterventionById(id);
-
-            InterventionViewModel interventionViewModel = InterventionTranspose.InterventionToInterventionViewModel(intervention);
+            Reclamation reclamation = reclamationRepository.GetReclamationById(intervention.Reclamation);
+            InterventionViewModel interventionViewModel = InterventionTranspose.InterventionToInterventionViewModel(intervention, reclamation);
             return View(interventionViewModel);
         }
         // GET: Intervention/Create
         public ActionResult Create(int reclamation)
         {
-            InterventionViewModel interventionViewModel = new InterventionViewModel();
-            interventionViewModel.Reclamation = reclamation;
-            return View(interventionViewModel);
+            CreateInterventionViewModel createInterventionViewModel = new CreateInterventionViewModel();
+            createInterventionViewModel.Reclamation = reclamation;
+            return View(createInterventionViewModel);
         }
 
         // POST: Intervention/Create
         [HttpPost]
-        public ActionResult Create(int reclamation, InterventionViewModel interventionViewModel)
+        public ActionResult Create(int reclamation, CreateInterventionViewModel createInterventionViewModel)
         {
             try
             {
@@ -59,11 +61,11 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 // controle
                 if (!ModelState.IsValid)
                 {
-                    return View(interventionViewModel);
+                    return View(createInterventionViewModel);
                 }
                 // TODO: Add insert logic here
                 string user = User.Identity.Name;
-                Intervention intervention = InterventionTranspose.CreateInterventionViewModelToIntervention(interventionViewModel, user);
+                Intervention intervention = InterventionTranspose.CreateInterventionViewModelToIntervention(createInterventionViewModel, user);
 
                 bool interventionIsCreated = interventionRepository.CreateIntervention(intervention);
                 if (interventionIsCreated)
@@ -86,24 +88,25 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         public ActionResult Edit(int id)
         {
             Intervention intervention = interventionRepository.GetInterventionById(id);
-            InterventionViewModel interventionViewModel = InterventionTranspose.InterventionToInterventionViewModel(intervention);
-            return View(interventionViewModel);
+            Reclamation reclamation = reclamationRepository.GetReclamationById(intervention.Reclamation);
+            CreateInterventionViewModel createInterventionViewModel = InterventionTranspose.InterventionToCreateInterventionViewModel(intervention, reclamation);
+            return View(createInterventionViewModel);
         }
 
         // POST: Intervention/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, InterventionViewModel interventionViewModel)
+        public ActionResult Edit(int id, CreateInterventionViewModel createInterventionViewModel)
         {
             try
             {
                 if (!ModelState.IsValid)
                 {
-                    return View(interventionViewModel);
+                    return View(createInterventionViewModel);
                 }
                 // TODO: Add update logic here
                 string user = User.Identity.Name;
                 Intervention oldIntervention = interventionRepository.GetInterventionById(id);
-                Intervention intervention = InterventionTranspose.UpdatedInterventionViewModelToUpdatedIntervention(oldIntervention,interventionViewModel, user);
+                Intervention intervention = InterventionTranspose.UpdatedCreateInterventionViewModelToUpdatedIntervention(oldIntervention, createInterventionViewModel, user);
 
                 bool interventionIsUpdated = interventionRepository.UpdatedIntervention(intervention);
                 if (interventionIsUpdated)

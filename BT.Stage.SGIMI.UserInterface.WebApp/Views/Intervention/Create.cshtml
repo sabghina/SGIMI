@@ -1,4 +1,4 @@
-﻿@model BT.Stage.SGIMI.UserInterface.ViewModel.InterventionViewModel
+﻿@model BT.Stage.SGIMI.UserInterface.ViewModel.CreateInterventionViewModel
 @{
     ViewBag.Title = "Ajouter une intervention";
 }
@@ -49,7 +49,7 @@
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        @Html.HiddenFor(model => model.Reclamation)
+        <h4>CreateInterventionViewModel</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
@@ -68,12 +68,29 @@
         </div>
 
         <div class="form-group">
+            @Html.HiddenFor(model => model.Reclamation, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.HiddenFor(model => model.Reclamation, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Reclamation, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Probleme, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Probleme, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Probleme, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
             @Html.LabelFor(model => model.ProblemeConstate, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.ProblemeConstate, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.ProblemeConstate, "", new { @class = "text-danger" })
             </div>
         </div>
+
         <div class="form-group">
             @Html.LabelFor(model => model.TraveauxEffectues, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -81,16 +98,6 @@
                 @Html.ValidationMessageFor(model => model.TraveauxEffectues, "", new { @class = "text-danger" })
             </div>
         </div>
-
-
-        @*<div class="form-group">
-                @Html.LabelFor(model => model.Reclamation, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.Reclamation, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Reclamation, "", new { @class = "text-danger" })
-                </div>
-            </div>*@
-
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
