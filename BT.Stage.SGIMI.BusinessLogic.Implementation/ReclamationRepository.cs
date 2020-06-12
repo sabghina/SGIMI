@@ -154,6 +154,11 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
                 throw;
             }
         }
+
+        public bool ChangeReclamation(Reclamation reclamationById)
+        {
+            return reclamationAdapter.ChangeReclamation(reclamationById);
+        }
     }
 }
 

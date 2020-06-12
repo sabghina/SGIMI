@@ -17,6 +17,21 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
         {
             sGIMIDbContext = _sGIMIDbContext;
         }
+
+        public bool ChangeReclamation(Reclamation reclamationById)
+        {
+            sGIMIDbContext.Reclamations.AddOrUpdate(reclamationById);
+            Task<int> nbRowsAffected = sGIMIDbContext.ObjectContext.SaveChangesAsync();
+            if (nbRowsAffected != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public bool CreateReclamation(Reclamation reclamation)
         {
             sGIMIDbContext.Reclamations.Add(reclamation);

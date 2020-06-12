@@ -28,5 +28,6 @@ namespace BT.Stage.SGIMI.BusinessLogic.Interface
 
         byte[] DynamicReports(List<ReclamationReport> reclamationReports);
         byte[] DynamicReport(ReclamationReport reclamationReport);
+        bool ChangeReclamation(Reclamation reclamationById);
     }
 }

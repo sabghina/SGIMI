@@ -63,6 +63,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 CreatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
                 CreatedTime = DateTime.Now.ToString("HH:mm:ss")
             };
+           
             return intervention;
         }
         public static CreateInterventionViewModel InterventionToCreateInterventionViewModel(Intervention intervention, Reclamation reclamation)

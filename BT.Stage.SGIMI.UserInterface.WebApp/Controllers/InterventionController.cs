@@ -66,15 +66,24 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 // TODO: Add insert logic here
                 string user = User.Identity.Name;
                 Intervention intervention = InterventionTranspose.CreateInterventionViewModelToIntervention(createInterventionViewModel, user);
-
+                Reclamation reclamationById = reclamationRepository.GetReclamationById(reclamation);
+                Reclamation reclamationEtat = ReclamationTranspose.ChangeReclamationEtat(reclamationById, user);
+                bool reclamationIsChanged = reclamationRepository.ChangeReclamation(reclamationEtat);
                 bool interventionIsCreated = interventionRepository.CreateIntervention(intervention);
-                if (interventionIsCreated)
+                if (reclamationIsChanged)
                 {
-                    return RedirectToAction("Index");
+                    if (interventionIsCreated)
+                    {
+                        return RedirectToAction("Index");
+                    }
+                    else
+                    {
+                        throw new InvalidOperationException("oops");
+                    }
                 }
                 else
                 {
-                    throw new InvalidOperationException("oops");
+                    throw new InvalidOperationException("oops désolé");
                 }
             }
             catch

@@ -90,6 +90,26 @@ namespace BT.Stage.SGIMI.Commun.Tools
 
         }
 
+        public static Reclamation ChangeReclamationEtat(Reclamation reclamationById, string user)
+        {
+            Reclamation reclamation = new Reclamation
+            {
+                Id = reclamationById.Id,
+                Materiel = reclamationById.Materiel,
+                Probleme = reclamationById.Probleme,
+                Commentaire = reclamationById.Commentaire,
+                UniteGestion = reclamationById.UniteGestion,
+                Etat = "en cours",
+                LastUpdatedBy = user,
+                LastUpdatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
+                LastUpdatedTime = DateTime.Now.ToString("HH:mm:ss"),
+                CreatedBy = reclamationById.CreatedBy,
+                CreatedDate = reclamationById.CreatedDate,
+                CreatedTime = reclamationById.CreatedTime
+            };
+            return reclamation;
+        }
+
         public static Reclamation UpdatedReclamationViewModelToUpdatedReclamation(Reclamation oldReclamation, CreateReclamationViewModel createReclamationViewModel, string user)
         {
             Reclamation reclamation = new Reclamation
