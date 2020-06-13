@@ -234,10 +234,20 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 string user = User.Identity.Name;
                 Intervention oldIntervention = interventionRepository.GetInterventionById(id);
                 Intervention intervention = InterventionTranspose.AnnulerInterventionViewModelToAnnulerIntervention(oldIntervention, user);
+                Reclamation reclamationById = reclamationRepository.GetReclamationById(intervention.Reclamation);
                 bool interventionIsCanceled = interventionRepository.CanceledIntervention(intervention);
                 if (interventionIsCanceled)
                 {
-                    return RedirectToAction("Canceled");
+                    Reclamation reclamationEtat = ReclamationTranspose.ChangeReclamationEtat(reclamationById, user, "En attente");
+                    bool reclamationIsChanged = reclamationRepository.ChangeReclamation(reclamationEtat);
+                    if (reclamationIsChanged)
+                    {
+                        return RedirectToAction("Canceled");
+                    }
+                    else
+                    {
+                        throw new InvalidOperationException("oops");
+                    }
                 }
                 else
                 {
