@@ -92,7 +92,7 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
             List<Materiel> materiels = new List<Materiel>();
             foreach (Materiel materiel in Listmateriels)
             {
-               if (materiel.Etat == "Affecte")
+               if ((materiel.Etat == "Affecte")&&(materiel.Statut == "Non reclamé"))
                 {
                     materiels.Add(materiel);
                 }
@@ -144,6 +144,21 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
             return materiels;
         }
 
+        public List<Materiel> GetComplainedMateriels()
+        {
+            List<Materiel> Listmateriels = sGIMIDbContext.Materiels.ToList();
+            List<Materiel> materiels = new List<Materiel>();
+            foreach (Materiel materiel in Listmateriels)
+            {
+                if (materiel.Statut == "Reclamé")
+                {
+                    materiels.Add(materiel);
+                }
+            }
+
+            return materiels;
+        }
+
         public bool ChangedMateriel(Materiel materielEtat)
         {
             sGIMIDbContext.Materiels.AddOrUpdate(materielEtat);
@@ -157,6 +172,8 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
                 return false;
             }
         }
+
+        
     }
 }
 

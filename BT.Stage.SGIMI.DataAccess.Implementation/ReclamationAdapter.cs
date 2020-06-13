@@ -84,19 +84,19 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
             
         }
 
-        public List<Reclamation> GetOnHoldReclamations()
+        public List<Reclamation> GetInProgressReclamations()
         {
             // replace with databse access
             List<Reclamation> reclamations = sGIMIDbContext.Reclamations.ToList();
-            List<Reclamation> reclamationWainting = new List<Reclamation>();
+            List<Reclamation> reclamationInProgress = new List<Reclamation>();
             foreach (Reclamation reclamation in reclamations)
             {
                 if (reclamation.Etat == "En cours")
                 {
-                    reclamationWainting.Add(reclamation);
+                    reclamationInProgress.Add(reclamation);
                 }
             }
-            return reclamationWainting;
+            return reclamationInProgress;
         }
         public List<Reclamation> GetCanceledReclamations()
         {

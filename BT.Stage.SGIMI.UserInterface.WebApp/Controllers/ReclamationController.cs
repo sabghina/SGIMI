@@ -30,18 +30,18 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         {
             // 1.get service list reclamation 
             List<Reclamation> reclamations = reclamationRepository.GetReclamations();
-            List<Materiel> materiels = materielRepository.GetAffectedMateriels();
+            List<Materiel> materiels = materielRepository.GetComplainedMateriels();
             // 2. transpose entity -> view model
             List<ReclamationViewModel> reclamationViewModels = ReclamationTranspose.ReclamationListToReclamationViewModelList(reclamations, materiels);
 
             return View(reclamationViewModels);
         }
         // GET: Reclamation En cours
-        public ActionResult OnHold()
+        public ActionResult InProgress()
         {
             // 1.get service list reclamation 
-            List<Reclamation> reclamations = reclamationRepository.GetOnHoldReclamations();
-            List<Materiel> materiels = materielRepository.GetAffectedMateriels();
+            List<Reclamation> reclamations = reclamationRepository.GetInProgressReclamations();
+            List<Materiel> materiels = materielRepository.GetComplainedMateriels();
             // 2. transpose entity -> view model
             List<ReclamationViewModel> reclamationViewModels = ReclamationTranspose.ReclamationListToReclamationViewModelList(reclamations, materiels);
 
@@ -53,6 +53,10 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             // 1.get service list reclamation 
             List<Reclamation> reclamations = reclamationRepository.GetFinishedReclamations();
             List<Materiel> materiels = materielRepository.GetAffectedMateriels();
+            foreach (Materiel materiel in materielRepository.GetComplainedMateriels())
+            {
+                materiels.Add(materiel);
+            }
             // 2. transpose entity -> view model
             List<ReclamationViewModel> reclamationViewModels = ReclamationTranspose.ReclamationListToReclamationViewModelList(reclamations, materiels);
 

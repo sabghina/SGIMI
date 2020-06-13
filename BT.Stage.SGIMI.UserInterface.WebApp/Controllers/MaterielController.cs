@@ -59,6 +59,17 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
 
             return View(archivedMaterielViewModels);
         }
+        // GET: Materiel reclamé
+        public ActionResult Complained()
+        {
+            // 1.get service list materiel 
+            List<Materiel> archivedMateriels = materielRepository.GetComplainedMateriels();
+            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
+            // 2. transpose entity -> view model
+            List<MaterielViewModel> archivedMaterielViewModels = MaterielTranspose.MaterielListToMaterielViewModelList(archivedMateriels, fournisseurs);
+
+            return View(archivedMaterielViewModels);
+        }
 
         // GET: Materiel/Details/5
         public ActionResult Details(int id)

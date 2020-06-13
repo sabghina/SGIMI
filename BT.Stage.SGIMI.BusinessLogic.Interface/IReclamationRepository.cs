@@ -32,6 +32,6 @@ namespace BT.Stage.SGIMI.BusinessLogic.Interface
         bool CanceledReclamation(Reclamation reclamation);
         List<Reclamation> GetFinishedReclamations();
         List<Reclamation> GetCanceledReclamations();
-        List<Reclamation> GetOnHoldReclamations();
+        List<Reclamation> GetInProgressReclamations();
     }
 }

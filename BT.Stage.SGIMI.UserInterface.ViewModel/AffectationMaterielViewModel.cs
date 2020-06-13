@@ -11,6 +11,7 @@ namespace BT.Stage.SGIMI.UserInterface.ViewModel
     {  
         public int Id { get; set; }
         public string Etat { get; set; }
+        public string Statut { get; set; }
         public string Agent { get; set; }
         public IEnumerable<SelectListItem> Agents { get; set; }
 

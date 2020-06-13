@@ -24,7 +24,7 @@ namespace BT.Stage.SGIMI.DataAccess.Interface
         bool UpdateReclamation(Reclamation reclamation);
         bool ChangeReclamation(Reclamation reclamationById);
         bool CancelReclamation(Reclamation reclamation);
-        List<Reclamation> GetOnHoldReclamations();
+        List<Reclamation> GetInProgressReclamations();
         List<Reclamation> GetFinishedReclamations();
         List<Reclamation> GetCanceledReclamations();
     }

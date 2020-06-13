@@ -16,10 +16,12 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
     {
         readonly IInterventionRepository interventionRepository;
         readonly IReclamationRepository reclamationRepository;
-        public InterventionController(IInterventionRepository _interventionRepository, IReclamationRepository _reclamationRepository)
+        readonly IMaterielRepository materielRepository;
+        public InterventionController(IInterventionRepository _interventionRepository, IReclamationRepository _reclamationRepository, IMaterielRepository _materielRepository)
         {
             interventionRepository = _interventionRepository;
             reclamationRepository = _reclamationRepository;
+            materielRepository = _materielRepository;
         }
 
         // GET: Intervention
@@ -27,7 +29,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         {
             // 1.get service list intervention 
             List<Intervention> interventions = interventionRepository.GetInterventions();
-            List<Reclamation> reclamations = reclamationRepository.GetOnHoldReclamations();
+            List<Reclamation> reclamations = reclamationRepository.GetInProgressReclamations();
             // 2. transpose entity -> view model
             List<InterventionViewModel> interventionViewModels = InterventionTranspose.InterventionListToInterventionViewModelList(interventions, reclamations);
 
@@ -185,6 +187,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 Intervention oldIntervention = interventionRepository.GetInterventionById(id);
                 Intervention intervention = InterventionTranspose.TerminerInterventionViewModelToterminerIntervention(oldIntervention, user);
                 Reclamation reclamationById = reclamationRepository.GetReclamationById(oldIntervention.Reclamation);
+                Materiel materielById = materielRepository.GetMaterielById(reclamationById.Materiel);
                 bool interventionIsFinished = interventionRepository.FinishedIntervention(intervention);
                 if (interventionIsFinished)
                 {
@@ -192,7 +195,16 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                     bool reclamationIsChanged = reclamationRepository.ChangeReclamation(reclamationEtat);
                     if (reclamationIsChanged)
                     {
-                        return RedirectToAction("Finished");
+                        Materiel materielStatus = MaterielTranspose.ChangeMaterielStatut(materielById, user, "Non reclamé");
+                        bool materielIsChanged = materielRepository.ChangeMateriel(materielStatus);
+                        if (materielIsChanged)
+                        {
+                            return RedirectToAction("Finished");
+                        }
+                        else
+                        {
+                            throw new InvalidOperationException("Désolé");
+                        }
                     }
                     else
                     {

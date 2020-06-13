@@ -415,9 +415,10 @@
     <Content Include="Views\Intervention\Annuler.cshtml" />
     <Content Include="Views\Intervention\Terminer.cshtml" />
     <Content Include="Views\Reclamation\Annuler.cshtml" />
-    <Content Include="Views\Reclamation\OnHold.cshtml" />
+    <Content Include="Views\Reclamation\InProgress.cshtml" />
     <Content Include="Views\Reclamation\Finished.cshtml" />
     <Content Include="Views\Reclamation\Canceled.cshtml" />
+    <Content Include="Views\Materiel\Complained.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

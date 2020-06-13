@@ -34,9 +34,9 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
             List<Reclamation> reclamations = reclamationAdapter.GetReclamations();
             return reclamations;
         }
-        public List<Reclamation> GetOnHoldReclamations()
+        public List<Reclamation> GetInProgressReclamations()
         {
-            List<Reclamation> reclamations = reclamationAdapter.GetOnHoldReclamations();
+            List<Reclamation> reclamations = reclamationAdapter.GetInProgressReclamations();
             return reclamations;
         }
         public List<Reclamation> GetFinishedReclamations()
