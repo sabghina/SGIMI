@@ -33,5 +33,6 @@ namespace BT.Stage.SGIMI.DataAccess.Interface
         bool RevokeMateriel(Materiel materiel);
         bool ArchivedMateriel(Materiel materiel);
         List<Materiel> GetArchivedMateriels();
+        bool ChangedMateriel(Materiel materielEtat);
     }
 }

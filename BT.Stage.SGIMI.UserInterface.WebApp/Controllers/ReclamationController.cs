@@ -25,7 +25,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             materielRepository = _materielRepository;
         }
 
-        // GET: Reclamation
+        // GET: Reclamation En Attente
         public ActionResult Index()
         {
             // 1.get service list reclamation 
@@ -36,7 +36,39 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
 
             return View(reclamationViewModels);
         }
+        // GET: Reclamation En cours
+        public ActionResult OnHold()
+        {
+            // 1.get service list reclamation 
+            List<Reclamation> reclamations = reclamationRepository.GetOnHoldReclamations();
+            List<Materiel> materiels = materielRepository.GetAffectedMateriels();
+            // 2. transpose entity -> view model
+            List<ReclamationViewModel> reclamationViewModels = ReclamationTranspose.ReclamationListToReclamationViewModelList(reclamations, materiels);
 
+            return View(reclamationViewModels);
+        }
+        // Get: Reclamation Terminée
+        public ActionResult Finished()
+        {
+            // 1.get service list reclamation 
+            List<Reclamation> reclamations = reclamationRepository.GetFinishedReclamations();
+            List<Materiel> materiels = materielRepository.GetAffectedMateriels();
+            // 2. transpose entity -> view model
+            List<ReclamationViewModel> reclamationViewModels = ReclamationTranspose.ReclamationListToReclamationViewModelList(reclamations, materiels);
+
+            return View(reclamationViewModels);
+        }
+        //Get: Reclamation Annulée
+        public ActionResult Canceled()
+        {
+            // 1.get service list reclamation 
+            List<Reclamation> reclamations = reclamationRepository.GetCanceledReclamations();
+            List<Materiel> materiels = materielRepository.GetAffectedMateriels();
+            // 2. transpose entity -> view model
+            List<ReclamationViewModel> reclamationViewModels = ReclamationTranspose.ReclamationListToReclamationViewModelList(reclamations, materiels);
+
+            return View(reclamationViewModels);
+        }
         // GET: Reclamation/Details/5
         public ActionResult Details(int id)
         {
@@ -82,22 +114,31 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                         }).AsEnumerable(), "Text", "Text");
                     createReclamationViewModel.UniteGestions = uniteGestionsSelectListItem;
                     return View(createReclamationViewModel);
-                   
+
                 }
                 //string user = User.Identity.Name;
                 // Materiel materiel = materielRepository.GetMaterielById(materielId);
                 string user = User.Identity.Name;
                 Reclamation reclamation = ReclamationTranspose.CreateReclamationViewModelToReclamation(createReclamationViewModel, user);
-
+                Materiel materielById = materielRepository.GetMaterielById(reclamation.Materiel);
                 bool reclamationIsCreated = reclamationRepository.CreateReclamation(reclamation);
                 if (reclamationIsCreated)
                 {
-                    return RedirectToAction("Index");
+                    Materiel materielStatut = MaterielTranspose.ChangeMaterielStatut(materielById, user, "Reclamé");
+                    bool materielIsChanged = materielRepository.ChangeMateriel(materielStatut);
+                    if (materielIsChanged)
+                    {
+                        return RedirectToAction("Index");
+                    }
+                    {
+                        throw new InvalidOperationException("Désolé");
+                    }
                 }
                 else
                 {
                     throw new InvalidOperationException("oops");
                 }
+
             }
             catch
             {
@@ -162,6 +203,57 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             {
                 return View();
             }
+        }
+
+        // GET: Intervention/Annuler
+        public ActionResult Annuler(int id)
+        {
+            try
+            {
+                Reclamation reclamation = reclamationRepository.GetReclamationById(id);
+                Materiel materiel = materielRepository.GetMaterielById(reclamation.Materiel);
+                ReclamationViewModel reclamationViewModel = ReclamationTranspose.ReclamationToReclamationViewModel(reclamation, materiel);
+                return View(reclamationViewModel);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        // POST: Intervention/Annuler
+        [HttpPost]
+        public ActionResult Annuler(int id, ReclamationViewModel reclamationViewModel)
+        {
+            try
+            {
+                string user = User.Identity.Name;
+                Reclamation oldReclamation = reclamationRepository.GetReclamationById(id);
+                Reclamation reclamation = ReclamationTranspose.AnnulerReclamationViewModelToAnnulerReclamation(oldReclamation, user);
+                Materiel materielById = materielRepository.GetMaterielById(reclamation.Materiel);
+                bool reclamationIsCanceled = reclamationRepository.CanceledReclamation(reclamation);
+                if (reclamationIsCanceled)
+                {
+                    Materiel materielStatut = MaterielTranspose.ChangeMaterielStatut(materielById, user, "Non reclamé");
+                    bool materielIsChanged = materielRepository.ChangeMateriel(materielStatut);
+                    if (materielIsChanged)
+                    {
+                        return RedirectToAction("Canceled");
+                    }
+                    else
+                    {
+                        throw new InvalidOperationException("oops");
+                    }
+                }
+                else
+                {
+                    throw new InvalidOperationException("oops");
+                }
+            }
+            catch
+            {
+                throw;
+            }
+
         }
         // GET: Reclamation/Delete/5
         public ActionResult Delete(int id)

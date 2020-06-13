@@ -27,7 +27,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         {
             // 1.get service list intervention 
             List<Intervention> interventions = interventionRepository.GetInterventions();
-            List<Reclamation> reclamations = reclamationRepository.GetReclamations();
+            List<Reclamation> reclamations = reclamationRepository.GetOnHoldReclamations();
             // 2. transpose entity -> view model
             List<InterventionViewModel> interventionViewModels = InterventionTranspose.InterventionListToInterventionViewModelList(interventions, reclamations);
 
@@ -39,7 +39,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         {
             // 1.get service list intervention 
             List<Intervention> interventions = interventionRepository.GetFinishedInterventions();
-            List<Reclamation> reclamations = reclamationRepository.GetReclamations();
+            List<Reclamation> reclamations = reclamationRepository.GetFinishedReclamations();
             // 2. transpose entity -> view model
             List<InterventionViewModel> interventionViewModels = InterventionTranspose.InterventionListToInterventionViewModelList(interventions, reclamations);
 
@@ -88,8 +88,9 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 }
                 // TODO: Add insert logic here
                 string user = User.Identity.Name;
-                Intervention intervention = InterventionTranspose.CreateInterventionViewModelToIntervention(createInterventionViewModel, user);
                 Reclamation reclamationById = reclamationRepository.GetReclamationById(reclamation);
+                Intervention intervention = InterventionTranspose.CreateInterventionViewModelToIntervention(reclamationById,createInterventionViewModel, user);
+                
                 bool interventionIsCreated = interventionRepository.CreateIntervention(intervention);
                 if (interventionIsCreated)
                     {
@@ -183,7 +184,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 string user = User.Identity.Name;
                 Intervention oldIntervention = interventionRepository.GetInterventionById(id);
                 Intervention intervention = InterventionTranspose.TerminerInterventionViewModelToterminerIntervention(oldIntervention, user);
-                Reclamation reclamationById = reclamationRepository.GetReclamationById(intervention.Reclamation);
+                Reclamation reclamationById = reclamationRepository.GetReclamationById(oldIntervention.Reclamation);
                 bool interventionIsFinished = interventionRepository.FinishedIntervention(intervention);
                 if (interventionIsFinished)
                 {
@@ -210,6 +211,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             }
 
         }
+        
         // GET: Intervention/Annuler
         public ActionResult Annuler(int id)
         {
@@ -234,7 +236,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 string user = User.Identity.Name;
                 Intervention oldIntervention = interventionRepository.GetInterventionById(id);
                 Intervention intervention = InterventionTranspose.AnnulerInterventionViewModelToAnnulerIntervention(oldIntervention, user);
-                Reclamation reclamationById = reclamationRepository.GetReclamationById(intervention.Reclamation);
+                Reclamation reclamationById = reclamationRepository.GetReclamationById(oldIntervention.Reclamation);
                 bool interventionIsCanceled = interventionRepository.CanceledIntervention(intervention);
                 if (interventionIsCanceled)
                 {
@@ -253,6 +255,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 {
                     throw new InvalidOperationException("oops");
                 }
+             
             }
             catch
             {

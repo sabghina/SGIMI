@@ -186,11 +186,6 @@ namespace BT.Stage.SGIMI.Commun.Tools
 
         }
 
-
-
-
-
-
         public static AffectationMaterielViewModel MaterielToAffectationMaterielViewModel(Materiel materiel)
         {
             AffectationMaterielViewModel affectationMaterielViewModel = new AffectationMaterielViewModel
@@ -215,6 +210,34 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 materielReports.Add(materielReport);
             }
             return materielReports;
+        }
+
+        public static Materiel ChangeMaterielStatut(Materiel materielById, string user, string statut)
+        {
+            Materiel materiel = new Materiel
+            {
+                Id = materielById.Id,
+                Nom = materielById.Nom,
+                Marque = materielById.Marque,
+                Modele = materielById.Modele,
+                ReferenceBT = materielById.ReferenceBT,
+                NumeroDeSerie = materielById.NumeroDeSerie,
+                Fournisseur = materielById.Fournisseur,
+                Agent = materielById.Agent,
+                Etat = materielById.Etat,
+                Statut = statut,
+                LastUpdatedBy = user,
+                LastUpdatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
+                LastUpdatedTime = DateTime.Now.ToString("HH:mm:ss"),
+                CreatedBy = materielById.CreatedBy,
+                CreatedDate = materielById.CreatedDate,
+                CreatedTime = materielById.CreatedTime,
+                AffectedBy = materielById.AffectedBy,
+                AffectedDate = materielById.AffectedDate,
+                AffectedTime = materielById.AffectedTime,
+
+            };
+            return materiel;
         }
 
         public static MaterielReport MaterielToMaterielReport(Materiel materiel)

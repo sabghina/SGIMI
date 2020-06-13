@@ -18,11 +18,25 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
             sGIMIDbContext = _sGIMIDbContext;
         }
 
+        public bool CancelReclamation(Reclamation reclamation)
+        {
+            sGIMIDbContext.Reclamations.AddOrUpdate(reclamation);
+            Task<int> nbRowsCanceled = sGIMIDbContext.ObjectContext.SaveChangesAsync();
+            if (nbRowsCanceled != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public bool ChangeReclamation(Reclamation reclamationById)
         {
             sGIMIDbContext.Reclamations.AddOrUpdate(reclamationById);
-            Task<int> nbRowsAffected = sGIMIDbContext.ObjectContext.SaveChangesAsync();
-            if (nbRowsAffected != null)
+            Task<int> nbRowsChanged = sGIMIDbContext.ObjectContext.SaveChangesAsync();
+            if (nbRowsChanged != null)
             {
                 return true;
             }
@@ -46,6 +60,8 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
             }
         }
 
+        
+
         public Reclamation GetReclamationById(int id)
         {
             Reclamation reclamation = sGIMIDbContext.Reclamations.Find(id);
@@ -56,8 +72,60 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
         {
             // replace with databse access
             List<Reclamation> reclamations = sGIMIDbContext.Reclamations.ToList();
+            List<Reclamation> reclamationWainting = new List<Reclamation>();
+            foreach (Reclamation reclamation in reclamations)
+            {
+                if (reclamation.Etat == "En attente")
+                {
+                    reclamationWainting.Add(reclamation);
+                }
+            }
+            return reclamationWainting;
+            
+        }
 
-            return reclamations;
+        public List<Reclamation> GetOnHoldReclamations()
+        {
+            // replace with databse access
+            List<Reclamation> reclamations = sGIMIDbContext.Reclamations.ToList();
+            List<Reclamation> reclamationWainting = new List<Reclamation>();
+            foreach (Reclamation reclamation in reclamations)
+            {
+                if (reclamation.Etat == "En cours")
+                {
+                    reclamationWainting.Add(reclamation);
+                }
+            }
+            return reclamationWainting;
+        }
+        public List<Reclamation> GetCanceledReclamations()
+        {
+            // replace with databse access
+            List<Reclamation> reclamations = sGIMIDbContext.Reclamations.ToList();
+            List<Reclamation> reclamationWainting = new List<Reclamation>();
+            foreach (Reclamation reclamation in reclamations)
+            {
+                if (reclamation.Etat == "Annulée")
+                {
+                    reclamationWainting.Add(reclamation);
+                }
+            }
+            return reclamationWainting;
+        }
+
+        public List<Reclamation> GetFinishedReclamations()
+        {
+            // replace with databse access
+            List<Reclamation> reclamations = sGIMIDbContext.Reclamations.ToList();
+            List<Reclamation> reclamationWainting = new List<Reclamation>();
+            foreach (Reclamation reclamation in reclamations)
+            {
+                if (reclamation.Etat == "Terminée")
+                {
+                    reclamationWainting.Add(reclamation);
+                }
+            }
+            return reclamationWainting;
         }
 
         public bool UpdateReclamation(Reclamation reclamation)

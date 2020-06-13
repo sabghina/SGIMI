@@ -189,6 +189,12 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
             List<Materiel> archivedMateriels = materielAdapter.GetArchivedMateriels();
             return archivedMateriels;
         }
+
+        public bool ChangeMateriel(Materiel materielEtat)
+        {
+            return materielAdapter.ChangedMateriel(materielEtat);
+        }
+        
     }
 }
 

@@ -49,7 +49,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
             return interventionViewModel;
         }
 
-        public static Intervention CreateInterventionViewModelToIntervention(CreateInterventionViewModel createInterventionViewModel, string user)
+        public static Intervention CreateInterventionViewModelToIntervention(Reclamation reclamationById,CreateInterventionViewModel createInterventionViewModel, string user)
         {
             Intervention intervention = new Intervention
             {
@@ -58,6 +58,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Nature = createInterventionViewModel.Nature,
                 Etat = "En cours",
                 Reclamation = createInterventionViewModel.Reclamation,
+                Probleme = reclamationById.Probleme,
                 ProblemeConstate = createInterventionViewModel.ProblemeConstate,
                 TraveauxEffectues = createInterventionViewModel.TraveauxEffectues,
                 CreatedBy = user,
@@ -168,6 +169,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Nature = oldIntervention.Nature,
                 Etat = "Annulée",
                 Reclamation = oldIntervention.Reclamation,
+                Probleme = oldIntervention.Probleme,
                 ProblemeConstate = oldIntervention.ProblemeConstate,
                 TraveauxEffectues = oldIntervention.TraveauxEffectues,
                 CreatedBy = oldIntervention.CreatedBy,

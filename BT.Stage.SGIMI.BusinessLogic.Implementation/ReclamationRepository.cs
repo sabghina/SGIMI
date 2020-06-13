@@ -34,6 +34,22 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
             List<Reclamation> reclamations = reclamationAdapter.GetReclamations();
             return reclamations;
         }
+        public List<Reclamation> GetOnHoldReclamations()
+        {
+            List<Reclamation> reclamations = reclamationAdapter.GetOnHoldReclamations();
+            return reclamations;
+        }
+        public List<Reclamation> GetFinishedReclamations()
+        {
+            List<Reclamation> reclamations = reclamationAdapter.GetFinishedReclamations();
+            return reclamations;
+        }
+
+        public List<Reclamation> GetCanceledReclamations()
+        {
+            List<Reclamation> reclamations = reclamationAdapter.GetCanceledReclamations();
+            return reclamations;
+        }
 
         public bool UpdatedReclamation(Reclamation reclamation)
         {
@@ -159,6 +175,13 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
         {
             return reclamationAdapter.ChangeReclamation(reclamationById);
         }
+
+        public bool CanceledReclamation(Reclamation reclamation)
+        {
+            return reclamationAdapter.CancelReclamation(reclamation);
+        }
+
+        
     }
 }
 

@@ -81,7 +81,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Probleme = createReclamationViewModel.Probleme,
                 Commentaire = createReclamationViewModel.Commentaire,
                 UniteGestion = createReclamationViewModel.UniteGestion,
-                Etat = "en attente",
+                Etat = "En attente",
                 CreatedBy = user,
                 CreatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
                 CreatedTime = DateTime.Now.ToString("HH:mm:ss")
@@ -157,6 +157,27 @@ namespace BT.Stage.SGIMI.Commun.Tools
             };
 
             return reclamationReport;
+        }
+
+        public static Reclamation AnnulerReclamationViewModelToAnnulerReclamation(Reclamation oldReclamation, string user)
+        {
+            Reclamation reclamation = new Reclamation
+            {
+                Id = oldReclamation.Id,
+                Materiel = oldReclamation.Materiel,
+                Probleme = oldReclamation.Probleme,
+                Commentaire = oldReclamation.Commentaire,
+                Etat = "Annulée",
+                UniteGestion = oldReclamation.UniteGestion,
+                CreatedBy = oldReclamation.CreatedBy,
+                CreatedDate = oldReclamation.CreatedDate,
+                CreatedTime = oldReclamation.CreatedTime,
+                LastUpdatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
+                LastUpdatedTime = DateTime.Now.ToString("HH:mm:ss"),
+                LastUpdatedBy = user
+
+            };
+            return reclamation;
         }
     }
 

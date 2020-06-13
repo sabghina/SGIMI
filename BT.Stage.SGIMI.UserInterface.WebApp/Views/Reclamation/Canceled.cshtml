@@ -1,14 +1,14 @@
 ﻿@model IEnumerable<BT.Stage.SGIMI.UserInterface.ViewModel.ReclamationViewModel>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "OnHold";
 }
-    <h2>Liste des réclamations en attente </h2>
-    <p>
-        @Html.ActionLink("liste des reclamations en cours", "OnHold")|
-        @Html.ActionLink("liste des reclamations annulées", "Canceled")|
-        @Html.ActionLink("liste des reclamations terminées", "Finished")|
-        @Html.ActionLink("Telecharger la liste des réclamations", "DynamicReports")
-    </p>
+<h2>Liste des réclamations annulées</h2>
+<p>
+    @Html.ActionLink("liste des reclamations en attente", "Index")|
+    @Html.ActionLink("liste des reclamations en cours", "OnHold")|
+    @Html.ActionLink("liste des reclamations terminées", "Finished")|
+    @Html.ActionLink("Telecharger la liste des réclamations", "DynamicReports")
+</p>
 <div class="pull-right">
 
 </div>
@@ -59,9 +59,7 @@
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
                 @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                @Html.ActionLink("Annuler", "Annuler", new { id = item.Id }) |
                 @Html.ActionLink("Télecharger Détails ", "DynamicReport", new { id = item.Id })|
-                <a href="@Url.Action("Create","Intervention",new { reclamation = item.Id })"> intervenir </a>
             </td>
         </tr>
     }

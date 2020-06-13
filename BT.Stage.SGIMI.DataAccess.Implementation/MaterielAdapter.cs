@@ -143,6 +143,20 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
 
             return materiels;
         }
+
+        public bool ChangedMateriel(Materiel materielEtat)
+        {
+            sGIMIDbContext.Materiels.AddOrUpdate(materielEtat);
+            Task<int> nbRowsChanged = sGIMIDbContext.ObjectContext.SaveChangesAsync();
+            if (nbRowsChanged != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
 
