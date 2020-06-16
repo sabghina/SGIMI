@@ -20,17 +20,17 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("SocieteTierceDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("FournisseurDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class SocieteTierceDataSet : global::System.Data.DataSet {
+    public partial class FournisseurDataSet : global::System.Data.DataSet {
         
-        private SocieteTierceDataTable tableSocieteTierce;
+        private FournisseurDataTable tableFournisseur;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public SocieteTierceDataSet() {
+        public FournisseurDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected SocieteTierceDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected FournisseurDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["SocieteTierce"] != null)) {
-                    base.Tables.Add(new SocieteTierceDataTable(ds.Tables["SocieteTierce"]));
+                if ((ds.Tables["Fournisseur"] != null)) {
+                    base.Tables.Add(new FournisseurDataTable(ds.Tables["Fournisseur"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public SocieteTierceDataTable SocieteTierce {
+        public FournisseurDataTable Fournisseur {
             get {
-                return this.tableSocieteTierce;
+                return this.tableFournisseur;
             }
         }
         
@@ -152,8 +152,8 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["SocieteTierce"] != null)) {
-                    base.Tables.Add(new SocieteTierceDataTable(ds.Tables["SocieteTierce"]));
+                if ((ds.Tables["Fournisseur"] != null)) {
+                    base.Tables.Add(new FournisseurDataTable(ds.Tables["Fournisseur"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableSocieteTierce = ((SocieteTierceDataTable)(base.Tables["SocieteTierce"]));
+            this.tableFournisseur = ((FournisseurDataTable)(base.Tables["Fournisseur"]));
             if ((initTable == true)) {
-                if ((this.tableSocieteTierce != null)) {
-                    this.tableSocieteTierce.InitVars();
+                if ((this.tableFournisseur != null)) {
+                    this.tableFournisseur.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             this.Namespace = "http://tempuri.org/FournisseurDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableSocieteTierce = new SocieteTierceDataTable();
-            base.Tables.Add(this.tableSocieteTierce);
+            this.tableFournisseur = new FournisseurDataTable();
+            base.Tables.Add(this.tableFournisseur);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeSocieteTierce() {
+        private bool ShouldSerializeFournisseur() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            SocieteTierceDataSet ds = new SocieteTierceDataSet();
+            FournisseurDataSet ds = new FournisseurDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,14 +270,14 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void SocieteTierceRowChangeEventHandler(object sender, SocieteTierceRowChangeEvent e);
+        public delegate void FournisseurRowChangeEventHandler(object sender, FournisseurRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class SocieteTierceDataTable : global::System.Data.TypedTableBase<SocieteTierceRow> {
+        public partial class FournisseurDataTable : global::System.Data.TypedTableBase<FournisseurRow> {
             
             private global::System.Data.DataColumn columnNom;
             
@@ -309,8 +309,8 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SocieteTierceDataTable() {
-                this.TableName = "SocieteTierce";
+            public FournisseurDataTable() {
+                this.TableName = "Fournisseur";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -318,7 +318,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal SocieteTierceDataTable(global::System.Data.DataTable table) {
+            internal FournisseurDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -335,7 +335,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected SocieteTierceDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected FournisseurDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -463,34 +463,34 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SocieteTierceRow this[int index] {
+            public FournisseurRow this[int index] {
                 get {
-                    return ((SocieteTierceRow)(this.Rows[index]));
+                    return ((FournisseurRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event SocieteTierceRowChangeEventHandler SocieteTierceRowChanging;
+            public event FournisseurRowChangeEventHandler FournisseurRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event SocieteTierceRowChangeEventHandler SocieteTierceRowChanged;
+            public event FournisseurRowChangeEventHandler FournisseurRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event SocieteTierceRowChangeEventHandler SocieteTierceRowDeleting;
+            public event FournisseurRowChangeEventHandler FournisseurRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event SocieteTierceRowChangeEventHandler SocieteTierceRowDeleted;
+            public event FournisseurRowChangeEventHandler FournisseurRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddSocieteTierceRow(SocieteTierceRow row) {
+            public void AddFournisseurRow(FournisseurRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SocieteTierceRow AddSocieteTierceRow(string Nom, string Email, string Contact, string Adresse, string SiteWeb, string Etat, string CreatedBy, string DateContrat, string ArchivedBy, string DateArchive, string ActivatedBy, string DateActivation, string LastUpdatedBy, string DateModification) {
-                SocieteTierceRow rowSocieteTierceRow = ((SocieteTierceRow)(this.NewRow()));
+            public FournisseurRow AddFournisseurRow(string Nom, string Email, string Contact, string Adresse, string SiteWeb, string Etat, string CreatedBy, string DateContrat, string ArchivedBy, string DateArchive, string ActivatedBy, string DateActivation, string LastUpdatedBy, string DateModification) {
+                FournisseurRow rowFournisseurRow = ((FournisseurRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Nom,
                         Email,
@@ -506,15 +506,15 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
                         DateActivation,
                         LastUpdatedBy,
                         DateModification};
-                rowSocieteTierceRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowSocieteTierceRow);
-                return rowSocieteTierceRow;
+                rowFournisseurRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowFournisseurRow);
+                return rowFournisseurRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                SocieteTierceDataTable cln = ((SocieteTierceDataTable)(base.Clone()));
+                FournisseurDataTable cln = ((FournisseurDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -522,7 +522,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new SocieteTierceDataTable();
+                return new FournisseurDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -579,28 +579,28 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SocieteTierceRow NewSocieteTierceRow() {
-                return ((SocieteTierceRow)(this.NewRow()));
+            public FournisseurRow NewFournisseurRow() {
+                return ((FournisseurRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new SocieteTierceRow(builder);
+                return new FournisseurRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(SocieteTierceRow);
+                return typeof(FournisseurRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.SocieteTierceRowChanged != null)) {
-                    this.SocieteTierceRowChanged(this, new SocieteTierceRowChangeEvent(((SocieteTierceRow)(e.Row)), e.Action));
+                if ((this.FournisseurRowChanged != null)) {
+                    this.FournisseurRowChanged(this, new FournisseurRowChangeEvent(((FournisseurRow)(e.Row)), e.Action));
                 }
             }
             
@@ -608,8 +608,8 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.SocieteTierceRowChanging != null)) {
-                    this.SocieteTierceRowChanging(this, new SocieteTierceRowChangeEvent(((SocieteTierceRow)(e.Row)), e.Action));
+                if ((this.FournisseurRowChanging != null)) {
+                    this.FournisseurRowChanging(this, new FournisseurRowChangeEvent(((FournisseurRow)(e.Row)), e.Action));
                 }
             }
             
@@ -617,8 +617,8 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.SocieteTierceRowDeleted != null)) {
-                    this.SocieteTierceRowDeleted(this, new SocieteTierceRowChangeEvent(((SocieteTierceRow)(e.Row)), e.Action));
+                if ((this.FournisseurRowDeleted != null)) {
+                    this.FournisseurRowDeleted(this, new FournisseurRowChangeEvent(((FournisseurRow)(e.Row)), e.Action));
                 }
             }
             
@@ -626,14 +626,14 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.SocieteTierceRowDeleting != null)) {
-                    this.SocieteTierceRowDeleting(this, new SocieteTierceRowChangeEvent(((SocieteTierceRow)(e.Row)), e.Action));
+                if ((this.FournisseurRowDeleting != null)) {
+                    this.FournisseurRowDeleting(this, new FournisseurRowChangeEvent(((FournisseurRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveSocieteTierceRow(SocieteTierceRow row) {
+            public void RemoveFournisseurRow(FournisseurRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -642,7 +642,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SocieteTierceDataSet ds = new SocieteTierceDataSet();
+                FournisseurDataSet ds = new FournisseurDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -660,7 +660,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "SocieteTierceDataTable";
+                attribute2.FixedValue = "FournisseurDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -704,15 +704,15 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class SocieteTierceRow : global::System.Data.DataRow {
+        public partial class FournisseurRow : global::System.Data.DataRow {
             
-            private SocieteTierceDataTable tableSocieteTierce;
+            private FournisseurDataTable tableFournisseur;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal SocieteTierceRow(global::System.Data.DataRowBuilder rb) : 
+            internal FournisseurRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableSocieteTierce = ((SocieteTierceDataTable)(this.Table));
+                this.tableFournisseur = ((FournisseurDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -720,14 +720,14 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             public string Nom {
                 get {
                     try {
-                        return ((string)(this[this.tableSocieteTierce.NomColumn]));
+                        return ((string)(this[this.tableFournisseur.NomColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Nom\' in table \'SocieteTierce\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Nom\' in table \'Fournisseur\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSocieteTierce.NomColumn] = value;
+                    this[this.tableFournisseur.NomColumn] = value;
                 }
             }
             
@@ -736,14 +736,14 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             public string Email {
                 get {
                     try {
-                        return ((string)(this[this.tableSocieteTierce.EmailColumn]));
+                        return ((string)(this[this.tableFournisseur.EmailColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Email\' in table \'SocieteTierce\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Email\' in table \'Fournisseur\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSocieteTierce.EmailColumn] = value;
+                    this[this.tableFournisseur.EmailColumn] = value;
                 }
             }
             
@@ -752,14 +752,14 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             public string Contact {
                 get {
                     try {
-                        return ((string)(this[this.tableSocieteTierce.ContactColumn]));
+                        return ((string)(this[this.tableFournisseur.ContactColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Contact\' in table \'SocieteTierce\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Contact\' in table \'Fournisseur\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSocieteTierce.ContactColumn] = value;
+                    this[this.tableFournisseur.ContactColumn] = value;
                 }
             }
             
@@ -768,14 +768,14 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             public string Adresse {
                 get {
                     try {
-                        return ((string)(this[this.tableSocieteTierce.AdresseColumn]));
+                        return ((string)(this[this.tableFournisseur.AdresseColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Adresse\' in table \'SocieteTierce\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Adresse\' in table \'Fournisseur\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSocieteTierce.AdresseColumn] = value;
+                    this[this.tableFournisseur.AdresseColumn] = value;
                 }
             }
             
@@ -784,14 +784,14 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             public string SiteWeb {
                 get {
                     try {
-                        return ((string)(this[this.tableSocieteTierce.SiteWebColumn]));
+                        return ((string)(this[this.tableFournisseur.SiteWebColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SiteWeb\' in table \'SocieteTierce\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'SiteWeb\' in table \'Fournisseur\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSocieteTierce.SiteWebColumn] = value;
+                    this[this.tableFournisseur.SiteWebColumn] = value;
                 }
             }
             
@@ -800,14 +800,14 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             public string Etat {
                 get {
                     try {
-                        return ((string)(this[this.tableSocieteTierce.EtatColumn]));
+                        return ((string)(this[this.tableFournisseur.EtatColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Etat\' in table \'SocieteTierce\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Etat\' in table \'Fournisseur\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSocieteTierce.EtatColumn] = value;
+                    this[this.tableFournisseur.EtatColumn] = value;
                 }
             }
             
@@ -816,14 +816,14 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             public string CreatedBy {
                 get {
                     try {
-                        return ((string)(this[this.tableSocieteTierce.CreatedByColumn]));
+                        return ((string)(this[this.tableFournisseur.CreatedByColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CreatedBy\' in table \'SocieteTierce\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CreatedBy\' in table \'Fournisseur\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSocieteTierce.CreatedByColumn] = value;
+                    this[this.tableFournisseur.CreatedByColumn] = value;
                 }
             }
             
@@ -832,14 +832,14 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             public string DateContrat {
                 get {
                     try {
-                        return ((string)(this[this.tableSocieteTierce.DateContratColumn]));
+                        return ((string)(this[this.tableFournisseur.DateContratColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DateContrat\' in table \'SocieteTierce\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'DateContrat\' in table \'Fournisseur\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSocieteTierce.DateContratColumn] = value;
+                    this[this.tableFournisseur.DateContratColumn] = value;
                 }
             }
             
@@ -848,14 +848,14 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             public string ArchivedBy {
                 get {
                     try {
-                        return ((string)(this[this.tableSocieteTierce.ArchivedByColumn]));
+                        return ((string)(this[this.tableFournisseur.ArchivedByColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ArchivedBy\' in table \'SocieteTierce\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ArchivedBy\' in table \'Fournisseur\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSocieteTierce.ArchivedByColumn] = value;
+                    this[this.tableFournisseur.ArchivedByColumn] = value;
                 }
             }
             
@@ -864,14 +864,14 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             public string DateArchive {
                 get {
                     try {
-                        return ((string)(this[this.tableSocieteTierce.DateArchiveColumn]));
+                        return ((string)(this[this.tableFournisseur.DateArchiveColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DateArchive\' in table \'SocieteTierce\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'DateArchive\' in table \'Fournisseur\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSocieteTierce.DateArchiveColumn] = value;
+                    this[this.tableFournisseur.DateArchiveColumn] = value;
                 }
             }
             
@@ -880,14 +880,14 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             public string ActivatedBy {
                 get {
                     try {
-                        return ((string)(this[this.tableSocieteTierce.ActivatedByColumn]));
+                        return ((string)(this[this.tableFournisseur.ActivatedByColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ActivatedBy\' in table \'SocieteTierce\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ActivatedBy\' in table \'Fournisseur\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSocieteTierce.ActivatedByColumn] = value;
+                    this[this.tableFournisseur.ActivatedByColumn] = value;
                 }
             }
             
@@ -896,14 +896,14 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             public string DateActivation {
                 get {
                     try {
-                        return ((string)(this[this.tableSocieteTierce.DateActivationColumn]));
+                        return ((string)(this[this.tableFournisseur.DateActivationColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DateActivation\' in table \'SocieteTierce\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'DateActivation\' in table \'Fournisseur\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSocieteTierce.DateActivationColumn] = value;
+                    this[this.tableFournisseur.DateActivationColumn] = value;
                 }
             }
             
@@ -912,14 +912,14 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             public string LastUpdatedBy {
                 get {
                     try {
-                        return ((string)(this[this.tableSocieteTierce.LastUpdatedByColumn]));
+                        return ((string)(this[this.tableFournisseur.LastUpdatedByColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'LastUpdatedBy\' in table \'SocieteTierce\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'LastUpdatedBy\' in table \'Fournisseur\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSocieteTierce.LastUpdatedByColumn] = value;
+                    this[this.tableFournisseur.LastUpdatedByColumn] = value;
                 }
             }
             
@@ -928,183 +928,183 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             public string DateModification {
                 get {
                     try {
-                        return ((string)(this[this.tableSocieteTierce.DateModificationColumn]));
+                        return ((string)(this[this.tableFournisseur.DateModificationColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DateModification\' in table \'SocieteTierce\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'DateModification\' in table \'Fournisseur\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSocieteTierce.DateModificationColumn] = value;
+                    this[this.tableFournisseur.DateModificationColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsNomNull() {
-                return this.IsNull(this.tableSocieteTierce.NomColumn);
+                return this.IsNull(this.tableFournisseur.NomColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetNomNull() {
-                this[this.tableSocieteTierce.NomColumn] = global::System.Convert.DBNull;
+                this[this.tableFournisseur.NomColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsEmailNull() {
-                return this.IsNull(this.tableSocieteTierce.EmailColumn);
+                return this.IsNull(this.tableFournisseur.EmailColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetEmailNull() {
-                this[this.tableSocieteTierce.EmailColumn] = global::System.Convert.DBNull;
+                this[this.tableFournisseur.EmailColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsContactNull() {
-                return this.IsNull(this.tableSocieteTierce.ContactColumn);
+                return this.IsNull(this.tableFournisseur.ContactColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetContactNull() {
-                this[this.tableSocieteTierce.ContactColumn] = global::System.Convert.DBNull;
+                this[this.tableFournisseur.ContactColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsAdresseNull() {
-                return this.IsNull(this.tableSocieteTierce.AdresseColumn);
+                return this.IsNull(this.tableFournisseur.AdresseColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetAdresseNull() {
-                this[this.tableSocieteTierce.AdresseColumn] = global::System.Convert.DBNull;
+                this[this.tableFournisseur.AdresseColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsSiteWebNull() {
-                return this.IsNull(this.tableSocieteTierce.SiteWebColumn);
+                return this.IsNull(this.tableFournisseur.SiteWebColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetSiteWebNull() {
-                this[this.tableSocieteTierce.SiteWebColumn] = global::System.Convert.DBNull;
+                this[this.tableFournisseur.SiteWebColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsEtatNull() {
-                return this.IsNull(this.tableSocieteTierce.EtatColumn);
+                return this.IsNull(this.tableFournisseur.EtatColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetEtatNull() {
-                this[this.tableSocieteTierce.EtatColumn] = global::System.Convert.DBNull;
+                this[this.tableFournisseur.EtatColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsCreatedByNull() {
-                return this.IsNull(this.tableSocieteTierce.CreatedByColumn);
+                return this.IsNull(this.tableFournisseur.CreatedByColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetCreatedByNull() {
-                this[this.tableSocieteTierce.CreatedByColumn] = global::System.Convert.DBNull;
+                this[this.tableFournisseur.CreatedByColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsDateContratNull() {
-                return this.IsNull(this.tableSocieteTierce.DateContratColumn);
+                return this.IsNull(this.tableFournisseur.DateContratColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetDateContratNull() {
-                this[this.tableSocieteTierce.DateContratColumn] = global::System.Convert.DBNull;
+                this[this.tableFournisseur.DateContratColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsArchivedByNull() {
-                return this.IsNull(this.tableSocieteTierce.ArchivedByColumn);
+                return this.IsNull(this.tableFournisseur.ArchivedByColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetArchivedByNull() {
-                this[this.tableSocieteTierce.ArchivedByColumn] = global::System.Convert.DBNull;
+                this[this.tableFournisseur.ArchivedByColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsDateArchiveNull() {
-                return this.IsNull(this.tableSocieteTierce.DateArchiveColumn);
+                return this.IsNull(this.tableFournisseur.DateArchiveColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetDateArchiveNull() {
-                this[this.tableSocieteTierce.DateArchiveColumn] = global::System.Convert.DBNull;
+                this[this.tableFournisseur.DateArchiveColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsActivatedByNull() {
-                return this.IsNull(this.tableSocieteTierce.ActivatedByColumn);
+                return this.IsNull(this.tableFournisseur.ActivatedByColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetActivatedByNull() {
-                this[this.tableSocieteTierce.ActivatedByColumn] = global::System.Convert.DBNull;
+                this[this.tableFournisseur.ActivatedByColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsDateActivationNull() {
-                return this.IsNull(this.tableSocieteTierce.DateActivationColumn);
+                return this.IsNull(this.tableFournisseur.DateActivationColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetDateActivationNull() {
-                this[this.tableSocieteTierce.DateActivationColumn] = global::System.Convert.DBNull;
+                this[this.tableFournisseur.DateActivationColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsLastUpdatedByNull() {
-                return this.IsNull(this.tableSocieteTierce.LastUpdatedByColumn);
+                return this.IsNull(this.tableFournisseur.LastUpdatedByColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetLastUpdatedByNull() {
-                this[this.tableSocieteTierce.LastUpdatedByColumn] = global::System.Convert.DBNull;
+                this[this.tableFournisseur.LastUpdatedByColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsDateModificationNull() {
-                return this.IsNull(this.tableSocieteTierce.DateModificationColumn);
+                return this.IsNull(this.tableFournisseur.DateModificationColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetDateModificationNull() {
-                this[this.tableSocieteTierce.DateModificationColumn] = global::System.Convert.DBNull;
+                this[this.tableFournisseur.DateModificationColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1112,22 +1112,22 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class SocieteTierceRowChangeEvent : global::System.EventArgs {
+        public class FournisseurRowChangeEvent : global::System.EventArgs {
             
-            private SocieteTierceRow eventRow;
+            private FournisseurRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SocieteTierceRowChangeEvent(SocieteTierceRow row, global::System.Data.DataRowAction action) {
+            public FournisseurRowChangeEvent(FournisseurRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SocieteTierceRow Row {
+            public FournisseurRow Row {
                 get {
                     return this.eventRow;
                 }

@@ -13,14 +13,13 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets
 {
 
 
-    public partial class SocieteTierceDataSet
+    public partial class FournisseurDataSet
     {
     }
 }
 namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
     
     
-    public partial class SocieteTierceDataSet
-    {
+    public partial class FournisseurDataSet {
     }
 }
