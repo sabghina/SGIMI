@@ -138,7 +138,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
             return interventionReport;
         }
 
-        public static Intervention TerminerInterventionViewModelToterminerIntervention(Intervention oldIntervention, string user)
+        public static Intervention TerminerInterventionViewModelToterminerIntervention(Intervention oldIntervention, CreateInterventionViewModel createInterventionViewModel, string user)
         {
             Intervention intervention = new Intervention
             {
@@ -148,8 +148,8 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Nature = oldIntervention.Nature,
                 Etat = "Terminée",
                 Reclamation = oldIntervention.Reclamation,
-                ProblemeConstate = oldIntervention.ProblemeConstate,
-                TraveauxEffectues = oldIntervention.TraveauxEffectues,
+                ProblemeConstate = createInterventionViewModel.ProblemeConstate,
+                TraveauxEffectues = createInterventionViewModel.TraveauxEffectues,
                 CreatedBy = oldIntervention.CreatedBy,
                 CreatedDate = oldIntervention.CreatedDate,
                 CreatedTime = oldIntervention.CreatedTime,

@@ -169,8 +169,8 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             {
                 Intervention intervention = interventionRepository.GetInterventionById(id);
                 Reclamation reclamation = reclamationRepository.GetReclamationById(intervention.Reclamation);
-                InterventionViewModel interventionViewModel = InterventionTranspose.InterventionToInterventionViewModel(intervention, reclamation);
-                return View(interventionViewModel);
+                CreateInterventionViewModel createInterventionViewModel = InterventionTranspose.InterventionToCreateInterventionViewModel(intervention, reclamation);
+                return View(createInterventionViewModel);
             }
             catch (Exception)
             {
@@ -179,13 +179,17 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         }
         // POST: Intervention/Terminer
         [HttpPost]
-        public ActionResult Terminer(int id, InterventionViewModel interventionViewModel)
+        public ActionResult Terminer(int id, CreateInterventionViewModel createInterventionViewModel)
         {
             try
             {
+                if (!ModelState.IsValid)
+                {
+                    return View(createInterventionViewModel);
+                }
                 string user = User.Identity.Name;
                 Intervention oldIntervention = interventionRepository.GetInterventionById(id);
-                Intervention intervention = InterventionTranspose.TerminerInterventionViewModelToterminerIntervention(oldIntervention, user);
+                Intervention intervention = InterventionTranspose.TerminerInterventionViewModelToterminerIntervention(oldIntervention, createInterventionViewModel, user);
                 Reclamation reclamationById = reclamationRepository.GetReclamationById(oldIntervention.Reclamation);
                 Materiel materielById = materielRepository.GetMaterielById(reclamationById.Materiel);
                 bool interventionIsFinished = interventionRepository.FinishedIntervention(intervention);
