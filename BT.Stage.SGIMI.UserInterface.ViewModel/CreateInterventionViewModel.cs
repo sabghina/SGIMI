@@ -20,15 +20,12 @@ namespace BT.Stage.SGIMI.UserInterface.ViewModel
 
 
         public string Probleme { get; set; }
-        [Required(ErrorMessage = "Veuillez exprimer le problème constaté")]
-        [MaxLength(100)]
+        
         [Display(Name = " Problème Constaté")]
         public string ProblemeConstate { get; set; }
 
 
 
-        [Required(ErrorMessage = "Veuillez exprimer les traveaux effectués")]
-        [MaxLength(100)]
         [Display(Name = " Les traveaux effectués")]
         public string TraveauxEffectues { get; set; }
 
