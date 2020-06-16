@@ -279,19 +279,23 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class InterventionDataTable : global::System.Data.TypedTableBase<InterventionRow> {
             
-            private global::System.Data.DataColumn columnDate;
+            private global::System.Data.DataColumn columnReclamation;
             
             private global::System.Data.DataColumn columnEtat;
             
             private global::System.Data.DataColumn columnNature;
             
-            private global::System.Data.DataColumn columnReclamation;
-            
             private global::System.Data.DataColumn columnProblemeConstate;
             
             private global::System.Data.DataColumn columnTraveauxEffectues;
             
-            private global::System.Data.DataColumn columnInterventionBy;
+            private global::System.Data.DataColumn columnCreatedBy;
+            
+            private global::System.Data.DataColumn columnDateCreation;
+            
+            private global::System.Data.DataColumn columnLastUpdatedBy;
+            
+            private global::System.Data.DataColumn columnDateModification;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -328,9 +332,9 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn DateColumn {
+            public global::System.Data.DataColumn ReclamationColumn {
                 get {
-                    return this.columnDate;
+                    return this.columnReclamation;
                 }
             }
             
@@ -352,14 +356,6 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ReclamationColumn {
-                get {
-                    return this.columnReclamation;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn ProblemeConstateColumn {
                 get {
                     return this.columnProblemeConstate;
@@ -376,9 +372,33 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn InterventionByColumn {
+            public global::System.Data.DataColumn CreatedByColumn {
                 get {
-                    return this.columnInterventionBy;
+                    return this.columnCreatedBy;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn DateCreationColumn {
+                get {
+                    return this.columnDateCreation;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn LastUpdatedByColumn {
+                get {
+                    return this.columnLastUpdatedBy;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn DateModificationColumn {
+                get {
+                    return this.columnDateModification;
                 }
             }
             
@@ -419,16 +439,18 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public InterventionRow AddInterventionRow(string Date, string Etat, string Nature, string Reclamation, string ProblemeConstate, string TraveauxEffectues, string InterventionBy) {
+            public InterventionRow AddInterventionRow(string Reclamation, string Etat, string Nature, string ProblemeConstate, string TraveauxEffectues, string CreatedBy, string DateCreation, string LastUpdatedBy, string DateModification) {
                 InterventionRow rowInterventionRow = ((InterventionRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Date,
+                        Reclamation,
                         Etat,
                         Nature,
-                        Reclamation,
                         ProblemeConstate,
                         TraveauxEffectues,
-                        InterventionBy};
+                        CreatedBy,
+                        DateCreation,
+                        LastUpdatedBy,
+                        DateModification};
                 rowInterventionRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowInterventionRow);
                 return rowInterventionRow;
@@ -451,32 +473,38 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnDate = base.Columns["Date"];
+                this.columnReclamation = base.Columns["Reclamation"];
                 this.columnEtat = base.Columns["Etat"];
                 this.columnNature = base.Columns["Nature"];
-                this.columnReclamation = base.Columns["Reclamation"];
                 this.columnProblemeConstate = base.Columns["ProblemeConstate"];
                 this.columnTraveauxEffectues = base.Columns["TraveauxEffectues"];
-                this.columnInterventionBy = base.Columns["InterventionBy"];
+                this.columnCreatedBy = base.Columns["CreatedBy"];
+                this.columnDateCreation = base.Columns["DateCreation"];
+                this.columnLastUpdatedBy = base.Columns["LastUpdatedBy"];
+                this.columnDateModification = base.Columns["DateModification"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnDate = new global::System.Data.DataColumn("Date", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDate);
+                this.columnReclamation = new global::System.Data.DataColumn("Reclamation", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnReclamation);
                 this.columnEtat = new global::System.Data.DataColumn("Etat", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEtat);
                 this.columnNature = new global::System.Data.DataColumn("Nature", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNature);
-                this.columnReclamation = new global::System.Data.DataColumn("Reclamation", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnReclamation);
                 this.columnProblemeConstate = new global::System.Data.DataColumn("ProblemeConstate", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnProblemeConstate);
                 this.columnTraveauxEffectues = new global::System.Data.DataColumn("TraveauxEffectues", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTraveauxEffectues);
-                this.columnInterventionBy = new global::System.Data.DataColumn("InterventionBy", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnInterventionBy);
+                this.columnCreatedBy = new global::System.Data.DataColumn("CreatedBy", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCreatedBy);
+                this.columnDateCreation = new global::System.Data.DataColumn("DateCreation", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDateCreation);
+                this.columnLastUpdatedBy = new global::System.Data.DataColumn("LastUpdatedBy", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLastUpdatedBy);
+                this.columnDateModification = new global::System.Data.DataColumn("DateModification", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDateModification);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -619,17 +647,17 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Date {
+            public string Reclamation {
                 get {
                     try {
-                        return ((string)(this[this.tableIntervention.DateColumn]));
+                        return ((string)(this[this.tableIntervention.ReclamationColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Date\' in table \'Intervention\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Reclamation\' in table \'Intervention\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableIntervention.DateColumn] = value;
+                    this[this.tableIntervention.ReclamationColumn] = value;
                 }
             }
             
@@ -667,22 +695,6 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Reclamation {
-                get {
-                    try {
-                        return ((string)(this[this.tableIntervention.ReclamationColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Reclamation\' in table \'Intervention\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableIntervention.ReclamationColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string ProblemeConstate {
                 get {
                     try {
@@ -715,30 +727,78 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string InterventionBy {
+            public string CreatedBy {
                 get {
                     try {
-                        return ((string)(this[this.tableIntervention.InterventionByColumn]));
+                        return ((string)(this[this.tableIntervention.CreatedByColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'InterventionBy\' in table \'Intervention\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CreatedBy\' in table \'Intervention\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableIntervention.InterventionByColumn] = value;
+                    this[this.tableIntervention.CreatedByColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsDateNull() {
-                return this.IsNull(this.tableIntervention.DateColumn);
+            public string DateCreation {
+                get {
+                    try {
+                        return ((string)(this[this.tableIntervention.DateCreationColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DateCreation\' in table \'Intervention\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableIntervention.DateCreationColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetDateNull() {
-                this[this.tableIntervention.DateColumn] = global::System.Convert.DBNull;
+            public string LastUpdatedBy {
+                get {
+                    try {
+                        return ((string)(this[this.tableIntervention.LastUpdatedByColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'LastUpdatedBy\' in table \'Intervention\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableIntervention.LastUpdatedByColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string DateModification {
+                get {
+                    try {
+                        return ((string)(this[this.tableIntervention.DateModificationColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DateModification\' in table \'Intervention\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableIntervention.DateModificationColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsReclamationNull() {
+                return this.IsNull(this.tableIntervention.ReclamationColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetReclamationNull() {
+                this[this.tableIntervention.ReclamationColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -767,18 +827,6 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsReclamationNull() {
-                return this.IsNull(this.tableIntervention.ReclamationColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetReclamationNull() {
-                this[this.tableIntervention.ReclamationColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsProblemeConstateNull() {
                 return this.IsNull(this.tableIntervention.ProblemeConstateColumn);
             }
@@ -803,14 +851,50 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsInterventionByNull() {
-                return this.IsNull(this.tableIntervention.InterventionByColumn);
+            public bool IsCreatedByNull() {
+                return this.IsNull(this.tableIntervention.CreatedByColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetInterventionByNull() {
-                this[this.tableIntervention.InterventionByColumn] = global::System.Convert.DBNull;
+            public void SetCreatedByNull() {
+                this[this.tableIntervention.CreatedByColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDateCreationNull() {
+                return this.IsNull(this.tableIntervention.DateCreationColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDateCreationNull() {
+                this[this.tableIntervention.DateCreationColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsLastUpdatedByNull() {
+                return this.IsNull(this.tableIntervention.LastUpdatedByColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetLastUpdatedByNull() {
+                this[this.tableIntervention.LastUpdatedByColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDateModificationNull() {
+                return this.IsNull(this.tableIntervention.DateModificationColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDateModificationNull() {
+                this[this.tableIntervention.DateModificationColumn] = global::System.Convert.DBNull;
             }
         }
         

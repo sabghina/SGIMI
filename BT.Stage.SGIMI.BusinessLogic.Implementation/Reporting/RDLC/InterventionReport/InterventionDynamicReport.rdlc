@@ -9,8 +9,9 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Date : </Value>
+                <Value>Reclamation :</Value>
                 <Style>
+                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -19,10 +20,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>2.74354cm</Top>
-        <Left>2.10711cm</Left>
+        <Top>0.46813cm</Top>
+        <Left>2.20319cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.03729cm</Width>
+        <Width>4.445cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -42,6 +43,7 @@
               <TextRun>
                 <Value>Etat : </Value>
                 <Style>
+                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -50,10 +52,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>3.51992cm</Top>
-        <Left>2.10711cm</Left>
+        <Top>1.562cm</Top>
+        <Left>2.20319cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.03729cm</Width>
+        <Width>4.445cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -74,6 +76,7 @@
               <TextRun>
                 <Value>Nature : </Value>
                 <Style>
+                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -82,47 +85,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>4.29631cm</Top>
-        <Left>2.10711cm</Left>
+        <Top>2.62944cm</Top>
+        <Left>2.20319cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.03729cm</Width>
+        <Width>4.445cm</Width>
         <ZIndex>2</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox5">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Reclamation :</Value>
-                <Style>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value xml:space="preserve"> </Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>5.0727cm</Top>
-        <Left>2.10711cm</Left>
-        <Height>0.6cm</Height>
-        <Width>2.72521cm</Width>
-        <ZIndex>3</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -142,6 +109,7 @@
               <TextRun>
                 <Value>Probleme constaté : </Value>
                 <Style>
+                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -150,11 +118,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>5.84909cm</Top>
-        <Left>2.10711cm</Left>
+        <Top>3.75888cm</Top>
+        <Left>2.20319cm</Left>
         <Height>0.6cm</Height>
-        <Width>3.81cm</Width>
-        <ZIndex>4</ZIndex>
+        <Width>4.84188cm</Width>
+        <ZIndex>3</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -174,6 +142,7 @@
               <TextRun>
                 <Value>Traveaux Effectués : </Value>
                 <Style>
+                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -182,11 +151,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>6.66805cm</Top>
-        <Left>2.10711cm</Left>
+        <Top>4.85277cm</Top>
+        <Left>2.20319cm</Left>
         <Height>0.6cm</Height>
-        <Width>3.81cm</Width>
-        <ZIndex>5</ZIndex>
+        <Width>4.84188cm</Width>
+        <ZIndex>4</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -204,19 +173,21 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!Date.Value, "InterventionDataSet")</Value>
-                <Style />
+                <Value>=First(Fields!Reclamation.Value, "InterventionDataSet")</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>2.74354cm</Top>
-        <Left>7.0416cm</Left>
+        <Top>0.46813cm</Top>
+        <Left>9.99518cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.445cm</Width>
-        <ZIndex>6</ZIndex>
+        <Width>8.04333cm</Width>
+        <ZIndex>5</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -235,18 +206,20 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!ProblemeConstate.Value, "InterventionDataSet")</Value>
-                <Style />
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>5.94555cm</Top>
-        <Left>7.0416cm</Left>
+        <Top>3.75888cm</Top>
+        <Left>9.99518cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.445cm</Width>
-        <ZIndex>7</ZIndex>
+        <Width>8.04333cm</Width>
+        <ZIndex>6</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -265,48 +238,20 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!TraveauxEffectues.Value, "InterventionDataSet")</Value>
-                <Style />
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>6.66805cm</Top>
-        <Left>7.0416cm</Left>
+        <Top>4.85277cm</Top>
+        <Left>9.99518cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.445cm</Width>
-        <ZIndex>8</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox12">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=First(Fields!Reclamation.Value, "InterventionDataSet")</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>5.0727cm</Top>
-        <Left>7.0416cm</Left>
-        <Height>0.6cm</Height>
-        <Width>4.445cm</Width>
-        <ZIndex>9</ZIndex>
+        <Width>8.04333cm</Width>
+        <ZIndex>7</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -325,18 +270,20 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!Nature.Value, "InterventionDataSet")</Value>
-                <Style />
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>4.29631cm</Top>
-        <Left>7.0416cm</Left>
+        <Top>2.62944cm</Top>
+        <Left>9.99518cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.445cm</Width>
-        <ZIndex>10</ZIndex>
+        <Width>8.04333cm</Width>
+        <ZIndex>8</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -355,51 +302,20 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!Etat.Value, "InterventionDataSet")</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>3.51992cm</Top>
-        <Left>7.0416cm</Left>
-        <Height>0.6cm</Height>
-        <Width>4.445cm</Width>
-        <ZIndex>11</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox9">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Details d'une intervention</Value>
                 <Style>
-                  <FontSize>11pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox9</rd:DefaultName>
-        <Top>0.86346cm</Top>
-        <Left>1.63118cm</Left>
-        <Height>0.75875cm</Height>
-        <Width>8.00333cm</Width>
-        <ZIndex>12</ZIndex>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>1.562cm</Top>
+        <Left>9.99518cm</Left>
+        <Height>0.6cm</Height>
+        <Width>8.04333cm</Width>
+        <ZIndex>9</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -417,8 +333,9 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Intervenu par :</Value>
+                <Value>Créer par :</Value>
                 <Style>
+                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -427,11 +344,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox17</rd:DefaultName>
-        <Top>7.68971cm</Top>
-        <Left>2.10711cm</Left>
+        <Top>6.0493cm</Top>
+        <Left>2.20319cm</Left>
         <Height>0.6cm</Height>
-        <Width>3.81cm</Width>
-        <ZIndex>13</ZIndex>
+        <Width>4.84188cm</Width>
+        <ZIndex>10</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -449,18 +366,118 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!InterventionBy.Value, "InterventionDataSet")</Value>
-                <Style />
+                <Value>=First(Fields!CreatedBy.Value, "InterventionDataSet")</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox18</rd:DefaultName>
-        <Top>7.68971cm</Top>
-        <Left>7.0416cm</Left>
+        <Top>6.0493cm</Top>
+        <Left>9.99518cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.445cm</Width>
+        <Width>8.04333cm</Width>
+        <ZIndex>11</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox2">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Date de création :</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>7.16055cm</Top>
+        <Left>2.20319cm</Left>
+        <Height>0.6cm</Height>
+        <Width>4.84188cm</Width>
+        <ZIndex>12</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox20">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!DateCreation.Value, "InterventionDataSet")</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox20</rd:DefaultName>
+        <Top>7.16055cm</Top>
+        <Left>9.99518cm</Left>
+        <Height>0.6cm</Height>
+        <Width>8.04333cm</Width>
+        <ZIndex>13</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox21">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Modifier par :</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox21</rd:DefaultName>
+        <Top>8.32471cm</Top>
+        <Left>2.20319cm</Left>
+        <Height>0.6cm</Height>
+        <Width>4.84188cm</Width>
         <ZIndex>14</ZIndex>
         <Style>
           <Border>
@@ -472,14 +489,111 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
+      <Textbox Name="Textbox22">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!LastUpdatedBy.Value, "InterventionDataSet")</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox22</rd:DefaultName>
+        <Top>8.32471cm</Top>
+        <Left>9.99518cm</Left>
+        <Height>0.6cm</Height>
+        <Width>8.04333cm</Width>
+        <ZIndex>15</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox23">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Date de modification :</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox23</rd:DefaultName>
+        <Top>9.40951cm</Top>
+        <Left>2.20319cm</Left>
+        <Height>0.6cm</Height>
+        <Width>4.84188cm</Width>
+        <ZIndex>16</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox24">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!DateModification.Value, "InterventionDataSet")</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox24</rd:DefaultName>
+        <Top>9.40951cm</Top>
+        <Left>9.99518cm</Left>
+        <Height>0.6cm</Height>
+        <Width>8.04333cm</Width>
+        <ZIndex>17</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>3.71539in</Height>
+    <Height>4.17373in</Height>
     <Style />
   </Body>
-  <Width>7.70833in</Width>
+  <Width>8.80208in</Width>
   <Page>
     <PageHeader>
-      <Height>5.50982cm</Height>
+      <Height>5.2717cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -490,7 +604,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Rapport d'interventions</Value>
+                  <Value>Détails d'intervention</Value>
                   <Style>
                     <FontSize>16pt</FontSize>
                     <FontWeight>Bold</FontWeight>
@@ -503,8 +617,9 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Left>7.50268cm</Left>
-          <Height>1.3407cm</Height>
+          <Top>0.45861cm</Top>
+          <Left>9.99518cm</Left>
+          <Height>0.78508cm</Height>
           <Width>8.47959cm</Width>
           <Style>
             <Border>
@@ -521,8 +636,9 @@
           <Source>Embedded</Source>
           <Value>Logo_BT</Value>
           <Sizing>FitProportional</Sizing>
-          <Left>0.52773cm</Left>
-          <Height>4.29273cm</Height>
+          <Top>0.71438cm</Top>
+          <Left>3.4284cm</Left>
+          <Height>3.76356cm</Height>
           <Width>3.61667cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
@@ -654,9 +770,9 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox14</rd:DefaultName>
-          <Top>1.89315cm</Top>
-          <Left>7.50268cm</Left>
-          <Height>3.61667cm</Height>
+          <Top>1.3848cm</Top>
+          <Left>9.99518cm</Left>
+          <Height>3.16688cm</Height>
           <Width>8.47959cm</Width>
           <ZIndex>2</ZIndex>
           <Style>
@@ -670,6 +786,17 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
+        <Line Name="Line2">
+          <Top>5.05037cm</Top>
+          <Height>0cm</Height>
+          <Width>22.35728cm</Width>
+          <ZIndex>3</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Line>
       </ReportItems>
       <Style>
         <Border>
@@ -678,7 +805,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>2.54cm</Height>
+      <Height>4.18042cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -697,8 +824,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox19</rd:DefaultName>
-          <Top>0.10583cm</Top>
-          <Left>7.96078cm</Left>
+          <Top>3.09562cm</Top>
+          <Left>8.42728cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
           <Style>
@@ -711,6 +838,51 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
+        <Textbox Name="Textbox25">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Signature</Value>
+                  <Style>
+                    <FontSize>12pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox25</rd:DefaultName>
+          <Top>0.21167cm</Top>
+          <Left>18.61374cm</Left>
+          <Height>0.81167cm</Height>
+          <Width>2.5cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Line Name="Line3">
+          <Top>0.03528cm</Top>
+          <Left>0.09608cm</Left>
+          <Height>0cm</Height>
+          <Width>21.49391cm</Width>
+          <ZIndex>2</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Line>
       </ReportItems>
       <Style>
         <Border>
@@ -744,8 +916,8 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="Date">
-          <DataField>Date</DataField>
+        <Field Name="Reclamation">
+          <DataField>Reclamation</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Etat">
@@ -756,8 +928,8 @@
           <DataField>Nature</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Reclamation">
-          <DataField>Reclamation</DataField>
+        <Field Name="Probleme">
+          <DataField>Probleme</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="ProblemeConstate">
@@ -768,8 +940,20 @@
           <DataField>TraveauxEffectues</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="InterventionBy">
-          <DataField>InterventionBy</DataField>
+        <Field Name="CreatedBy">
+          <DataField>CreatedBy</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DateCreation">
+          <DataField>DateCreation</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LastUpdatedBy">
+          <DataField>LastUpdatedBy</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DateModification">
+          <DataField>DateModification</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>

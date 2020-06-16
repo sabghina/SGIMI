@@ -110,28 +110,42 @@ namespace BT.Stage.SGIMI.Commun.Tools
             };
             return intervention;
         }
-        public static List<InterventionReport> InterventionListToInterventionReportList(List<Intervention> interventions)
+        public static List<InterventionReport> InterventionListToInterventionReportList(List<Intervention> interventions, List<Reclamation> reclamations)
         {
             List<InterventionReport> interventionReports = new List<InterventionReport>();
             foreach (Intervention intervention in interventions)
             {
-                InterventionReport interventionReport = InterventionToInterventionReport(intervention);
-                interventionReports.Add(interventionReport);
+                foreach (Reclamation reclamation in reclamations)
+                {
+                    if (intervention.Reclamation == reclamation.Id)
+                    {
+                        InterventionReport interventionReport = InterventionToInterventionReport(intervention, reclamation);
+                        interventionReports.Add(interventionReport);
+
+                    }
+                }
+                
             }
             return interventionReports;
         }
-        public static InterventionReport InterventionToInterventionReport(Intervention intervention)
+        public static InterventionReport InterventionToInterventionReport(Intervention intervention, Reclamation reclamation)
         {
 
             InterventionReport interventionReport = new InterventionReport
             {
-                Date = $"{intervention.CreatedDate}",
+                
                 Etat = $"{ intervention.Etat}",
                 Nature = $"{intervention.Nature}",
-                Reclamation = $"{intervention.Reclamation}",
+                Reclamation = $"{reclamation.Probleme}",
                 ProblemeConstate = $"{intervention.ProblemeConstate}",
                 TraveauxEffectues = $"{intervention.TraveauxEffectues}",
-                InterventionBy = $"{intervention.CreatedBy}"
+                CreatedBy = $"{ intervention.CreatedBy}",
+                DateCreation = $"Date : {intervention.CreatedDate} / Heure : { intervention.CreatedTime }",
+                LastUpdatedBy = $"{intervention.LastUpdatedBy}",
+                DateModification = $"Date : {intervention.LastUpdatedDate} / Heure : { intervention.LastUpdatedTime }",
+
+
+
 
             };
 
