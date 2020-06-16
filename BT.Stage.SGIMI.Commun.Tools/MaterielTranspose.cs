@@ -205,14 +205,21 @@ namespace BT.Stage.SGIMI.Commun.Tools
             };
             return affectationMaterielViewModel;
         }
-        public static List<MaterielReport> MaterielListToMaterielReportList(List<Materiel> materiels)
+        public static List<MaterielReport> MaterielListToMaterielReportList(List<Materiel> materiels, List<Fournisseur> fournisseurs)
         {
             List<MaterielReport> materielReports = new List<MaterielReport>();
             foreach (Materiel materiel in materiels)
-            {
-                MaterielReport materielReport = MaterielToMaterielReport(materiel);
+            { 
+                foreach (Fournisseur fournisseur in fournisseurs)
+                {
+                    if (materiel.Fournisseur == fournisseur.Id)
+                    {
+                        MaterielReport materielReport = MaterielToMaterielReport(materiel, fournisseur);
 
-                materielReports.Add(materielReport);
+                        materielReports.Add(materielReport);
+                    }
+                }
+                
             }
             return materielReports;
         }
@@ -245,7 +252,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
             return materiel;
         }
 
-        public static MaterielReport MaterielToMaterielReport(Materiel materiel)
+        public static MaterielReport MaterielToMaterielReport(Materiel materiel, Fournisseur fournisseur)
         {
             MaterielReport materielReport = new MaterielReport
             {
@@ -254,11 +261,20 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Modele = $"{materiel.Modele}",
                 ReferenceBT = $"{materiel.ReferenceBT}",
                 NumeroDeSerie = $"{materiel.NumeroDeSerie}",
-                Fournisseur = $"{materiel.Fournisseur}",
+                Fournisseur = $"{fournisseur.Nom}",
                 Etat = $"{materiel.Etat}",
+                Statut = $"{materiel.Statut}",
                 Agent = $"{materiel.Agent}",
-                DateContrat = $"{materiel.CreatedDate}",
-                DateAffectation = $"{materiel.AffectedDate}"
+                CreatedBy = $"{materiel.CreatedBy}",
+                DateContrat = $"Date : {materiel.CreatedDate} / Heure : { materiel.CreatedTime }",
+                AffectedBy = $"{materiel.AffectedBy}",
+                DateAffectation = $"Date : {materiel.AffectedDate} / Heure : { materiel.AffectedTime }",
+                RevokedBy = $"{materiel.RevokedBy}",
+                DateElimination = $"Date : {materiel.RevokedDate} / Heure : { materiel.RevokedTime }",
+                ArchivedBy = $"{materiel.ArchivedBy}",
+                DateArchive = $"Date : {materiel.ArchivedDate} / Heure : { materiel.ArchivedTime }",
+                LastUpdatedBy = $"{materiel.LastUpdatedBy}",
+                DateModification = $"Date : {materiel.LastUpdatedDate} / Heure : { materiel.LastUpdatedTime }",
             };
 
             return materielReport;

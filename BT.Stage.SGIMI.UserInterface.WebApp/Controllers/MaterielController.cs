@@ -374,7 +374,8 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         public FileResult DynamicReports()
         {
             List<Materiel> materiels = materielRepository.GetMateriels();
-            List<MaterielReport> materielReports = MaterielTranspose.MaterielListToMaterielReportList(materiels);
+            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
+            List<MaterielReport> materielReports = MaterielTranspose.MaterielListToMaterielReportList(materiels, fournisseurs);
             byte[] file = materielRepository.DynamicReports(materielReports);
             string filename = $"dynamic_reports_{DateTime.Now}.pdf";
             return File(file, "application/pdf", filename);
@@ -384,7 +385,8 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         public FileResult DynamicReport(int id)
         {
             Materiel materiel = materielRepository.GetMaterielById(id);
-            MaterielReport materielReport = MaterielTranspose.MaterielToMaterielReport(materiel);
+            Fournisseur fournisseur = fournisseurRepository.GetFournisseurById(materiel.Fournisseur);
+            MaterielReport materielReport = MaterielTranspose.MaterielToMaterielReport(materiel, fournisseur);
             byte[] file = materielRepository.DynamicReport(materielReport);
             string filename = $"ContratMateriel_{id}_{DateTime.Now}.pdf";
             return File(file, "application/pdf", filename);

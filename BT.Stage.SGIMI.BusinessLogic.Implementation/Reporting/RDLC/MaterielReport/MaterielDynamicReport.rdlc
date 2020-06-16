@@ -20,10 +20,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>1.65792cm</Top>
-        <Left>7.88459cm</Left>
+        <Top>0.17639cm</Top>
+        <Left>3.91583cm</Left>
         <Height>0.6cm</Height>
-        <Width>3.33375cm</Width>
+        <Width>4.7625cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -52,10 +52,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>4.7282cm</Top>
-        <Left>7.88459cm</Left>
+        <Top>3.28194cm</Top>
+        <Left>3.91583cm</Left>
         <Height>0.6cm</Height>
-        <Width>3.62846cm</Width>
+        <Width>4.7625cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -91,10 +91,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>3.98709cm</Top>
-        <Left>7.88459cm</Left>
+        <Top>2.50556cm</Top>
+        <Left>3.91583cm</Left>
         <Height>0.6cm</Height>
-        <Width>3.33375cm</Width>
+        <Width>4.7625cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -124,10 +124,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>3.2107cm</Top>
-        <Left>7.88459cm</Left>
+        <Top>1.72917cm</Top>
+        <Left>3.91583cm</Left>
         <Height>0.6cm</Height>
-        <Width>3.33375cm</Width>
+        <Width>4.7625cm</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -157,10 +157,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>2.43431cm</Top>
-        <Left>7.88459cm</Left>
+        <Top>0.95278cm</Top>
+        <Left>3.91583cm</Left>
         <Height>0.6cm</Height>
-        <Width>3.33375cm</Width>
+        <Width>4.7625cm</Width>
         <ZIndex>4</ZIndex>
         <Style>
           <Border>
@@ -189,10 +189,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>1.62264cm</Top>
-        <Left>14.15521cm</Left>
+        <Top>0.17639cm</Top>
+        <Left>12.21729cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.445cm</Width>
+        <Width>8.49312cm</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
@@ -221,10 +221,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>4.7282cm</Top>
-        <Left>14.15521cm</Left>
+        <Top>3.28194cm</Top>
+        <Left>12.21729cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.445cm</Width>
+        <Width>8.49312cm</Width>
         <ZIndex>6</ZIndex>
         <Style>
           <Border>
@@ -253,10 +253,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>3.98709cm</Top>
-        <Left>14.15521cm</Left>
+        <Top>2.50556cm</Top>
+        <Left>12.21729cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.445cm</Width>
+        <Width>8.49312cm</Width>
         <ZIndex>7</ZIndex>
         <Style>
           <Border>
@@ -285,10 +285,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>3.2107cm</Top>
-        <Left>14.15521cm</Left>
+        <Top>1.72917cm</Top>
+        <Left>12.21729cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.445cm</Width>
+        <Width>8.49312cm</Width>
         <ZIndex>8</ZIndex>
         <Style>
           <Border>
@@ -317,10 +317,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>2.43431cm</Top>
-        <Left>14.15521cm</Left>
+        <Top>0.95278cm</Top>
+        <Left>12.21729cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.445cm</Width>
+        <Width>8.49312cm</Width>
         <ZIndex>9</ZIndex>
         <Style>
           <Border>
@@ -350,10 +350,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>5.50459cm</Top>
-        <Left>7.88459cm</Left>
+        <Top>4.05833cm</Top>
+        <Left>3.91583cm</Left>
         <Height>0.6cm</Height>
-        <Width>3.33375cm</Width>
+        <Width>4.7625cm</Width>
         <ZIndex>10</ZIndex>
         <Style>
           <Border>
@@ -382,55 +382,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>5.50459cm</Top>
-        <Left>14.15521cm</Left>
+        <Top>4.05833cm</Top>
+        <Left>12.21729cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.445cm</Width>
+        <Width>8.49312cm</Width>
         <ZIndex>11</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Line Name="Line3">
-        <Top>0.68467cm</Top>
-        <Height>0cm</Height>
-        <Width>24.60626cm</Width>
-        <ZIndex>12</ZIndex>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-          </Border>
-        </Style>
-      </Line>
-      <Textbox Name="Textbox19">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Signature Directeur BT </Value>
-                <Style>
-                  <FontSize>12pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox18</rd:DefaultName>
-        <Top>10.43522cm</Top>
-        <Left>19.48215cm</Left>
-        <Height>0.75875cm</Height>
-        <Width>4.77542cm</Width>
-        <ZIndex>13</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -448,7 +404,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Date Contrat :</Value>
+                <Value>Date Debut Contrat :</Value>
                 <Style>
                   <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
@@ -459,11 +415,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>7.83376cm</Top>
-        <Left>7.88459cm</Left>
+        <Top>8.58452cm</Top>
+        <Left>3.91583cm</Left>
         <Height>0.6cm</Height>
-        <Width>3.33375cm</Width>
-        <ZIndex>14</ZIndex>
+        <Width>4.7625cm</Width>
+        <ZIndex>12</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -491,44 +447,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox16</rd:DefaultName>
-        <Top>7.83376cm</Top>
-        <Left>14.15521cm</Left>
+        <Top>8.58452cm</Top>
+        <Left>12.21729cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.445cm</Width>
-        <ZIndex>15</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox20">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Signature Fournisseur </Value>
-                <Style>
-                  <FontSize>12pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox18</rd:DefaultName>
-        <Top>10.43522cm</Top>
-        <Left>1.26076cm</Left>
-        <Height>0.75875cm</Height>
-        <Width>4.77542cm</Width>
-        <ZIndex>16</ZIndex>
+        <Width>8.49312cm</Width>
+        <ZIndex>13</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -557,11 +480,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>6.95153cm</Top>
-        <Left>7.88459cm</Left>
+        <Top>4.83472cm</Top>
+        <Left>3.91583cm</Left>
         <Height>0.70583cm</Height>
-        <Width>3.33375cm</Width>
-        <ZIndex>17</ZIndex>
+        <Width>4.7625cm</Width>
+        <ZIndex>14</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -590,11 +513,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>8.61014cm</Top>
-        <Left>7.88459cm</Left>
+        <Top>10.13729cm</Top>
+        <Left>3.91583cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.20688cm</Width>
-        <ZIndex>18</ZIndex>
+        <Width>4.7625cm</Width>
+        <ZIndex>15</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -613,18 +536,20 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!Etat.Value, "MaterielDataSet")</Value>
-                <Style />
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox23</rd:DefaultName>
-        <Top>6.28098cm</Top>
-        <Left>14.15521cm</Left>
+        <Top>6.25535cm</Top>
+        <Left>12.21729cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
-        <ZIndex>19</ZIndex>
+        <Width>8.49312cm</Width>
+        <ZIndex>16</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -653,11 +578,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>6.28098cm</Top>
-        <Left>7.88459cm</Left>
+        <Top>6.25535cm</Top>
+        <Left>3.91583cm</Left>
         <Height>0.6cm</Height>
-        <Width>3.33375cm</Width>
-        <ZIndex>20</ZIndex>
+        <Width>4.7625cm</Width>
+        <ZIndex>17</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -676,18 +601,20 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!Agent.Value, "MaterielDataSet")</Value>
-                <Style />
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox25</rd:DefaultName>
-        <Top>6.98681cm</Top>
-        <Left>14.15521cm</Left>
+        <Top>4.90527cm</Top>
+        <Left>12.21729cm</Left>
         <Height>0.63528cm</Height>
-        <Width>2.5cm</Width>
-        <ZIndex>21</ZIndex>
+        <Width>8.49312cm</Width>
+        <ZIndex>18</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -706,17 +633,97 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!DateAffectation.Value, "MaterielDataSet")</Value>
-                <Style />
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox26</rd:DefaultName>
-        <Top>8.61014cm</Top>
-        <Left>14.15521cm</Left>
+        <Top>10.13729cm</Top>
+        <Left>12.21729cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Width>8.49312cm</Width>
+        <ZIndex>19</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Line Name="Line1">
+        <Top>5.94346cm</Top>
+        <Left>1.92221cm</Left>
+        <Height>0cm</Height>
+        <Width>21.39732cm</Width>
+        <ZIndex>20</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Textbox Name="Textbox18">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Statut :</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox18</rd:DefaultName>
+        <Top>7.03174cm</Top>
+        <Left>3.91583cm</Left>
+        <Height>0.6cm</Height>
+        <Width>4.7625cm</Width>
+        <ZIndex>21</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox27">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Ajouté par :</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox27</rd:DefaultName>
+        <Top>7.80813cm</Top>
+        <Left>3.91583cm</Left>
+        <Height>0.6cm</Height>
+        <Width>4.7625cm</Width>
         <ZIndex>22</ZIndex>
         <Style>
           <Border>
@@ -728,14 +735,533 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
+      <Textbox Name="Textbox28">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!Statut.Value, "MaterielDataSet")</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox28</rd:DefaultName>
+        <Top>7.03174cm</Top>
+        <Left>12.21729cm</Left>
+        <Height>0.6cm</Height>
+        <Width>8.49312cm</Width>
+        <ZIndex>23</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox29">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!CreatedBy.Value, "MaterielDataSet")</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox28</rd:DefaultName>
+        <Top>7.80813cm</Top>
+        <Left>12.21729cm</Left>
+        <Height>0.6cm</Height>
+        <Width>8.49312cm</Width>
+        <ZIndex>24</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox30">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Affecté par :</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox28</rd:DefaultName>
+        <Top>9.3609cm</Top>
+        <Left>3.91583cm</Left>
+        <Height>0.6cm</Height>
+        <Width>4.7625cm</Width>
+        <ZIndex>25</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox31">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Date Fin Contrat :</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox28</rd:DefaultName>
+        <Top>13.24285cm</Top>
+        <Left>3.91583cm</Left>
+        <Height>0.6cm</Height>
+        <Width>4.7625cm</Width>
+        <ZIndex>26</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox32">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!ArchivedBy.Value, "MaterielDataSet")</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox28</rd:DefaultName>
+        <Top>12.46646cm</Top>
+        <Left>12.21729cm</Left>
+        <Height>0.6cm</Height>
+        <Width>8.49312cm</Width>
+        <ZIndex>27</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox33">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Archivé par :</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox28</rd:DefaultName>
+        <Top>12.46646cm</Top>
+        <Left>3.91583cm</Left>
+        <Height>0.6cm</Height>
+        <Width>4.7625cm</Width>
+        <ZIndex>28</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox34">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!DateElimination.Value, "MaterielDataSet")</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox28</rd:DefaultName>
+        <Top>11.69007cm</Top>
+        <Left>12.21729cm</Left>
+        <Height>0.6cm</Height>
+        <Width>8.49312cm</Width>
+        <ZIndex>29</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox35">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Date Elimination :</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox28</rd:DefaultName>
+        <Top>11.69007cm</Top>
+        <Left>3.91583cm</Left>
+        <Height>0.6cm</Height>
+        <Width>4.7625cm</Width>
+        <ZIndex>30</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox36">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!RevokedBy.Value, "MaterielDataSet")</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox28</rd:DefaultName>
+        <Top>10.91368cm</Top>
+        <Left>12.21729cm</Left>
+        <Height>0.6cm</Height>
+        <Width>8.49312cm</Width>
+        <ZIndex>31</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox37">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Eliminé par :</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox28</rd:DefaultName>
+        <Top>10.91368cm</Top>
+        <Left>3.91583cm</Left>
+        <Height>0.6cm</Height>
+        <Width>4.7625cm</Width>
+        <ZIndex>32</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox38">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!AffectedBy.Value, "MaterielDataSet")</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox28</rd:DefaultName>
+        <Top>9.3609cm</Top>
+        <Left>12.21729cm</Left>
+        <Height>0.6cm</Height>
+        <Width>8.49312cm</Width>
+        <ZIndex>33</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox39">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!LastUpdatedBy.Value, "MaterielDataSet")</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox28</rd:DefaultName>
+        <Top>14.01924cm</Top>
+        <Left>12.21729cm</Left>
+        <Height>0.6cm</Height>
+        <Width>8.49312cm</Width>
+        <ZIndex>34</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox40">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Modifié par :</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox28</rd:DefaultName>
+        <Top>14.01924cm</Top>
+        <Left>3.91583cm</Left>
+        <Height>0.6cm</Height>
+        <Width>4.7625cm</Width>
+        <ZIndex>35</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox41">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!DateArchive.Value, "MaterielDataSet")</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox28</rd:DefaultName>
+        <Top>13.24285cm</Top>
+        <Left>12.21729cm</Left>
+        <Height>0.6cm</Height>
+        <Width>8.49312cm</Width>
+        <ZIndex>36</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox42">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!DateModification.Value, "MaterielDataSet")</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox28</rd:DefaultName>
+        <Top>14.79563cm</Top>
+        <Left>12.21729cm</Left>
+        <Height>0.6cm</Height>
+        <Width>8.49312cm</Width>
+        <ZIndex>37</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox43">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Date Modification :</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox28</rd:DefaultName>
+        <Top>14.79563cm</Top>
+        <Left>3.91583cm</Left>
+        <Height>0.6cm</Height>
+        <Width>4.7625cm</Width>
+        <ZIndex>38</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>4.40707in</Height>
+    <Height>6.14808in</Height>
     <Style />
   </Body>
-  <Width>9.68751in</Width>
+  <Width>9.94793in</Width>
   <Page>
     <PageHeader>
-      <Height>5.50982cm</Height>
+      <Height>4.8219cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -759,9 +1285,9 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>0.68792cm</Top>
-          <Left>9.39445cm</Left>
-          <Height>0.83799cm</Height>
+          <Top>0.39688cm</Top>
+          <Left>10.0559cm</Left>
+          <Height>0.67924cm</Height>
           <Width>8.47959cm</Width>
           <Style>
             <Border>
@@ -778,9 +1304,9 @@
           <Source>Embedded</Source>
           <Value>Logo_BT</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>0.68792cm</Top>
-          <Left>2.41951cm</Left>
-          <Height>4.29273cm</Height>
+          <Top>0.39688cm</Top>
+          <Left>3.08096cm</Left>
+          <Height>3.7371cm</Height>
           <Width>3.61667cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
@@ -912,8 +1438,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox14</rd:DefaultName>
-          <Top>1.78167cm</Top>
-          <Left>9.39445cm</Left>
+          <Top>1.14667cm</Top>
+          <Left>10.0559cm</Left>
           <Height>3.19897cm</Height>
           <Width>8.47959cm</Width>
           <ZIndex>2</ZIndex>
@@ -928,6 +1454,17 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
+        <Line Name="Line3">
+          <Top>4.48675cm</Top>
+          <Height>0cm</Height>
+          <Width>25.26773cm</Width>
+          <ZIndex>3</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Line>
       </ReportItems>
       <Style>
         <Border>
@@ -936,7 +1473,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>1.27cm</Height>
+      <Height>2.12575cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -955,8 +1492,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox15</rd:DefaultName>
-          <Top>0.07055cm</Top>
-          <Left>11.55584cm</Left>
+          <Top>1.41992cm</Top>
+          <Left>11.50292cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
           <Style>
@@ -969,6 +1506,83 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
+        <Textbox Name="Textbox20">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Signature Fournisseur </Value>
+                  <Style>
+                    <FontSize>12pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox18</rd:DefaultName>
+          <Top>0.28222cm</Top>
+          <Left>2.61013cm</Left>
+          <Height>0.75875cm</Height>
+          <Width>4.77542cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox19">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Signature Directeur BT </Value>
+                  <Style>
+                    <FontSize>12pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox18</rd:DefaultName>
+          <Top>0.28222cm</Top>
+          <Left>17.82974cm</Left>
+          <Height>0.75875cm</Height>
+          <Width>4.77542cm</Width>
+          <ZIndex>2</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Line Name="Line4">
+          <Top>0.14111cm</Top>
+          <Height>0cm</Height>
+          <Width>25.26773cm</Width>
+          <ZIndex>3</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Line>
       </ReportItems>
       <Style>
         <Border>
@@ -1040,6 +1654,42 @@
         </Field>
         <Field Name="DateAffectation">
           <DataField>DateAffectation</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Statut">
+          <DataField>Statut</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CreatedBy">
+          <DataField>CreatedBy</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AffectedBy">
+          <DataField>AffectedBy</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RevokedBy">
+          <DataField>RevokedBy</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DateElimination">
+          <DataField>DateElimination</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ArchivedBy">
+          <DataField>ArchivedBy</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DateArchive">
+          <DataField>DateArchive</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LastUpdatedBy">
+          <DataField>LastUpdatedBy</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DateModification">
+          <DataField>DateModification</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
