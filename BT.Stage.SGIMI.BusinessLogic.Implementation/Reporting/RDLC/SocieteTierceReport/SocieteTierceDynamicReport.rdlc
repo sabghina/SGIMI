@@ -11,7 +11,7 @@
               <TextRun>
                 <Value>Nom : </Value>
                 <Style>
-                  <FontSize>11pt</FontSize>
+                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -20,8 +20,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>1.40972cm</Top>
-        <Left>4.77573cm</Left>
+        <Top>1.17299cm</Top>
+        <Left>3.296cm</Left>
         <Height>0.6cm</Height>
         <Width>2.03729cm</Width>
         <Style>
@@ -43,7 +43,7 @@
               <TextRun>
                 <Value>SiteWeb : </Value>
                 <Style>
-                  <FontSize>11pt</FontSize>
+                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -52,10 +52,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>4.51528cm</Top>
-        <Left>4.77573cm</Left>
+        <Top>4.19007cm</Top>
+        <Left>3.296cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.03729cm</Width>
+        <Width>3.22792cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -74,16 +74,10 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Adresse :</Value>
+                <Value>Adresse : </Value>
                 <Style>
-                  <FontSize>11pt</FontSize>
+                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value xml:space="preserve"> </Value>
-                <Style>
-                  <FontSize>11pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -91,10 +85,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>3.73889cm</Top>
-        <Left>4.77573cm</Left>
+        <Top>5.2575cm</Top>
+        <Left>3.296cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.03729cm</Width>
+        <Width>2.83104cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -115,7 +109,7 @@
               <TextRun>
                 <Value>Contact : </Value>
                 <Style>
-                  <FontSize>11pt</FontSize>
+                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -124,8 +118,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>2.9625cm</Top>
-        <Left>4.77573cm</Left>
+        <Top>3.20202cm</Top>
+        <Left>3.296cm</Left>
         <Height>0.6cm</Height>
         <Width>2.03729cm</Width>
         <ZIndex>3</ZIndex>
@@ -148,7 +142,7 @@
               <TextRun>
                 <Value>Email : </Value>
                 <Style>
-                  <FontSize>11pt</FontSize>
+                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -157,8 +151,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>2.18611cm</Top>
-        <Left>4.77573cm</Left>
+        <Top>2.1875cm</Top>
+        <Left>3.296cm</Left>
         <Height>0.6cm</Height>
         <Width>2.03729cm</Width>
         <ZIndex>4</ZIndex>
@@ -179,9 +173,9 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!Nom.Value, "SocieteTierceDataSet")</Value>
+                <Value>=First(Fields!Nom.Value, "FournisseurDataSet")</Value>
                 <Style>
-                  <FontSize>11pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -189,10 +183,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>1.40972cm</Top>
-        <Left>8.53281cm</Left>
+        <Top>1.17299cm</Top>
+        <Left>9.78804cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.445cm</Width>
+        <Width>7.84643cm</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
@@ -211,9 +205,9 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!SiteWeb.Value, "SocieteTierceDataSet")</Value>
+                <Value>=First(Fields!SiteWeb.Value, "FournisseurDataSet")</Value>
                 <Style>
-                  <FontSize>11pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -221,10 +215,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>4.48cm</Top>
-        <Left>8.53281cm</Left>
+        <Top>4.19007cm</Top>
+        <Left>9.77635cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.445cm</Width>
+        <Width>7.84643cm</Width>
         <ZIndex>6</ZIndex>
         <Style>
           <Border>
@@ -243,9 +237,9 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!Adresse.Value, "SocieteTierceDataSet")</Value>
+                <Value>=First(Fields!Adresse.Value, "FournisseurDataSet")</Value>
                 <Style>
-                  <FontSize>11pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -253,10 +247,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>3.73889cm</Top>
-        <Left>8.53282cm</Left>
+        <Top>5.2575cm</Top>
+        <Left>9.78804cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.445cm</Width>
+        <Width>7.84643cm</Width>
         <ZIndex>7</ZIndex>
         <Style>
           <Border>
@@ -275,9 +269,9 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!Contact.Value, "SocieteTierceDataSet")</Value>
+                <Value>=First(Fields!Contact.Value, "FournisseurDataSet")</Value>
                 <Style>
-                  <FontSize>11pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -285,10 +279,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>2.92722cm</Top>
-        <Left>8.53281cm</Left>
+        <Top>3.20202cm</Top>
+        <Left>9.78804cm</Left>
         <Height>0.6cm</Height>
-        <Width>11.32417cm</Width>
+        <Width>10.8873cm</Width>
         <ZIndex>8</ZIndex>
         <Style>
           <Border>
@@ -307,9 +301,9 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!Email.Value, "SocieteTierceDataSet")</Value>
+                <Value>=First(Fields!Email.Value, "FournisseurDataSet")</Value>
                 <Style>
-                  <FontSize>11pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -317,10 +311,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>2.18611cm</Top>
-        <Left>8.53281cm</Left>
+        <Top>2.1875cm</Top>
+        <Left>9.78804cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.445cm</Width>
+        <Width>7.84643cm</Width>
         <ZIndex>9</ZIndex>
         <Style>
           <Border>
@@ -332,127 +326,29 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="Textbox15">
+      <Textbox Name="Textbox2">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!DateContrat.Value, "SocieteTierceDataSet")</Value>
+                <Value>Date création :</Value>
                 <Style>
-                  <FontSize>11pt</FontSize>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox15</rd:DefaultName>
-        <Top>6.06693cm</Top>
-        <Left>8.53281cm</Left>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>8.56563cm</Top>
+        <Left>3.296cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.445cm</Width>
+        <Width>3.51896cm</Width>
         <ZIndex>10</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox16">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Date contrat :</Value>
-                <Style>
-                  <FontSize>11pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox16</rd:DefaultName>
-        <Top>6.03166cm</Top>
-        <Left>4.77573cm</Left>
-        <Height>0.6cm</Height>
-        <Width>3.16146cm</Width>
-        <ZIndex>11</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox19">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Signature </Value>
-                <Style>
-                  <FontSize>12pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox19</rd:DefaultName>
-        <Top>6.41174cm</Top>
-        <Left>17.06245cm</Left>
-        <Height>0.63528cm</Height>
-        <Width>2.5cm</Width>
-        <ZIndex>12</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox17">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Etat :</Value>
-                <Style>
-                  <FontSize>12pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox16</rd:DefaultName>
-        <Top>5.32582cm</Top>
-        <Left>4.77573cm</Left>
-        <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
-        <ZIndex>13</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -470,18 +366,96 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!Etat.Value, "SocieteTierceDataSet")</Value>
-                <Style />
+                <Value>=First(Fields!DateContrat.Value, "FournisseurDataSet")</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>5.32582cm</Top>
-        <Left>8.53281cm</Left>
+        <Top>8.56563cm</Top>
+        <Left>9.77635cm</Left>
+        <Height>0.6cm</Height>
+        <Width>7.85812cm</Width>
+        <ZIndex>11</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Line Name="Line3">
+        <Top>0.73202cm</Top>
+        <Height>0cm</Height>
+        <Width>24.34168cm</Width>
+        <ZIndex>12</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Textbox Name="Textbox16">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Etat :</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox16</rd:DefaultName>
+        <Top>6.61598cm</Top>
+        <Left>3.296cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
+        <ZIndex>13</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox17">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!Etat.Value, "FournisseurDataSet")</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox17</rd:DefaultName>
+        <Top>6.61598cm</Top>
+        <Left>9.77635cm</Left>
+        <Height>0.6cm</Height>
+        <Width>7.84643cm</Width>
         <ZIndex>14</ZIndex>
         <Style>
           <Border>
@@ -493,14 +467,481 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
+      <Textbox Name="Textbox19">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Ajouté par :</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox19</rd:DefaultName>
+        <Top>7.57757cm</Top>
+        <Left>3.296cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.5cm</Width>
+        <ZIndex>15</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox20">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!CreatedBy.Value, "FournisseurDataSet")</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox20</rd:DefaultName>
+        <Top>7.57757cm</Top>
+        <Left>9.77635cm</Left>
+        <Height>0.6cm</Height>
+        <Width>7.85812cm</Width>
+        <ZIndex>16</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox21">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Archivé par : </Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox21</rd:DefaultName>
+        <Top>9.52722cm</Top>
+        <Left>3.296cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.90037cm</Width>
+        <ZIndex>17</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox22">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!ArchivedBy.Value, "FournisseurDataSet")</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox22</rd:DefaultName>
+        <Top>9.52722cm</Top>
+        <Left>9.77635cm</Left>
+        <Height>0.6cm</Height>
+        <Width>7.84643cm</Width>
+        <ZIndex>18</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox23">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Date fin contrat :</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox23</rd:DefaultName>
+        <Top>10.51528cm</Top>
+        <Left>3.296cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.51896cm</Width>
+        <ZIndex>19</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox24">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!DateArchive.Value, "FournisseurDataSet")</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox24</rd:DefaultName>
+        <Top>10.51528cm</Top>
+        <Left>9.77635cm</Left>
+        <Height>0.6cm</Height>
+        <Width>7.85812cm</Width>
+        <ZIndex>20</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox25">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Activé par :</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox25</rd:DefaultName>
+        <Top>11.45042cm</Top>
+        <Left>3.296cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.5cm</Width>
+        <ZIndex>21</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox26">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!ActivatedBy.Value, "FournisseurDataSet")</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox26</rd:DefaultName>
+        <Top>11.45042cm</Top>
+        <Left>9.77635cm</Left>
+        <Height>0.6cm</Height>
+        <Width>7.85812cm</Width>
+        <ZIndex>22</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox27">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Date activation :</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox27</rd:DefaultName>
+        <Top>12.41202cm</Top>
+        <Left>3.296cm</Left>
+        <Height>0.6cm</Height>
+        <Width>4.13036cm</Width>
+        <ZIndex>23</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox28">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!DateActivation.Value, "FournisseurDataSet")</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox28</rd:DefaultName>
+        <Top>12.41202cm</Top>
+        <Left>9.77635cm</Left>
+        <Height>0.6cm</Height>
+        <Width>7.84643cm</Width>
+        <ZIndex>24</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox29">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Modifié par :</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox29</rd:DefaultName>
+        <Top>13.3207cm</Top>
+        <Left>3.296cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.22792cm</Width>
+        <ZIndex>25</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox30">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!LastUpdatedBy.Value, "FournisseurDataSet")</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox30</rd:DefaultName>
+        <Top>13.3207cm</Top>
+        <Left>9.77635cm</Left>
+        <Height>0.6cm</Height>
+        <Width>7.85812cm</Width>
+        <ZIndex>26</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox31">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Date modification :</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox31</rd:DefaultName>
+        <Top>14.23169cm</Top>
+        <Left>3.296cm</Left>
+        <Height>0.6cm</Height>
+        <Width>4.13036cm</Width>
+        <ZIndex>27</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox32">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!DateModification.Value, "FournisseurDataSet")</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox32</rd:DefaultName>
+        <Top>14.23169cm</Top>
+        <Left>9.77635cm</Left>
+        <Height>0.6cm</Height>
+        <Width>7.85812cm</Width>
+        <ZIndex>28</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Line Name="Line1">
+        <Top>6.35139cm</Top>
+        <Left>1.71662cm</Left>
+        <Height>0cm</Height>
+        <Width>20.7827cm</Width>
+        <ZIndex>29</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
     </ReportItems>
-    <Height>2.82997in</Height>
+    <Height>5.90869in</Height>
     <Style />
   </Body>
-  <Width>8.10417in</Width>
+  <Width>9.58334in</Width>
   <Page>
     <PageHeader>
-      <Height>5.50982cm</Height>
+      <Height>6.27696cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -511,7 +952,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Contrat du société tierce</Value>
+                  <Value>Contrat du Societe Tierce</Value>
                   <Style>
                     <FontSize>16pt</FontSize>
                     <FontWeight>Bold</FontWeight>
@@ -524,7 +965,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Left>7.50268cm</Left>
+          <Top>0.59076cm</Top>
+          <Left>8.69156cm</Left>
           <Height>1.3407cm</Height>
           <Width>8.47959cm</Width>
           <Style>
@@ -542,7 +984,8 @@
           <Source>Embedded</Source>
           <Value>Logo_BT</Value>
           <Sizing>FitProportional</Sizing>
-          <Left>0.52773cm</Left>
+          <Top>0.59076cm</Top>
+          <Left>1.71662cm</Left>
           <Height>4.29273cm</Height>
           <Width>3.61667cm</Width>
           <ZIndex>1</ZIndex>
@@ -675,8 +1118,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox14</rd:DefaultName>
-          <Top>1.89315cm</Top>
-          <Left>7.50268cm</Left>
+          <Top>2.48391cm</Top>
+          <Left>8.69156cm</Left>
           <Height>3.61667cm</Height>
           <Width>8.47959cm</Width>
           <ZIndex>2</ZIndex>
@@ -699,11 +1142,11 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>2.54cm</Height>
+      <Height>4.30416cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
-        <Textbox Name="Textbox18">
+        <Textbox Name="Textbox15">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
@@ -717,9 +1160,9 @@
               <Style />
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox18</rd:DefaultName>
-          <Top>0.07056cm</Top>
-          <Left>8.80745cm</Left>
+          <rd:DefaultName>Textbox15</rd:DefaultName>
+          <Top>3.25437cm</Top>
+          <Left>10.43781cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
           <Style>
@@ -732,6 +1175,50 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
+        <Textbox Name="Textbox18">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Signature </Value>
+                  <Style>
+                    <FontSize>12pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox18</rd:DefaultName>
+          <Top>0.3175cm</Top>
+          <Left>19.41724cm</Left>
+          <Height>0.75875cm</Height>
+          <Width>2.34125cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Line Name="Line4">
+          <Top>0.14111cm</Top>
+          <Height>0cm</Height>
+          <Width>24.34168cm</Width>
+          <ZIndex>2</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Line>
       </ReportItems>
       <Style>
         <Border>
@@ -757,25 +1244,11 @@
       </ConnectionProperties>
       <rd:DataSourceID>0a6162ef-7c07-499c-84a7-9bb58f5d6ebb</rd:DataSourceID>
     </DataSource>
-    <DataSource Name="SocieteTierce">
-      <ConnectionProperties>
-        <DataProvider>System.Data.DataSet</DataProvider>
-        <ConnectString>/* Local Connection */</ConnectString>
-      </ConnectionProperties>
-      <rd:DataSourceID>3bc80e93-9f33-468e-b3e3-b397c21783c1</rd:DataSourceID>
-    </DataSource>
-    <DataSource Name="SocieteTierceDataSet">
-      <ConnectionProperties>
-        <DataProvider>System.Data.DataSet</DataProvider>
-        <ConnectString>/* Local Connection */</ConnectString>
-      </ConnectionProperties>
-      <rd:DataSourceID>3febd37a-0b67-4700-b70f-d740baa6059f</rd:DataSourceID>
-    </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="SocieteTierceDataSet">
+    <DataSet Name="FournisseurDataSet">
       <Query>
-        <DataSourceName>SocieteTierceDataSet</DataSourceName>
+        <DataSourceName>FournisseurDataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -803,15 +1276,43 @@
           <DataField>Etat</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="CreatedBy">
+          <DataField>CreatedBy</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="DateContrat">
           <DataField>DateContrat</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="ArchivedBy">
+          <DataField>ArchivedBy</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DateArchive">
+          <DataField>DateArchive</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ActivatedBy">
+          <DataField>ActivatedBy</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DateActivation">
+          <DataField>DateActivation</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LastUpdatedBy">
+          <DataField>LastUpdatedBy</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DateModification">
+          <DataField>DateModification</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>SocieteTierceDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Sabrina\source\repos\SGIMI\BT.Stage.SGIMI.BusinessLogic.Implementation\Reporting\Datasets\SocieteTierceDataSet.xsd</rd:SchemaPath>
-        <rd:TableName>SocieteTierce</rd:TableName>
+        <rd:DataSetName>FournisseurDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Sabrina\source\repos\SGIMI\BT.Stage.SGIMI.BusinessLogic.Implementation\Reporting\Datasets\FournisseurDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>Fournisseur</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName />
