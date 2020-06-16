@@ -78,14 +78,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Reporting\Datasets\FournisseurDataSet.cs">
-      <DependentUpon>FournisseurDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Reporting\Datasets\FournisseurDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FournisseurDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Reporting\Datasets\InterventionDataSet.cs">
       <DependentUpon>InterventionDataSet.xsd</DependentUpon>
     </Compile>
@@ -158,17 +150,6 @@
     <None Include="Reporting\Datasets\SocieteTierceDataSet.xss">
       <DependentUpon>SocieteTierceDataSet.xsd</DependentUpon>
     </None>
-    <None Include="Reporting\Datasets\FournisseurDataSet.xsc">
-      <DependentUpon>FournisseurDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Reporting\Datasets\FournisseurDataSet.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>FournisseurDataSet.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Reporting\Datasets\FournisseurDataSet.xss">
-      <DependentUpon>FournisseurDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Reporting\Datasets\InterventionDataSet.xsc">
       <DependentUpon>InterventionDataSet.xsd</DependentUpon>
     </None>
@@ -215,7 +196,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Reporting\RDLC\FournisseurReport\ActivatedFournisseurDynamicReport - Copy.rdlc" />
     <EmbeddedResource Include="Reporting\RDLC\InterventionReport\InterventionDynamicReport.rdlc" />
     <EmbeddedResource Include="Reporting\RDLC\InterventionReport\InterventionDynamicReports.rdlc" />
     <EmbeddedResource Include="Reporting\RDLC\InterventionReport\InterventionStaticReport.rdlc" />

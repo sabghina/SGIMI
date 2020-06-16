@@ -393,7 +393,6 @@
       </Textbox>
       <Line Name="Line3">
         <Top>0.73202cm</Top>
-        <Left>0cm</Left>
         <Height>0cm</Height>
         <Width>24.34168cm</Width>
         <ZIndex>12</ZIndex>
@@ -1312,7 +1311,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>FournisseurDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Sabrina\source\repos\SGIMI\BT.Stage.SGIMI.BusinessLogic.Implementation\Reporting\Datasets\FournisseurDataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\Sabrina\source\repos\SGIMI\BT.Stage.SGIMI.BusinessLogic.Implementation\Reporting\Datasets\SocieteTierceDataSet.xsd</rd:SchemaPath>
         <rd:TableName>Fournisseur</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />

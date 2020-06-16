@@ -29,6 +29,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Interface
         /// </summary>
         /// <param name="fournisseur"></param>
         /// <returns></returns>
+        List <Fournisseur> GetSearchedFournisseurs();
         bool CreateFournisseur(Fournisseur fournisseur);
         bool UpdatedFournisseur(Fournisseur fournisseur);
 
@@ -38,5 +39,6 @@ namespace BT.Stage.SGIMI.BusinessLogic.Interface
         byte[] DynamicReport(FournisseurReport fournisseurReport);
         bool ArchivedFournisseur(Fournisseur fournisseur);
         bool ActivatedFournisseur(Fournisseur fournisseur);
+        bool SearchedFournisseur(Fournisseur fournisseur);
     }
 }

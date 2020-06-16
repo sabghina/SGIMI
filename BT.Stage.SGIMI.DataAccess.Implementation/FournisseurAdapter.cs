@@ -116,5 +116,15 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
                 return false;
             }
         }
+
+        public List<Fournisseur> GetSearchedFournisseurs()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool SearchFournisseur(Fournisseur fournisseur)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
