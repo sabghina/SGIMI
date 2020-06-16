@@ -130,29 +130,37 @@ namespace BT.Stage.SGIMI.Commun.Tools
             return reclamation;
         }
 
-        public static List<ReclamationReport> ReclamationListToReclamationReportList(List<Reclamation> reclamations)
+        public static List<ReclamationReport> ReclamationListToReclamationReportList(List<Reclamation> reclamations, List<Materiel> materiels)
         {
             List<ReclamationReport> reclamationReports = new List<ReclamationReport>();
             foreach (Reclamation reclamation in reclamations)
             {
-                ReclamationReport reclamationReport = ReclamationToReclamationReport(reclamation);
+                foreach (Materiel materiel in materiels)
+                {
+                    if (reclamation.Materiel == materiel.Id)
+                    {
+                        ReclamationReport reclamationReport = ReclamationToReclamationReport(reclamation, materiel);
 
-                reclamationReports.Add(reclamationReport);
+                        reclamationReports.Add(reclamationReport);
+                    }
+                }
             }
             return reclamationReports;
         }
 
-        public static ReclamationReport ReclamationToReclamationReport(Reclamation reclamation)
+        public static ReclamationReport ReclamationToReclamationReport(Reclamation reclamation, Materiel materiel)
         {
             ReclamationReport reclamationReport = new ReclamationReport
             {
-                Materiel = $"{reclamation.Materiel}",
-                Date = $"{reclamation.CreatedDate}",
+                Materiel = $"{materiel.ReferenceBT}",
                 Probleme = $"{reclamation.Probleme}",
                 Commentaire = $"{reclamation.Commentaire}",
                 Etat = $"{reclamation.Etat}",
                 UniteGestion = $"{reclamation.UniteGestion}",
-                Rec_By = $"{reclamation.CreatedBy}"
+                CreatedBy = $"{reclamation.CreatedBy}",
+                DateCreation = $"Date : {reclamation.CreatedDate} / Heure : { reclamation.CreatedTime }",
+                LastUpdatedBy = $"{reclamation.LastUpdatedBy}",
+                DateModification = $"Date : {reclamation.LastUpdatedDate} / Heure : { reclamation.LastUpdatedTime }",
 
             };
 

@@ -4,5 +4,8 @@
 
     public partial class ReclamationDataSet
     {
+        partial class ReclamationDataTable
+        {
+        }
     }
 }

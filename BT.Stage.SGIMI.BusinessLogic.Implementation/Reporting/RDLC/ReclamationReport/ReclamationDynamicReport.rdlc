@@ -9,9 +9,9 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Materiel: </Value>
+                <Value>Matériel : </Value>
                 <Style>
-                  <FontSize>11pt</FontSize>
+                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -20,10 +20,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>1.42007cm</Top>
-        <Left>2.10711cm</Left>
+        <Top>0.3882cm</Top>
+        <Left>3.29805cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.03729cm</Width>
+        <Width>3.95521cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -41,9 +41,9 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Date: </Value>
+                <Value>Date création : </Value>
                 <Style>
-                  <FontSize>11pt</FontSize>
+                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -52,10 +52,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>2.19646cm</Top>
-        <Left>2.10711cm</Left>
+        <Top>6.94972cm</Top>
+        <Left>3.29805cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.03729cm</Width>
+        <Width>3.95521cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -74,9 +74,9 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Probleme: </Value>
+                <Value>Problème : </Value>
                 <Style>
-                  <FontSize>11pt</FontSize>
+                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -85,10 +85,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>3.00813cm</Top>
-        <Left>2.10711cm</Left>
+        <Top>1.52646cm</Top>
+        <Left>3.29805cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.54cm</Width>
+        <Width>3.95521cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -107,9 +107,9 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Commentaire: </Value>
+                <Value>Commentaire : </Value>
                 <Style>
-                  <FontSize>11pt</FontSize>
+                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -118,10 +118,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>3.74924cm</Top>
-        <Left>2.10711cm</Left>
+        <Top>2.58507cm</Top>
+        <Left>3.29805cm</Left>
         <Height>0.6cm</Height>
-        <Width>3.06917cm</Width>
+        <Width>3.95521cm</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -140,9 +140,9 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>UniteGestion: </Value>
+                <Value>Unite gestion : </Value>
                 <Style>
-                  <FontSize>11pt</FontSize>
+                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -151,10 +151,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>5.25639cm</Top>
-        <Left>2.10711cm</Left>
+        <Top>4.78014cm</Top>
+        <Left>3.25805cm</Left>
         <Height>0.6cm</Height>
-        <Width>3.06917cm</Width>
+        <Width>3.99521cm</Width>
         <ZIndex>4</ZIndex>
         <Style>
           <Border>
@@ -173,9 +173,9 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Etat: </Value>
+                <Value>Etat : </Value>
                 <Style>
-                  <FontSize>11pt</FontSize>
+                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -184,10 +184,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>4.49035cm</Top>
-        <Left>2.10711cm</Left>
+        <Top>3.71396cm</Top>
+        <Left>3.25805cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.03729cm</Width>
+        <Width>3.99521cm</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
@@ -208,7 +208,7 @@
               <TextRun>
                 <Value>=First(Fields!Materiel.Value, "ReclamationDataSet")</Value>
                 <Style>
-                  <FontSize>11pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -216,10 +216,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>1.45535cm</Top>
-        <Left>7.50268cm</Left>
+        <Top>0.3882cm</Top>
+        <Left>11.273cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.445cm</Width>
+        <Width>7.81813cm</Width>
         <ZIndex>6</ZIndex>
         <Style>
           <Border>
@@ -240,7 +240,7 @@
               <TextRun>
                 <Value>=First(Fields!Probleme.Value, "ReclamationDataSet")</Value>
                 <Style>
-                  <FontSize>11pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -248,10 +248,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>2.97285cm</Top>
-        <Left>7.50268cm</Left>
+        <Top>1.52646cm</Top>
+        <Left>11.273cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.445cm</Width>
+        <Width>7.81813cm</Width>
         <ZIndex>7</ZIndex>
         <Style>
           <Border>
@@ -272,7 +272,7 @@
               <TextRun>
                 <Value>=First(Fields!Commentaire.Value, "ReclamationDataSet")</Value>
                 <Style>
-                  <FontSize>11pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -280,10 +280,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>3.71396cm</Top>
-        <Left>7.50268cm</Left>
+        <Top>2.58507cm</Top>
+        <Left>11.273cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.445cm</Width>
+        <Width>7.81813cm</Width>
         <ZIndex>8</ZIndex>
         <Style>
           <Border>
@@ -304,7 +304,7 @@
               <TextRun>
                 <Value>=First(Fields!Etat.Value, "ReclamationDataSet")</Value>
                 <Style>
-                  <FontSize>11pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -312,10 +312,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>4.49035cm</Top>
-        <Left>7.50268cm</Left>
+        <Top>3.71396cm</Top>
+        <Left>11.273cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.445cm</Width>
+        <Width>7.81813cm</Width>
         <ZIndex>9</ZIndex>
         <Style>
           <Border>
@@ -336,7 +336,7 @@
               <TextRun>
                 <Value>=First(Fields!UniteGestion.Value, "ReclamationDataSet")</Value>
                 <Style>
-                  <FontSize>11pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -344,10 +344,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>5.25639cm</Top>
-        <Left>7.50268cm</Left>
+        <Top>4.78014cm</Top>
+        <Left>11.273cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.445cm</Width>
+        <Width>7.81813cm</Width>
         <ZIndex>10</ZIndex>
         <Style>
           <Border>
@@ -366,9 +366,9 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!Date.Value, "ReclamationDataSet")</Value>
+                <Value>=First(Fields!DateCreation.Value, "ReclamationDataSet")</Value>
                 <Style>
-                  <FontSize>11pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -376,10 +376,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>2.19646cm</Top>
-        <Left>7.50268cm</Left>
+        <Top>6.94972cm</Top>
+        <Left>11.273cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.445cm</Width>
+        <Width>7.81813cm</Width>
         <ZIndex>11</ZIndex>
         <Style>
           <Border>
@@ -400,7 +400,7 @@
               <TextRun>
                 <Value>Réclamée par :</Value>
                 <Style>
-                  <FontSize>11pt</FontSize>
+                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -409,10 +409,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox4</rd:DefaultName>
-        <Top>6.15513cm</Top>
-        <Left>2.14711cm</Left>
+        <Top>5.89055cm</Top>
+        <Left>3.25805cm</Left>
         <Height>0.6cm</Height>
-        <Width>3.53188cm</Width>
+        <Width>3.95521cm</Width>
         <ZIndex>12</ZIndex>
         <Style>
           <Border>
@@ -431,18 +431,20 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Fields!Rec_By.Value</Value>
-                <Style />
+                <Value>=First(Fields!CreatedBy.Value, "ReclamationDataSet")</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox5</rd:DefaultName>
-        <Top>6.15513cm</Top>
-        <Left>7.50268cm</Left>
+        <Top>5.89055cm</Top>
+        <Left>11.273cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.445cm</Width>
+        <Width>7.81813cm</Width>
         <ZIndex>13</ZIndex>
         <Style>
           <Border>
@@ -454,14 +456,144 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
+      <Textbox Name="Textbox2">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Modifiée par :</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>8.03367cm</Top>
+        <Left>3.29805cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.95521cm</Width>
+        <ZIndex>14</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox18">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Date modification : </Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox18</rd:DefaultName>
+        <Top>9.04791cm</Top>
+        <Left>3.29805cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.99521cm</Width>
+        <ZIndex>15</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox19">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!DateModification.Value, "ReclamationDataSet")</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox18</rd:DefaultName>
+        <Top>9.04791cm</Top>
+        <Left>11.273cm</Left>
+        <Height>0.6cm</Height>
+        <Width>7.81813cm</Width>
+        <ZIndex>16</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox20">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!LastUpdatedBy.Value, "ReclamationDataSet")</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox18</rd:DefaultName>
+        <Top>8.03367cm</Top>
+        <Left>11.273cm</Left>
+        <Height>0.6cm</Height>
+        <Width>7.81813cm</Width>
+        <ZIndex>17</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>3.06608in</Height>
+    <Height>3.86783in</Height>
     <Style />
   </Body>
-  <Width>7.5in</Width>
+  <Width>9.81251in</Width>
   <Page>
     <PageHeader>
-      <Height>5.50982cm</Height>
+      <Height>5.08649cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -485,8 +617,9 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Left>7.50268cm</Left>
-          <Height>1.3407cm</Height>
+          <Top>0.34396cm</Top>
+          <Left>10.61155cm</Left>
+          <Height>0.75862cm</Height>
           <Width>8.47959cm</Width>
           <Style>
             <Border>
@@ -503,9 +636,10 @@
           <Source>Embedded</Source>
           <Value>Logo_BT</Value>
           <Sizing>FitProportional</Sizing>
-          <Left>0.52773cm</Left>
-          <Height>4.29273cm</Height>
-          <Width>3.61667cm</Width>
+          <Top>0.60854cm</Top>
+          <Left>3.68951cm</Left>
+          <Height>3.52544cm</Height>
+          <Width>2.55834cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -636,9 +770,9 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox14</rd:DefaultName>
-          <Top>1.89315cm</Top>
-          <Left>7.50268cm</Left>
-          <Height>3.61667cm</Height>
+          <Top>1.27896cm</Top>
+          <Left>10.61155cm</Left>
+          <Height>3.24625cm</Height>
           <Width>8.47959cm</Width>
           <ZIndex>2</ZIndex>
           <Style>
@@ -652,6 +786,17 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
+        <Line Name="Line3">
+          <Top>4.9101cm</Top>
+          <Height>0cm</Height>
+          <Width>24.89731cm</Width>
+          <ZIndex>3</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Line>
       </ReportItems>
       <Style>
         <Border>
@@ -663,6 +808,48 @@
       <Height>2.54cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Line Name="Line4">
+          <Top>0.17639cm</Top>
+          <Height>0cm</Height>
+          <Width>24.89731cm</Width>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Line>
+        <Textbox Name="Textbox21">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Globals!PageNumber</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox21</rd:DefaultName>
+          <Top>1.5714cm</Top>
+          <Left>11.59306cm</Left>
+          <Height>0.6cm</Height>
+          <Width>2.5cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
       <Style>
         <Border>
           <Style>None</Style>
@@ -719,8 +906,20 @@
           <DataField>UniteGestion</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Rec_By">
-          <DataField>Rec_By</DataField>
+        <Field Name="CreatedBy">
+          <DataField>CreatedBy</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DateCreation">
+          <DataField>DateCreation</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LastUpdatedBy">
+          <DataField>LastUpdatedBy</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DateModification">
+          <DataField>DateModification</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>

@@ -16,12 +16,14 @@
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Materiel" msprop:Generator_ColumnVarNameInTable="columnMateriel" msprop:Generator_ColumnPropNameInRow="Materiel" msprop:Generator_ColumnPropNameInTable="MaterielColumn" msprop:Generator_UserColumnName="Materiel" type="xs:string" minOccurs="0" />
-              <xs:element name="Date" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_UserColumnName="Date" type="xs:string" minOccurs="0" />
               <xs:element name="Probleme" msprop:Generator_ColumnVarNameInTable="columnProbleme" msprop:Generator_ColumnPropNameInRow="Probleme" msprop:Generator_ColumnPropNameInTable="ProblemeColumn" msprop:Generator_UserColumnName="Probleme" type="xs:string" minOccurs="0" />
               <xs:element name="Commentaire" msprop:Generator_ColumnVarNameInTable="columnCommentaire" msprop:Generator_ColumnPropNameInRow="Commentaire" msprop:Generator_ColumnPropNameInTable="CommentaireColumn" msprop:Generator_UserColumnName="Commentaire" type="xs:string" minOccurs="0" />
               <xs:element name="Etat" msprop:Generator_ColumnVarNameInTable="columnEtat" msprop:Generator_ColumnPropNameInRow="Etat" msprop:Generator_ColumnPropNameInTable="EtatColumn" msprop:Generator_UserColumnName="Etat" type="xs:string" minOccurs="0" />
               <xs:element name="UniteGestion" msprop:Generator_ColumnVarNameInTable="columnUniteGestion" msprop:Generator_ColumnPropNameInRow="UniteGestion" msprop:Generator_ColumnPropNameInTable="UniteGestionColumn" msprop:Generator_UserColumnName="UniteGestion" type="xs:string" minOccurs="0" />
-              <xs:element name="Rec_By" msprop:Generator_ColumnVarNameInTable="columnRec_By" msprop:Generator_ColumnPropNameInRow="Rec_By" msprop:Generator_ColumnPropNameInTable="Rec_ByColumn" msprop:Generator_UserColumnName="Rec_By" type="xs:string" minOccurs="0" />
+              <xs:element name="CreatedBy" msprop:Generator_ColumnVarNameInTable="columnCreatedBy" msprop:Generator_ColumnPropNameInRow="CreatedBy" msprop:Generator_ColumnPropNameInTable="CreatedByColumn" msprop:Generator_UserColumnName="CreatedBy" type="xs:string" minOccurs="0" />
+              <xs:element name="DateCreation" msprop:Generator_ColumnVarNameInTable="columnDateCreation" msprop:Generator_ColumnPropNameInRow="DateCreation" msprop:Generator_ColumnPropNameInTable="DateCreationColumn" msprop:Generator_UserColumnName="DateCreation" type="xs:string" minOccurs="0" />
+              <xs:element name="LastUpdatedBy" msprop:Generator_ColumnVarNameInTable="columnLastUpdatedBy" msprop:Generator_ColumnPropNameInRow="LastUpdatedBy" msprop:Generator_ColumnPropNameInTable="LastUpdatedByColumn" msprop:Generator_UserColumnName="LastUpdatedBy" type="xs:string" minOccurs="0" />
+              <xs:element name="DateModification" msprop:Generator_ColumnVarNameInTable="columnDateModification" msprop:Generator_ColumnPropNameInRow="DateModification" msprop:Generator_ColumnPropNameInTable="DateModificationColumn" msprop:Generator_UserColumnName="DateModification" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
