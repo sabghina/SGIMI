@@ -301,7 +301,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
             List<FournisseurReport> fournisseurReports = FournisseurTranspose.FournisseurListToFournisseurReportList(fournisseurs);
             byte[] file = fournisseurRepository.DynamicReports(fournisseurReports);
-            string filename = $"dynamic_reports_{DateTime.Now}.pdf";
+            string filename = $"ContratFournisseurs_{DateTime.Now}.pdf";
             return File(file, "application/pdf", filename);
         }
 
@@ -311,7 +311,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             Fournisseur fournisseur = fournisseurRepository.GetFournisseurById(id);
             FournisseurReport fournisseurReport = FournisseurTranspose.FournisseurToFournisseurReport(fournisseur);
             byte[] file = fournisseurRepository.DynamicReport(fournisseurReport);
-            string filename = $"dynamic_report_{id}_{DateTime.Now}.pdf";
+            string filename = $"ContratFournisseur_{id}_{DateTime.Now}.pdf";
             return File(file, "application/pdf", filename);
         }
     }

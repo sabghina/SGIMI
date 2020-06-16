@@ -123,12 +123,20 @@ namespace BT.Stage.SGIMI.Commun.Tools
             FournisseurReport fournisseurReport = new FournisseurReport
             {
                 Nom = $"{fournisseur.Nom}",
-                Contact = $"Telephone :{fournisseur.Telephone}/Fax: {fournisseur.Fax}",
+                Contact = $"Telephone :{fournisseur.Telephone} / Fax: {fournisseur.Fax}",
                 Email = $"{fournisseur.Email}",
                 Adresse = $"{fournisseur.Adresse}",
                 SiteWeb = $"{fournisseur.SiteWeb}",
                 Etat = $"{fournisseur.Etat}", 
-                DateContrat = $"{fournisseur.CreatedDate}"
+                CreatedBy = $"{fournisseur.CreatedBy}",
+                DateContrat = $"Date : {fournisseur.CreatedDate} / Heure: {fournisseur.CreatedTime} ",
+                ArchivedBy = $"{fournisseur.ArchivedBy}",
+                DateArchive = $"Date : {fournisseur.ArchivedDate} / Heure: {fournisseur.ArchivedTime} ",
+                ActivatedBy = $"{fournisseur.ActivatedBy}",
+                DateActivation = $"Date : {fournisseur.ActivatedDate} / Heure: {fournisseur.ActivatedTime} ",
+                LastUpdatedBy = $"{fournisseur.LastUpdatedBy}",
+                DateModification = $"Date : {fournisseur.LastUpdatedDate} / Heure: {fournisseur.LastUpdatedTime} ",
+
             };
 
             return fournisseurReport;

@@ -6,7 +6,7 @@
 <h2>Liste des fournisseurs archivés</h2>
 
 <p>
-    @Html.ActionLink("Retour", "Index")|
+    @Html.ActionLink("Liste des fournisseurs actives", "Index")|
     @Html.ActionLink("Telecharger la liste des fournisseurs archivés ", "DynamicReports")|
 
 </p>
@@ -62,7 +62,6 @@
             </td>
 
             <td>
-                @Html.ActionLink("Modifier", "Edit", new { id = item.Id }) |
                 @Html.ActionLink("Détails", "Details", new { id = item.Id }) |
                 @Html.ActionLink("Activer", "Activer", new { id = item.Id }) |
                 @Html.ActionLink("Télecharger Contrat ", "DynamicReport", new { id = item.Id })

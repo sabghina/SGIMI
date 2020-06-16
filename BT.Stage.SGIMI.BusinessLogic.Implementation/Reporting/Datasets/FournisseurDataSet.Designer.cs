@@ -291,7 +291,21 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             
             private global::System.Data.DataColumn columnEtat;
             
+            private global::System.Data.DataColumn columnCreatedBy;
+            
             private global::System.Data.DataColumn columnDateContrat;
+            
+            private global::System.Data.DataColumn columnArchivedBy;
+            
+            private global::System.Data.DataColumn columnDateArchive;
+            
+            private global::System.Data.DataColumn columnActivatedBy;
+            
+            private global::System.Data.DataColumn columnDateActivation;
+            
+            private global::System.Data.DataColumn columnLastUpdatedBy;
+            
+            private global::System.Data.DataColumn columnDateModification;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -376,9 +390,65 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CreatedByColumn {
+                get {
+                    return this.columnCreatedBy;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn DateContratColumn {
                 get {
                     return this.columnDateContrat;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ArchivedByColumn {
+                get {
+                    return this.columnArchivedBy;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn DateArchiveColumn {
+                get {
+                    return this.columnDateArchive;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ActivatedByColumn {
+                get {
+                    return this.columnActivatedBy;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn DateActivationColumn {
+                get {
+                    return this.columnDateActivation;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn LastUpdatedByColumn {
+                get {
+                    return this.columnLastUpdatedBy;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn DateModificationColumn {
+                get {
+                    return this.columnDateModification;
                 }
             }
             
@@ -419,7 +489,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FournisseurRow AddFournisseurRow(string Nom, string Email, string Contact, string Adresse, string SiteWeb, string Etat, string DateContrat) {
+            public FournisseurRow AddFournisseurRow(string Nom, string Email, string Contact, string Adresse, string SiteWeb, string Etat, string CreatedBy, string DateContrat, string ArchivedBy, string DateArchive, string ActivatedBy, string DateActivation, string LastUpdatedBy, string DateModification) {
                 FournisseurRow rowFournisseurRow = ((FournisseurRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Nom,
@@ -428,7 +498,14 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
                         Adresse,
                         SiteWeb,
                         Etat,
-                        DateContrat};
+                        CreatedBy,
+                        DateContrat,
+                        ArchivedBy,
+                        DateArchive,
+                        ActivatedBy,
+                        DateActivation,
+                        LastUpdatedBy,
+                        DateModification};
                 rowFournisseurRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFournisseurRow);
                 return rowFournisseurRow;
@@ -457,7 +534,14 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
                 this.columnAdresse = base.Columns["Adresse"];
                 this.columnSiteWeb = base.Columns["SiteWeb"];
                 this.columnEtat = base.Columns["Etat"];
+                this.columnCreatedBy = base.Columns["CreatedBy"];
                 this.columnDateContrat = base.Columns["DateContrat"];
+                this.columnArchivedBy = base.Columns["ArchivedBy"];
+                this.columnDateArchive = base.Columns["DateArchive"];
+                this.columnActivatedBy = base.Columns["ActivatedBy"];
+                this.columnDateActivation = base.Columns["DateActivation"];
+                this.columnLastUpdatedBy = base.Columns["LastUpdatedBy"];
+                this.columnDateModification = base.Columns["DateModification"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -475,8 +559,22 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
                 base.Columns.Add(this.columnSiteWeb);
                 this.columnEtat = new global::System.Data.DataColumn("Etat", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEtat);
+                this.columnCreatedBy = new global::System.Data.DataColumn("CreatedBy", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCreatedBy);
                 this.columnDateContrat = new global::System.Data.DataColumn("DateContrat", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDateContrat);
+                this.columnArchivedBy = new global::System.Data.DataColumn("ArchivedBy", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnArchivedBy);
+                this.columnDateArchive = new global::System.Data.DataColumn("DateArchive", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDateArchive);
+                this.columnActivatedBy = new global::System.Data.DataColumn("ActivatedBy", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnActivatedBy);
+                this.columnDateActivation = new global::System.Data.DataColumn("DateActivation", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDateActivation);
+                this.columnLastUpdatedBy = new global::System.Data.DataColumn("LastUpdatedBy", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLastUpdatedBy);
+                this.columnDateModification = new global::System.Data.DataColumn("DateModification", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDateModification);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -715,6 +813,22 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string CreatedBy {
+                get {
+                    try {
+                        return ((string)(this[this.tableFournisseur.CreatedByColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CreatedBy\' in table \'Fournisseur\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFournisseur.CreatedByColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string DateContrat {
                 get {
                     try {
@@ -726,6 +840,102 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
                 }
                 set {
                     this[this.tableFournisseur.DateContratColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string ArchivedBy {
+                get {
+                    try {
+                        return ((string)(this[this.tableFournisseur.ArchivedByColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ArchivedBy\' in table \'Fournisseur\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFournisseur.ArchivedByColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string DateArchive {
+                get {
+                    try {
+                        return ((string)(this[this.tableFournisseur.DateArchiveColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DateArchive\' in table \'Fournisseur\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFournisseur.DateArchiveColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string ActivatedBy {
+                get {
+                    try {
+                        return ((string)(this[this.tableFournisseur.ActivatedByColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ActivatedBy\' in table \'Fournisseur\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFournisseur.ActivatedByColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string DateActivation {
+                get {
+                    try {
+                        return ((string)(this[this.tableFournisseur.DateActivationColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DateActivation\' in table \'Fournisseur\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFournisseur.DateActivationColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string LastUpdatedBy {
+                get {
+                    try {
+                        return ((string)(this[this.tableFournisseur.LastUpdatedByColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'LastUpdatedBy\' in table \'Fournisseur\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFournisseur.LastUpdatedByColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string DateModification {
+                get {
+                    try {
+                        return ((string)(this[this.tableFournisseur.DateModificationColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DateModification\' in table \'Fournisseur\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFournisseur.DateModificationColumn] = value;
                 }
             }
             
@@ -803,6 +1013,18 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCreatedByNull() {
+                return this.IsNull(this.tableFournisseur.CreatedByColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCreatedByNull() {
+                this[this.tableFournisseur.CreatedByColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsDateContratNull() {
                 return this.IsNull(this.tableFournisseur.DateContratColumn);
             }
@@ -811,6 +1033,78 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetDateContratNull() {
                 this[this.tableFournisseur.DateContratColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsArchivedByNull() {
+                return this.IsNull(this.tableFournisseur.ArchivedByColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetArchivedByNull() {
+                this[this.tableFournisseur.ArchivedByColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDateArchiveNull() {
+                return this.IsNull(this.tableFournisseur.DateArchiveColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDateArchiveNull() {
+                this[this.tableFournisseur.DateArchiveColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsActivatedByNull() {
+                return this.IsNull(this.tableFournisseur.ActivatedByColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetActivatedByNull() {
+                this[this.tableFournisseur.ActivatedByColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDateActivationNull() {
+                return this.IsNull(this.tableFournisseur.DateActivationColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDateActivationNull() {
+                this[this.tableFournisseur.DateActivationColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsLastUpdatedByNull() {
+                return this.IsNull(this.tableFournisseur.LastUpdatedByColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetLastUpdatedByNull() {
+                this[this.tableFournisseur.LastUpdatedByColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDateModificationNull() {
+                return this.IsNull(this.tableFournisseur.DateModificationColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDateModificationNull() {
+                this[this.tableFournisseur.DateModificationColumn] = global::System.Convert.DBNull;
             }
         }
         

@@ -212,6 +212,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Reporting\RDLC\FournisseurReport\ActivatedFournisseurDynamicReport - Copy.rdlc" />
     <EmbeddedResource Include="Reporting\RDLC\InterventionReport\InterventionDynamicReport.rdlc" />
     <EmbeddedResource Include="Reporting\RDLC\InterventionReport\InterventionDynamicReports.rdlc" />
     <EmbeddedResource Include="Reporting\RDLC\InterventionReport\InterventionStaticReport.rdlc" />

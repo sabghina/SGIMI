@@ -344,7 +344,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>8.56563cm</Top>
+        <Top>9.57105cm</Top>
         <Left>3.296cm</Left>
         <Height>0.6cm</Height>
         <Width>3.51896cm</Width>
@@ -376,8 +376,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>8.56563cm</Top>
-        <Left>9.77635cm</Left>
+        <Top>9.57105cm</Top>
+        <Left>9.78804cm</Left>
         <Height>0.6cm</Height>
         <Width>7.85812cm</Width>
         <ZIndex>11</ZIndex>
@@ -393,7 +393,6 @@
       </Textbox>
       <Line Name="Line3">
         <Top>0.73202cm</Top>
-        <Left>0cm</Left>
         <Height>0cm</Height>
         <Width>24.34168cm</Width>
         <ZIndex>12</ZIndex>
@@ -421,7 +420,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox16</rd:DefaultName>
-        <Top>6.61598cm</Top>
+        <Top>7.46265cm</Top>
         <Left>3.296cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
@@ -453,7 +452,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox17</rd:DefaultName>
-        <Top>6.61598cm</Top>
+        <Top>7.46265cm</Top>
         <Left>9.77635cm</Left>
         <Height>0.6cm</Height>
         <Width>7.84643cm</Width>
@@ -486,7 +485,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox19</rd:DefaultName>
-        <Top>7.57757cm</Top>
+        <Top>8.47715cm</Top>
         <Left>3.296cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
@@ -518,44 +517,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox20</rd:DefaultName>
-        <Top>7.57757cm</Top>
-        <Left>9.77635cm</Left>
+        <Top>8.47715cm</Top>
+        <Left>9.78804cm</Left>
         <Height>0.6cm</Height>
         <Width>7.85812cm</Width>
         <ZIndex>16</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox21">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Archivé par : </Value>
-                <Style>
-                  <FontSize>12pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox21</rd:DefaultName>
-        <Top>9.52722cm</Top>
-        <Left>3.296cm</Left>
-        <Height>0.6cm</Height>
-        <Width>2.90037cm</Width>
-        <ZIndex>17</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -583,76 +549,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox22</rd:DefaultName>
-        <Top>9.52722cm</Top>
+        <Top>10.70049cm</Top>
         <Left>9.77635cm</Left>
         <Height>0.6cm</Height>
         <Width>7.84643cm</Width>
-        <ZIndex>18</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox23">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Date fin contrat :</Value>
-                <Style>
-                  <FontSize>12pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox23</rd:DefaultName>
-        <Top>10.51528cm</Top>
-        <Left>3.296cm</Left>
-        <Height>0.6cm</Height>
-        <Width>3.51896cm</Width>
-        <ZIndex>19</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox24">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=First(Fields!DateArchive.Value, "FournisseurDataSet")</Value>
-                <Style>
-                  <FontSize>12pt</FontSize>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox24</rd:DefaultName>
-        <Top>10.51528cm</Top>
-        <Left>9.77635cm</Left>
-        <Height>0.6cm</Height>
-        <Width>7.85812cm</Width>
-        <ZIndex>20</ZIndex>
+        <ZIndex>17</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -681,43 +582,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox25</rd:DefaultName>
-        <Top>11.45042cm</Top>
+        <Top>10.70049cm</Top>
         <Left>3.296cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
-        <ZIndex>21</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox26">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=First(Fields!ActivatedBy.Value, "FournisseurDataSet")</Value>
-                <Style>
-                  <FontSize>12pt</FontSize>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox26</rd:DefaultName>
-        <Top>11.45042cm</Top>
-        <Left>9.77635cm</Left>
-        <Height>0.6cm</Height>
-        <Width>7.85812cm</Width>
-        <ZIndex>22</ZIndex>
+        <ZIndex>18</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -746,11 +615,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox27</rd:DefaultName>
-        <Top>12.41202cm</Top>
+        <Top>11.90931cm</Top>
         <Left>3.296cm</Left>
         <Height>0.6cm</Height>
         <Width>4.13036cm</Width>
-        <ZIndex>23</ZIndex>
+        <ZIndex>19</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -778,11 +647,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox28</rd:DefaultName>
-        <Top>12.41202cm</Top>
+        <Top>11.90931cm</Top>
         <Left>9.77635cm</Left>
         <Height>0.6cm</Height>
         <Width>7.84643cm</Width>
-        <ZIndex>24</ZIndex>
+        <ZIndex>20</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -811,11 +680,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox29</rd:DefaultName>
-        <Top>13.3207cm</Top>
+        <Top>13.02966cm</Top>
         <Left>3.296cm</Left>
         <Height>0.6cm</Height>
         <Width>3.22792cm</Width>
-        <ZIndex>25</ZIndex>
+        <ZIndex>21</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -843,11 +712,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox30</rd:DefaultName>
-        <Top>13.3207cm</Top>
+        <Top>13.02966cm</Top>
         <Left>9.77635cm</Left>
         <Height>0.6cm</Height>
         <Width>7.85812cm</Width>
-        <ZIndex>26</ZIndex>
+        <ZIndex>22</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -880,7 +749,7 @@
         <Left>3.296cm</Left>
         <Height>0.6cm</Height>
         <Width>4.13036cm</Width>
-        <ZIndex>27</ZIndex>
+        <ZIndex>23</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -908,11 +777,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox32</rd:DefaultName>
-        <Top>14.23169cm</Top>
+        <Top>14.23168cm</Top>
         <Left>9.77635cm</Left>
         <Height>0.6cm</Height>
         <Width>7.85812cm</Width>
-        <ZIndex>28</ZIndex>
+        <ZIndex>24</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -928,7 +797,7 @@
         <Left>1.71662cm</Left>
         <Height>0cm</Height>
         <Width>20.7827cm</Width>
-        <ZIndex>29</ZIndex>
+        <ZIndex>25</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -953,7 +822,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Fin Contrat du fournisseur</Value>
+                  <Value>Contrat du fournisseur</Value>
                   <Style>
                     <FontSize>16pt</FontSize>
                     <FontWeight>Bold</FontWeight>
