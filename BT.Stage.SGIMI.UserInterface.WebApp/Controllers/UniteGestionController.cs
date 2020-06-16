@@ -150,7 +150,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         public FileResult StaticReports()
         {
               byte[] file = uniteGestionRepository.StaticReports();
-              string filename = $"static_reports_{DateTime.Now}.pdf";
+              string filename = $"ListeUnitesGestions_{DateTime.Now}.pdf";
               return File(file, "application/pdf", filename);
         }
 
@@ -169,7 +169,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 List<UniteGestion> uniteGestions = uniteGestionRepository.GetUniteGestions();
                 List<UniteGestionReport> uniteGestionReports = UniteGestionTranspose.UniteGestionListToUniteGestionReportList(uniteGestions);
                 byte[] file = uniteGestionRepository.DynamicReports(uniteGestionReports);
-                string filename = $"dynamic_reports_{DateTime.Now}.pdf";
+                string filename = $"ListeUnitesGestions_{DateTime.Now}.pdf";
                 return File(file, "application/pdf", filename);
             }
 
@@ -179,7 +179,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 UniteGestion uniteGestion = uniteGestionRepository.GetUniteGestionById(id);
                 UniteGestionReport uniteGestionReport = UniteGestionTranspose.UniteGestionToUniteGestionReport(uniteGestion);
                 byte[] file = uniteGestionRepository.DynamicReport(uniteGestionReport);
-                string filename = $"dynamic_report_{id}_{DateTime.Now}.pdf";
+                string filename = $"DetailsUniteGestion_{id}_{DateTime.Now}.pdf";
                 return File(file, "application/pdf", filename);
          }
         }

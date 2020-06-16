@@ -14,6 +14,8 @@ namespace BT.Stage.SGIMI.Data.DTO
         public string Contact { get; set; }
         public string Adresse { get; set; }
         public string Type { get; set; }
+        public string CreatedBy { get; set; }
+        public string DateCreation { get; set; }
 
     }
 }

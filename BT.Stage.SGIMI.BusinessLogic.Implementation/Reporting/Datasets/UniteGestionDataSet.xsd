@@ -12,7 +12,7 @@
   <xs:element name="UniteGestionDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="UniteGestionDataSet" msprop:Generator_UserDSName="UniteGestionDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="UniteGestion" msprop:Generator_TableClassName="UniteGestionDataTable" msprop:Generator_TableVarName="tableUniteGestion" msprop:Generator_TablePropName="UniteGestion" msprop:Generator_RowDeletingName="UniteGestionRowDeleting" msprop:Generator_RowChangingName="UniteGestionRowChanging" msprop:Generator_RowEvHandlerName="UniteGestionRowChangeEventHandler" msprop:Generator_RowDeletedName="UniteGestionRowDeleted" msprop:Generator_UserTableName="UniteGestion" msprop:Generator_RowChangedName="UniteGestionRowChanged" msprop:Generator_RowEvArgName="UniteGestionRowChangeEvent" msprop:Generator_RowClassName="UniteGestionRow">
+        <xs:element name="UniteGestion" msprop:Generator_TableClassName="UniteGestionDataTable" msprop:Generator_TableVarName="tableUniteGestion" msprop:Generator_RowChangedName="UniteGestionRowChanged" msprop:Generator_TablePropName="UniteGestion" msprop:Generator_RowDeletingName="UniteGestionRowDeleting" msprop:Generator_RowChangingName="UniteGestionRowChanging" msprop:Generator_RowEvHandlerName="UniteGestionRowChangeEventHandler" msprop:Generator_RowDeletedName="UniteGestionRowDeleted" msprop:Generator_RowClassName="UniteGestionRow" msprop:Generator_UserTableName="UniteGestion" msprop:Generator_RowEvArgName="UniteGestionRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Nom" msprop:Generator_ColumnVarNameInTable="columnNom" msprop:Generator_ColumnPropNameInRow="Nom" msprop:Generator_ColumnPropNameInTable="NomColumn" msprop:Generator_UserColumnName="Nom" type="xs:string" minOccurs="0" />
@@ -20,6 +20,8 @@
               <xs:element name="Contact" msprop:Generator_ColumnVarNameInTable="columnContact" msprop:Generator_ColumnPropNameInRow="Contact" msprop:Generator_ColumnPropNameInTable="ContactColumn" msprop:Generator_UserColumnName="Contact" type="xs:string" minOccurs="0" />
               <xs:element name="Adresse" msprop:Generator_ColumnVarNameInTable="columnAdresse" msprop:Generator_ColumnPropNameInRow="Adresse" msprop:Generator_ColumnPropNameInTable="AdresseColumn" msprop:Generator_UserColumnName="Adresse" type="xs:string" minOccurs="0" />
               <xs:element name="Type" msprop:Generator_ColumnVarNameInTable="columnType" msprop:Generator_ColumnPropNameInRow="Type" msprop:Generator_ColumnPropNameInTable="TypeColumn" msprop:Generator_UserColumnName="Type" type="xs:string" minOccurs="0" />
+              <xs:element name="CreatedBy" msprop:Generator_ColumnVarNameInTable="columnCreatedBy" msprop:Generator_ColumnPropNameInRow="CreatedBy" msprop:Generator_ColumnPropNameInTable="CreatedByColumn" msprop:Generator_UserColumnName="CreatedBy" type="xs:string" minOccurs="0" />
+              <xs:element name="DateCreation" msprop:Generator_ColumnVarNameInTable="columnDateCreation" msprop:Generator_ColumnPropNameInRow="DateCreation" msprop:Generator_ColumnPropNameInTable="DateCreationColumn" msprop:Generator_UserColumnName="DateCreation" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

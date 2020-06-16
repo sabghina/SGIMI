@@ -100,10 +100,12 @@ namespace BT.Stage.SGIMI.Commun.Tools
             UniteGestionReport uniteGestionReport = new UniteGestionReport
             {
                 Nom = $"{uniteGestion.Nom}",
-                Contact = $"Telephone :{uniteGestion.Telephone}/Fax: {uniteGestion.Fax}",
+                Contact = $"Telephone : {uniteGestion.Telephone} / Fax: {uniteGestion.Fax}",
                 Email = $"{uniteGestion.Email}",
                 Adresse = $"{uniteGestion.Adresse}",
-                Type = $"{uniteGestion.Type}"
+                Type = $"{uniteGestion.Type}",
+                CreatedBy = $"{uniteGestion.CreatedBy}",
+                DateCreation = $"Date: {uniteGestion.CreatedDate} / Heure: { uniteGestion.CreatedTime }",
             };
 
             return uniteGestionReport;
