@@ -422,6 +422,7 @@
     <Content Include="Views\Materiel\UserMateriels.cshtml" />
     <Content Include="Views\Materiel\ComplainedUser.cshtml" />
     <Content Include="Views\Reclamation\UserOnHold.cshtml" />
+    <Content Include="Views\Reclamation\UserFinished.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
