@@ -51,6 +51,12 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
             return reclamations;
         }
 
+        public List<Reclamation> GetUserFinishedReclamations(string currentUser)
+        {
+            List<Reclamation> userReclamations = reclamationAdapter.GetUserFinishedReclamations(currentUser);
+            return userReclamations;
+        }
+
         public List<Reclamation> GetCanceledReclamations()
         {
             List<Reclamation> reclamations = reclamationAdapter.GetCanceledReclamations();
@@ -187,6 +193,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
             return reclamationAdapter.CancelReclamation(reclamation);
         }
 
+        
     }
 }
 
