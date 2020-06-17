@@ -23,6 +23,19 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
  
         public ActionResult Index()
         {
+            List<Reclamation> reclamations = reclamationRepository.GetReclamations();
+            var nbReclamationByDate = reclamations.GroupBy(Reclamation => Reclamation.CreatedDate)
+                .Select(groupedReclamation => new { date = groupedReclamation.Key, dates = groupedReclamation.ToList() })
+                .ToList();
+
+            List<DataPoint> dataPoints = new List<DataPoint>();
+            foreach (var groupReclamation in nbReclamationByDate)
+            {
+                dataPoints.Add(new DataPoint(groupReclamation.date, groupReclamation.dates.Count()));
+            }
+
+            ViewBag.NombreReclamationParDate = JsonConvert.SerializeObject(dataPoints);
+            return View();
             ////DateFilter dateFilter = new DateFilter(datedebut, datefin);
             //List<Reclamation> reclamations = reclamationRepository.GetReclamations();
             //var nbReclamationByDate = reclamations.GroupBy(Reclamation => Reclamation.CreatedDate)
@@ -36,7 +49,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             //}
 
             //ViewBag.NombreReclamationParDate = JsonConvert.SerializeObject(dataPoints);
-            return View();
+            // return View();
 
             //List<DataPoint> dataPoints1 = new List<DataPoint>();
 
