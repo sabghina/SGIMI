@@ -27,5 +27,6 @@ namespace BT.Stage.SGIMI.DataAccess.Interface
         List<Reclamation> GetInProgressReclamations();
         List<Reclamation> GetFinishedReclamations();
         List<Reclamation> GetCanceledReclamations();
+        List<Reclamation> GetUserReclamations(string currentUser);
     }
 }

@@ -84,6 +84,21 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
             
         }
 
+        public List<Reclamation> GetUserReclamations(string currentUser)
+        {
+            // replace with databse access
+            List<Reclamation> reclamations = sGIMIDbContext.Reclamations.ToList();
+            List<Reclamation> reclamationWainting = new List<Reclamation>();
+            foreach (Reclamation reclamation in reclamations)
+            {
+                if ((reclamation.Etat == "En attente") && (reclamation.CreatedBy == currentUser)) 
+                {
+                    reclamationWainting.Add(reclamation);
+                }
+            }
+            return reclamationWainting;
+        }
+
         public List<Reclamation> GetInProgressReclamations()
         {
             // replace with databse access
@@ -141,5 +156,7 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
                 return false;
             }
         }
+
+      
     }
 }

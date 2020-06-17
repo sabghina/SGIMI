@@ -1,15 +1,14 @@
 ﻿@model IEnumerable<BT.Stage.SGIMI.UserInterface.ViewModel.ReclamationViewModel>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Mes réclamations en attente";
 }
-    <h2>Liste des réclamations en attente </h2>
-    <p>
-        @Html.ActionLink("liste des reclamations en cours", "InProgress")|
-        @Html.ActionLink("liste des reclamations annulées", "Canceled")|
-        @Html.ActionLink("liste des reclamations terminées", "Finished")|
-        @Html.ActionLink(" Mes réclamations en attente", "UserOnHold")|
-        @Html.ActionLink("Telecharger la liste des réclamations", "DynamicReports")
-    </p>
+<h2>Ma liste des réclamations en attente </h2>
+<p>
+    @Html.ActionLink("Ma liste des reclamations en cours", "InProgress")|
+    @Html.ActionLink("Ma liste des reclamations annulées", "Canceled")|
+    @Html.ActionLink("Ma liste des reclamations terminées", "Finished")|
+    @Html.ActionLink("Telecharger ma liste des réclamations", "DynamicReports")
+</p>
 <div class="pull-right">
 
 </div>
@@ -62,6 +61,7 @@
                 @Html.ActionLink("Details", "Details", new { id = item.Id }) |
                 @Html.ActionLink("Annuler", "Annuler", new { id = item.Id }) |
                 @Html.ActionLink("Télecharger Détails ", "DynamicReport", new { id = item.Id })|
+
                 @if ((Request.IsAuthenticated) && (User.IsInRole("admin")))
                 {
                     <a href="@Url.Action("Create", "Intervention", new { reclamation = item.Id })"> intervenir </a>
