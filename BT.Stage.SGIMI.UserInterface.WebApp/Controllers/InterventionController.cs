@@ -183,10 +183,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         {
             try
             {
-                if (!ModelState.IsValid)
-                {
-                    return View(createInterventionViewModel);
-                }
+               
                 string user = User.Identity.Name;
                 Intervention oldIntervention = interventionRepository.GetInterventionById(id);
                 Intervention intervention = InterventionTranspose.TerminerInterventionViewModelToterminerIntervention(oldIntervention, createInterventionViewModel, user);
