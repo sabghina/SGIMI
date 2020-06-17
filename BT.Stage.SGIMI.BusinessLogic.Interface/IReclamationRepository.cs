@@ -35,5 +35,6 @@ namespace BT.Stage.SGIMI.BusinessLogic.Interface
         List<Reclamation> GetInProgressReclamations();
         List<Reclamation> GetUserReclamations(string currentUser);
         List<Reclamation> GetUserFinishedReclamations(string currentUser);
+        List<Reclamation> GetUserInProgressReclamations(string currentUser);
     }
 }

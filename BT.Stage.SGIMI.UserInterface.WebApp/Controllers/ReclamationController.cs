@@ -60,6 +60,20 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
 
             return View(reclamationViewModels);
         }
+
+        // GET: Reclamation User En cours
+        public ActionResult UserInProgress()
+        {
+            // 1.get service list reclamation 
+            string currentUser = User.Identity.Name;
+            List<Reclamation> userReclamations = reclamationRepository.GetUserInProgressReclamations(currentUser);
+            List<Materiel> materiels = materielRepository.GetComplainedMateriels();
+            // 2. transpose entity -> view model
+            List<ReclamationViewModel> reclamationViewModels = ReclamationTranspose.ReclamationListToReclamationViewModelList(userReclamations, materiels);
+
+            return View(reclamationViewModels);
+        }
+
         // Get: Reclamation Terminée
         public ActionResult Finished()
         {

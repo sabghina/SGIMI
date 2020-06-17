@@ -113,6 +113,22 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
             }
             return reclamationInProgress;
         }
+
+        public List<Reclamation> GetUserInProgressReclamations(string currentUser)
+        {
+            // replace with databse access
+            List<Reclamation> reclamations = sGIMIDbContext.Reclamations.ToList();
+            List<Reclamation> reclamationInProgress = new List<Reclamation>();
+            foreach (Reclamation reclamation in reclamations)
+            {
+                if ((reclamation.Etat == "En cours")&&(reclamation.CreatedBy == currentUser))
+                {
+                    reclamationInProgress.Add(reclamation);
+                }
+            }
+            return reclamationInProgress;
+        }
+
         public List<Reclamation> GetCanceledReclamations()
         {
             // replace with databse access
