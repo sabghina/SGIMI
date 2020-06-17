@@ -4,13 +4,7 @@
 }
 <h2>Ma liste des matériels non réclamés</h2>
 <p>
-    @if ((Request.IsAuthenticated) && (User.IsInRole("admin")))
-    {
-        @Html.ActionLink("Liste des matériels non affectés", "Index")
-        @Html.ActionLink("liste des matériels affectés", "Affected")
-        @Html.ActionLink("liste des matériels supprimés", "Archived")
-        @Html.ActionLink("Ma liste des matériels réclamés", "ComplainedUser")
-    }
+    
     @Html.ActionLink("Ma liste des matériels réclamés", "ComplainedUser")|
     @Html.ActionLink("Telecharger ma liste des matériels", "DynamicReports")
 </p>

@@ -157,7 +157,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
             Intervention intervention = new Intervention
             {
 
-                Id = oldIntervention.Id,
+                Id = createInterventionViewModel.Id,
                 Type = oldIntervention.Type,
                 Nature = oldIntervention.Nature,
                 Etat = "Terminée",
