@@ -63,12 +63,36 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         public ActionResult Complained()
         {
             // 1.get service list materiel 
-            List<Materiel> archivedMateriels = materielRepository.GetComplainedMateriels();
+            List<Materiel> complainedMateriels = materielRepository.GetComplainedMateriels();
             List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
             // 2. transpose entity -> view model
-            List<MaterielViewModel> archivedMaterielViewModels = MaterielTranspose.MaterielListToMaterielViewModelList(archivedMateriels, fournisseurs);
+            List<MaterielViewModel> archivedMaterielViewModels = MaterielTranspose.MaterielListToMaterielViewModelList(complainedMateriels, fournisseurs);
 
             return View(archivedMaterielViewModels);
+        }
+        // GET: Materiel reclamé
+        public ActionResult ComplainedUser()
+        {
+            // 1.get service list materiel 
+            string currentUser = User.Identity.Name;
+            List<Materiel> complainedUserMateriels = materielRepository.GetComplainedUserMateriels(currentUser);
+            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
+            // 2. transpose entity -> view model
+            List<MaterielViewModel> archivedMaterielViewModels = MaterielTranspose.MaterielListToMaterielViewModelList(complainedUserMateriels, fournisseurs);
+
+            return View(archivedMaterielViewModels);
+        }
+        // GET: Materiel reclamé
+        public ActionResult UserMateriels()
+        {
+            // 1.get service list materiel 
+            string currentUser = User.Identity.Name;
+            List<Materiel> userMateriels = materielRepository.GetUserMateriels(currentUser);
+            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
+            // 2. transpose entity -> view model
+            List<MaterielViewModel> userMaterielsViewModels = MaterielTranspose.MaterielListToMaterielViewModelList(userMateriels, fournisseurs);
+
+            return View(userMaterielsViewModels);
         }
 
         // GET: Materiel/Details/5

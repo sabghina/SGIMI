@@ -173,7 +173,35 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
             }
         }
 
-        
+        public List<Materiel> GetUserMateriels(string currentUser)
+        {
+            List<Materiel> Listmateriels = sGIMIDbContext.Materiels.ToList();
+            List<Materiel> userMateriels = new List<Materiel>();
+            foreach (Materiel materiel in Listmateriels)
+            {
+                if ((materiel.Agent == currentUser)&& (materiel.Statut== "Non reclamé"))
+                {
+                    userMateriels.Add(materiel);
+                }
+            }
+
+            return userMateriels;
+        }
+
+        public List<Materiel> GetComplainedUserMateriels(string currentUser)
+        {
+            List<Materiel> Listmateriels = sGIMIDbContext.Materiels.ToList();
+            List<Materiel> materiels = new List<Materiel>();
+            foreach (Materiel materiel in Listmateriels)
+            {
+                if ((materiel.Statut == "Reclamé")&&(materiel.Agent== currentUser))
+                {
+                    materiels.Add(materiel);
+                }
+            }
+
+            return materiels;
+        }
     }
 }
 

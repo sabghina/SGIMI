@@ -201,7 +201,17 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
             return materielAdapter.ChangedMateriel(materielEtat);
         }
 
-        
+        public List<Materiel> GetUserMateriels(string currentUser)
+        {
+            List<Materiel> userMateriels = materielAdapter.GetUserMateriels(currentUser);
+            return userMateriels;
+        }
+
+        public List<Materiel> GetComplainedUserMateriels(string currentUser)
+        {
+            List<Materiel> complainedUserMateriels = materielAdapter.GetComplainedUserMateriels(currentUser);
+            return complainedUserMateriels;
+        }
     }
 }
 

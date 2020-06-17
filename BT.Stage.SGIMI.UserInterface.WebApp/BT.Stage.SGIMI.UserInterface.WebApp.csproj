@@ -419,6 +419,8 @@
     <Content Include="Views\Reclamation\Finished.cshtml" />
     <Content Include="Views\Reclamation\Canceled.cshtml" />
     <Content Include="Views\Materiel\Complained.cshtml" />
+    <Content Include="Views\Materiel\UserMateriels.cshtml" />
+    <Content Include="Views\Materiel\ComplainedUser.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

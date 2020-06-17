@@ -35,5 +35,7 @@ namespace BT.Stage.SGIMI.DataAccess.Interface
         List<Materiel> GetArchivedMateriels();
         bool ChangedMateriel(Materiel materielEtat);
         List<Materiel> GetComplainedMateriels();
+        List<Materiel> GetUserMateriels(string currentUser);
+        List<Materiel> GetComplainedUserMateriels(string currentUser);
     }
 }

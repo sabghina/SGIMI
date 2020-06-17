@@ -41,5 +41,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Interface
         List<Materiel> GetArchivedMateriels();
         bool ChangeMateriel(Materiel materielEtat);
         List<Materiel> GetComplainedMateriels();
+        List<Materiel> GetUserMateriels(string currentUser);
+        List<Materiel> GetComplainedUserMateriels(string currentUser);
     }
 }
