@@ -36,7 +36,7 @@
                     else if ((Request.IsAuthenticated) && (User.IsInRole("user")))
                     {
                         <li>@Html.ActionLink("Materiel", "UserMateriels", "Materiel")</li>
-                        <li>@Html.ActionLink("Reclamation", "Index", "Reclamation")</li>
+                        <li>@Html.ActionLink("Reclamation", "UserOnHold", "Reclamation")</li>
                     }
 
 
