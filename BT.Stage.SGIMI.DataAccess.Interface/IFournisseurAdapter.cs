@@ -27,13 +27,13 @@ namespace BT.Stage.SGIMI.DataAccess.Interface
         /// </summary>
         /// <param name="fournisseur"></param>
         /// <returns></returns>
-        List<Fournisseur> GetSearchedFournisseurs();
+        
         bool CreateFournisseur(Fournisseur fournisseur);
         bool UpdateFournisseur(Fournisseur fournisseur);
         string GetNameFournisseurById(int id);
         bool ArchiveFournisseur(Fournisseur fournisseur);
         bool ActiveFournisseur(Fournisseur fournisseur);
-        bool SearchFournisseur(Fournisseur fournisseur);
+        
         
     }
 }

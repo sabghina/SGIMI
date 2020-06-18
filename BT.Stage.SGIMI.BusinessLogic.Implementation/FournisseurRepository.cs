@@ -183,15 +183,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
 
         
 
-        public bool SearchedFournisseur(Fournisseur fournisseur)
-        {
-            return fournisseurAdapter.SearchFournisseur(fournisseur);
-        }
-        public List<Fournisseur> GetSearchedFournisseurs()
-        {
-            List<Fournisseur> searchedFournisseurs = fournisseurAdapter.GetSearchedFournisseurs();
-            return searchedFournisseurs;
-        }
+     
 
     }
 }

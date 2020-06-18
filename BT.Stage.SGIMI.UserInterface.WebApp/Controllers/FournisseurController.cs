@@ -135,17 +135,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
 
         }
 
-        public ActionResult Search()
-        {
-            // 1.get service list fournisseur 
-
-            List<Fournisseur> searchedFournisseurs = fournisseurRepository.GetSearchedFournisseurs();
-
-            // 2. transpose entity -> view model
-            List<FournisseurViewModel> searchedFournisseurViewModels = FournisseurTranspose.FournisseurListToFournisseurViewModelList(searchedFournisseurs);
-
-            return View(searchedFournisseurViewModels);
-        }
+       
 
         //// GET: Fournisseur/Archiver/5
         //public ActionResult Archiver(int id)
