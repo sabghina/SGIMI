@@ -116,6 +116,22 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
 
             return View(reclamationViewModels);
         }
+
+        //Get: Reclamation User Annulée
+        public ActionResult UserCanceled()
+        {
+            // 1.get service list reclamation
+            string currentUser = User.Identity.Name;
+            List<Reclamation> userReclamations = reclamationRepository.GetUserCanceledReclamations(currentUser);
+            List<Materiel> materiels = materielRepository.GetAffectedMateriels();
+            // 2. transpose entity -> view model
+            List<ReclamationViewModel> reclamationViewModels = ReclamationTranspose.ReclamationListToReclamationViewModelList(userReclamations, materiels);
+
+            return View(reclamationViewModels);
+        }
+
+
+
         // GET: Reclamation/Details/5
         public ActionResult Details(int id)
         {

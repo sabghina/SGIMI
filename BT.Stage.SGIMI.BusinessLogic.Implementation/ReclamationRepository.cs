@@ -68,6 +68,12 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
             return reclamations;
         }
 
+        public List<Reclamation> GetUserCanceledReclamations(string currentUser)
+        {
+            List<Reclamation> userReclamations = reclamationAdapter.GetUserCanceledReclamations(currentUser);
+            return userReclamations;
+        }
+
         public bool UpdatedReclamation(Reclamation reclamation)
         {
             return reclamationAdapter.UpdateReclamation(reclamation);

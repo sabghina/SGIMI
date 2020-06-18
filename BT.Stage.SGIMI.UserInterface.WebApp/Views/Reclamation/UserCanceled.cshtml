@@ -1,0 +1,66 @@
+﻿@model IEnumerable<BT.Stage.SGIMI.UserInterface.ViewModel.ReclamationViewModel>
+@{
+    ViewBag.Title = "User Annulé";
+}
+<h2>Liste des réclamations annulées</h2>
+<p>
+    @Html.ActionLink("liste des reclamations en attente", "Index")|
+    @Html.ActionLink("liste des reclamations en cours", "InProgress")|
+    @Html.ActionLink("liste des reclamations terminées", "Finished")|
+    @Html.ActionLink("Telecharger la liste des réclamations", "DynamicReports")
+</p>
+<div class="pull-right">
+
+</div>
+<form class="navbar-form navbar-left" role="search">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Chercher une reclamation">
+    </div>
+    <button type="submit" class="glyphicon glyphicon-search" aria-hidden="true"></button>
+</form>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Materiel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Etat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Probleme)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Commentaire)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UniteGestion)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.OrderByDescending(item => item.CreatedTime))
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Materiel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Etat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Probleme)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Commentaire)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UniteGestion)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Télecharger Détails ", "DynamicReport", new { id = item.Id })|
+            </td>
+        </tr>
+    }
+
+</table>

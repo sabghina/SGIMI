@@ -424,6 +424,7 @@
     <Content Include="Views\Reclamation\UserOnHold.cshtml" />
     <Content Include="Views\Reclamation\UserFinished.cshtml" />
     <Content Include="Views\Reclamation\UserInProgress.cshtml" />
+    <Content Include="Views\Reclamation\UserCanceled.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

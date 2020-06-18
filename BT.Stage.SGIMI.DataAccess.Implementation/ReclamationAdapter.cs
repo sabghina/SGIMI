@@ -144,6 +144,26 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
             return reclamationWainting;
         }
 
+
+        public List<Reclamation> GetUserCanceledReclamations(string currentUser)
+        {
+            // replace with databse access
+            List<Reclamation> reclamations = sGIMIDbContext.Reclamations.ToList();
+            List<Reclamation> reclamationWainting = new List<Reclamation>();
+            foreach (Reclamation reclamation in reclamations)
+            {
+                if ((reclamation.Etat == "Annulée" ) && (reclamation.CreatedBy == currentUser))
+                {
+                    reclamationWainting.Add(reclamation);
+                }
+            }
+            return reclamationWainting;
+        
+    }
+
+
+
+
         public List<Reclamation> GetFinishedReclamations()
         {
             // replace with databse access
@@ -188,6 +208,5 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
             }
         }
 
-        
     }
 }
