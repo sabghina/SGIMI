@@ -126,7 +126,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
                 throw;
             }
         }
-        // Dynamic reports (tous les interventions)
+        // In Progress Dynamic reports (tous les interventions)
         public byte[] DynamicReportsInProgress(List<InterventionReport> interventionReports)
         {
             try
@@ -142,6 +142,24 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
                 throw;
             }
         }
+
+        // Finished Dynamic reports (tous les interventions)
+        public byte[] DynamicReportsFinished(List<InterventionReport> interventionReports)
+        {
+            try
+            {
+                string reportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.InterventionReport.InterventionDynamicReportsFinished.rdlc";
+                ReportDataSource reportDataSource = new ReportDataSource("InterventionDataSet", interventionReports);
+
+                return GenerateInterventionReport(reportEmbeddedResource, reportDataSource);
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
 
         // Dynamic report implementaion (une seule intervention)
         public byte[] DynamicReport(InterventionReport interventionReport)
@@ -190,7 +208,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
             return file;
         }
 
-        
+
     }
 }
 
