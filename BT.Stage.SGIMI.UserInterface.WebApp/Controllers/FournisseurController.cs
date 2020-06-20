@@ -66,9 +66,6 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         {
             try
             {
-                // controle existance email
-                //ModelState.AddModelError("Email", "Email existe");
-                // controle
                 if (!ModelState.IsValid)
                 {
                     return View(fournisseurViewModel);
