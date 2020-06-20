@@ -136,51 +136,6 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         }
 
        
-
-        //// GET: Fournisseur/Archiver/5
-        //public ActionResult Archiver(int id)
-        //{
-        //    try
-        //    {
-        //        Fournisseur fournisseur = fournisseurRepository.GetFournisseurById(id);
-        //        FournisseurViewModel fournisseurViewModel = FournisseurTranspose.FournisseurToFournisseurViewModel(fournisseur);
-        //        return View(fournisseurViewModel);
-        //    }
-        //    catch (Exception)
-        //    {
-        //        throw;
-        //    }
-        //}
-
-        //// POST: Fournisseur/Archiver/5
-        //[HttpPost]
-        //public ActionResult Archiver(int id, FournisseurViewModel fournisseurViewModel)
-        //{
-        //    try
-        //    {
-        //        if (!ModelState.IsValid)
-        //        {
-        //            return View(fournisseurViewModel);
-        //        }
-        //        string user = User.Identity.Name;
-        //        Fournisseur oldFournisseur = fournisseurRepository.GetFournisseurById(id);
-        //        Fournisseur fournisseur = FournisseurTranspose.ArchiverFournisseurViewModelToArchiverFournisseur(oldFournisseur, user);
-        //        bool fournisseurIsUpdated = fournisseurRepository.ArchivedFournisseur(fournisseur);
-        //        if (!fournisseurIsUpdated)
-        //        {
-        //            throw new Exception("oops");
-        //        }
-        //        return RedirectToAction("Index");
-        //    }
-        //    catch
-        //    {
-        //        throw;
-        //    }
-
-        //}
-
-
-
         // GET: Fournisseur/Archiver/5
         public ActionResult Archiver(int id)
         {
@@ -257,30 +212,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
 
         }
 
-        // GET: Fournisseur/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: Fournisseur/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-
-        // Static Reports (tous les fournisseurs)
+         // Static Reports (tous les fournisseurs)
         public FileResult StaticReports()
         {
             byte[] file = fournisseurRepository.StaticReports();
@@ -303,7 +235,17 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
             List<FournisseurReport> fournisseurReports = FournisseurTranspose.FournisseurListToFournisseurReportList(fournisseurs);
             byte[] file = fournisseurRepository.DynamicReports(fournisseurReports);
-            string filename = $"ContratFournisseurs_{DateTime.Now}.pdf";
+            string filename = $"ListeDesContratsFournisseursActive_{DateTime.Now}.pdf";
+            return File(file, "application/pdf", filename);
+        }
+
+        // Dynamic Reports(tous les fournisseurs)
+        public FileResult DynamicReportsArchived()
+        {
+            List<Fournisseur> fournisseurs = fournisseurRepository.GetArchivedFournisseurs();
+            List<FournisseurReport> fournisseurReports = FournisseurTranspose.FournisseurListToFournisseurReportList(fournisseurs);
+            byte[] file = fournisseurRepository.DynamicReports(fournisseurReports);
+            string filename = $"ListeDesContratsFournisseursArchivé{DateTime.Now}.pdf";
             return File(file, "application/pdf", filename);
         }
 
