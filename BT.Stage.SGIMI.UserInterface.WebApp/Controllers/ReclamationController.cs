@@ -319,27 +319,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             }
 
         }
-        // GET: Reclamation/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
 
-        // POST: Reclamation/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
         // Static Reports (tous les reclamations)
         public FileResult StaticReports()
         {
@@ -379,6 +359,16 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             return File(file, "application/pdf", filename);
         }
 
+        // Dynamic Reports In Progress admin
+        public FileResult DynamicReportsFinished()
+        {
+            List<Reclamation> reclamations = reclamationRepository.GetFinishedReclamations();
+            List<Materiel> materiels = materielRepository.GetAffectedMateriels();
+            List<ReclamationReport> reclamationReports = ReclamationTranspose.ReclamationListToReclamationReportList(reclamations, materiels);
+            byte[] file = reclamationRepository.DynamicReportsFinished(reclamationReports);
+            string filename = $"ListeReclamationsEnCours{DateTime.Now}.pdf";
+            return File(file, "application/pdf", filename);
+        }
 
         // Dynamic Report (un seul materiel)
         public FileResult DynamicReport(int id)

@@ -192,6 +192,23 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
                 throw;
             }
         }
+
+        // Dynamic reports reclamations InProgress
+        public byte[] DynamicReportsFinished(List<ReclamationReport> reclamationReports)
+        {
+            try
+            {
+                string reportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.ReclamationReport.ReclamationDynamicReportsFinished.rdlc";
+                ReportDataSource reportDataSource = new ReportDataSource("ReclamationDataSet", reclamationReports);
+
+                return GenerateReclamationReport(reportEmbeddedResource, reportDataSource);
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
         // Dynamic report implementaion (une seule reclamation)
         public byte[] DynamicReport(ReclamationReport reclamationReport)
         {

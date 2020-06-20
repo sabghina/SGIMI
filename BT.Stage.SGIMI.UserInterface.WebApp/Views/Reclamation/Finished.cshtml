@@ -1,23 +1,14 @@
 ﻿@model IEnumerable<BT.Stage.SGIMI.UserInterface.ViewModel.ReclamationViewModel>
 @{
-    ViewBag.Title = "OnHold";
+    ViewBag.Title = "ReclamationFinished";
 }
 <h2>Liste des réclamations terminées</h2>
 <p>
     @Html.ActionLink("liste des reclamations en attente", "Index")|
     @Html.ActionLink("liste des reclamations en cours", "InProgress")|
     @Html.ActionLink("liste des reclamations annulées", "Canceled")|
-    @Html.ActionLink("Telecharger la liste des réclamations", "DynamicReports")
+    @Html.ActionLink("Telecharger la liste des réclamations terminés", "DynamicReportsFinished")
 </p>
-<div class="pull-right">
-
-</div>
-<form class="navbar-form navbar-left" role="search">
-    <div class="form-group">
-        <input type="text" class="form-control" placeholder="Chercher une reclamation">
-    </div>
-    <button type="submit" class="glyphicon glyphicon-search" aria-hidden="true"></button>
-</form>
 <table class="table">
     <tr>
         <th>

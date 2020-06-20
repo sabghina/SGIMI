@@ -25,6 +25,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Interface
         bool UpdatedReclamation(Reclamation reclamation);
         byte[] StaticReports();
         byte[] StaticReport();
+        byte[] DynamicReportsFinished(List<ReclamationReport> reclamationReports);
         byte[] DynamicReportsOnHold(List<ReclamationReport> reclamationReports);
         byte[] DynamicReportsInProgress(List<ReclamationReport> reclamationReports);
         byte[] DynamicReport(ReclamationReport reclamationReport);
