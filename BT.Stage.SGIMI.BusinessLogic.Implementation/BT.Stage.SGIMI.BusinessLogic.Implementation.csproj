@@ -217,6 +217,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Reporting\RDLC\FournisseurReport\FournisseurDynamicReportsArchived.rdlc" />
     <EmbeddedResource Include="Reporting\RDLC\InterventionReport\InterventionDynamicReport.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\InterventionReport\InterventionDynamicReportsCanceled.rdlc" />
     <EmbeddedResource Include="Reporting\RDLC\InterventionReport\InterventionDynamicReportsFinished.rdlc" />
     <EmbeddedResource Include="Reporting\RDLC\InterventionReport\InterventionDynamicReportsInProgress.rdlc" />
     <EmbeddedResource Include="Reporting\RDLC\InterventionReport\InterventionDynamicReports.rdlc" />

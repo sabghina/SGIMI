@@ -160,6 +160,23 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
             }
         }
 
+        // Canceled Dynamic reports (tous les interventions)
+        public byte[] DynamicReportsCanceled(List<InterventionReport> interventionReports)
+        {
+            try
+            {
+                string reportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.InterventionReport.InterventionDynamicReportsCanceled.rdlc";
+                ReportDataSource reportDataSource = new ReportDataSource("InterventionDataSet", interventionReports);
+
+                return GenerateInterventionReport(reportEmbeddedResource, reportDataSource);
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
 
         // Dynamic report implementaion (une seule intervention)
         public byte[] DynamicReport(InterventionReport interventionReport)

@@ -349,6 +349,16 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             return File(file, "application/pdf", filename);
         }
 
+        public FileResult DynamicReportsCanceled()
+        {
+            List<Intervention> interventions = interventionRepository.GetCanceledInterventions();
+            List<Reclamation> reclamations = reclamationRepository.GetReclamations();
+            List<InterventionReport> interventionReports = InterventionTranspose.InterventionListToInterventionReportList(interventions, reclamations);
+            byte[] file = interventionRepository.DynamicReportsCanceled(interventionReports);
+            string filename = $"ListeInterventionsCanceled{DateTime.Now}.pdf";
+            return File(file, "application/pdf", filename);
+        }
+
         // Dynamic Report (une seul intervention)
         public FileResult DynamicReport(int id)
         {
