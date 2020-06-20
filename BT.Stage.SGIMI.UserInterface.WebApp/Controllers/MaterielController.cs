@@ -401,7 +401,17 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
             List<MaterielReport> materielReports = MaterielTranspose.MaterielListToMaterielReportList(materiels, fournisseurs);
             byte[] file = materielRepository.DynamicReports(materielReports);
-            string filename = $"dynamic_reports_{DateTime.Now}.pdf";
+            string filename = $"Liste_Des_Materiels_{DateTime.Now}.pdf";
+            return File(file, "application/pdf", filename);
+        }
+
+        public FileResult DynamicReportsAffected()
+        {
+            List<Materiel> materiels = materielRepository.GetAffectedMateriels();
+            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
+            List<MaterielReport> materielReports = MaterielTranspose.MaterielListToMaterielReportList(materiels, fournisseurs);
+            byte[] file = materielRepository.DynamicReports(materielReports);
+            string filename = $"Liste_Des_Materiels_{DateTime.Now}.pdf";
             return File(file, "application/pdf", filename);
         }
 

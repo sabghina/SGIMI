@@ -2,70 +2,32 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
-      <Textbox Name="Textbox3">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Liste des matériels</Value>
-                <Style>
-                  <FontSize>12pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>1.44625cm</Top>
-        <Left>1.70189cm</Left>
-        <Height>0.6cm</Height>
-        <Width>16.51cm</Width>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
       <Tablix Name="Tablix1">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.64661cm</Width>
+              <Width>2.62607cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.64661cm</Width>
+              <Width>2.76596cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.64661cm</Width>
+              <Width>2.38672cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.17202cm</Width>
+              <Width>3.03901cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.1312cm</Width>
+              <Width>3.32637cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.15661cm</Width>
+              <Width>2.44152cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.64661cm</Width>
+              <Width>2.65131cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.20602cm</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>2.20602cm</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.78738cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -122,7 +84,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox10</rd:DefaultName>
@@ -335,76 +299,6 @@
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox6</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <VerticalAlign>Middle</VerticalAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox9">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Date Contrat</Value>
-                              <Style>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox9</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <VerticalAlign>Middle</VerticalAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox13">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Date Affectation</Value>
-                              <Style>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox13</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -688,80 +582,12 @@
                     </Textbox>
                   </CellContents>
                 </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="DateContrat">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!DateContrat.Value</Value>
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>DateContrat</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <VerticalAlign>Middle</VerticalAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="DateAffectation">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!DateAffectation.Value</Value>
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>DateAffectation</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <VerticalAlign>Middle</VerticalAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
               </TablixCells>
             </TablixRow>
           </TablixRows>
         </TablixBody>
         <TablixColumnHierarchy>
           <TablixMembers>
-            <TablixMember />
-            <TablixMember />
             <TablixMember />
             <TablixMember />
             <TablixMember />
@@ -783,11 +609,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>MaterielDataSet</DataSetName>
-        <Top>3.03954cm</Top>
-        <Left>0.06016cm</Left>
+        <Top>0.49954cm</Top>
+        <Left>1.35449cm</Left>
         <Height>1.2cm</Height>
-        <Width>23.95833cm</Width>
-        <ZIndex>1</ZIndex>
+        <Width>22.02434cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -795,13 +620,13 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2.23622in</Height>
+    <Height>3.28158in</Height>
     <Style />
   </Body>
-  <Width>9.73303in</Width>
+  <Width>10.43365in</Width>
   <Page>
     <PageHeader>
-      <Height>4.29273cm</Height>
+      <Height>5.3246cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -812,7 +637,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Liste des matériels</Value>
+                  <Value>Liste des matériels affectés</Value>
                   <Style>
                     <FontSize>16pt</FontSize>
                     <FontWeight>Bold</FontWeight>
@@ -825,7 +650,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Left>7.56016cm</Left>
+          <Top>0.29104cm</Top>
+          <Left>9.13324cm</Left>
           <Height>0.83799cm</Height>
           <Width>8.47959cm</Width>
           <Style>
@@ -843,9 +669,10 @@
           <Source>Embedded</Source>
           <Value>Logo_BT</Value>
           <Sizing>FitProportional</Sizing>
-          <Left>0.58522cm</Left>
-          <Height>4.29273cm</Height>
-          <Width>3.61667cm</Width>
+          <Top>0.68791cm</Top>
+          <Left>3.14385cm</Left>
+          <Height>3.57836cm</Height>
+          <Width>3.12641cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -976,8 +803,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox14</rd:DefaultName>
-          <Top>1.09375cm</Top>
-          <Left>7.56016cm</Left>
+          <Top>1.59647cm</Top>
+          <Left>9.13324cm</Left>
           <Height>3.19897cm</Height>
           <Width>8.47959cm</Width>
           <ZIndex>2</ZIndex>
@@ -992,6 +819,17 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
+        <Line Name="Line3">
+          <Top>5.0953cm</Top>
+          <Height>0cm</Height>
+          <Width>26.50147cm</Width>
+          <ZIndex>3</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Line>
       </ReportItems>
       <Style>
         <Border>
@@ -1019,8 +857,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox5</rd:DefaultName>
-          <Top>0.17639cm</Top>
-          <Left>10.20974cm</Left>
+          <Top>1.59604cm</Top>
+          <Left>9.87412cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
           <Style>
@@ -1033,6 +871,17 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
+        <Line Name="Line4">
+          <Top>0.14111cm</Top>
+          <Height>0cm</Height>
+          <Width>26.50147cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Line>
       </ReportItems>
       <Style>
         <Border>
@@ -1104,6 +953,42 @@
         </Field>
         <Field Name="DateAffectation">
           <DataField>DateAffectation</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Statut">
+          <DataField>Statut</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CreatedBy">
+          <DataField>CreatedBy</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AffectedBy">
+          <DataField>AffectedBy</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RevokedBy">
+          <DataField>RevokedBy</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DateElimination">
+          <DataField>DateElimination</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ArchivedBy">
+          <DataField>ArchivedBy</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DateArchive">
+          <DataField>DateArchive</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LastUpdatedBy">
+          <DataField>LastUpdatedBy</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DateModification">
+          <DataField>DateModification</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
