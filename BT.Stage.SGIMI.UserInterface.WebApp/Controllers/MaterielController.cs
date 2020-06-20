@@ -415,6 +415,16 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             return File(file, "application/pdf", filename);
         }
 
+        public FileResult DynamicReportsArchived()
+        {
+            List<Materiel> materiels = materielRepository.GetArchivedMateriels();
+            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
+            List<MaterielReport> materielReports = MaterielTranspose.MaterielListToMaterielReportList(materiels, fournisseurs);
+            byte[] file = materielRepository.DynamicReportsArchived(materielReports);
+            string filename = $"Liste_Des_Materiels_Supprimés{DateTime.Now}.pdf";
+            return File(file, "application/pdf", filename);
+        }
+
         // Dynamic Report (un seul materiel)
         public FileResult DynamicReport(int id)
         {

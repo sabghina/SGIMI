@@ -7,7 +7,7 @@
 
 <p>
     @Html.ActionLink("Retour", "Index")|
-    @Html.ActionLink("Telecharger la liste des matériels supprimés ", "DynamicReports")|
+    @Html.ActionLink("Telecharger la liste des matériels supprimés ", "DynamicReportsArchived")|
 
 </p>
 <form class="navbar-form navbar-left" role="search">
@@ -37,7 +37,7 @@
             @Html.DisplayNameFor(model => model.Fournisseur)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Agent)
+            @Html.DisplayNameFor(model => model.ArchivedBy)
         </th>
 
         <th></th>
@@ -65,7 +65,7 @@
                 @Html.DisplayFor(modelItem => item.Fournisseur)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Agent)
+                @Html.DisplayFor(modelItem => item.ArchivedBy)
             </td>
             <td>
                 @Html.ActionLink("Modifier", "Edit", new { id = item.Id }) |

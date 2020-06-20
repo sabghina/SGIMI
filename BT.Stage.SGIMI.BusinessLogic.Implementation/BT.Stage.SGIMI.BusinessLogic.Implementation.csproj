@@ -219,6 +219,7 @@
     <EmbeddedResource Include="Reporting\RDLC\InterventionReport\InterventionDynamicReports.rdlc" />
     <EmbeddedResource Include="Reporting\RDLC\InterventionReport\InterventionStaticReport.rdlc" />
     <EmbeddedResource Include="Reporting\RDLC\InterventionReport\InterventionStaticReports.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\MaterielReport\MaterielDynamicReportsArchived.rdlc" />
     <EmbeddedResource Include="Reporting\RDLC\MaterielReport\MaterielDynamicReportsNoAffected.rdlc" />
     <EmbeddedResource Include="Reporting\RDLC\MaterielReport\MaterielDynamicReportsAffected.rdlc" />
     <EmbeddedResource Include="Reporting\RDLC\MaterielReport\MaterielDynamicReport.rdlc" />

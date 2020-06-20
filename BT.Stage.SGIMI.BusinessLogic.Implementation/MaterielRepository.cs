@@ -128,7 +128,24 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
             }
 
         }
-        // Dynamic report implementaion (un seul fournisseur)
+
+        public byte[] DynamicReportsArchived(List<MaterielReport> materielReports)
+        {
+            try
+            {
+                string reportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.MaterielReport.MaterielDynamicReportsArchived.rdlc";
+                ReportDataSource reportDataSource = new ReportDataSource("MaterielDataSet", materielReports);
+
+                return GenerateMaterielReport(reportEmbeddedResource, reportDataSource);
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+        }
+        // Dynamic report implementaion (un seul materiel)
         public byte[] DynamicReport(MaterielReport materielReport)
         {
             try
