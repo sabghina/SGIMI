@@ -12,7 +12,7 @@
   <xs:element name="InterventionDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="InterventionDataSet" msprop:Generator_UserDSName="InterventionDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Intervention" msprop:Generator_TableClassName="InterventionDataTable" msprop:Generator_TableVarName="tableIntervention" msprop:Generator_RowChangedName="InterventionRowChanged" msprop:Generator_TablePropName="Intervention" msprop:Generator_RowDeletingName="InterventionRowDeleting" msprop:Generator_RowChangingName="InterventionRowChanging" msprop:Generator_RowEvHandlerName="InterventionRowChangeEventHandler" msprop:Generator_RowDeletedName="InterventionRowDeleted" msprop:Generator_RowClassName="InterventionRow" msprop:Generator_UserTableName="Intervention" msprop:Generator_RowEvArgName="InterventionRowChangeEvent">
+        <xs:element name="Intervention" msprop:Generator_TableClassName="InterventionDataTable" msprop:Generator_TableVarName="tableIntervention" msprop:Generator_TablePropName="Intervention" msprop:Generator_RowDeletingName="InterventionRowDeleting" msprop:Generator_RowChangingName="InterventionRowChanging" msprop:Generator_RowEvHandlerName="InterventionRowChangeEventHandler" msprop:Generator_RowDeletedName="InterventionRowDeleted" msprop:Generator_UserTableName="Intervention" msprop:Generator_RowChangedName="InterventionRowChanged" msprop:Generator_RowEvArgName="InterventionRowChangeEvent" msprop:Generator_RowClassName="InterventionRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Reclamation" msprop:Generator_ColumnVarNameInTable="columnReclamation" msprop:Generator_ColumnPropNameInRow="Reclamation" msprop:Generator_ColumnPropNameInTable="ReclamationColumn" msprop:Generator_UserColumnName="Reclamation" type="xs:string" minOccurs="0" />
@@ -24,6 +24,7 @@
               <xs:element name="DateCreation" msprop:Generator_ColumnVarNameInTable="columnDateCreation" msprop:Generator_ColumnPropNameInRow="DateCreation" msprop:Generator_ColumnPropNameInTable="DateCreationColumn" msprop:Generator_UserColumnName="DateCreation" type="xs:string" minOccurs="0" />
               <xs:element name="LastUpdatedBy" msprop:Generator_ColumnVarNameInTable="columnLastUpdatedBy" msprop:Generator_ColumnPropNameInRow="LastUpdatedBy" msprop:Generator_ColumnPropNameInTable="LastUpdatedByColumn" msprop:Generator_UserColumnName="LastUpdatedBy" type="xs:string" minOccurs="0" />
               <xs:element name="DateModification" msprop:Generator_ColumnVarNameInTable="columnDateModification" msprop:Generator_ColumnPropNameInRow="DateModification" msprop:Generator_ColumnPropNameInTable="DateModificationColumn" msprop:Generator_UserColumnName="DateModification" type="xs:string" minOccurs="0" />
+              <xs:element name="Type" msprop:Generator_ColumnVarNameInTable="columnType" msprop:Generator_ColumnPropNameInRow="Type" msprop:Generator_ColumnPropNameInTable="TypeColumn" msprop:Generator_UserColumnName="Type" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

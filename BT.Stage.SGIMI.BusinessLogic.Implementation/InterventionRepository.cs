@@ -126,6 +126,22 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
                 throw;
             }
         }
+        // Dynamic reports (tous les interventions)
+        public byte[] DynamicReportsInProgress(List<InterventionReport> interventionReports)
+        {
+            try
+            {
+                string reportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.InterventionReport.InterventionDynamicReportsInProgress.rdlc";
+                ReportDataSource reportDataSource = new ReportDataSource("InterventionDataSet", interventionReports);
+
+                return GenerateInterventionReport(reportEmbeddedResource, reportDataSource);
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
 
         // Dynamic report implementaion (une seule intervention)
         public byte[] DynamicReport(InterventionReport interventionReport)

@@ -317,14 +317,25 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             return File(file, "application/pdf", filename);
         }
 
+        //// Dynamic Reports (tous les interventions)
+        //public FileResult DynamicReports()
+        //{
+        //    List<Intervention> interventions = interventionRepository.GetInterventions();
+        //    List<Reclamation> reclamations = reclamationRepository.GetReclamations();
+        //    List<InterventionReport> interventionReports = InterventionTranspose.InterventionListToInterventionReportList(interventions, reclamations);
+        //    byte[] file = interventionRepository.DynamicReports(interventionReports);
+        //    string filename = $"ListeInterventions_{DateTime.Now}.pdf";
+        //    return File(file, "application/pdf", filename);
+        //}
+
         // Dynamic Reports (tous les interventions)
-        public FileResult DynamicReports()
+        public FileResult DynamicReportsInProgress()
         {
             List<Intervention> interventions = interventionRepository.GetInterventions();
-            List<Reclamation> reclamations = reclamationRepository.GetReclamations();
+            List<Reclamation> reclamations = reclamationRepository.GetInProgressReclamations();
             List<InterventionReport> interventionReports = InterventionTranspose.InterventionListToInterventionReportList(interventions, reclamations);
-            byte[] file = interventionRepository.DynamicReports(interventionReports);
-            string filename = $"ListeInterventions_{DateTime.Now}.pdf";
+            byte[] file = interventionRepository.DynamicReportsInProgress(interventionReports);
+            string filename = $"ListeInterventionsEnCours{DateTime.Now}.pdf";
             return File(file, "application/pdf", filename);
         }
 

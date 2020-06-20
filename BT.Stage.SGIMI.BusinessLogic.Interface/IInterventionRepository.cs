@@ -28,7 +28,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Interface
 
         byte[] StaticReports();
         byte[] StaticReport();
-
+        byte[] DynamicReportsInProgress(List<InterventionReport> interventionlReports);
         byte[] DynamicReports(List<InterventionReport> interventionlReports);
         byte[] DynamicReport(InterventionReport interventionReport);
         List<Intervention> GetFinishedInterventions();

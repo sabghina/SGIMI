@@ -136,6 +136,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 
                 Etat = $"{ intervention.Etat}",
                 Nature = $"{intervention.Nature}",
+                Type = $"{intervention.Type}",
                 Reclamation = $"{reclamation.Probleme}",
                 ProblemeConstate = $"{intervention.ProblemeConstate}",
                 TraveauxEffectues = $"{intervention.TraveauxEffectues}",
