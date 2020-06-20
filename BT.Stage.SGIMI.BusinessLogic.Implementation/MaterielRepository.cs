@@ -95,11 +95,11 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
 
 
         // Dynamic reports (tous les materiels)
-        public byte[] DynamicReports(List<MaterielReport> materielReports)
+        public byte[] DynamicReportsNoAffected(List<MaterielReport> materielReports)
         {
             try
             {
-                string reportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.MaterielReport.MaterielDynamicReports.rdlc";
+                string reportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.MaterielReport.MaterielDynamicReportsNoAffected.rdlc";
                 ReportDataSource reportDataSource = new ReportDataSource("MaterielDataSet", materielReports);
 
                 return GenerateMaterielReport(reportEmbeddedResource, reportDataSource);
@@ -110,6 +110,23 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
                 throw;
             }
            
+        }
+
+        public byte[] DynamicReportsAffected(List<MaterielReport> materielReports)
+        {
+            try
+            {
+                string reportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.MaterielReport.MaterielDynamicReportsAffected.rdlc";
+                ReportDataSource reportDataSource = new ReportDataSource("MaterielDataSet", materielReports);
+
+                return GenerateMaterielReport(reportEmbeddedResource, reportDataSource);
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
         }
         // Dynamic report implementaion (un seul fournisseur)
         public byte[] DynamicReport(MaterielReport materielReport)

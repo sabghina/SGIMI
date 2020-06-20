@@ -395,13 +395,13 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         }
 
         // Dynamic Reports (tous les materiels)
-        public FileResult DynamicReports()
+        public FileResult DynamicReportsNoAffected()
         {
             List<Materiel> materiels = materielRepository.GetMateriels();
             List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
             List<MaterielReport> materielReports = MaterielTranspose.MaterielListToMaterielReportList(materiels, fournisseurs);
-            byte[] file = materielRepository.DynamicReports(materielReports);
-            string filename = $"Liste_Des_Materiels_{DateTime.Now}.pdf";
+            byte[] file = materielRepository.DynamicReportsNoAffected(materielReports);
+            string filename = $"Liste_Des_Materiels_Non_Affecté{DateTime.Now}.pdf";
             return File(file, "application/pdf", filename);
         }
 
@@ -410,8 +410,8 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             List<Materiel> materiels = materielRepository.GetAffectedMateriels();
             List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
             List<MaterielReport> materielReports = MaterielTranspose.MaterielListToMaterielReportList(materiels, fournisseurs);
-            byte[] file = materielRepository.DynamicReports(materielReports);
-            string filename = $"Liste_Des_Materiels_{DateTime.Now}.pdf";
+            byte[] file = materielRepository.DynamicReportsAffected(materielReports);
+            string filename = $"Liste_Des_Materiels_Affecté{DateTime.Now}.pdf";
             return File(file, "application/pdf", filename);
         }
 
