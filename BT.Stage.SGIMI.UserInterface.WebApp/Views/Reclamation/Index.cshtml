@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<BT.Stage.SGIMI.UserInterface.ViewModel.ReclamationViewModel>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "ReclamationEnAttente";
 }
     <h2>Liste des réclamations en attente </h2>
     <p>
@@ -13,12 +13,6 @@
 <div class="pull-right">
 
 </div>
-<form class="navbar-form navbar-left" role="search">
-    <div class="form-group">
-        <input type="text" class="form-control" placeholder="Chercher une reclamation">
-    </div>
-    <button type="submit" class="glyphicon glyphicon-search" aria-hidden="true"></button>
-</form>
 <table class="table">
     <tr>
         <th>
@@ -58,9 +52,7 @@
                 @Html.DisplayFor(modelItem => item.UniteGestion)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
                 @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                @Html.ActionLink("Annuler", "Annuler", new { id = item.Id }) |
                 @Html.ActionLink("Télecharger Détails ", "DynamicReport", new { id = item.Id })|
                 @if ((Request.IsAuthenticated) && (User.IsInRole("admin")))
                 {
