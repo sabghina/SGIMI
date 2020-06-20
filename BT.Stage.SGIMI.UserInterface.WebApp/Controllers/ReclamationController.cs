@@ -368,6 +368,17 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             return File(file, "application/pdf", filename);
         }
 
+        // Dynamic Reports In Progress admin
+        public FileResult DynamicReportsInProgress()
+        {
+            List<Reclamation> reclamations = reclamationRepository.GetInProgressReclamations();
+            List<Materiel> materiels = materielRepository.GetComplainedMateriels();
+            List<ReclamationReport> reclamationReports = ReclamationTranspose.ReclamationListToReclamationReportList(reclamations, materiels);
+            byte[] file = reclamationRepository.DynamicReportsInProgress(reclamationReports);
+            string filename = $"ListeReclamationsEnCours{DateTime.Now}.pdf";
+            return File(file, "application/pdf", filename);
+        }
+
         // Dynamic Report (un seul materiel)
         public FileResult DynamicReport(int id)
         {
