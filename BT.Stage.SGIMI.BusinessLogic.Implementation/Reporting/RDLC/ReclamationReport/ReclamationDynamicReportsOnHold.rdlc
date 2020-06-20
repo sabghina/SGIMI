@@ -6,22 +6,22 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>3.12208cm</Width>
+              <Width>2.87042cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>5.38333cm</Width>
+              <Width>5.87256cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.55833cm</Width>
+              <Width>3.84938cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.9798cm</Width>
+              <Width>3.67521cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.94979cm</Width>
+              <Width>2.97625cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.68521cm</Width>
+              <Width>2.63229cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -461,10 +461,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>ReclamationDataSet</DataSetName>
-        <Top>0.68474cm</Top>
+        <Top>0.79058cm</Top>
         <Left>1.03216cm</Left>
         <Height>1.2cm</Height>
-        <Width>21.67855cm</Width>
+        <Width>21.87612cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -475,7 +475,7 @@
     <Height>3.27327in</Height>
     <Style />
   </Body>
-  <Width>9.94407in</Width>
+  <Width>10.5899in</Width>
   <Page>
     <PageHeader>
       <Height>5.80086cm</Height>
@@ -489,7 +489,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value> Rapport des réclamations en cours</Value>
+                  <Value> Rapport des réclamations en attente</Value>
                   <Style>
                     <FontSize>16pt</FontSize>
                     <FontWeight>Bold</FontWeight>
@@ -674,7 +674,7 @@
         <Line Name="Line3">
           <Top>5.62447cm</Top>
           <Height>0cm</Height>
-          <Width>25.25793cm</Width>
+          <Width>26.89835cm</Width>
           <ZIndex>3</ZIndex>
           <Style>
             <Border>
@@ -726,7 +726,7 @@
         <Line Name="Line4">
           <Top>0.17639cm</Top>
           <Height>0cm</Height>
-          <Width>25.25793cm</Width>
+          <Width>26.89835cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>

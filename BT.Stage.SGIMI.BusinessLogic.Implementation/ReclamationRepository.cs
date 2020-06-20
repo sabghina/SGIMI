@@ -160,11 +160,11 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
             return file;
         }
         // Dynamic reports (tous les reclamations)
-        public byte[] DynamicReports(List<ReclamationReport> reclamationReports)
+        public byte[] DynamicReportsOnHold(List<ReclamationReport> reclamationReports)
         {
             try
             {
-                string reportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.ReclamationReport.ReclamationDynamicReports.rdlc";
+                string reportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.ReclamationReport.ReclamationDynamicReportsOnHold.rdlc";
                 ReportDataSource reportDataSource = new ReportDataSource("ReclamationDataSet", reclamationReports);
 
                 return GenerateReclamationReport(reportEmbeddedResource, reportDataSource);

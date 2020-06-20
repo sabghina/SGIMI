@@ -358,12 +358,12 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         }
 
         // Dynamic Reports (tous les materiels)
-        public FileResult DynamicReports()
+        public FileResult DynamicReportsOnHold()
         {
             List<Reclamation> reclamations = reclamationRepository.GetReclamations();
-            List<Materiel> materiels = materielRepository.GetMateriels();
+            List<Materiel> materiels = materielRepository.GetComplainedMateriels();
             List<ReclamationReport> reclamationReports = ReclamationTranspose.ReclamationListToReclamationReportList(reclamations, materiels);
-            byte[] file = reclamationRepository.DynamicReports(reclamationReports);
+            byte[] file = reclamationRepository.DynamicReportsOnHold(reclamationReports);
             string filename = $"ListeReclamations_{DateTime.Now}.pdf";
             return File(file, "application/pdf", filename);
         }
@@ -378,6 +378,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             string filename = $"ListeReclamationsEnCours{DateTime.Now}.pdf";
             return File(file, "application/pdf", filename);
         }
+
 
         // Dynamic Report (un seul materiel)
         public FileResult DynamicReport(int id)
