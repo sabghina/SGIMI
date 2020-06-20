@@ -212,7 +212,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Terminée par</Value>
+                              <Value>Annulée par</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>

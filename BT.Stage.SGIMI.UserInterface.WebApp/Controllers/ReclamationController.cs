@@ -381,6 +381,58 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             return File(file, "application/pdf", filename);
         }
 
+
+
+
+
+        // Dynamic Reports (tous les materiels)
+        public FileResult UserDynamicReportsOnHold()
+        {
+            string currentUser = User.Identity.Name;
+            List<Reclamation> reclamations = reclamationRepository.GetUserReclamations(currentUser);
+            List<Materiel> materiels = materielRepository.GetComplainedMateriels();
+            List<ReclamationReport> reclamationReports = ReclamationTranspose.ReclamationListToReclamationReportList(reclamations, materiels);
+            byte[] file = reclamationRepository.DynamicReportsOnHold(reclamationReports);
+            string filename = $"ListeReclamations_{DateTime.Now}.pdf";
+            return File(file, "application/pdf", filename);
+        }
+
+        // Dynamic Reports In Progress admin
+        public FileResult UserDynamicReportsInProgress()
+        {
+            string currentUser = User.Identity.Name;
+            List<Reclamation> reclamations = reclamationRepository.GetUserInProgressReclamations(currentUser);
+            List<Materiel> materiels = materielRepository.GetComplainedMateriels();
+            List<ReclamationReport> reclamationReports = ReclamationTranspose.ReclamationListToReclamationReportList(reclamations, materiels);
+            byte[] file = reclamationRepository.DynamicReportsInProgress(reclamationReports);
+            string filename = $"ListeReclamationsEnCours{DateTime.Now}.pdf";
+            return File(file, "application/pdf", filename);
+        }
+
+        // Dynamic Reports In Progress admin
+        public FileResult UserDynamicReportsFinished()
+        {
+            string currentUser = User.Identity.Name;
+            List<Reclamation> reclamations = reclamationRepository.GetUserFinishedReclamations(currentUser);
+            List<Materiel> materiels = materielRepository.GetAffectedMateriels();
+            List<ReclamationReport> reclamationReports = ReclamationTranspose.ReclamationListToReclamationReportList(reclamations, materiels);
+            byte[] file = reclamationRepository.DynamicReportsFinished(reclamationReports);
+            string filename = $"ListeReclamationsEnCours{DateTime.Now}.pdf";
+            return File(file, "application/pdf", filename);
+        }
+
+        // Dynamic Reports Canceled admin
+        public FileResult UserDynamicReportsCanceled()
+        {
+            string currentUser = User.Identity.Name;
+            List<Reclamation> reclamations = reclamationRepository.GetUserCanceledReclamations(currentUser);
+            List<Materiel> materiels = materielRepository.GetAffectedMateriels();
+            List<ReclamationReport> reclamationReports = ReclamationTranspose.ReclamationListToReclamationReportList(reclamations, materiels);
+            byte[] file = reclamationRepository.DynamicReportsCanceled(reclamationReports);
+            string filename = $"ListeReclamationsAnnulé{DateTime.Now}.pdf";
+            return File(file, "application/pdf", filename);
+        }
+
         // Dynamic Report (un seul materiel)
         public FileResult DynamicReport(int id)
         {

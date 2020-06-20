@@ -245,6 +245,76 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
             }
         }
 
+
+
+        // User Dynamic reports En attente
+        public byte[] UserDynamicReportsOnHold(List<ReclamationReport> reclamationReports)
+        {
+            try
+            {
+                string reportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.ReclamationReport.ReclamationDynamicReportsOnHold.rdlc";
+                ReportDataSource reportDataSource = new ReportDataSource("ReclamationDataSet", reclamationReports);
+
+                return GenerateReclamationReport(reportEmbeddedResource, reportDataSource);
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        // User Dynamic reports reclamations InProgress
+        public byte[] UserDynamicReportsInProgress(List<ReclamationReport> reclamationReports)
+        {
+            try
+            {
+                string reportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.ReclamationReport.ReclamationDynamicReportsInProgress.rdlc";
+                ReportDataSource reportDataSource = new ReportDataSource("ReclamationDataSet", reclamationReports);
+
+                return GenerateReclamationReport(reportEmbeddedResource, reportDataSource);
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        // User Dynamic reports reclamations InProgress
+        public byte[] UserDynamicReportsFinished(List<ReclamationReport> reclamationReports)
+        {
+            try
+            {
+                string reportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.ReclamationReport.ReclamationDynamicReportsFinished.rdlc";
+                ReportDataSource reportDataSource = new ReportDataSource("ReclamationDataSet", reclamationReports);
+
+                return GenerateReclamationReport(reportEmbeddedResource, reportDataSource);
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        // User Dynamic reports reclamations annulées
+        public byte[] UserDynamicReportsCanceled(List<ReclamationReport> reclamationReports)
+        {
+            try
+            {
+                string reportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.ReclamationReport.ReclamationDynamicReportsCanceled.rdlc";
+                ReportDataSource reportDataSource = new ReportDataSource("ReclamationDataSet", reclamationReports);
+
+                return GenerateReclamationReport(reportEmbeddedResource, reportDataSource);
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public bool ChangeReclamation(Reclamation reclamationById)
         {
             return reclamationAdapter.ChangeReclamation(reclamationById);
