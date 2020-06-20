@@ -33,7 +33,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Interface
         bool RevokeMateriel(Materiel materiel);
         byte[] StaticReports();
         byte[] StaticReport();
-
+        byte[] DynamicReportsComplained(List<MaterielReport> materielReports);
         byte[] DynamicReportsAffected(List<MaterielReport> materielReports);
         byte[] DynamicReportsNoAffected(List<MaterielReport> materielReports);
         byte[] DynamicReportsArchived(List<MaterielReport> materielReports);

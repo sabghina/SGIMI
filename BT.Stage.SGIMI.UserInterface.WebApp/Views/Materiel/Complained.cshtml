@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<BT.Stage.SGIMI.UserInterface.ViewModel.MaterielViewModel>
 @{
-    ViewBag.Title = "Materiel";
+    ViewBag.Title = "MaterielReclamé";
 }
 
 <h2>Liste des matériels réclamés</h2>
@@ -8,7 +8,7 @@
 <p>
     @Html.ActionLink("Retour", "Index")|
     @Html.ActionLink("liste des matériels affectés", "Affected")|
-    @Html.ActionLink("Telecharger la liste des matériels affectés ", "DynamicReports")|
+    @Html.ActionLink("Telecharger la liste des matériels réclamés ", "DynamicReportsComplained")|
 
 </p>
 <form class="navbar-form navbar-left" role="search">
@@ -80,9 +80,7 @@
                 @Html.DisplayFor(modelItem => item.Agent)
             </td>
             <td>
-                @Html.ActionLink("Modifier", "Edit", new { id = item.Id }) |
                 @Html.ActionLink("Détails", "Details", new { id = item.Id }) |
-                @Html.ActionLink("Retirer", "Retirer", new { id = item.Id }) |
                 @Html.ActionLink("Télecharger Contrat ", "DynamicReport", new { id = item.Id })
             </td>
         </tr>

@@ -145,6 +145,25 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
             }
 
         }
+
+
+        public byte[] DynamicReportsComplained(List<MaterielReport> materielReports)
+        {
+            try
+            {
+                string reportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.MaterielReport.MaterielDynamicReportsComplained.rdlc";
+                ReportDataSource reportDataSource = new ReportDataSource("MaterielDataSet", materielReports);
+
+                return GenerateMaterielReport(reportEmbeddedResource, reportDataSource);
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+
         // Dynamic report implementaion (un seul materiel)
         public byte[] DynamicReport(MaterielReport materielReport)
         {
@@ -163,6 +182,8 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
                 throw;
             }
         }
+
+
 
         private byte[] GenerateMaterielReport(string reportEmbeddedResource, ReportDataSource reportDataSource)
         {
@@ -246,6 +267,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
             List<Materiel> complainedUserMateriels = materielAdapter.GetComplainedUserMateriels(currentUser);
             return complainedUserMateriels;
         }
+
     }
 }
 

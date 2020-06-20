@@ -415,6 +415,17 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             return File(file, "application/pdf", filename);
         }
 
+        public FileResult DynamicReportsUserAffected()
+        {
+            string currentUser = User.Identity.Name;
+            List<Materiel> materiels = materielRepository.GetUserMateriels(currentUser);
+            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
+            List<MaterielReport> materielReports = MaterielTranspose.MaterielListToMaterielReportList(materiels, fournisseurs);
+            byte[] file = materielRepository.DynamicReportsAffected(materielReports);
+            string filename = $"Liste_Des_Materiels_Affecté_User{DateTime.Now}.pdf";
+            return File(file, "application/pdf", filename);
+        }
+
         public FileResult DynamicReportsArchived()
         {
             List<Materiel> materiels = materielRepository.GetArchivedMateriels();
@@ -422,6 +433,27 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             List<MaterielReport> materielReports = MaterielTranspose.MaterielListToMaterielReportList(materiels, fournisseurs);
             byte[] file = materielRepository.DynamicReportsArchived(materielReports);
             string filename = $"Liste_Des_Materiels_Supprimés{DateTime.Now}.pdf";
+            return File(file, "application/pdf", filename);
+        }
+
+        public FileResult DynamicReportsComplained()
+        {
+            List<Materiel> materiels = materielRepository.GetComplainedMateriels();
+            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
+            List<MaterielReport> materielReports = MaterielTranspose.MaterielListToMaterielReportList(materiels, fournisseurs);
+            byte[] file = materielRepository.DynamicReportsComplained(materielReports);
+            string filename = $"Liste_Des_Materiels_Réclamés{DateTime.Now}.pdf";
+            return File(file, "application/pdf", filename);
+        }
+
+        public FileResult DynamicReportsComplainedUser()
+        {
+            string currentUser = User.Identity.Name;
+            List<Materiel> materiels = materielRepository.GetComplainedUserMateriels(currentUser);
+            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
+            List<MaterielReport> materielReports = MaterielTranspose.MaterielListToMaterielReportList(materiels, fournisseurs);
+            byte[] file = materielRepository.DynamicReportsComplained(materielReports);
+            string filename = $"Liste_Des_Materiels_Réclamés_User{DateTime.Now}.pdf";
             return File(file, "application/pdf", filename);
         }
 

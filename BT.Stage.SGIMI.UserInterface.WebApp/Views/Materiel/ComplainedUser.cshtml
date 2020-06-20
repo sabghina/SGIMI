@@ -1,15 +1,11 @@
 ﻿@model IEnumerable<BT.Stage.SGIMI.UserInterface.ViewModel.MaterielViewModel>
 @{
-    ViewBag.Title = "UserMateriels";
+    ViewBag.Title = "UserComplainedMateriels";
 }
 <h2>Ma liste des matériels réclamés</h2>
 <p>
-    @*@if ((Request.IsAuthenticated) && (User.IsInRole("admin")))
-    {
-        @Html.ActionLink("Ma liste des matériels non réclamés", "UserMateriels")
-    }*@
     @Html.ActionLink("Ma liste des matériels non réclamés", "UserMateriels")|
-    @Html.ActionLink("Telecharger ma liste des matériels", "DynamicReports")
+    @Html.ActionLink("Telecharger ma liste des matériels réclamés", "DynamicReportsComplainedUser")
 </p>
 
 <form class="navbar-form navbar-left" role="search">
