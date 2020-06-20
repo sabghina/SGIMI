@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<BT.Stage.SGIMI.UserInterface.ViewModel.FournisseurViewModel>
 @{
-    ViewBag.Title = "Fournisseur";
+    ViewBag.Title = "FournisseurActives";
 }
 
 <h2>Liste des fournisseurs archivés</h2>
@@ -10,12 +10,6 @@
     @Html.ActionLink("Telecharger la liste des fournisseurs archivés ", "DynamicReportsArchived")|
 
 </p>
-<form class="navbar-form navbar-left" role="search">
-    <div class="form-group">
-        <input type="text" class="form-control" placeholder="Chercher un fournisseur">
-    </div>
-    <button type="submit" class="glyphicon glyphicon-search" aria-hidden="true"></button>
-</form>
 <table class="table">
     <tr>
         <th>
@@ -36,7 +30,7 @@
         <th>
             @Html.DisplayNameFor(model => model.SiteWeb)
         </th>
-
+        <th></th>
     </tr>
 
     @foreach (var item in Model.OrderByDescending(item => item.CreatedTime))

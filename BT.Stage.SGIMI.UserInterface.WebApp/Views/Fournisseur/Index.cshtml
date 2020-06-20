@@ -12,20 +12,6 @@
     @Html.ActionLink("Telecharger la liste des fournisseurs actives ", "DynamicReports")
 
 </p>
-
-
-<p>
-    @using (Html.BeginForm("Index", "Fournisseur", FormMethod.Get))
-    {
-        <b> Chercher par : </b> @Html.RadioButton("SearchBy", "Nom",true) <text> Nom </text>
-        @Html.RadioButton("SearchBy", "Adresse") <text> Adresse </text>
-        @Html.TextBox("Search") <input type="submit" value="Search" /> 
-
-
-    }
-        @*<button type="submit" class="glyphicon glyphicon-search" aria-hidden="true"></button>*@
-
-
         <table class="table">
             <tr>
                 <th>
@@ -47,8 +33,6 @@
                 <th>
                     @Html.DisplayNameFor(model => model.SiteWeb)
                 </th>
-                <th></th>
-                <th></th>
                 <th></th>
             </tr>
 
