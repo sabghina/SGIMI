@@ -159,7 +159,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
             byte[] file = localReport.Render(reportType, deviceInfo, out mimeType, out encoding, out fileNameExtension, out streams, out warnings);
             return file;
         }
-        // Dynamic reports (tous les reclamations)
+        // Dynamic reports En attente
         public byte[] DynamicReportsOnHold(List<ReclamationReport> reclamationReports)
         {
             try
@@ -199,6 +199,23 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
             try
             {
                 string reportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.ReclamationReport.ReclamationDynamicReportsFinished.rdlc";
+                ReportDataSource reportDataSource = new ReportDataSource("ReclamationDataSet", reclamationReports);
+
+                return GenerateReclamationReport(reportEmbeddedResource, reportDataSource);
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        // Dynamic reports reclamations annulées
+        public byte[] DynamicReportsCanceled(List<ReclamationReport> reclamationReports)
+        {
+            try
+            {
+                string reportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.ReclamationReport.ReclamationDynamicReportsCanceled.rdlc";
                 ReportDataSource reportDataSource = new ReportDataSource("ReclamationDataSet", reclamationReports);
 
                 return GenerateReclamationReport(reportEmbeddedResource, reportDataSource);

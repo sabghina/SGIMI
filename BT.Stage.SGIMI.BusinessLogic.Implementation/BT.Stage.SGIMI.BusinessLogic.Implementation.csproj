@@ -232,6 +232,7 @@
     <EmbeddedResource Include="Reporting\RDLC\FournisseurReport\FournisseurStaticReport.rdlc" />
     <EmbeddedResource Include="Reporting\RDLC\FournisseurReport\FournisseurStaticReports.rdlc" />
     <EmbeddedResource Include="Reporting\RDLC\ReclamationReport\ReclamationDynamicReport.rdlc" />
+    <EmbeddedResource Include="Reporting\RDLC\ReclamationReport\ReclamationDynamicReportsCanceled.rdlc" />
     <EmbeddedResource Include="Reporting\RDLC\ReclamationReport\ReclamationDynamicReportsFinished.rdlc" />
     <EmbeddedResource Include="Reporting\RDLC\ReclamationReport\ReclamationDynamicReportsInProgress.rdlc" />
     <EmbeddedResource Include="Reporting\RDLC\ReclamationReport\ReclamationDynamicReportsOnHold.rdlc" />

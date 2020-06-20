@@ -370,6 +370,17 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             return File(file, "application/pdf", filename);
         }
 
+        // Dynamic Reports Canceled admin
+        public FileResult DynamicReportsCanceled()
+        {
+            List<Reclamation> reclamations = reclamationRepository.GetCanceledReclamations();
+            List<Materiel> materiels = materielRepository.GetAffectedMateriels();
+            List<ReclamationReport> reclamationReports = ReclamationTranspose.ReclamationListToReclamationReportList(reclamations, materiels);
+            byte[] file = reclamationRepository.DynamicReportsCanceled(reclamationReports);
+            string filename = $"ListeReclamationsAnnulé{DateTime.Now}.pdf";
+            return File(file, "application/pdf", filename);
+        }
+
         // Dynamic Report (un seul materiel)
         public FileResult DynamicReport(int id)
         {
