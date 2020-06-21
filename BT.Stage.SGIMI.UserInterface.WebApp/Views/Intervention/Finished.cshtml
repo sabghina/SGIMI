@@ -2,13 +2,10 @@
 @{
     ViewBag.Title = "Ajout d'une intervention";
 }
-<h2>Liste des interventions terminées</h2>
-
-<p>
-    @Html.ActionLink("liste des interventions en cours", "Index")|
-    @Html.ActionLink("liste des interventions annulées", "Canceled")|
+<br />
+<form class="navbar-form navbar-right">
     @Html.ActionLink("Telecharger la liste des interventions terminées", "DynamicReportsFinished")
-</p>
+</form>
 <table class="table">
     <tr>
 
