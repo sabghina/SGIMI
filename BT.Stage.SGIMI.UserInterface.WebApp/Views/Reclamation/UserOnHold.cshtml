@@ -2,14 +2,9 @@
 @{
     ViewBag.Title = "Mes réclamations en attente";
 }
-<h2>Ma liste des réclamations en attente </h2>
+    <br />
+    <br />
 <p>
-    @if ((Request.IsAuthenticated) && (User.IsInRole("user")))
-    {
-        @Html.ActionLink("Ma liste des reclamations en cours", "UserInProgress")
-        @Html.ActionLink("Ma liste des reclamations annulées", "UserCanceled") 
-        @Html.ActionLink("Ma liste des reclamations terminées", "UserFinished") 
-    }
         @Html.ActionLink("Telecharger ma liste des réclamations en attente", "UserDynamicReportsOnHold")
 </p>
 
