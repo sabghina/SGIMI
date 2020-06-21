@@ -2,20 +2,12 @@
 @{
     ViewBag.Title = "Materiel";
 }
-
-<h2>Liste des matériels supprimés</h2>
-
+    <br />
+    <br />
 <p>
-    @Html.ActionLink("Retour", "Index")|
-    @Html.ActionLink("Telecharger la liste des matériels supprimés ", "DynamicReportsArchived")|
+    @Html.ActionLink("Telecharger la liste des matériels supprimés ", "DynamicReportsArchived")
 
 </p>
-<form class="navbar-form navbar-left" role="search">
-    <div class="form-group">
-        <input type="text" class="form-control" placeholder="Chercher un materiel">
-    </div>
-    <button type="submit" class="glyphicon glyphicon-search" aria-hidden="true"></button>
-</form>
 <table class="table">
     <tr>
         <th>
