@@ -1,13 +1,11 @@
 ﻿@model IEnumerable<BT.Stage.SGIMI.UserInterface.ViewModel.MaterielViewModel>
 @{
-    ViewBag.Title = "MaterielNoAffected";
+    ViewBag.Title = "MaterielAffected";
 }
-    <br />
-    <br />
-<p>
-    @Html.ActionLink("Telecharger la liste des matériels affectés ", "DynamicReportsAffected")|
-
-</p>
+<br />
+<form class="navbar-form navbar-right">
+    <a class="btn btn-primary" href="@Url.Action("DynamicReportsAffected","Materiel")"><i class="fa fa-plus-square"></i>Télecharger matériaux affectés</a>
+</form>
 <table class="table">
     <tr>
         <th>
@@ -65,9 +63,9 @@
                 @Html.DisplayFor(modelItem => item.Agent)
             </td>
             <td>
-                @Html.ActionLink("Détails", "Details", new { id = item.Id }) |
-                @Html.ActionLink("Retirer", "Retirer", new { id = item.Id }) |
-                @Html.ActionLink("Télecharger Contrat ", "DynamicReport", new { id = item.Id })
+                <a class="btn btn-info" href="@Url.Action("Details","Materiel")"><i class="fa fa-plus-square"></i>Détails</a>
+                <a class="btn btn-success" href="@Url.Action("Retirer","Materiel")"><i class="fa fa-plus-square"></i>Retirer</a>
+                <a class="btn btn-primary" href="@Url.Action("DynamicReport","Materiel")"><i class="fa fa-plus-square"></i>Télecharger Contrat</a>
             </td>
         </tr>
     }

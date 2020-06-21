@@ -2,12 +2,10 @@
 @{
     ViewBag.Title = "MaterielReclamé";
 }
-    <br />
-    <br />
-<p>
-    @Html.ActionLink("Telecharger la liste des matériels réclamés ", "DynamicReportsComplained")|
-
-</p>
+<br />
+<form class="navbar-form navbar-right">
+    <a class="btn btn-primary" href="@Url.Action("DynamicReportsComplained","Materiel")"><i class="fa fa-plus-square"></i>Télecharger matériaux réclamés</a>
+</form>
 <table class="table">
     <tr>
         <th>
@@ -71,8 +69,8 @@
                 @Html.DisplayFor(modelItem => item.Agent)
             </td>
             <td>
-                @Html.ActionLink("Détails", "Details", new { id = item.Id }) |
-                @Html.ActionLink("Télecharger Contrat ", "DynamicReport", new { id = item.Id })
+                <a class="btn btn-info" href="@Url.Action("Details","Materiel")"><i class="fa fa-plus-square"></i>Détails</a>
+                <a class="btn btn-primary" href="@Url.Action("DynamicReport","Materiel")"><i class="fa fa-plus-square"></i>Télecharger contrat</a>
             </td>
         </tr>
     }
