@@ -1,20 +1,12 @@
 ﻿@model IEnumerable<BT.Stage.SGIMI.UserInterface.ViewModel.UniteGestionViewModel>
-
-
-<h2>Liste des unités gestions</h2>
-
-<p>
-    @Html.ActionLink("Ajouter une nouvelle unite Gestion ", "Create")|
-    @Html.ActionLink("Telecharger la liste des unités gestions", "DynamicReports")|
-
-</p>
-
-<form class="navbar-form navbar-left" role="search">
-    <div class="form-group">
-        <input type="text" class="form-control" placeholder="Chercher une unité de gestion">
-    </div>
-    <button type="submit" class="glyphicon glyphicon-search" aria-hidden="true"></button>
+@{
+    ViewBag.Title = "Unité Gestion";
+}
+<br />
+<form class="navbar-form navbar-right">
+    <a class="btn btn-primary" href="@Url.Action("DynamicReports","UniteGestion")"><i class="fa fa-plus-square"></i>Télecharger la liste des unités gestions</a>
 </form>
+@Html.ActionLink("Ajouter une nouvelle unite Gestion ", "Create")|
 <table class="table">
     <tr>
         <th>
@@ -63,10 +55,10 @@
             </td>
 
             <td>
-                @Html.ActionLink("Modifier", "Edit", new { id = item.Id }) |
-                @Html.ActionLink("Détails", "Details", new { id = item.Id }) |
-                @Html.ActionLink("Télecharger Rapport ", "DynamicReport", new { id = item.Id }) |
-
+                <a class="btn btn-info" href="@Url.Action("Details","UniteGestion", new { id = item.Id })"><i class="fa fa-plus-square"></i>Détails</a>
+                <a class="btn btn-success" href="@Url.Action("Edit","UniteGestion", new { id = item.Id })"><i class="fa fa-plus-square"></i>Modifier</a>
+                <a class="btn btn-primary" href="@Url.Action("DynamicReport","UniteGestion", new { id = item.Id })"><i class="fa fa-plus-square"></i>Télecharger rapport</a>
+                
             </td>
         </tr>
     }
