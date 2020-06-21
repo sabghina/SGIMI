@@ -7,8 +7,16 @@
 <h2>Liste des fournisseurs actives</h2>
 
 <p>
-    @Html.ActionLink("Ajouter un nouveau fournisseur", "Create")|
-    @Html.ActionLink("liste des fournisseurs archivés", "Archived")|
+
+    <a class="btn btn-primary" href="@Url.Action("Create", "Fournisseur")"><i class="fa fa-plus-square"></i> Nouveau Fournisseur</a>
+
+    <button type="button" class="btn btn-primary">
+        <div class="btn-color-white">
+            @Html.ActionLink("Ajouter un nouveau fournisseur", "Create")
+        </div>
+    </button>
+
+    @Html.ActionLink("liste des fournisseurs archivés", "Archived", new { style = "color:White;" })|
     @Html.ActionLink("Telecharger la liste des fournisseurs actives ", "DynamicReports")
 
 </p>

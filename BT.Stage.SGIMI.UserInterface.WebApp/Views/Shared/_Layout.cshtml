@@ -21,26 +21,90 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-
                     @if ((Request.IsAuthenticated) && (User.IsInRole("admin")))
-
                     {
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Fournisseur <span class="caret"></span></a>
 
-                        <li>@Html.ActionLink("Fournisseur", "Index", "Fournisseur")</li>
-                        <li>@Html.ActionLink("SocieteTierce", "Index", "SocieteTierce")</li>
-                        <li>@Html.ActionLink("Materiel", "Index", "Materiel")</li>
-                        <li>@Html.ActionLink("Reclamation", "Index", "Reclamation")</li>
-                        <li>@Html.ActionLink("Intervention", "Index", "Intervention")</li>
+                            <ul class="dropdown-menu">
+                                <li> @Html.ActionLink("Nouveau fournisseur", "Create", "Fournisseur")</li>
+                                <li> @Html.ActionLink("Fournisseurs actives", "Index", "Fournisseur")</li>
+                                <li>@Html.ActionLink("Fournisseurs archivées", "Archived", "Fournisseur")</li>
+
+                            </ul>
+                        </li>
+                    
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Societe Tierce <span class="caret"></span></a>
+
+                            <ul class="dropdown-menu">
+                                <li> @Html.ActionLink("Nouvelle societe Tierce", "Create", "SocieteTierce")</li>
+                                <li> @Html.ActionLink("Societes tierces actives", "Index", "SocieteTierce")</li>
+                                <li>@Html.ActionLink("Societes tierces archivées", "Archived", "SocieteTierce")</li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Materiel <span class="caret"></span></a>
+
+                            <ul class="dropdown-menu">
+                                <li> @Html.ActionLink("Nouveau matériel ", "Create", "Materiel")</li>
+                                <li> @Html.ActionLink("Materiels non affectés", "Index", "Materiel")</li>
+                                <li>@Html.ActionLink("Materiels affectés", "Affected", "Materiel")</li>
+                                <li>@Html.ActionLink("Materiels supprimés", "Archived", "Materiel")</li>
+                                <li>@Html.ActionLink("Materiels réclamés", "Complained", "Materiel")</li>
+                                <li>@Html.ActionLink("Mes matériels", "UserMateriels", "Materiel")</li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Reclamation<span class="caret"></span></a>
+
+                            <ul class="dropdown-menu">
+                                <li> @Html.ActionLink("Reclamations en attentes", "Index", "Reclamation")</li>
+                                <li>@Html.ActionLink("Reclamations en cours", "InProgress", "Reclamation")</li>
+                                <li>@Html.ActionLink("Reclamations terminées", "Finished", "Reclamation")</li>
+                                <li>@Html.ActionLink("Reclamations annulées", "Canceled", "Reclamation")</li>
+                                <li>@Html.ActionLink("Mes reclamations en attentes", "UserOnHold", "Reclamation")</li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Intervention<span class="caret"></span></a>
+
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Interventions en cours", "Index", "Intervention")</li>
+                                <li>@Html.ActionLink("Interventions terminés", "Finished", "Intervention")</li>
+                                <li>@Html.ActionLink("Interventions annulées", "Canceled", "Intervention")</li>
+                            </ul>
+                        </li>
                         <li>@Html.ActionLink("UniteGestion", "Index", "UniteGestion")</li>
-                    }
-                    else if ((Request.IsAuthenticated) && (User.IsInRole("user")))
-                    {
-                        <li>@Html.ActionLink("Materiel", "UserMateriels", "Materiel")</li>
-                        <li>@Html.ActionLink("Reclamation", "UserOnHold", "Reclamation")</li>
-                    }
 
+                        }
+                        @if ((Request.IsAuthenticated) && (User.IsInRole("user")))
+                        {
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Materiel <span class="caret"></span></a>
 
-                </ul>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Mes matériels non réclamés", "UserMateriels", "Materiel")</li>
+                                <li>@Html.ActionLink("Mes matériels réclamés", "ComplainedUser", "Materiel")</li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Reclamation<span class="caret"></span></a>
+
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Mes reclamations en attentes", "UserOnHold", "Reclamation")</li>
+                                <li>@Html.ActionLink("Mes reclamations en cours", "UserInProgress", "Reclamation")</li>
+                                <li>@Html.ActionLink("Mes reclamations terminées", "UserFinished", "Reclamation")</li>
+                                <li>@Html.ActionLink("Mes reclamations annulées", "UserCanceled", "Reclamation")</li>
+
+                            </ul>
+                        </li>
+                         }
+                    </ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>

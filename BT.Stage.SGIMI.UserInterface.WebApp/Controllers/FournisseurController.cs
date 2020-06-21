@@ -29,6 +29,8 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             // 2. transpose entity -> view model
             List<FournisseurViewModel> fournisseurViewModels = FournisseurTranspose.FournisseurListToFournisseurViewModelList(fournisseurs);
 
+            
+
             return View(fournisseurViewModels);
         }
         // GET: Fournisseur Archived

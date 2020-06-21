@@ -3480,6 +3480,10 @@ fieldset[disabled] .btn-danger.focus {
   color: #337ab7;
   border-radius: 0;
 }
+.btn-color-white{
+    color : white;
+    background-color:transparent;
+}
 .btn-link,
 .btn-link:active,
 .btn-link.active,
