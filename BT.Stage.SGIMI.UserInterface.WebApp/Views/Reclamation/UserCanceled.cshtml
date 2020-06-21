@@ -4,7 +4,7 @@
 }
 <br />
 <form class="navbar-form navbar-right">
-    @Html.ActionLink("Telecharger la liste des réclamations annulées", "UserDynamicReportsCanceled")
+    <a class="btn btn-primary" href="@Url.Action("DynamicReportsCanceled","Reclamation")"><i class="fa fa-plus-square"></i>Télecharger réclamations annulés</a>
 </form>
 <table class="table">
     <tr>
@@ -45,8 +45,8 @@
                 @Html.DisplayFor(modelItem => item.UniteGestion)
             </td>
             <td>
-                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                @Html.ActionLink("Télecharger Détails ", "DynamicReport", new { id = item.Id })|
+                <a class="btn btn-info" href="@Url.Action("Details","Reclamation", new { id = item.Id })"><i class="fa fa-plus-square"></i>Détails</a>
+                <a class="btn btn-primary" href="@Url.Action("DynamicReport","Reclamation", new { id = item.Id })"><i class="fa fa-plus-square"></i>Télecharger détails</a>
             </td>
         </tr>
     }
