@@ -1,7 +1,15 @@
 ﻿@model BT.Stage.SGIMI.UserInterface.ViewModel.CreateInterventionViewModel
 @{
     ViewBag.Title = "Ajouter une intervention";
-}
+}<style>
+    h2, p {
+        color: white;
+    }
+
+    .form-group {
+        color: white;
+    }
+</style>
 @{
     List<SelectListItem> listN = new List<SelectListItem>();
     listN.Add(new SelectListItem
@@ -46,7 +54,6 @@
     @Html.AntiForgeryToken()
 
 <div class="form-horizontal">
-    <h4>CreateInterventionViewModel</h4>
     <hr />
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
     

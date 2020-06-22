@@ -1,107 +1,111 @@
 ﻿@model BT.Stage.SGIMI.UserInterface.ViewModel.InterventionViewModel
 @{
-    ViewBag.Title = "Détails";
+    ViewBag.Title = "DétailsIntervention";
 }
+<style>
+    h2, p, dt, dd {
+        color: white;
+    }
+</style>
+<h2>Détails d'une intervention</h2>
+<div>
 
-    <div>
-        <h4>Détails d'une intervention</h4>
-        
-        <hr />
-        <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.Type)
-            </dt>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.Type)
-            </dd>
-            <dt>
-                @Html.DisplayNameFor(model => model.Nature)
-            </dt>
-            <dd>
-                @Html.DisplayFor(model => model.Nature)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nature)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nature)
+        </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.Etat)
-            </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Etat)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.Etat)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.Etat)
+        </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.Reclamation)
-            </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Reclamation)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.Reclamation)
-            </dd>
-            <dt>
-                @Html.DisplayNameFor(model => model.ProblemeConstate)
-            </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Reclamation)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProblemeConstate)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.ProblemeConstate)
-            </dd>
-            <dt>
-                @Html.DisplayNameFor(model => model.TraveauxEffectues)
-            </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProblemeConstate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TraveauxEffectues)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.TraveauxEffectues)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.TraveauxEffectues)
+        </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.CreatedBy)
-            </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.CreatedBy)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.CreatedBy)
+        </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.CreatedDate)
-            </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.CreatedDate)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.CreatedTime)
-            </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedTime)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.CreatedTime)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.CreatedTime)
+        </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.LastUpdatedDate)
-            </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastUpdatedDate)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.LastUpdatedDate)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.LastUpdatedDate)
+        </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.LastUpdatedTime)
-            </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastUpdatedTime)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.LastUpdatedTime)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.LastUpdatedTime)
+        </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.LastUpdatedBy)
-            </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastUpdatedBy)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.LastUpdatedBy)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.LastUpdatedBy)
+        </dd>
 
-        </dl>
-    </div>
+    </dl>
+</div>
 <p>
     @Html.ActionLink("Retour", "Index")
 </p>
