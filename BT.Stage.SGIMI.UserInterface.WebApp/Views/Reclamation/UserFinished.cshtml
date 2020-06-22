@@ -1,16 +1,18 @@
 ﻿@model IEnumerable<BT.Stage.SGIMI.UserInterface.ViewModel.ReclamationViewModel>
 @{
-    ViewBag.Title = "Mes reclamations terminés";
+    ViewBag.Title = "MesReclamationsTerminés";
 }
 <style>
     table {
         border-collapse: collapse;
         width: 100%;
+        border-style:solid;
     }
 
     th, td {
         text-align: center;
         padding: 8px;
+        background-color: #f2f2f2;
     }
 
     tr:nth-child(even) {
@@ -21,9 +23,10 @@
         background-color: white;
         color: black;
     }
-
-    h2 {
-        font-style: oblique;
+    h2
+    {
+        font-style:oblique;
+        color:white;
     }
 </style>
 <h2>Ma liste des réclamations terminées</h2>

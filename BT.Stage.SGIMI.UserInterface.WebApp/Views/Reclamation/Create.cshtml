@@ -1,5 +1,17 @@
 ﻿@model BT.Stage.SGIMI.UserInterface.ViewModel.CreateReclamationViewModel
-<h2>Reclamation sur le materiel </h2>
+@{
+    ViewBag.Title = "AjouterReclamation";
+}
+<style>
+    h2, p {
+        color: white;
+    }
+
+    .form-group {
+        color: white;
+    }
+</style>
+<h2>Reclamation sur materiel </h2>
 
 
 @using (Html.BeginForm("Create", "Reclamation", FormMethod.Post))
@@ -7,7 +19,6 @@
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>CreateReclamationViewModel</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">

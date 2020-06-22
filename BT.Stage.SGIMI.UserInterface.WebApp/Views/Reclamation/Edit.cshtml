@@ -27,14 +27,22 @@
         Selected = true
     });
 }
+<style>
+    h2, p {
+        color: white;
+    }
 
-
+    .form-group {
+        color: white;
+    }
+</style>
+<h2>CreateReclamationViewModel</h2>
 @using (Html.BeginForm("Edit", "Reclamation", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>CreateReclamationViewModel</h4>
+        
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.Id)
