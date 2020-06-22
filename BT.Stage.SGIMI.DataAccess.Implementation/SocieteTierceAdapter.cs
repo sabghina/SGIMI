@@ -109,5 +109,18 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
             }
         }
 
+        public bool ActiveSocieteTierce(Fournisseur societeTierce)
+        {
+            sGIMIDbContext.Fournisseurs.AddOrUpdate(societeTierce);
+            Task<int> nbRowsAffected = sGIMIDbContext.ObjectContext.SaveChangesAsync();
+            if (nbRowsAffected != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

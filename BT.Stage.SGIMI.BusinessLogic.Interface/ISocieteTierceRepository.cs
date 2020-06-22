@@ -37,5 +37,6 @@ namespace BT.Stage.SGIMI.BusinessLogic.Interface
         byte[] DynamicReports(List<SocieteTierceReport> societeTierceReports);
         byte[] DynamicReport(SocieteTierceReport societeTierceReport);
         bool ArchivedSocieteTierce(Fournisseur societeTierce);
+        bool ActivatedSocieteTierce(Fournisseur societeTierce);
     }
 }

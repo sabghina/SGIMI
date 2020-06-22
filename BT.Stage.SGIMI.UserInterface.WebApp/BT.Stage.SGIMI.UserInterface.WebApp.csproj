@@ -431,6 +431,7 @@
     <Content Include="Views\Reclamation\UserInProgress.cshtml" />
     <Content Include="Views\Reclamation\UserCanceled.cshtml" />
     <Content Include="Views\SocieteTierce\Archiver.cshtml" />
+    <Content Include="Views\SocieteTierce\Activer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

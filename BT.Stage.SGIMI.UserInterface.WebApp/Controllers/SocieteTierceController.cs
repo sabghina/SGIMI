@@ -168,6 +168,43 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             }
 
         }
+        // GET: SocieteTierce/Activer/5
+        public ActionResult Activer(int id)
+        {
+            try
+            {
+                Fournisseur societeTierce = societeTierceRepository.GetSocieteTierceById(id);
+                SocieteTierceViewModel societeTierceViewModel = SocieteTierceTranspose.FournisseurToSocieteTierceViewModel(societeTierce);
+                return View(societeTierceViewModel);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        // POST: SocieteTierce/Activer/5
+        [HttpPost]
+        public ActionResult Activer(int id, FournisseurViewModel fournisseurViewModel)
+        {
+            try
+            {
+                string user = User.Identity.Name;
+                Fournisseur oldSocieteTierce = societeTierceRepository.GetSocieteTierceById(id);
+                Fournisseur societeTierce = SocieteTierceTranspose.ActiverSocieteTierceViewModelToActiverFournisseur(oldSocieteTierce, user);
+                bool societeTierceIsActivated = societeTierceRepository.ActivatedSocieteTierce(societeTierce);
+                if (!societeTierceIsActivated)
+                {
+                    throw new Exception("oops");
+                }
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                throw;
+            }
+
+        }
 
         // GET: SocieteTierce/Delete/5
         public ActionResult Delete(int id)

@@ -34,6 +34,7 @@ namespace BT.Stage.SGIMI.DataAccess.Interface
         bool CreateSocieteTierce(Fournisseur societeTierce);
         bool UpdateSocieteTierce(Fournisseur societeTierce);
         bool ArchiveSocieteTierce(Fournisseur societeTierce);
+        bool ActiveSocieteTierce(Fournisseur societeTierce);
     }
 }
 

@@ -159,5 +159,36 @@ namespace BT.Stage.SGIMI.Commun.Tools
             };
             return societeTierce;
         }
+
+        public static Fournisseur ActiverSocieteTierceViewModelToActiverFournisseur(Fournisseur oldSocieteTierce, string user)
+        {
+            Fournisseur fournisseur = new Fournisseur
+            {
+                Id = oldSocieteTierce.Id,
+                Nom = oldSocieteTierce.Nom,
+                Email = oldSocieteTierce.Email,
+                Telephone = oldSocieteTierce.Telephone,
+                Adresse = oldSocieteTierce.Adresse,
+                Fax = oldSocieteTierce.Fax,
+                SiteWeb = oldSocieteTierce.SiteWeb,
+                Type = oldSocieteTierce.Type,
+                Etat = "Active",
+                ActivatedBy = user,
+                ActivatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
+                ActivatedTime = DateTime.Now.ToString("HH:mm:ss"),
+                ArchivedBy = oldSocieteTierce.ArchivedBy,
+                ArchivedDate = oldSocieteTierce.ArchivedDate,
+                ArchivedTime = oldSocieteTierce.ArchivedTime,
+                CreatedBy = oldSocieteTierce.CreatedBy,
+                CreatedDate = oldSocieteTierce.CreatedDate,
+                CreatedTime = oldSocieteTierce.CreatedTime,
+                LastUpdatedBy = oldSocieteTierce.LastUpdatedBy,
+                LastUpdatedDate = oldSocieteTierce.LastUpdatedDate,
+                LastUpdatedTime = oldSocieteTierce.LastUpdatedTime,
+
+
+            };
+            return fournisseur;
+        }
     }
 }

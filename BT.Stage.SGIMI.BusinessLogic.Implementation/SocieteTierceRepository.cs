@@ -172,6 +172,11 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
         {
             return societeTierceAdapter.ArchiveSocieteTierce(societeTierce);
         }
+
+        public bool ActivatedSocieteTierce(Fournisseur societeTierce)
+        {
+            return societeTierceAdapter.ActiveSocieteTierce(societeTierce);
+        }
     }
 }
 
