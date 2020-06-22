@@ -63,9 +63,9 @@
                 @Html.DisplayFor(modelItem => item.Agent)
             </td>
             <td>
-                <a class="btn btn-info" href="@Url.Action("Details","Materiel")"><i class="fa fa-plus-square"></i>Détails</a>
-                <a class="btn btn-success" href="@Url.Action("Retirer","Materiel")"><i class="fa fa-plus-square"></i>Retirer</a>
-                <a class="btn btn-primary" href="@Url.Action("DynamicReport","Materiel")"><i class="fa fa-plus-square"></i>Télecharger Contrat</a>
+                <a class="btn btn-info" href="@Url.Action("Details","Materiel", new { id = item.Id })"><i class="fa fa-plus-square"></i>Détails</a>
+                <a class="btn btn-success" href="@Url.Action("Retirer","Materiel", new { id = item.Id })"><i class="fa fa-plus-square"></i>Retirer</a>
+                <a class="btn btn-primary" href="@Url.Action("DynamicReport","Materiel", new { id = item.Id })"><i class="fa fa-plus-square"></i>Télecharger Contrat</a>
             </td>
         </tr>
     }
