@@ -16,12 +16,14 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
     {
         readonly IMaterielRepository materielRepository;
         readonly IFournisseurRepository fournisseurRepository;
+        readonly ISocieteTierceRepository societeTierceRepository;
         public MaterielController(
             IMaterielRepository _materielRepository,
-            IFournisseurRepository _fournisseurRepository)
+            IFournisseurRepository _fournisseurRepository, ISocieteTierceRepository _societeTierceRepository)
         {
             materielRepository = _materielRepository;
             fournisseurRepository = _fournisseurRepository;
+            societeTierceRepository = _societeTierceRepository;
         }
 
         // GET: Materiel non affecté
@@ -29,8 +31,13 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         {
             // 1.get service list materiel 
             List<Materiel> materiels = materielRepository.GetMateriels();
-            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
+            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseursActive();
+            List<Fournisseur> societeTierces = societeTierceRepository.GetSocieteTierces();
+            foreach (Fournisseur societeTierce in societeTierces)
+            {
+                fournisseurs.Add(societeTierce);
 
+            }
             // 2. transpose entity -> view model
             List<MaterielViewModel> materielViewModels = MaterielTranspose.MaterielListToMaterielViewModelList(materiels,fournisseurs);
 
@@ -41,7 +48,13 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         {
             // 1.get service list materiel 
             List<Materiel> affectedMateriels = materielRepository.GetAffectedMateriels();
-            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
+            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseursActive();
+            List<Fournisseur> societeTierces = societeTierceRepository.GetSocieteTierces();
+            foreach (Fournisseur societeTierce in societeTierces)
+            {
+                fournisseurs.Add(societeTierce);
+
+            }
             // 2. transpose entity -> view model
             List<MaterielViewModel> affectedMaterielViewModels = MaterielTranspose.MaterielListToMaterielViewModelList(affectedMateriels, fournisseurs);
 
@@ -53,7 +66,13 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         {
             // 1.get service list materiel 
             List<Materiel> archivedMateriels = materielRepository.GetArchivedMateriels();
-            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
+            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseursActive();
+            List<Fournisseur> societeTierces = societeTierceRepository.GetSocieteTierces();
+            foreach (Fournisseur societeTierce in societeTierces)
+            {
+                fournisseurs.Add(societeTierce);
+
+            }
             // 2. transpose entity -> view model
             List<MaterielViewModel> archivedMaterielViewModels = MaterielTranspose.MaterielListToMaterielViewModelList(archivedMateriels, fournisseurs);
 
@@ -64,7 +83,13 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         {
             // 1.get service list materiel 
             List<Materiel> complainedMateriels = materielRepository.GetComplainedMateriels();
-            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
+            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseursActive();
+            List<Fournisseur> societeTierces = societeTierceRepository.GetSocieteTierces();
+            foreach (Fournisseur societeTierce in societeTierces)
+            {
+                fournisseurs.Add(societeTierce);
+
+            }
             // 2. transpose entity -> view model
             List<MaterielViewModel> archivedMaterielViewModels = MaterielTranspose.MaterielListToMaterielViewModelList(complainedMateriels, fournisseurs);
 
@@ -76,7 +101,13 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             // 1.get service list materiel 
             string currentUser = User.Identity.Name;
             List<Materiel> complainedUserMateriels = materielRepository.GetComplainedUserMateriels(currentUser);
-            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
+            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseursActive();
+            List<Fournisseur> societeTierces = societeTierceRepository.GetSocieteTierces();
+            foreach (Fournisseur societeTierce in societeTierces)
+            {
+                fournisseurs.Add(societeTierce);
+
+            }
             // 2. transpose entity -> view model
             List<MaterielViewModel> archivedMaterielViewModels = MaterielTranspose.MaterielListToMaterielViewModelList(complainedUserMateriels, fournisseurs);
 
@@ -88,7 +119,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             // 1.get service list materiel 
             string currentUser = User.Identity.Name;
             List<Materiel> userMateriels = materielRepository.GetUserMateriels(currentUser);
-            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
+            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseursActive();
             // 2. transpose entity -> view model
             List<MaterielViewModel> userMaterielsViewModels = MaterielTranspose.MaterielListToMaterielViewModelList(userMateriels, fournisseurs);
 
@@ -107,7 +138,13 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         // GET: Materiel/Create
         public ActionResult Create()
         {
-            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
+            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseursActive();
+            List<Fournisseur> societeTierces = societeTierceRepository.GetSocieteTierces();
+            foreach (Fournisseur societeTierce in societeTierces)
+            {
+                fournisseurs.Add(societeTierce);
+
+            }
             IEnumerable<SelectListItem> fournisseursSelectListItem = new SelectList(fournisseurs.Select(
                 fournisseur => new
                 {
@@ -130,7 +167,13 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             {
                 if (!ModelState.IsValid)
                 {
-                    List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
+                    List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseursActive();
+                    List<Fournisseur> societeTierces = societeTierceRepository.GetSocieteTierces();
+                    foreach (Fournisseur societeTierce in societeTierces)
+                    {
+                        fournisseurs.Add(societeTierce);
+
+                    }
                     IEnumerable<SelectListItem> fournisseursSelectListItem = new SelectList(fournisseurs.Select(
                     fournisseur => new
                     {
@@ -166,7 +209,13 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         {
             Materiel materiel = materielRepository.GetMaterielById(id);
             CreateMaterielViewModel createMaterielViewModel = MaterielTranspose.MaterielToCreateMaterielViewModel(materiel);
-            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
+            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseursActive();
+            List<Fournisseur> societeTierces = societeTierceRepository.GetSocieteTierces();
+            foreach (Fournisseur societeTierce in societeTierces)
+            {
+                fournisseurs.Add(societeTierce);
+
+            }
             IEnumerable<SelectListItem> fournisseursSelectListItem = new SelectList(fournisseurs.Select(
                 fournisseur => new
                 {
@@ -188,7 +237,13 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             {
                 if (!ModelState.IsValid)
                 {
-                    List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
+                    List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseursActive();
+                    List<Fournisseur> societeTierces = societeTierceRepository.GetSocieteTierces();
+                    foreach (Fournisseur societeTierce in societeTierces)
+                    {
+                        fournisseurs.Add(societeTierce);
+
+                    }
                     IEnumerable<SelectListItem> fournisseursSelectListItem = new SelectList(fournisseurs.Select(
                     fournisseur => new
                     {
@@ -382,7 +437,13 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         public FileResult DynamicReportsNoAffected()
         {
             List<Materiel> materiels = materielRepository.GetMateriels();
-            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
+            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseursActive();
+            List<Fournisseur> societeTierces = societeTierceRepository.GetSocieteTierces();
+            foreach (Fournisseur societeTierce in societeTierces)
+            {
+                fournisseurs.Add(societeTierce);
+
+            }
             List<MaterielReport> materielReports = MaterielTranspose.MaterielListToMaterielReportList(materiels, fournisseurs);
             byte[] file = materielRepository.DynamicReportsNoAffected(materielReports);
             string filename = $"Liste_Des_Materiels_Non_Affecté{DateTime.Now}.pdf";
@@ -392,7 +453,13 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         public FileResult DynamicReportsAffected()
         {
             List<Materiel> materiels = materielRepository.GetAffectedMateriels();
-            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
+            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseursActive();
+            List<Fournisseur> societeTierces = societeTierceRepository.GetSocieteTierces();
+            foreach (Fournisseur societeTierce in societeTierces)
+            {
+                fournisseurs.Add(societeTierce);
+
+            }
             List<MaterielReport> materielReports = MaterielTranspose.MaterielListToMaterielReportList(materiels, fournisseurs);
             byte[] file = materielRepository.DynamicReportsAffected(materielReports);
             string filename = $"Liste_Des_Materiels_Affecté{DateTime.Now}.pdf";
@@ -403,7 +470,13 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         {
             string currentUser = User.Identity.Name;
             List<Materiel> materiels = materielRepository.GetUserMateriels(currentUser);
-            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
+            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseursActive();
+            List<Fournisseur> societeTierces = societeTierceRepository.GetSocieteTierces();
+            foreach (Fournisseur societeTierce in societeTierces)
+            {
+                fournisseurs.Add(societeTierce);
+
+            }
             List<MaterielReport> materielReports = MaterielTranspose.MaterielListToMaterielReportList(materiels, fournisseurs);
             byte[] file = materielRepository.DynamicReportsAffected(materielReports);
             string filename = $"Liste_Des_Materiels_Affecté_User{DateTime.Now}.pdf";
@@ -413,7 +486,13 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         public FileResult DynamicReportsArchived()
         {
             List<Materiel> materiels = materielRepository.GetArchivedMateriels();
-            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
+            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseursActive();
+            List<Fournisseur> societeTierces = societeTierceRepository.GetSocieteTierces();
+            foreach (Fournisseur societeTierce in societeTierces)
+            {
+                fournisseurs.Add(societeTierce);
+
+            }
             List<MaterielReport> materielReports = MaterielTranspose.MaterielListToMaterielReportList(materiels, fournisseurs);
             byte[] file = materielRepository.DynamicReportsArchived(materielReports);
             string filename = $"Liste_Des_Materiels_Supprimés{DateTime.Now}.pdf";
@@ -423,7 +502,13 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         public FileResult DynamicReportsComplained()
         {
             List<Materiel> materiels = materielRepository.GetComplainedMateriels();
-            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
+            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseursActive();
+            List<Fournisseur> societeTierces = societeTierceRepository.GetSocieteTierces();
+            foreach (Fournisseur societeTierce in societeTierces)
+            {
+                fournisseurs.Add(societeTierce);
+
+            }
             List<MaterielReport> materielReports = MaterielTranspose.MaterielListToMaterielReportList(materiels, fournisseurs);
             byte[] file = materielRepository.DynamicReportsComplained(materielReports);
             string filename = $"Liste_Des_Materiels_Réclamés{DateTime.Now}.pdf";
@@ -434,7 +519,13 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         {
             string currentUser = User.Identity.Name;
             List<Materiel> materiels = materielRepository.GetComplainedUserMateriels(currentUser);
-            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
+            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseursActive();
+            List<Fournisseur> societeTierces = societeTierceRepository.GetSocieteTierces();
+            foreach (Fournisseur societeTierce in societeTierces)
+            {
+                fournisseurs.Add(societeTierce);
+
+            }
             List<MaterielReport> materielReports = MaterielTranspose.MaterielListToMaterielReportList(materiels, fournisseurs);
             byte[] file = materielRepository.DynamicReportsComplained(materielReports);
             string filename = $"Liste_Des_Materiels_Réclamés_User{DateTime.Now}.pdf";

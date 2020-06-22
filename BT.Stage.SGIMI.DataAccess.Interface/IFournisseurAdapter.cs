@@ -13,7 +13,6 @@ namespace BT.Stage.SGIMI.DataAccess.Interface
         /// Returns Active List Fournissuers.
         /// </summary>
         /// <returns></returns>
-        List<Fournisseur> GetFournisseurs();
         /// Returns Archived List Fournissuers.
         List<Fournisseur> GetArchivedFournisseurs();
         /// <summary>
@@ -33,7 +32,6 @@ namespace BT.Stage.SGIMI.DataAccess.Interface
         string GetNameFournisseurById(int id);
         bool ArchiveFournisseur(Fournisseur fournisseur);
         bool ActiveFournisseur(Fournisseur fournisseur);
-        
-        
+        List<Fournisseur> GetFournisseursActive();
     }
 }

@@ -14,7 +14,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Interface
         /// Returns List Fournissuers.
         /// </summary>
         /// <returns></returns>
-        List<Fournisseur> GetFournisseurs();
+        List<Fournisseur> GetFournisseursActive();
         /// Returns Archived List Fournissuers.
         List<Fournisseur> GetArchivedFournisseurs();
         /// <summary>
@@ -39,6 +39,6 @@ namespace BT.Stage.SGIMI.BusinessLogic.Interface
         byte[] DynamicReport(FournisseurReport fournisseurReport);
         bool ArchivedFournisseur(Fournisseur fournisseur);
         bool ActivatedFournisseur(Fournisseur fournisseur);
-      
+        
     }
 }

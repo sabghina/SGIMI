@@ -24,7 +24,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         public ActionResult Index()
         {
             // 1.get service list fournisseur 
-            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
+            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseursActive();
 
             // 2. transpose entity -> view model
             List<FournisseurViewModel> fournisseurViewModels = FournisseurTranspose.FournisseurListToFournisseurViewModelList(fournisseurs);
@@ -231,7 +231,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         // Dynamic Reports (tous les fournisseurs)
         public FileResult DynamicReports()
         {
-            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
+            List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseursActive();
             List<FournisseurReport> fournisseurReports = FournisseurTranspose.FournisseurListToFournisseurReportList(fournisseurs);
             byte[] file = fournisseurRepository.DynamicReports(fournisseurReports);
             string filename = $"ListeDesContratsFournisseursActive_{DateTime.Now}.pdf";

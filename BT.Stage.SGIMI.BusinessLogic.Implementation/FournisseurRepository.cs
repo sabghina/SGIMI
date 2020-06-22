@@ -34,12 +34,13 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
         {
             return fournisseurAdapter.GetNameFournisseurById(id);
         }
-        public List<Fournisseur> GetFournisseurs()
+        public List<Fournisseur> GetFournisseursActive()
         {
-            List<Fournisseur> fournisseurs = fournisseurAdapter.GetFournisseurs();
+            List<Fournisseur> fournisseurs = fournisseurAdapter.GetFournisseursActive();
             return fournisseurs;
         }
 
+        
         public bool UpdatedFournisseur(Fournisseur fournisseur)
         {
             return fournisseurAdapter.UpdateFournisseur(fournisseur);
@@ -180,10 +181,6 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
             List<Fournisseur> archivedFournisseurs = fournisseurAdapter.GetArchivedFournisseurs();
             return archivedFournisseurs;
         }
-
-        
-
-     
 
     }
 }

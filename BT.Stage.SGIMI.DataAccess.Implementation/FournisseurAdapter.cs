@@ -53,13 +53,13 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
             return fournisseur;
         }
 
-        public List<Fournisseur> GetFournisseurs()
+        public List<Fournisseur> GetFournisseursActive()
         {
             List<Fournisseur> listFournisseurs = sGIMIDbContext.Fournisseurs.ToList();
             List<Fournisseur> fournisseurs = new List<Fournisseur>();
             foreach (Fournisseur fournisseur in listFournisseurs)
             {
-                if ((fournisseur.Etat == "Active")&&(fournisseur.Type == "F"))
+                if ((fournisseur.Etat == "Active") && (fournisseur.Type == "F"))
                 {
                     fournisseurs.Add(fournisseur);
                 }
@@ -74,7 +74,7 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
             List<Fournisseur> archivedfournisseurs = new List<Fournisseur>();
             foreach (Fournisseur fournisseur in fournisseurs)
             {
-                if (fournisseur.Etat == "Archivé")
+                if ((fournisseur.Etat == "Archivé")&&(fournisseur.Type == "F"))
                 {
                     archivedfournisseurs.Add(fournisseur);
                 }
@@ -117,6 +117,6 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
             }
         }
 
-      
+        
     }
 }
