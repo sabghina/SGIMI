@@ -228,19 +228,6 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             affectationMaterielViewModel.Id = id;
             return View(affectationMaterielViewModel);
 
-            //Materiel materiel = materielRepository.GetMaterielById(id);
-            //CreateMaterielViewModel createMaterielViewModel = MaterielTranspose.MaterielToCreateMaterielViewModel(materiel);
-            //List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseurs();
-            //IEnumerable<SelectListItem> fournisseursSelectListItem = new SelectList(fournisseurs.Select(
-            //    fournisseur => new
-            //    {
-            //        Id = fournisseur.Id,
-            //        Text = fournisseur.Nom
-            //    }).AsEnumerable(), "Text", "Text");
-
-            //createMaterielViewModel.Fournisseurs = fournisseursSelectListItem;
-
-            //return View(createMaterielViewModel);
         }
 
         // POST: Materiel/Affecter
@@ -249,9 +236,6 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         {
             try
             {
-                // controle existance email
-                //ModelState.AddModelError("Email", "Email existe");
-                // controle
                 if (!ModelState.IsValid)
                 {
                     return View(affectationMaterielViewModel);
