@@ -2,7 +2,31 @@
 @{
     ViewBag.Title = "Mes réclamations en attente";
 }
-<br />
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        text-align: center;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2
+    }
+
+    th {
+        background-color: white;
+        color: black;
+    }
+
+    h2 {
+        font-style: oblique;
+    }
+</style>
+<h2>Ma liste des réclamations en attentes </h2>
 <form class="navbar-form navbar-right">
     <a class="btn btn-primary" href="@Url.Action("DynamicReportsOnHold","Reclamation")"><i class="fa fa-plus-square"></i>Télecharger réclamations en attentes</a>
 </form>
@@ -52,9 +76,9 @@
                 {
                     <a class="btn btn-success" href="@Url.Action("Create","Intervention", new { id = item.Id })"><i class="fa fa-plus-square"></i>Intervenir</a>
                 }
-            <a class="btn btn-primary" href="@Url.Action("DynamicReport","Reclamation", new { id = item.Id })">
-                <i class="fa fa-plus-square"></i>Télecharger détails
-            </a>
+                <a class="btn btn-primary" href="@Url.Action("DynamicReport","Reclamation", new { id = item.Id })">
+                    <i class="fa fa-plus-square"></i>Télecharger détails
+                </a>
 
             </td>
         </tr>
