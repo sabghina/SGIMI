@@ -3,14 +3,17 @@
 @{
     ViewBag.Title = "Modification";
 }
-
+<style>
+        h2 {
+            color: white;
+        }
+    </style>
 <h2>Modifier une société Tierce</h2>
 @using (Html.BeginForm("Edit", "SocieteTierce", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>SocieteTierceViewModel</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.Id)

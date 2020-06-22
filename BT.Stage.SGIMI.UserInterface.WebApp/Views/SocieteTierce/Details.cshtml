@@ -2,11 +2,14 @@
 @{
     ViewBag.Title = "Détails";
 }
-
-<h2>Détails</h2>
+<style>
+        h2,dt,dd {
+            color: white;
+        }
+</style>    
+<h2>Détails d'une Societe Tierce</h2>
 
 <div>
-    <h4>Détails d'une Societe Tierce</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -141,6 +144,5 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Modifier", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Retour", "Index")
+    <a class="btn btn-default" href="@Url.Action("Index","SocieteTierce")"><i class="fa fa-plus-square"></i>Retour</a>
 </p>

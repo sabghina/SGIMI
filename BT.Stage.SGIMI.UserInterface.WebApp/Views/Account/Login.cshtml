@@ -185,6 +185,7 @@ body {
                         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                         <div class="user-box">
                             @*<div class="form-group">*@
+                            <label>Email</label>
                                 @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
                                 @*<div class="col-md-10">*@
                                     @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
@@ -193,6 +194,7 @@ body {
                             @*</div>*@
                         </div>
                         @*<div class="form-group">*@
+                        <label>Mot de passe</label>
                             @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
                             <div class="user-box">
                                 @*<div class="col-md-10">*@
@@ -216,7 +218,7 @@ body {
                                 @*</div>
                             </div>*@
                             <p>
-                                @Html.ActionLink("Register as a new user", "Register")
+                                @Html.ActionLink("S'authentifier", "Register")
                             </p>
                             @* Enable this once you have account confirmation enabled for password reset functionality
                 <p>
