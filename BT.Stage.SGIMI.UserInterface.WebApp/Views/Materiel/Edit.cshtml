@@ -1,12 +1,22 @@
 ﻿@model BT.Stage.SGIMI.UserInterface.ViewModel.CreateMaterielViewModel
+@{
+    ViewBag.Title = "ModifierMateriel";
+}
+<style>
+    h2, p {
+        color: white;
+    }
 
-
-@using (Html.BeginForm("Edit","Materiel",FormMethod.Post))
+    .form-group {
+        color: white;
+    }
+</style>
+<h2>Modifier les données d'un materiel</h2>
+@using (Html.BeginForm("Edit", "Materiel", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
-        <h4>Modifier les données d'un materiel</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">

@@ -3,11 +3,14 @@
 @{
     ViewBag.Title = "Details";
 }
-
-<h2>Details</h2>
+    <style>
+        h2, p, dt, dd {
+            color: white;
+        }
+    </style>
+    <h2>Details d'un materiel</h2>
 
 <div>
-    <h4>Details materiel</h4>
     
         @*<button type="button" class="btn btn-info">
             @Html.ActionLink("Affecter", "Affecter", new { id = Model.Id })

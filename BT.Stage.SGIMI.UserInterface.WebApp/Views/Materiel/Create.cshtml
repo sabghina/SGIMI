@@ -1,9 +1,19 @@
 ﻿@model BT.Stage.SGIMI.UserInterface.ViewModel.CreateMaterielViewModel
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "AjouterMateriel";
 }
+<style>
+    h2,p
+    {
+        color:white;
+    }
+    .form-group
+    {
+        color:white;
+    }
 
+</style>
 <h2>Ajouter un nouveau matériel</h2>
 
 
@@ -12,7 +22,6 @@
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>MaterielViewModel</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
