@@ -53,7 +53,7 @@ namespace BT.Stage.SGIMI.Data.Entity
         /// <summary>
         /// F: Fourniseur, S: SociétéTierce
         /// </summary>
-        public char Type { get; set; }
+        public string Type { get; set; }
         public string Etat { get; set; }
 
         public string ArchivedBy { get; set; }

@@ -51,7 +51,7 @@ namespace BT.Stage.SGIMI.UserInterface.ViewModel
         /// <summary>
         /// F: Fourniseur, S: SociétéTierce
         /// </summary>
-        public TypeFournisseur Type { get; set; }
+        public string Type { get; set; }
         public string Etat { get; set; }
 
         public string ArchivedBy { get; set; }

@@ -50,7 +50,7 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
 
             foreach (Fournisseur societeTierce in fournisseurs)
             {
-                if ((societeTierce.Etat == "Active") && (societeTierce.Type == 'S'))
+                if ((societeTierce.Etat == "Active") && (societeTierce.Type == "S"))
                 {
                     societeTierces.Add(societeTierce);
                 }
@@ -86,7 +86,7 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
 
             foreach (Fournisseur societeTierce in fournisseurs)
             {
-                if ((societeTierce.Etat == "Archivé") && (societeTierce.Type == 'S'))
+                if ((societeTierce.Etat == "Archivé") && (societeTierce.Type == "S"))
                 {
                     archivedSocieteTierces.Add(societeTierce);
                 }
