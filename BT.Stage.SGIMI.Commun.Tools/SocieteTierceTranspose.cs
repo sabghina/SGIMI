@@ -131,7 +131,8 @@ namespace BT.Stage.SGIMI.Commun.Tools
             return societeTierceReport;
         }
 
-        public static Fournisseur ArchiverFournisseurViewModelToArchiverFournisseur(Fournisseur oldSocieteTierce, string user)
+
+        public static Fournisseur ArchiverSocieteTierceViewModelToArchiverFournisseur(Fournisseur oldSocieteTierce, string user)
         {
             Fournisseur societeTierce = new Fournisseur
             {
@@ -158,6 +159,5 @@ namespace BT.Stage.SGIMI.Commun.Tools
             };
             return societeTierce;
         }
-
     }
 }

@@ -164,7 +164,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 {
                     throw new Exception("oops");
                 }
-                return RedirectToAction("Index");
+                return RedirectToAction("Archived");
             }
             catch
             {

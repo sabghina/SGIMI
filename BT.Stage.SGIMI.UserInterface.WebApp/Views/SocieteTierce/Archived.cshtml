@@ -26,36 +26,7 @@
         <th>
             @Html.DisplayNameFor(model => model.SiteWeb)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Etat)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ArchivedBy)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ArchivedDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ArchivedTime)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CreatedBy)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CreatedDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CreatedTime)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LastUpdatedBy)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LastUpdatedDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LastUpdatedTime)
-        </th>
+        
         <th></th>
     </tr>
 
@@ -80,36 +51,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.SiteWeb)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Etat)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ArchivedBy)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ArchivedDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ArchivedTime)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CreatedBy)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CreatedDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CreatedTime)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastUpdatedBy)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastUpdatedDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastUpdatedTime)
-            </td>
+            
             <td>
                 <a class="btn btn-info" href="@Url.Action("Details","SocieteTierce", new { id = item.Id })"><i class="fa fa-plus-square"></i>Détails</a>
                 <a class="btn btn-success" href="@Url.Action("Activer","SocieteTierce", new { id = item.Id })"><i class="fa fa-plus-square"></i>Activer</a>

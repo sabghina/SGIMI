@@ -34,12 +34,10 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         // GET: Fournisseur Archived
         public ActionResult Archived()
         {
-            // 1.get service list fournisseur 
-
+            // 1.get service list societeTierce 
             List<Fournisseur> archivedSocieteTierces = societeTierceRepository.GetArchivedSocieteTierces();
-
             // 2. transpose entity -> view model
-            List<FournisseurViewModel> archivedSocieteTierceViewModels = FournisseurTranspose.FournisseurListToFournisseurViewModelList(archivedSocieteTierces);
+            List<SocieteTierceViewModel> archivedSocieteTierceViewModels = SocieteTierceTranspose.FournisseurListToSocieteTierceViewModelList(archivedSocieteTierces);
 
             return View(archivedSocieteTierceViewModels);
         }
@@ -132,24 +130,37 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 return View();
             }
         }
-        // POST: Fournisseur/Archiver/5
-        [HttpPost]
+
+        // GET: SocieteTierce/Archiver/5
         public ActionResult Archiver(int id)
+        {
+            try
+            {
+                Fournisseur societeTierce = societeTierceRepository.GetSocieteTierceById(id);
+                SocieteTierceViewModel societeTierceViewModel = SocieteTierceTranspose.FournisseurToSocieteTierceViewModel(societeTierce);
+                return View(societeTierceViewModel);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        // POST: SocieteTierce/Archiver/5
+        [HttpPost]
+        public ActionResult Archiver(int id, SocieteTierceViewModel societeTierceViewModel)
         {
             try
             {
                 string user = User.Identity.Name;
                 Fournisseur oldSocieteTierce = societeTierceRepository.GetSocieteTierceById(id);
-                Fournisseur societeTierce = SocieteTierceTranspose.ArchiverFournisseurViewModelToArchiverFournisseur(oldSocieteTierce, user);
+                Fournisseur societeTierce = SocieteTierceTranspose.ArchiverSocieteTierceViewModelToArchiverFournisseur(oldSocieteTierce, user);
                 bool societeTierceIsArchived = societeTierceRepository.ArchivedSocieteTierce(societeTierce);
-                if (societeTierceIsArchived)
+                if (!societeTierceIsArchived)
                 {
-                    return RedirectToAction("Index");
+                    throw new Exception("oops");
                 }
-                else
-                {
-                    throw new InvalidOperationException("oops");
-                }
+                return RedirectToAction("Archived");
             }
             catch
             {
