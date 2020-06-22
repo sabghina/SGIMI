@@ -1,10 +1,17 @@
 ﻿@model BT.Stage.SGIMI.UserInterface.ViewModel.UniteGestionViewModel
-
+@{
+    ViewBag.Title = "ModifierUniteGestion";
+}
+<style>
+    h2, p {
+        color: white;
+    }
+</style>
 
 @using (Html.BeginForm("Edit", "UniteGestion", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>UniteGestionViewModel</h4>
         <hr />
