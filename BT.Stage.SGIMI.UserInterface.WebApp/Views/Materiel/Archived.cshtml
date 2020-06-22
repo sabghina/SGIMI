@@ -2,9 +2,33 @@
 @{
     ViewBag.Title = "Materiel";
 }
-<br />
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        text-align: center;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2
+    }
+
+    th {
+        background-color: white;
+        color: black;
+    }
+
+    h2 {
+        font-style: oblique;
+    }
+</style>
+<h2>Liste des matériels supprimés</h2>
 <form class="navbar-form navbar-right">
-    <a class="btn btn-primary" href="@Url.Action("DynamicReportsArchived","Materiel")"><i class="fa fa-plus-square"></i>Télecharger matériaux supprimés</a>
+    <a class="btn btn-primary" href="@Url.Action("DynamicReportsArchived","Materiel")"><i class="fa fa-plus-square"></i>Télecharger matériels supprimés</a>
 </form>
 <table class="table">
     <tr>

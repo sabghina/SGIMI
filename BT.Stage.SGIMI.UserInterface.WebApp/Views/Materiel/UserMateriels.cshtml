@@ -1,10 +1,34 @@
 ﻿@model IEnumerable<BT.Stage.SGIMI.UserInterface.ViewModel.MaterielViewModel>
 @{
-    ViewBag.Title = "UserMateriaux";
+    ViewBag.Title = "UserMateriels";
 }
-<br />
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        text-align: center;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2
+    }
+
+    th {
+        background-color: white;
+        color: black;
+    }
+
+    h2 {
+        font-style: oblique;
+    }
+</style>
+<h2>Ma liste des matériels</h2>
 <form class="navbar-form navbar-right">
-    <a class="btn btn-primary" href="@Url.Action("DynamicReportsAffected","Materiel")"><i class="fa fa-plus-square"></i>Télecharger ma liste des matériaux</a>
+    <a class="btn btn-primary" href="@Url.Action("DynamicReportsAffected","Materiel")"><i class="fa fa-plus-square"></i>Télecharger ma liste des matériels</a>
 </form>
 <table class="table">
     <tr>
@@ -60,8 +84,8 @@
                 <a class="btn btn-info" href="@Url.Action("Details","Materiel", new { id = item.Id })"><i class="fa fa-plus-square"></i>Détails</a>
                 <a class="btn btn-success" href="@Url.Action("Create","Reclamation",new { materiel = item.Id })" )"><i class="fa fa-plus-square"></i>Reclamer</a>
                 <a class="btn btn-primary" href="@Url.Action("DynamicReport","Materiel", new { id = item.Id })"><i class="fa fa-plus-square"></i>Télecharger Contrat</a>
-                
-             </td>
+
+            </td>
         </tr>
     }
 

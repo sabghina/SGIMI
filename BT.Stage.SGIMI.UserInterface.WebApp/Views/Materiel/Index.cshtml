@@ -3,9 +3,33 @@
 @{
     ViewBag.Title = "MaterielNoAffected";
 }
-<br />
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        text-align: center;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2
+    }
+
+    th {
+        background-color: white;
+        color: black;
+    }
+
+    h2 {
+        font-style: oblique;
+    }
+</style>
+<h2>Liste des matériels non affectés</h2>
 <form class="navbar-form navbar-right">
-    <a class="btn btn-primary" href="@Url.Action("DynamicReportsNoAffected","Materiel")"><i class="fa fa-plus-square"></i>Télecharger matériaux non affectés</a>
+    <a class="btn btn-primary" href="@Url.Action("DynamicReportsNoAffected","Materiel")"><i class="fa fa-plus-square"></i>Télecharger matériels non affectés</a>
 </form>
 <table class="table">
     <tr>
@@ -59,7 +83,7 @@
                 <a class="btn btn-success" href="@Url.Action("Affecter","Materiel", new { id = item.Id })"><i class="fa fa-plus-square"></i>Affecter</a>
                 <a class="btn btn-danger" href="@Url.Action("Archiver","Materiel", new { id = item.Id })"><i class="fa fa-plus-square"></i>Supprimer</a>
                 <a class="btn btn-primary" href="@Url.Action("DynamicReport","Materiel", new { id = item.Id })"><i class="fa fa-plus-square"></i>Télecharger Contrat</a>
-                
+
             </td>
         </tr>
     }
