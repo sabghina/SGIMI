@@ -59,7 +59,7 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
             List<Fournisseur> fournisseurs = new List<Fournisseur>();
             foreach (Fournisseur fournisseur in listFournisseurs)
             {
-                if (fournisseur.Etat == "Active")
+                if ((fournisseur.Etat == "Active")&&(fournisseur.Type == "F"))
                 {
                     fournisseurs.Add(fournisseur);
                 }
