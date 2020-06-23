@@ -253,7 +253,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             List<Fournisseur> societeTierces = societeTierceRepository.GetSocieteTierces();
             List<SocieteTierceReport> societeTierceReports = SocieteTierceTranspose.SocieteTierceListToSocieteTierceReportList(societeTierces);
             byte[] file = societeTierceRepository.DynamicReports(societeTierceReports);
-            string filename = $"dynamic_reports_{DateTime.Now}.pdf";
+            string filename = $"Liste_SocieteTierce_{DateTime.Now}.pdf";
             return File(file, "application/pdf", filename);
         }
 
@@ -263,7 +263,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             Fournisseur societeTierce = societeTierceRepository.GetSocieteTierceById(id);
             SocieteTierceReport societeTierceReport = SocieteTierceTranspose.SocieteTierceToSocieteTierceReport(societeTierce);
             byte[] file = societeTierceRepository.DynamicReport(societeTierceReport);
-            string filename = $"dynamic_report_{id}_{DateTime.Now}.pdf";
+            string filename = $"Contrat_SocieteTierce_{id}_{DateTime.Now}.pdf";
             return File(file, "application/pdf", filename);
         }
     }

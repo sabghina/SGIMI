@@ -179,7 +179,7 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
             List<Materiel> userMateriels = new List<Materiel>();
             foreach (Materiel materiel in Listmateriels)
             {
-                if ((materiel.Agent == currentUser)&& (materiel.Statut== "Non reclamé"))
+                if ((materiel.Agent == currentUser)&&(materiel.Statut== "Non reclamé"))
                 {
                     userMateriels.Add(materiel);
                 }

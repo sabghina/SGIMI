@@ -125,7 +125,14 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Adresse = $"{societeTierce.Adresse}",
                 SiteWeb = $"{societeTierce.SiteWeb}",
                 Etat = $"{societeTierce.Etat}",
-                DateContrat = $"{societeTierce.CreatedDate}"
+                DateContrat = $"Date : {societeTierce.CreatedDate} / Heure : { societeTierce.CreatedTime }",
+                CreatedBy = $"{societeTierce.CreatedBy}",
+                LastUpdatedBy = $"{societeTierce.LastUpdatedBy}",
+                DateModification = $"Date : {societeTierce.LastUpdatedDate} / Heure : { societeTierce.LastUpdatedTime}",
+                ArchivedBy = $"{societeTierce.ArchivedBy}",
+                DateArchive = $"Date : {societeTierce.ArchivedDate} / Heure : { societeTierce.ArchivedTime}",
+                ActivatedBy = $"{societeTierce.ActivatedBy}",
+                DateActivation = $"Date : {societeTierce.ActivatedDate} / Heure : { societeTierce.ActivatedTime}",
             };
 
             return societeTierceReport;

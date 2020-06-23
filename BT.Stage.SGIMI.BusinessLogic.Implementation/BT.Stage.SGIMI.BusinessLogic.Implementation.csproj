@@ -78,14 +78,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Reporting\Datasets\SocieteTierceDataSet.cs">
-      <DependentUpon>SocieteTierceDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Reporting\Datasets\SocieteTierceDataSet.Designer.cs">
-      <DependentUpon>SocieteTierceDataSet.xsd</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="Reporting\Datasets\InterventionDataSet.cs">
       <DependentUpon>InterventionDataSet.xsd</DependentUpon>
     </Compile>
@@ -109,6 +101,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ReclamationDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Datasets\SocieteTierceDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SocieteTierceDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Reporting\Datasets\UniteGestionDataSet.cs">
       <DependentUpon>UniteGestionDataSet.xsd</DependentUpon>
@@ -158,17 +155,6 @@
     <None Include="Reporting\Datasets\FournisseurDataSet.xss">
       <DependentUpon>FournisseurDataSet.xsd</DependentUpon>
     </None>
-    <None Include="Reporting\Datasets\SocieteTierceDataSet.xsc">
-      <DependentUpon>SocieteTierceDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Reporting\Datasets\SocieteTierceDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SocieteTierceDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Reporting\Datasets\SocieteTierceDataSet.xss">
-      <DependentUpon>SocieteTierceDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Reporting\Datasets\InterventionDataSet.xsc">
       <DependentUpon>InterventionDataSet.xsd</DependentUpon>
     </None>
@@ -201,6 +187,17 @@
     </None>
     <None Include="Reporting\Datasets\ReclamationDataSet.xss">
       <DependentUpon>ReclamationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reporting\Datasets\SocieteTierceDataSet.xsc">
+      <DependentUpon>SocieteTierceDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reporting\Datasets\SocieteTierceDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SocieteTierceDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reporting\Datasets\SocieteTierceDataSet.xss">
+      <DependentUpon>SocieteTierceDataSet.xsd</DependentUpon>
     </None>
     <None Include="Reporting\Datasets\UniteGestionDataSet.xsc">
       <DependentUpon>UniteGestionDataSet.xsd</DependentUpon>

@@ -20,7 +20,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("SocieteTierceDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("SocieteTierceDataSet1")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class SocieteTierceDataSet : global::System.Data.DataSet {
         
@@ -127,7 +127,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            FournisseurDataSet cln = ((FournisseurDataSet)(base.Clone()));
+            SocieteTierceDataSet cln = ((SocieteTierceDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.Datasets {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "FournisseurDataSet";
+            this.DataSetName = "SocieteTierceDataSet1";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/FournisseurDataSet.xsd";
+            this.Namespace = "http://tempuri.org/SocieteTierceDataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableSocieteTierce = new SocieteTierceDataTable();

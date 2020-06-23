@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="FournisseurDataSet" targetNamespace="http://tempuri.org/FournisseurDataSet.xsd" xmlns:mstns="http://tempuri.org/FournisseurDataSet.xsd" xmlns="http://tempuri.org/FournisseurDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="SocieteTierceDataSet1" targetNamespace="http://tempuri.org/SocieteTierceDataSet1.xsd" xmlns:mstns="http://tempuri.org/SocieteTierceDataSet1.xsd" xmlns="http://tempuri.org/SocieteTierceDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -9,7 +9,7 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="FournisseurDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="FournisseurDataSet" msprop:Generator_UserDSName="FournisseurDataSet">
+  <xs:element name="SocieteTierceDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="SocieteTierceDataSet1" msprop:Generator_UserDSName="SocieteTierceDataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="SocieteTierce" msprop:Generator_TableClassName="SocieteTierceDataTable" msprop:Generator_TableVarName="tableSocieteTierce" msprop:Generator_TablePropName="SocieteTierce" msprop:Generator_RowDeletingName="SocieteTierceRowDeleting" msprop:Generator_RowChangingName="SocieteTierceRowChanging" msprop:Generator_RowEvHandlerName="SocieteTierceRowChangeEventHandler" msprop:Generator_RowDeletedName="SocieteTierceRowDeleted" msprop:Generator_UserTableName="SocieteTierce" msprop:Generator_RowChangedName="SocieteTierceRowChanged" msprop:Generator_RowEvArgName="SocieteTierceRowChangeEvent" msprop:Generator_RowClassName="SocieteTierceRow">

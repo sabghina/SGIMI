@@ -38,7 +38,6 @@
 <hr />
 <table class="table">
     <tr>
-        <th></th>
         <th>
             @Html.DisplayNameFor(model => model.Nom)
         </th>
@@ -64,9 +63,6 @@
     @foreach (var item in Model.OrderByDescending(item => item.CreatedTime))
     {
         <tr>
-            <td>
-                <img src="~/Icon/intranet.png" width="25" height="25" />
-            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Nom)
             </td>

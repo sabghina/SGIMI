@@ -173,7 +173,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!Nom.Value, "FournisseurDataSet")</Value>
+                <Value>=First(Fields!Nom.Value, "SocieteTierceDataSet")</Value>
                 <Style>
                   <FontSize>12pt</FontSize>
                 </Style>
@@ -205,7 +205,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!SiteWeb.Value, "FournisseurDataSet")</Value>
+                <Value>=First(Fields!SiteWeb.Value, "SocieteTierceDataSet")</Value>
                 <Style>
                   <FontSize>12pt</FontSize>
                 </Style>
@@ -237,7 +237,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!Adresse.Value, "FournisseurDataSet")</Value>
+                <Value>=First(Fields!Adresse.Value, "SocieteTierceDataSet")</Value>
                 <Style>
                   <FontSize>12pt</FontSize>
                 </Style>
@@ -269,7 +269,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!Contact.Value, "FournisseurDataSet")</Value>
+                <Value>=First(Fields!Contact.Value, "SocieteTierceDataSet")</Value>
                 <Style>
                   <FontSize>12pt</FontSize>
                 </Style>
@@ -301,7 +301,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!Email.Value, "FournisseurDataSet")</Value>
+                <Value>=First(Fields!Email.Value, "SocieteTierceDataSet")</Value>
                 <Style>
                   <FontSize>12pt</FontSize>
                 </Style>
@@ -366,7 +366,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!DateContrat.Value, "FournisseurDataSet")</Value>
+                <Value>=First(Fields!DateContrat.Value, "SocieteTierceDataSet")</Value>
                 <Style>
                   <FontSize>12pt</FontSize>
                 </Style>
@@ -442,7 +442,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!Etat.Value, "FournisseurDataSet")</Value>
+                <Value>=First(Fields!Etat.Value, "SocieteTierceDataSet")</Value>
                 <Style>
                   <FontSize>12pt</FontSize>
                 </Style>
@@ -507,7 +507,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!CreatedBy.Value, "FournisseurDataSet")</Value>
+                <Value>=First(Fields!CreatedBy.Value, "SocieteTierceDataSet")</Value>
                 <Style>
                   <FontSize>12pt</FontSize>
                 </Style>
@@ -572,7 +572,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!ArchivedBy.Value, "FournisseurDataSet")</Value>
+                <Value>=First(Fields!ArchivedBy.Value, "SocieteTierceDataSet")</Value>
                 <Style>
                   <FontSize>12pt</FontSize>
                 </Style>
@@ -637,7 +637,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!DateArchive.Value, "FournisseurDataSet")</Value>
+                <Value>=First(Fields!DateArchive.Value, "SocieteTierceDataSet")</Value>
                 <Style>
                   <FontSize>12pt</FontSize>
                 </Style>
@@ -702,7 +702,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!ActivatedBy.Value, "FournisseurDataSet")</Value>
+                <Value>=First(Fields!ActivatedBy.Value, "SocieteTierceDataSet")</Value>
                 <Style>
                   <FontSize>12pt</FontSize>
                 </Style>
@@ -767,7 +767,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!DateActivation.Value, "FournisseurDataSet")</Value>
+                <Value>=First(Fields!DateActivation.Value, "SocieteTierceDataSet")</Value>
                 <Style>
                   <FontSize>12pt</FontSize>
                 </Style>
@@ -832,7 +832,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!LastUpdatedBy.Value, "FournisseurDataSet")</Value>
+                <Value>=First(Fields!LastUpdatedBy.Value, "SocieteTierceDataSet")</Value>
                 <Style>
                   <FontSize>12pt</FontSize>
                 </Style>
@@ -897,7 +897,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!DateModification.Value, "FournisseurDataSet")</Value>
+                <Value>=First(Fields!DateModification.Value, "SocieteTierceDataSet")</Value>
                 <Style>
                   <FontSize>12pt</FontSize>
                 </Style>
@@ -1244,11 +1244,18 @@
       </ConnectionProperties>
       <rd:DataSourceID>0a6162ef-7c07-499c-84a7-9bb58f5d6ebb</rd:DataSourceID>
     </DataSource>
+    <DataSource Name="SocieteTierceDataSet1">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>15471fc8-bd7d-4d4a-9cbe-b8de72dd62fa</rd:DataSourceID>
+    </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="FournisseurDataSet">
+    <DataSet Name="SocieteTierceDataSet">
       <Query>
-        <DataSourceName>FournisseurDataSet</DataSourceName>
+        <DataSourceName>SocieteTierceDataSet1</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -1310,9 +1317,9 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>FournisseurDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Sabrina\source\repos\SGIMI\BT.Stage.SGIMI.BusinessLogic.Implementation\Reporting\Datasets\FournisseurDataSet.xsd</rd:SchemaPath>
-        <rd:TableName>Fournisseur</rd:TableName>
+        <rd:DataSetName>SocieteTierceDataSet1</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Sabrina\source\repos\SGIMI\BT.Stage.SGIMI.BusinessLogic.Implementation\Reporting\Datasets\SocieteTierceDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>SocieteTierce</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName />

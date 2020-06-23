@@ -120,6 +120,11 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             string currentUser = User.Identity.Name;
             List<Materiel> userMateriels = materielRepository.GetUserMateriels(currentUser);
             List<Fournisseur> fournisseurs = fournisseurRepository.GetFournisseursActive();
+            List<Fournisseur> societeTierces = societeTierceRepository.GetSocieteTierces();
+            foreach (Fournisseur societeTierce in societeTierces)
+            {
+                fournisseurs.Add(societeTierce);
+            }
             // 2. transpose entity -> view model
             List<MaterielViewModel> userMaterielsViewModels = MaterielTranspose.MaterielListToMaterielViewModelList(userMateriels, fournisseurs);
 

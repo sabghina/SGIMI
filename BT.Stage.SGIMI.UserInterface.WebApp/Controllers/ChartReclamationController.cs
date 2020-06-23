@@ -10,6 +10,7 @@ using System.Web.Mvc;
 
 namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
 {
+[Authorize]
     public class ChartReclamationController : Controller
     {
         readonly IReclamationRepository reclamationRepository;
@@ -20,18 +21,19 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         // GET: ChartReclamation
         public ActionResult Index()
         {
-            List<Reclamation> reclamations = reclamationRepository.GetReclamations();
-            var nbReclamationByDate = reclamations.GroupBy(Reclamation => Reclamation.CreatedDate)
-                .Select(groupedReclamation => new { date = groupedReclamation.Key, dates = groupedReclamation.ToList() })
+            string currentUser = User.Identity.Name;
+            List<Reclamation> reclamations = reclamationRepository.GetUserReclamations(currentUser);
+            var nbReclamationByMateriel = reclamations.GroupBy(Reclamation => Reclamation.Materiel)
+                .Select(groupedReclamation => new { materiel = groupedReclamation.Key, materiels = groupedReclamation.ToList() })
                 .ToList();
 
             List<DataPoint> dataPoints = new List<DataPoint>();
-            foreach (var groupReclamation in nbReclamationByDate)
+            foreach (var groupReclamation in nbReclamationByMateriel)
             {
-                dataPoints.Add(new DataPoint(groupReclamation.date, groupReclamation.dates.Count()));
+                //dataPoints.Add(new DataPoint(groupReclamation.materiel, groupReclamation.materiels.Count()));
             }
 
-            ViewBag.NombreReclamationParDate = JsonConvert.SerializeObject(dataPoints);
+            ViewBag.NombreReclamationPar = JsonConvert.SerializeObject(dataPoints);
             return View();
         }
     }
