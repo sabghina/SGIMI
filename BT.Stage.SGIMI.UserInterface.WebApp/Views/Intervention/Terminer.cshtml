@@ -2,14 +2,20 @@
 @{
     ViewBag.Title = "Terminer une intervention";
 }
-
+<style>
+    h2
+    {
+        font-style:oblique;
+        color:white;
+    }
+</style>
 <h2>Terminer Intervention  </h2>
 @using (Html.BeginForm("Terminer", "Intervention", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
 
 <div class="form-horizontal">
-    <h4>TerminerInterventionViewModel</h4>
+
     <hr />
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 

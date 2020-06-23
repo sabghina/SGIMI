@@ -1,29 +1,20 @@
 ﻿@model BT.Stage.SGIMI.UserInterface.ViewModel.AffectationMaterielViewModel
-    @*@{ 
-        List<SelectListItem> ListUnité = new List<SelectListItem>();
-        ListUnité.Add(new SelectListItem
-        {
-            Text = "Siége",
-            Value = "Siége",
+<style>
 
-        });
-        ListUnité.Add(new SelectListItem
-        {
-            Text = "Agence",
-            Value = "Agence",
+    h2 {
+        color:white;
+        font-style:oblique;
+       }
+</style>
 
-        });
-    }*@
+<h2>Affectation du materiel @Html.HiddenFor(model => model.Id)</h2>
 
 @using (Html.BeginForm("Affecter","Materiel",FormMethod.Post)) 
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Affectation du materiel @Html.HiddenFor(model => model.Id)</h4>
-        <hr />
-        
-
+      <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
 
