@@ -6,7 +6,7 @@
     table {
         border-collapse: collapse;
         width: 100%;
-        border-style:solid;
+        border-style: solid;
     }
 
     th, td {
@@ -23,16 +23,19 @@
         background-color: white;
         color: black;
     }
-    h2
-    {
-        font-style:oblique;
-        color:white;
+
+    h2 {
+        font-style: oblique;
+        color: white;
     }
 </style>
 <h2>Liste des unités gestions</h2>
 <form class="navbar-form navbar-right">
     <a class="btn btn-primary" href="@Url.Action("DynamicReports","UniteGestion")"><i class="fa fa-plus-square"></i>Télecharger la liste des unités gestions</a>
 </form>
+<br />
+<br />
+<hr />
 @Html.ActionLink("Ajouter une nouvelle unite Gestion ", "Create")|
 <table class="table">
     <tr>
