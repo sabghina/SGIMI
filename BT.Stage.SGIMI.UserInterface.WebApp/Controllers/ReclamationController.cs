@@ -170,6 +170,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 if (!ModelState.IsValid)
                 {
                     List<UniteGestion> uniteGestions = uniteGestionRepository.GetUniteGestions();
+
                     IEnumerable<SelectListItem> uniteGestionsSelectListItem = new SelectList(uniteGestions.Select(
                         uniteGestion => new
                         {
