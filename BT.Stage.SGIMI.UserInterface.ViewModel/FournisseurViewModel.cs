@@ -24,22 +24,21 @@ namespace BT.Stage.SGIMI.UserInterface.ViewModel
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
-        [RegularExpression(@"(\+00216[0-9]{2}|0)([0-9]{9}|[0-9\-\s]{9,18})")]
-        [StringLength(15, MinimumLength = 8, ErrorMessage = "Longueur non valide")]
+        [StringLength(8, ErrorMessage = "Longueur non valide")]
         [Required(ErrorMessage = "Veuillez saisir le numéro de téléphone du fournisseur")]
-        [MaxLength(15)]
+        [MaxLength(8)]
         [Display(Name = " Téléphone")]
         public string Telephone { get; set; }
 
-        
+
         [Required(ErrorMessage = "Veuillez saisir l'adresse du fournisseur")]
         [MaxLength(30)]
         [Display(Name = " Adresse")]
         public string Adresse { get; set; }
 
-        [RegularExpression(@"(\+00216[0-9]{2}|0)([0-9]{9}|[0-9\-\s]{9,18})")]
+        [StringLength(8, ErrorMessage = "Longueur non valide")]
         [Required(ErrorMessage = "Veuillez saisir le fax du fournisseur")]
-        [MaxLength(15)]
+        [MaxLength(8)]
         [Display(Name = " Fax")]
         public string Fax { get; set; }
 
