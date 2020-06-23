@@ -68,10 +68,10 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             return View(interventionViewModel);
         }
         // GET: Intervention/Create
-        public ActionResult Create(int reclamation)
+        public ActionResult Create(int id)
         {
             CreateInterventionViewModel createInterventionViewModel = new CreateInterventionViewModel();
-            createInterventionViewModel.Reclamation = reclamation;
+            createInterventionViewModel.Reclamation = id;
             return View(createInterventionViewModel);
         }
 

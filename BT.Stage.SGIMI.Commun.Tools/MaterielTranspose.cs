@@ -112,7 +112,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Modele = createMaterielViewModel.Modele,
                 ReferenceBT = createMaterielViewModel.ReferenceBT,
                 NumeroDeSerie = createMaterielViewModel.NumeroDeSerie,
-                Fournisseur = createMaterielViewModel.Fournisseur,
+                Fournisseur = oldMateriel.Fournisseur,
                 Agent = oldMateriel.Agent,
                 Etat = oldMateriel.Etat,
                 LastUpdatedBy = user,
