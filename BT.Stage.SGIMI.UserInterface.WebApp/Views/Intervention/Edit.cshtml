@@ -47,41 +47,13 @@
     });
 
 }
-@{
-    List<SelectListItem> listEtat = new List<SelectListItem>();
-    @* listEtat.Add(new SelectListItem
-
-        {
-            Text = "Choisir Etat",
-            Value = "Choisir Etat",
-            Selected = true
-        }); *@
-    listEtat.Add(new SelectListItem
-    {
-        Text = "En cours",
-        Value = "En cours",
-        Selected = true
-    });
-    listEtat.Add(new SelectListItem
-    {
-        Text = "Terminé",
-        Value = "Terminé",
-
-    });
-    listEtat.Add(new SelectListItem
-    {
-        Text = "Annuler",
-        Value = "Annuler",
-        Selected = true
-    });
-}
-
+<h2>Modifier une intervention</h2>
 @using (Html.BeginForm("Edit", "Intervention", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>Modifier une intervention</h4>
+        
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.Id)
@@ -98,29 +70,6 @@
             <div class="col-md-10">
                 @Html.DropDownListFor(model => model.Nature, listN, new { @class = "form-control", required = "required" })
                 @Html.ValidationMessageFor(model => model.Nature, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Etat, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownListFor(model => model.Etat, listEtat, new { @class = "form-control", required = "required" })
-                @Html.ValidationMessageFor(model => model.Etat, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.ProblemeConstate, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.ProblemeConstate, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.ProblemeConstate, "", new { @class = "text-danger" })
-            </div>
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(model => model.TraveauxEffectues, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.TraveauxEffectues, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.TraveauxEffectues, "", new { @class = "text-danger" })
             </div>
         </div>
 

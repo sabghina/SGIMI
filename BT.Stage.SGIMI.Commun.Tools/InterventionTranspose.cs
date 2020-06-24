@@ -94,13 +94,13 @@ namespace BT.Stage.SGIMI.Commun.Tools
             Intervention intervention = new Intervention
             {
 
-                Id = createInterventionViewModel.Id,
+                Id = oldIntervention.Id,
                 Type = createInterventionViewModel.Type,
                 Nature = createInterventionViewModel.Nature,
-                Etat = createInterventionViewModel.Etat,
+                Etat = oldIntervention.Etat,
                 Reclamation = oldIntervention.Reclamation,
-                ProblemeConstate = createInterventionViewModel.ProblemeConstate,
-                TraveauxEffectues = createInterventionViewModel.TraveauxEffectues,
+                ProblemeConstate = oldIntervention.ProblemeConstate,
+                TraveauxEffectues = oldIntervention.TraveauxEffectues,
                 CreatedBy = oldIntervention.CreatedBy,
                 CreatedDate = oldIntervention.CreatedDate,
                 CreatedTime = oldIntervention.CreatedTime,
