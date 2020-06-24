@@ -31,7 +31,7 @@
 </style>
 <h2>Ma liste des réclamations en attentes </h2>
 <form class="navbar-form navbar-right">
-    <a class="btn btn-primary" href="@Url.Action("DynamicReportsOnHold","Reclamation")"><i class="fa fa-plus-square"></i>Télecharger réclamations en attentes</a>
+    <a class="btn btn-primary" href="@Url.Action("UserDynamicReportsOnHold","Reclamation")"><i class="fa fa-plus-square"></i>Télecharger réclamations en attentes</a>
 </form>
 <br />
 <br />
@@ -75,9 +75,9 @@
                 @Html.DisplayFor(modelItem => item.UniteGestion)
             </td>
             <td>
-                <a class="btn btn-info" href="@Url.Action("Edit","Reclamation", new { id = item.Id })"><i class="fa fa-plus-square"></i>Modifier</a>
+                <a class="btn btn-success" href="@Url.Action("Edit","Reclamation", new { id = item.Id })"><i class="fa fa-plus-square"></i>Modifier</a>
                 <a class="btn btn-info" href="@Url.Action("Details","Reclamation", new { id = item.Id })"><i class="fa fa-plus-square"></i>Détails</a>
-                <a class="btn btn-info" href="@Url.Action("Annuler","Reclamation", new { id = item.Id })"><i class="fa fa-plus-square"></i>Annuler</a>
+                <a class="btn btn-danger" href="@Url.Action("Annuler","Reclamation", new { id = item.Id })"><i class="fa fa-plus-square"></i>Annuler</a>
                 @if ((Request.IsAuthenticated) && (User.IsInRole("admin")))
                 {
                     <a class="btn btn-success" href="@Url.Action("Create","Intervention", new { id = item.Id })"><i class="fa fa-plus-square"></i>Intervenir</a>

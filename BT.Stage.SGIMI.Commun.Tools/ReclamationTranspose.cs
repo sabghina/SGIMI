@@ -114,11 +114,11 @@ namespace BT.Stage.SGIMI.Commun.Tools
         {
             Reclamation reclamation = new Reclamation
             {
-                Id = createReclamationViewModel.Id,
+                Id = oldReclamation.Id,
                 Materiel = oldReclamation.Materiel,
                 Probleme = createReclamationViewModel.Probleme,
                 Commentaire = createReclamationViewModel.Commentaire,
-                Etat = createReclamationViewModel.Etat,
+                Etat = oldReclamation.Etat,
                 UniteGestion = createReclamationViewModel.UniteGestion,
                 CreatedBy = oldReclamation.CreatedBy,
                 CreatedDate = oldReclamation.CreatedDate,

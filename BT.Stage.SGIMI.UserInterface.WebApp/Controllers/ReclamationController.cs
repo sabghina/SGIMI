@@ -364,7 +364,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         public FileResult DynamicReportsFinished()
         {
             List<Reclamation> reclamations = reclamationRepository.GetFinishedReclamations();
-            List<Materiel> materiels = materielRepository.GetAffectedMateriels();
+            List<Materiel> materiels = materielRepository.GetComplainedMateriels();
             List<ReclamationReport> reclamationReports = ReclamationTranspose.ReclamationListToReclamationReportList(reclamations, materiels);
             byte[] file = reclamationRepository.DynamicReportsFinished(reclamationReports);
             string filename = $"ListeReclamationsEnCours{DateTime.Now}.pdf";
