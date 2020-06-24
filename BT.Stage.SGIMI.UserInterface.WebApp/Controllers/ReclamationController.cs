@@ -193,7 +193,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                     bool materielIsChanged = materielRepository.ChangeMateriel(materielStatut);
                     if (materielIsChanged)
                     {
-                        return RedirectToAction("Index");
+                        return RedirectToAction("UserOnHold");
                     }
                     {
                         throw new InvalidOperationException("Désolé");
@@ -257,7 +257,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 bool reclamationIsUpdated = reclamationRepository.UpdatedReclamation(reclamation);
                 if (reclamationIsUpdated)
                 {
-                    return RedirectToAction("Index");
+                    return RedirectToAction("UserOnHold");
                 }
                 else
                 {
@@ -302,7 +302,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                     bool materielIsChanged = materielRepository.ChangeMateriel(materielStatut);
                     if (materielIsChanged)
                     {
-                        return RedirectToAction("Canceled");
+                        return RedirectToAction("UserCanceled");
                     }
                     else
                     {
