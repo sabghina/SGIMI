@@ -27,27 +27,6 @@
         <script type="text/javascript">
 		window.onload = function () {
 
-@*var chart = new CanvasJS.Chart("chartContainer", {
-	theme: "light1", // "light1", "light2", "dark1", "dark2"
-	exportEnabled: true,
-	animationEnabled: true,
-	title: {
-		text: "Statistiques des reclamations"
-	},
-	subtitles: [{
-		text: "Banque de tunisie, 2020"
-	}],
-	data: [{
-		type: "bar",
-		startAngle: 180,
-		toolTipContent: "<b>{label}</b>:{y}%",
-		showInLegend: "true",
-		legendText: "{label}",
-		indexLabel: "{label} - {y}%",
-		dataPoints: @Html.Raw(ViewBag.ReclamationParService)
-	}]
-});
-chart.render();*@
 
 			var chart = new CanvasJS.Chart("chartContainer", {
 				theme: "light1", // "light1", "light2", "dark1", "dark2"
@@ -62,7 +41,7 @@ chart.render();*@
 					startAngle: 180,
 					toolTipContent: "<b>{label}</b> = {y}",
 					showInLegend: "true",
-                    legendText: "Nombre Reclamation Par Date",
+                    legendText: "{y}",
 					indexLabel: "",
 					dataPoints: @Html.Raw(ViewBag.NombreReclamationParDate)
 	            }]
@@ -102,7 +81,7 @@ chart.render();*@
 					startAngle: 180,
 					toolTipContent: "<b>{label}</b> = {y}",
 					showInLegend: "true",
-                    legendText: "Nombre intervention Par date",
+                    legendText: "{y}",
 					indexLabel: "",
 					dataPoints: @Html.Raw(ViewBag.NombreInterventionParDate)
 	            }]
