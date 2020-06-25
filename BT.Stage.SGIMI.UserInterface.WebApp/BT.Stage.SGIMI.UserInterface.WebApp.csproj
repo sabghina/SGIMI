@@ -236,6 +236,7 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\jquery-3.5.1" />
     <Content Include="Content\jquery-3.5.1 b" />
+    <Content Include="Content\login.scss" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\canvajs-2.3.2\canvasjs.min.js" />
     <Content Include="Scripts\canvajs-2.3.2\canvasjs.react.js" />
