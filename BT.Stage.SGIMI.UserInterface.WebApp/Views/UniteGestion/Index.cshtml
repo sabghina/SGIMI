@@ -29,13 +29,18 @@
         color: white;
     }
 </style>
-<h2>Liste des unités gestions</h2>
-<form class="navbar-form navbar-right">
-    <a class="btn btn-primary" href="@Url.Action("DynamicReports","UniteGestion")"><i class="fa fa-plus-square"></i>Télecharger la liste des unités gestions</a>
-</form>
-<br />
-<br />
+
+<div class="row">
+    <div class="col-lg-6 col-md-6">
+        <h2>Liste des unités de gestion </h2>
+    </div>
+    <div class="col-lg-6 col-md-6">
+        <a class="btn btn-primary navbar-right" style="margin-top: 3%;" href="@Url.Action("DynamicReports","UniteGestion")"><i class="fa fa-plus-square"></i>Télecharger la liste des unités gestions</a>
+
+    </div>
+</div>
 <hr />
+
 @Html.ActionLink("Ajouter une nouvelle unite Gestion ", "Create")|
 <table class="table">
     <tr>
