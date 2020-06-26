@@ -55,10 +55,10 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Models
 
         [Required]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(Name = "Mot de passe")]
         public string Password { get; set; }
 
-        [Display(Name = "Remember me?")]
+        [Display(Name = "Sauvgarder mes coordonées")]
         public bool RememberMe { get; set; }
     }
 

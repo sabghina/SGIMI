@@ -203,14 +203,20 @@ body {
     }
     </style>
 <div class="login-box">
-    <h2>Se connecter</h2>
+    
     @*<div class="row">
         <div class="col-md-8">
             <section id="loginForm">*@
+
+    <img 
+         src="~/Content/images/SGIMI.png" 
+         width="350"
+         />
+
     @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
     {
         @Html.AntiForgeryToken()
-        <h4 class="blanc">Bonjour Agent BT..</h4>
+        <h4 class="blanc">Bonjour Agent BT!</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
@@ -226,7 +232,7 @@ body {
         </div>
         @*<div class="form-group">*@
 
-        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" ,@style="width:150px; text-align: left;"})
         <div class="user-box" style="margin-left: 5%;">
             @*<div class="col-md-10">*@
             @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
@@ -237,7 +243,7 @@ body {
 
         @*<div class="form-group">*@
         @*<div class="col-md-offset-2 col-md-10">*@
-        <div class="checkbox" style="margin-left: 12%;">
+        <div class="checkbox" style="margin-left: 12%; color:white;">
             @Html.CheckBoxFor(m => m.RememberMe)
             @Html.LabelFor(m => m.RememberMe)
         </div>
@@ -245,14 +251,12 @@ body {
         @*</div>*@
         @*<div class="form-group">
             <div class="col-md-offset-2 col-md-10">*@
+<br />
 <p>
-    <center> <button type="submit" class="btn btn-primary"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button></center>
+    <center> <button type="submit" class="btn btn-primary"><i class="fa fa-sign-in" aria-hidden="true"></i> Se connecter</button></center>
 </p>
 <p>
-
-    <center>@Html.ActionLink("S'authentifier", "Register")</center>
-
-
+ <center>@Html.ActionLink("S'authentifier", "Register")</center>
 </p>
         <p>
 
