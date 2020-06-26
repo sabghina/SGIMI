@@ -118,7 +118,7 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
                 throw;
             }
         }
-        // Dynamic reports (tous les fournisseurs)
+        // Dynamic reportsArchived (tous les fournisseurs)
         public byte[] DynamicReportsArchived(List<FournisseurReport> fournisseurReports)
         {
             try
