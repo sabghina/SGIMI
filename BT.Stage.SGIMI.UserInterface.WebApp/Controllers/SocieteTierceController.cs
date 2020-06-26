@@ -253,10 +253,19 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             List<Fournisseur> societeTierces = societeTierceRepository.GetSocieteTierces();
             List<SocieteTierceReport> societeTierceReports = SocieteTierceTranspose.SocieteTierceListToSocieteTierceReportList(societeTierces);
             byte[] file = societeTierceRepository.DynamicReports(societeTierceReports);
-            string filename = $"Liste_SocieteTierce_{DateTime.Now}.pdf";
+            string filename = $"Liste_SocieteTierce_Actives{DateTime.Now}.pdf";
             return File(file, "application/pdf", filename);
         }
 
+        //Societe Tierce Archived Dynamic Reports
+        public FileResult DynamicReportsArchived()
+        {
+            List<Fournisseur> societeTierces = societeTierceRepository.GetArchivedSocieteTierces();
+            List<SocieteTierceReport> societeTierceReports = SocieteTierceTranspose.SocieteTierceListToSocieteTierceReportList(societeTierces);
+            byte[] file = societeTierceRepository.DynamicReports(societeTierceReports);
+            string filename = $"Liste_SocieteTierce_Archivées{DateTime.Now}.pdf";
+            return File(file, "application/pdf", filename);
+        }
         // Dynamic Report (une seule st tierce)
         public FileResult DynamicReport(int id)
         {

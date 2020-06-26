@@ -600,7 +600,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Rapport des sociétes tierces archivées </Value>
+                  <Value>Rapport des sociétes tierces</Value>
                   <Style>
                     <FontSize>16pt</FontSize>
                     <FontWeight>Bold</FontWeight>
@@ -613,9 +613,9 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Left>6.47751cm</Left>
+          <Left>7.50268cm</Left>
           <Height>1.3407cm</Height>
-          <Width>10.94021cm</Width>
+          <Width>8.47959cm</Width>
           <Style>
             <Border>
               <Style>Solid</Style>

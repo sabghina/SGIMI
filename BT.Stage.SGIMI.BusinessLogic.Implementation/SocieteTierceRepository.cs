@@ -115,6 +115,21 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
             }
 
         }
+        public byte[] DynamicReportsArchived(List<SocieteTierceReport> societeTierceReports)
+        {
+            try
+            {
+                string reportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.SocieteTierceReport.SocieteTierceDynamicReportsArchived.rdlc";
+                ReportDataSource reportDataSource = new ReportDataSource("SocieteTierceDataSet", societeTierceReports);
+
+                return GenerateSocieteTierceReport(reportEmbeddedResource, reportDataSource);
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
 
         public byte[] DynamicReport(SocieteTierceReport societeTierceReport)
         {
@@ -133,6 +148,8 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
                 throw;
             };
         }
+
+       
 
         private byte[] GenerateSocieteTierceReport(string reportEmbeddedResource, ReportDataSource reportDataSource)
         {
@@ -177,6 +194,8 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
         {
             return societeTierceAdapter.ActiveSocieteTierce(societeTierce);
         }
+
+       
     }
 }
 
