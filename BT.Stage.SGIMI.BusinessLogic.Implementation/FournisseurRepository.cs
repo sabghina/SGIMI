@@ -118,6 +118,22 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
                 throw;
             }
         }
+        // Dynamic reports (tous les fournisseurs)
+        public byte[] DynamicReportsArchived(List<FournisseurReport> fournisseurReports)
+        {
+            try
+            {
+                string reportEmbeddedResource = "BT.Stage.SGIMI.BusinessLogic.Implementation.Reporting.RDLC.FournisseurReport.FournisseurDynamicReportsArchived.rdlc";
+                ReportDataSource reportDataSource = new ReportDataSource("FournisseurDataSet", fournisseurReports);
+
+                return GenerateFournisseurReport(reportEmbeddedResource, reportDataSource);
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
         // Dynamic report implementaion (un seul fournisseur)
         public byte[] DynamicReport(FournisseurReport fournisseurReport)
         {

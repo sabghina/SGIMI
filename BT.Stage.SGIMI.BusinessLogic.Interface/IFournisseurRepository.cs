@@ -39,6 +39,6 @@ namespace BT.Stage.SGIMI.BusinessLogic.Interface
         byte[] DynamicReport(FournisseurReport fournisseurReport);
         bool ArchivedFournisseur(Fournisseur fournisseur);
         bool ActivatedFournisseur(Fournisseur fournisseur);
-        
+        byte[] DynamicReportsArchived(List<FournisseurReport> fournisseurReports);
     }
 }

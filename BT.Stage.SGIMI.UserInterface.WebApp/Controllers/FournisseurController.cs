@@ -243,7 +243,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         {
             List<Fournisseur> fournisseurs = fournisseurRepository.GetArchivedFournisseurs();
             List<FournisseurReport> fournisseurReports = FournisseurTranspose.FournisseurListToFournisseurReportList(fournisseurs);
-            byte[] file = fournisseurRepository.DynamicReports(fournisseurReports);
+            byte[] file = fournisseurRepository.DynamicReportsArchived(fournisseurReports);
             string filename = $"ListeDesContratsFournisseursArchivé{DateTime.Now}.pdf";
             return File(file, "application/pdf", filename);
         }

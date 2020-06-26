@@ -199,6 +199,7 @@ body {
 }*@
     .blanc {
         color: white;
+        
     }
     </style>
 <div class="login-box">
@@ -219,7 +220,7 @@ body {
 
             @*<div class="col-md-10">*@
             @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
-            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-warning" ,@style = "font-weight:bold;" })
             @*</div>*@
             @*</div>*@
         </div>
