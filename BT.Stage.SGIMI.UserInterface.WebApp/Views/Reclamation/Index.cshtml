@@ -6,7 +6,7 @@
     table {
         border-collapse: collapse;
         width: 100%;
-        border-style:solid;
+        border-style: solid;
     }
 
     th, td {
@@ -23,16 +23,24 @@
         background-color: white;
         color: black;
     }
-    h2
-    {
-        font-style:oblique;
-        color:white;
+
+    h2 {
+        font-style: oblique;
+        color: white;
     }
 </style>
-<h2>Liste des réclamations en attentes</h2>
-<form class="navbar-form navbar-right">
-    <a class="btn btn-primary" href="@Url.Action("DynamicReportsOnHold","Reclamation")"><i class="fa fa-plus-square"></i>Télecharger réclamations en attentes</a>
-</form>
+
+<div class="row">
+    <div class="col-lg-6 col-md-6">
+        <h2>Liste des réclamations en attentes </h2>
+    </div>
+    <div class="col-lg-6 col-md-6">
+        <a class="btn btn-primary navbar-right" style="margin-top: 3%;" href="@Url.Action("DynamicReportsOnHold","Reclamation")"><i class="fa fa-plus-square"></i>Télecharger la liste des reclamations en attentes</a>
+
+    </div>
+</div>
+
+<hr />
 <table class="table">
     <tr>
         <th>
