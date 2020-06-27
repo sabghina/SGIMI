@@ -1,35 +1,33 @@
 ﻿@model BT.Stage.SGIMI.UserInterface.ViewModel.FournisseurViewModel
-
+<style>
+    h1,h3{
+        color:white;
+        text-align:center;
+    }
+</style>
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>FournisseurViewModel</h4>
+        <h1>Confirmation de la demande d'archive</h1>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.Id)
+        
 
+        <h3 style="text-align:center">
+            Voulez vous archiver ce fournisseur ?
 
-        <p>
-            Voulez vous archiver ce fournisseur
-
-        </p>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Oui" class="btn btn-default" />
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                @*<input type="reset" value="Non" class="btn btn-default" />*@
-
-                <div>
-                    @Html.ActionLink("Non", "Index")
-                </div>
+        </h3>
+        <br />
+        <div class="form-group" style="margin-left:150px">
+            <div class="col-md-offset-4 col-md-10">
+                <input type="submit" value="Oui" class="btn btn-success" style="margin:10px" />
+                <a class="btn btn-danger" href="@Url.Action("Index","Fournisseur")"><i class="fa fa-plus-square"></i>Non</a>
             </div>
         </div>
     </div>
+    <br />
 }
 

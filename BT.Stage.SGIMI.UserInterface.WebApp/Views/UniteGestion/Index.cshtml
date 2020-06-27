@@ -41,7 +41,7 @@
 </div>
 <hr />
 
-@Html.ActionLink("Ajouter une nouvelle unite Gestion ", "Create")|
+@*@Html.ActionLink("Ajouter une nouvelle unite Gestion ", "Create")|*@
 <table class="table">
     <tr>
         <th>
@@ -91,7 +91,7 @@
 
             <td>
                 <a class="btn btn-info" href="@Url.Action("Details","UniteGestion", new { id = item.Id })"><i class="fa fa-plus-square"></i>Détails</a>
-                <a class="btn btn-success" href="@Url.Action("Edit","UniteGestion", new { id = item.Id })"><i class="fa fa-plus-square"></i>Modifier</a>
+                @*<a class="btn btn-success" href="@Url.Action("Edit","UniteGestion", new { id = item.Id })"><i class="fa fa-plus-square"></i>Modifier</a>*@
                 <a class="btn btn-primary" href="@Url.Action("DynamicReport","UniteGestion", new { id = item.Id })"><i class="fa fa-plus-square"></i>Télecharger rapport</a>
 
             </td>

@@ -70,12 +70,9 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Modifier" class="btn btn-success" style="margin:10px"  />
+                <a class="btn btn-danger" href="@Url.Action("UserOnHold","Reclamation")"><i class="fa fa-plus-square"></i>Retour</a>
             </div>
         </div>
     </div>
 }
-
-<div>
-    @Html.ActionLink("Retour", "Index")
-</div>
