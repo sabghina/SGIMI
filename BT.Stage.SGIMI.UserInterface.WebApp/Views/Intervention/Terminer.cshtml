@@ -8,6 +8,11 @@
         font-style:oblique;
         color:white;
     }
+    textarea {
+        height: 50px;
+        width: 500px;
+        color: black;
+    }
 </style>
 <h2>Terminer Intervention  </h2>
 @using (Html.BeginForm("Terminer", "Intervention", FormMethod.Post))
@@ -29,7 +34,7 @@
     <div class="form-group">
         @Html.LabelFor(model => model.ProblemeConstate, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.ProblemeConstate, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.TextAreaFor(model => model.ProblemeConstate, new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.ProblemeConstate, "", new { @class = "text-danger" })
         </div>
     </div>
@@ -37,7 +42,7 @@
     <div class="form-group">
         @Html.LabelFor(model => model.TraveauxEffectues, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.TraveauxEffectues, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.TextAreaFor(model => model.TraveauxEffectues, new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.TraveauxEffectues, "", new { @class = "text-danger" })
         </div>
     </div>
