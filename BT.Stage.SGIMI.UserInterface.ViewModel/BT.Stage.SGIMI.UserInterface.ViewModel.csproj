@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AffectationMaterielViewModel.cs" />
+    <Compile Include="AvisViewModel.cs" />
     <Compile Include="CreateMaterielViewModel.cs" />
     <Compile Include="InterventionViewModel.cs" />
     <Compile Include="CreateInterventionViewModel.cs" />

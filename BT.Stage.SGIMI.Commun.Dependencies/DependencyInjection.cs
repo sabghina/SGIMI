@@ -36,6 +36,9 @@ namespace BT.Stage.SGIMI.Commun.Dependencies
             unityContainer.RegisterType<IUniteGestionAdapter, UniteGestionAdapter>();
             unityContainer.RegisterType<IUniteGestionRepository, UniteGestionRepository>();
 
+            unityContainer.RegisterType<IAvisAdapter, AvisAdapter>();
+            unityContainer.RegisterType<IAvisRepository, AvisRepository>();
+
             return unityContainer;
         } 
     }
