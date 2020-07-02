@@ -41,7 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AvisTranspose.cs" />
     <Compile Include="InterventionTranspose.cs" />
     <Compile Include="ReclamationTranspose.cs" />
     <Compile Include="FournisseurTranspose.cs" />
