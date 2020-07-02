@@ -565,7 +565,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Liste des matériels supprimés</Value>
+                  <Value>Liste des matériels archivés</Value>
                   <Style>
                     <FontSize>16pt</FontSize>
                     <FontWeight>Bold</FontWeight>

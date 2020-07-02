@@ -500,7 +500,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             }
             List<MaterielReport> materielReports = MaterielTranspose.MaterielListToMaterielReportList(materiels, fournisseurs);
             byte[] file = materielRepository.DynamicReportsArchived(materielReports);
-            string filename = $"Liste_Des_Materiels_Supprimés{DateTime.Now}.pdf";
+            string filename = $"Liste_Des_Materiels_Archivés{DateTime.Now}.pdf";
             return File(file, "application/pdf", filename);
         }
 
