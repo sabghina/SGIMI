@@ -4,6 +4,8 @@ using BT.Stage.SGIMI.Commun.Tools;
 using BT.Stage.SGIMI.Data.DTO;
 using BT.Stage.SGIMI.Data.Entity;
 using BT.Stage.SGIMI.UserInterface.ViewModel;
+using BT.Stage.SGIMI.UserInterface.WebApp.Models;
+using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -72,7 +74,6 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 {
                     return View(fournisseurViewModel);
                 }
-                // TODO: Add insert logic here
                 string user = User.Identity.Name;
                 Fournisseur fournisseur = FournisseurTranspose.CreateFournisseurViewModelToFournisseur(fournisseurViewModel, user);
 

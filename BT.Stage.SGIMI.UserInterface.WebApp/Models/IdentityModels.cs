@@ -16,6 +16,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Models
             // Add custom user claims here
             return userIdentity;
         }
+        public string Unite { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
