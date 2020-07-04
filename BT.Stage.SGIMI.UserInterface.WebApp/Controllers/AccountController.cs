@@ -10,6 +10,10 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using BT.Stage.SGIMI.UserInterface.WebApp.Models;
 using Unity;
+using BT.Stage.SGIMI.Data.Entity;
+using BT.Stage.SGIMI.DataAccess.Implementation.DatabaseConnection;
+using BT.Stage.SGIMI.BusinessLogic.Interface;
+using System.Collections.Generic;
 
 namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
 {
@@ -18,15 +22,17 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+        readonly IUniteGestionRepository uniteGestionRepository;
         [InjectionConstructor]
         public AccountController()
         {
         }
 
-        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager)
+        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager, IUniteGestionRepository _uniteGestionRepository)
         {
             UserManager = userManager;
             SignInManager = signInManager;
+            uniteGestionRepository = _uniteGestionRepository;
         }
 
         public ApplicationSignInManager SignInManager
@@ -69,7 +75,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
         {
-            
+
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
             var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
@@ -77,14 +83,19 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
             {
                 return View(model);
             }
+
             if (User.IsInRole("admin"))
             {
-                returnUrl = "/";
+                return RedirectToAction("Index", "Home");
+                //returnUrl = "/";
             }
-            else if (User.IsInRole("user"))
+
+            if (User.IsInRole("user"))
             {
-                returnUrl = "/ChartReclamation";
+                return RedirectToAction("Index", "ChartReclamation");
+                //returnUrl = "/ChartReclamation";
             }
+
             switch (result)
             {
                 case SignInStatus.Success:
@@ -160,7 +171,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, Unite = 1 };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

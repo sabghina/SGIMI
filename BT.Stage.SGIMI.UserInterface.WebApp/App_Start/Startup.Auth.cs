@@ -6,6 +6,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using BT.Stage.SGIMI.UserInterface.WebApp.Models;
+using BT.Stage.SGIMI.Data.Entity;
 
 namespace BT.Stage.SGIMI.UserInterface.WebApp
 {

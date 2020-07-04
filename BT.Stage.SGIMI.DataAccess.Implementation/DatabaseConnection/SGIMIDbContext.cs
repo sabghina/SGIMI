@@ -2,15 +2,21 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation.DatabaseConnection
 {
     using BT.Stage.SGIMI.Data.Entity;
     using BT.Stage.SGIMI.DataAccess.Interface.DatabaseConnection;
+    using Microsoft.AspNet.Identity.EntityFramework;
     using System;
     using System.Data.Entity;
     using System.Linq;
 
-    public class SGIMIDbContext : DbContext, ISGIMIDbContext
+    public class SGIMIDbContext : IdentityDbContext<ApplicationUser>, ISGIMIDbContext
     {
         public SGIMIDbContext()
-            : base("name=SGIMIDbContext")
+            : base("name=SGIMIDbContext", throwIfV1Schema: false)
         {
+        }
+
+        public static SGIMIDbContext Create()
+        {
+            return new SGIMIDbContext();
         }
 
         // Add a DbSet for each entity type that you want to include in your model. For more information 

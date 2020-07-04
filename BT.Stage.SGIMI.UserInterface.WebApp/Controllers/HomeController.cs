@@ -1,5 +1,6 @@
 ﻿using BT.Stage.SGIMI.BusinessLogic.Interface;
 using BT.Stage.SGIMI.Data.Entity;
+using BT.Stage.SGIMI.DataAccess.Implementation.DatabaseConnection;
 using BT.Stage.SGIMI.UserInterface.WebApp.Models;
 using chart.Models;
 using Newtonsoft.Json;
@@ -25,7 +26,13 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         }
  
         public ActionResult Index()
-        {  
+        {
+            //ApplicationDbContext applicationDbContext = new ApplicationDbContext();
+            //List<ApplicationUser> users = applicationDbContext.Users.ToList();
+
+            //SGIMIDbContext sGIMIDbContext = new SGIMIDbContext();
+            //List<ApplicationUser> _users = sGIMIDbContext.Users.ToList();
+
             //Liste des reclamations
             List<Reclamation> reclamationsOnHold = reclamationRepository.GetReclamations();
             List<Reclamation> reclamationsInProgress = reclamationRepository.GetInProgressReclamations();

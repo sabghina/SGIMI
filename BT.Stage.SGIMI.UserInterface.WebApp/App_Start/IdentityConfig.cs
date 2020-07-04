@@ -11,6 +11,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using BT.Stage.SGIMI.UserInterface.WebApp.Models;
+using BT.Stage.SGIMI.Data.Entity;
 
 namespace BT.Stage.SGIMI.UserInterface.WebApp
 {
