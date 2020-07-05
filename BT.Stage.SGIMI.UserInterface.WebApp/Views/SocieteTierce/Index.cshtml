@@ -36,7 +36,7 @@
         <h2>Liste des sociétes tierces actives</h2>
     </div>
     <div class="col-lg-6 col-md-6">
-        <a class="btn btn-primary navbar-right" style="margin-top: 3%;" href="@Url.Action("DynamicReports","SocieteTierce")"><i class="fa fa-plus-square"></i>Télecharger les societés tierces actives</a>
+        <a class="btn btn-primary navbar-right btn-sm" style="margin-top: 3%;" href="@Url.Action("DynamicReports","SocieteTierce")"><i class="fa fa-plus-square"></i>Télecharger les societés tierces actives</a>
 
     </div>
 </div>
@@ -93,10 +93,10 @@
             </td>
 
             <td>
-                <a class="btn btn-info" href="@Url.Action("Details","SocieteTierce", new { id = item.Id })"><i class="fa fa-plus-square"></i>Détails</a>
-                <a class="btn btn-success" href="@Url.Action("Edit","SocieteTierce", new { id = item.Id })"><i class="fa fa-plus-square"></i>Modifier</a>
-                <a class="btn btn-danger" href="@Url.Action("Archiver","SocieteTierce", new { id = item.Id })"><i class="fa fa-plus-square"></i>Archiver</a>
-                <a class="btn btn-primary" href="@Url.Action("DynamicReport","SocieteTierce", new { id = item.Id })"><i class="fa fa-plus-square"></i>Télecharger Contrat</a>
+                <a class="btn btn-info btn-sm" href="@Url.Action("Details","SocieteTierce", new { id = item.Id })"><i class="fa fa-plus-square"></i>Détails</a>
+                <a class="btn btn-success btn-sm" href="@Url.Action("Edit","SocieteTierce", new { id = item.Id })"><i class="fa fa-plus-square"></i>Modifier</a>
+                <a class="btn btn-danger btn-sm" href="@Url.Action("Archiver","SocieteTierce", new { id = item.Id })"><i class="fa fa-plus-square"></i>Archiver</a>
+                <a class="btn btn-primary btn-sm" href="@Url.Action("DynamicReport","SocieteTierce", new { id = item.Id })"><i class="fa fa-plus-square"></i>Télecharger Contrat</a>
 
             </td>
         </tr>
