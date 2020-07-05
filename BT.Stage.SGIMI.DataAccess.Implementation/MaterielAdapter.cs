@@ -202,6 +202,20 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
 
             return materiels;
         }
+
+        public bool FiltrerMateriel(Materiel materiel)
+        {
+            sGIMIDbContext.Materiels.AddOrUpdate(materiel);
+            Task<int> nbRowsFiltrer= sGIMIDbContext.ObjectContext.SaveChangesAsync();
+            if (nbRowsFiltrer != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
 

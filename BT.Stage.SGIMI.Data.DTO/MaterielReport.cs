@@ -15,6 +15,7 @@ namespace BT.Stage.SGIMI.Data.DTO
         public string NumeroDeSerie { get; set; }
         public string Fournisseur { get; set; }
         public string Agent { get; set; }
+        public string UniteGestion { get; set; }
         public string Etat { get; set; }
         public string Statut { get; set; }
 

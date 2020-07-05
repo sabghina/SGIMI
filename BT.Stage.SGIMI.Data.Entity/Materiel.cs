@@ -41,6 +41,7 @@ namespace BT.Stage.SGIMI.Data.Entity
         public string Etat { get; set; }
         public string Statut { get; set; }
         public string Agent { get; set; }
+        public string UniteGestion { get; set; }
 
         public string AffectedBy { get; set; }
         public string AffectedDate { get; set; }

@@ -1,10 +1,14 @@
-﻿using BT.Stage.SGIMI.BusinessLogic.Interface;
+﻿using BT.Stage.SGIMI.BusinessLogic.Implementation;
+using BT.Stage.SGIMI.BusinessLogic.Interface;
 using BT.Stage.SGIMI.Commun.Tools;
 using BT.Stage.SGIMI.Data.DTO;
 using BT.Stage.SGIMI.Data.Entity;
+using BT.Stage.SGIMI.DataAccess.Implementation.DatabaseConnection;
+using BT.Stage.SGIMI.DataAccess.Interface.DatabaseConnection;
 using BT.Stage.SGIMI.UserInterface.ViewModel;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -17,13 +21,18 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
         readonly IMaterielRepository materielRepository;
         readonly IFournisseurRepository fournisseurRepository;
         readonly ISocieteTierceRepository societeTierceRepository;
+        readonly IUniteGestionRepository uniteGestionRepository;
+        private readonly IEnumerable<SelectListItem> nameUsers;
+
         public MaterielController(
             IMaterielRepository _materielRepository,
-            IFournisseurRepository _fournisseurRepository, ISocieteTierceRepository _societeTierceRepository)
+            IFournisseurRepository _fournisseurRepository, ISocieteTierceRepository _societeTierceRepository, IUniteGestionRepository _uniteGestionRepository, IEnumerable<SelectListItem> _nameUsers)
         {
             materielRepository = _materielRepository;
             fournisseurRepository = _fournisseurRepository;
             societeTierceRepository = _societeTierceRepository;
+            uniteGestionRepository = _uniteGestionRepository;
+            nameUsers = _nameUsers;
         }
 
         // GET: Materiel non affecté
@@ -280,11 +289,84 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
                 return View();
             }
         }
+        // GET: Materiel/Filtrer/5
+        public ActionResult Filtrer(int id)
+        {
+            List<UniteGestion> uniteGestions = uniteGestionRepository.GetUniteGestions();
+            IEnumerable<SelectListItem> uniteGestionsSelectListItem = new SelectList(uniteGestions.Select(
+                uniteGestion => new
+                {
+                    Id = uniteGestion.Id,
+                    Text = uniteGestion.Nom
+                }).AsEnumerable(), "Text", "Text");
+
+            AffectationMaterielViewModel affectationMaterielViewModel = new AffectationMaterielViewModel
+            {
+                UniteGestions = uniteGestionsSelectListItem,
+            };
+            
+            affectationMaterielViewModel.Id = id;
+            return View(affectationMaterielViewModel);
+
+        }
+
+        // POST: Materiel/Filtrer
+        [HttpPost]
+        public ActionResult Filtrer(int id,AffectationMaterielViewModel affectationMaterielViewModel)
+        {
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    return View(affectationMaterielViewModel);
+                }
+
+                Materiel oldMateriel = materielRepository.GetMaterielById(id);
+                Materiel materiel = MaterielTranspose.FiltrerMaterielViewModelToMateriel(oldMateriel, affectationMaterielViewModel);
+
+                bool materielIsCreated = materielRepository.FiltrerMateriel(materiel);
+                if (materielIsCreated)
+                {
+                    return RedirectToAction("Affecter",new { Id = id });
+                }
+                else
+                {
+                    throw new InvalidOperationException("oops");
+                }
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         // GET: Materiel/Affecter/5
         public ActionResult Affecter(int id)
         {
+            SGIMIDbContext sGIMIDbContext = new SGIMIDbContext();
+            List<ApplicationUser> _users = sGIMIDbContext.Users.ToList();
+            Materiel materiel = materielRepository.GetMaterielById(id);
+            foreach (ApplicationUser applicationUser in _users)
+            {
+                UniteGestion uniteGestion = uniteGestionRepository.GetUniteGestionById(applicationUser.Unite);
 
-            AffectationMaterielViewModel affectationMaterielViewModel = new AffectationMaterielViewModel();
+                if (uniteGestion.Nom == materiel.UniteGestion)
+                {
+
+                    IEnumerable<SelectListItem> nameUsers = new SelectList(_users.Select(
+                agent => new
+                {
+                    Id = agent.Email,
+                    Text = agent.UserName
+                }).AsEnumerable(), "Text", "Id");
+                    //IEnumerable<SelectListItem> nameUsers = new SelectList(new List<string> { "admin@bt.com", "admin@bt.com" }).AsEnumerable(),;
+                }
+            }
+                AffectationMaterielViewModel affectationMaterielViewModel = new AffectationMaterielViewModel
+                {
+                    Agents = nameUsers,
+                };
             affectationMaterielViewModel.Id = id;
             return View(affectationMaterielViewModel);
 
@@ -292,7 +374,7 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
 
         // POST: Materiel/Affecter
         [HttpPost]
-        public ActionResult Affecter(int id,AffectationMaterielViewModel affectationMaterielViewModel)
+        public ActionResult Affecter(int id, AffectationMaterielViewModel affectationMaterielViewModel)
         {
             try
             {

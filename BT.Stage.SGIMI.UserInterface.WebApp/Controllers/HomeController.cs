@@ -27,12 +27,6 @@ namespace BT.Stage.SGIMI.UserInterface.WebApp.Controllers
  
         public ActionResult Index()
         {
-            //ApplicationDbContext applicationDbContext = new ApplicationDbContext();
-            //List<ApplicationUser> users = applicationDbContext.Users.ToList();
-
-            //SGIMIDbContext sGIMIDbContext = new SGIMIDbContext();
-            //List<ApplicationUser> _users = sGIMIDbContext.Users.ToList();
-
             //Liste des reclamations
             List<Reclamation> reclamationsOnHold = reclamationRepository.GetReclamations();
             List<Reclamation> reclamationsInProgress = reclamationRepository.GetInProgressReclamations();

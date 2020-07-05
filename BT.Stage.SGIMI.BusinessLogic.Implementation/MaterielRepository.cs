@@ -268,6 +268,10 @@ namespace BT.Stage.SGIMI.BusinessLogic.Implementation
             return complainedUserMateriels;
         }
 
+        public bool FiltrerMateriel(Materiel materiel)
+        {
+            return materielAdapter.FiltrerMateriel(materiel);
+        }
     }
 }
 

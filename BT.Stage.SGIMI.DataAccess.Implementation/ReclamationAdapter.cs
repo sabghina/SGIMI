@@ -60,8 +60,6 @@ namespace BT.Stage.SGIMI.DataAccess.Implementation
             }
         }
 
-        
-
         public Reclamation GetReclamationById(int id)
         {
             Reclamation reclamation = sGIMIDbContext.Reclamations.Find(id);

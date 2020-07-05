@@ -45,5 +45,6 @@ namespace BT.Stage.SGIMI.BusinessLogic.Interface
         List<Materiel> GetComplainedMateriels();
         List<Materiel> GetUserMateriels(string currentUser);
         List<Materiel> GetComplainedUserMateriels(string currentUser);
+        bool FiltrerMateriel(Materiel materiel);
     }
 }

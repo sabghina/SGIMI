@@ -206,6 +206,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007041818405_InitialCreate.cs" />
+    <Compile Include="Migrations\202007041818405_InitialCreate.designer.cs">
+      <DependentUpon>202007041818405_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\DataPoint.cs" />
     <Compile Include="Models\DateFilter.cs" />
@@ -397,7 +402,7 @@
     <Content Include="Views\UniteGestion\Edit.cshtml" />
     <Content Include="Views\UniteGestion\Index.cshtml" />
     <Content Include="Views\UniteGestion\Create.cshtml" />
-    <Content Include="Views\Materiel\Affecter.cshtml" />
+    <Content Include="Views\Materiel\Filtrer.cshtml" />
     <Content Include="Views\Intervention\Index.cshtml" />
     <Content Include="Views\UniteGestion\Details.cshtml" />
     <Content Include="Views\ChartReclamation\Index.cshtml" />
@@ -436,6 +441,7 @@
     <Content Include="Views\SocieteTierce\Archiver.cshtml" />
     <Content Include="Views\SocieteTierce\Activer.cshtml" />
     <Content Include="Views\HomeUser\Index.cshtml" />
+    <Content Include="Views\Materiel\Affecter.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -484,10 +490,19 @@
       <Project>{CEF0D6F2-B066-4DB4-B7AD-933D35E07BA1}</Project>
       <Name>BT.Stage.SGIMI.DataAccess.Implementation</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BT.Stage.SGIMI.DataAccess.Interface\BT.Stage.SGIMI.DataAccess.Interface.csproj">
+      <Project>{9EF0E5D3-F826-4EF3-8A39-B6024A6D7089}</Project>
+      <Name>BT.Stage.SGIMI.DataAccess.Interface</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BT.Stage.SGIMI.UserInterface.ViewModel\BT.Stage.SGIMI.UserInterface.ViewModel.csproj">
       <Project>{753F3014-9A39-42D9-A24F-5C530B590F1F}</Project>
       <Name>BT.Stage.SGIMI.UserInterface.ViewModel</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202007041818405_InitialCreate.resx">
+      <DependentUpon>202007041818405_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

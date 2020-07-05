@@ -41,6 +41,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 NumeroDeSerie = materiel.NumeroDeSerie,
                 Fournisseur = fournisseur.Nom,
                 Agent = materiel.Agent,
+                UniteGestion = materiel.UniteGestion,
                 Etat = materiel.Etat,
                 Statut = materiel.Statut,
                 AffectedBy = materiel.AffectedBy,
@@ -114,6 +115,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 NumeroDeSerie = createMaterielViewModel.NumeroDeSerie,
                 Fournisseur = oldMateriel.Fournisseur,
                 Agent = oldMateriel.Agent,
+                UniteGestion = oldMateriel.UniteGestion,
                 Etat = oldMateriel.Etat,
                 LastUpdatedBy = user,
                 LastUpdatedDate = DateTime.Now.ToString("dd/MM/yyyy"),
@@ -140,6 +142,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 ReferenceBT = oldMateriel.ReferenceBT,
                 NumeroDeSerie = oldMateriel.NumeroDeSerie,
                 Fournisseur = oldMateriel.Fournisseur,
+                UniteGestion = oldMateriel.UniteGestion,
                 Etat = "Affecte",
                 Statut = oldMateriel.Statut,
                 Agent = affectationMaterielViewModel.Agent,
@@ -170,6 +173,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 ReferenceBT = oldMateriel.ReferenceBT,
                 NumeroDeSerie = oldMateriel.NumeroDeSerie,
                 Fournisseur = oldMateriel.Fournisseur,
+                UniteGestion = oldMateriel.UniteGestion,
                 Etat = "Non affecté",
                 Statut = oldMateriel.Statut,
                 RevokedBy = user,
@@ -201,6 +205,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 Etat = materiel.Etat,
                 Statut = materiel.Statut,
                 Agent = materiel.Agent,
+                UniteGestion = materiel.UniteGestion,
                 AffectedBy = materiel.AffectedBy,
                 AffectedDate = materiel.AffectedDate,
                 AffectedTime = materiel.AffectedTime,
@@ -239,6 +244,7 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 NumeroDeSerie = materielById.NumeroDeSerie,
                 Fournisseur = materielById.Fournisseur,
                 Agent = materielById.Agent,
+                UniteGestion = materielById.UniteGestion,
                 Etat = materielById.Etat,
                 Statut = statut,
                 LastUpdatedBy = user,
@@ -305,6 +311,37 @@ namespace BT.Stage.SGIMI.Commun.Tools
                 AffectedBy = user,
                 AffectedDate = oldMateriel.AffectedDate,
                 AffectedTime = oldMateriel.AffectedTime,
+                LastUpdatedBy = oldMateriel.LastUpdatedBy,
+                LastUpdatedDate = oldMateriel.LastUpdatedDate,
+                LastUpdatedTime = oldMateriel.LastUpdatedTime,
+                CreatedBy = oldMateriel.CreatedBy,
+                CreatedDate = oldMateriel.CreatedDate,
+                CreatedTime = oldMateriel.CreatedTime,
+
+
+
+            };
+            return materiel;
+        }
+
+        public static Materiel FiltrerMaterielViewModelToMateriel(Materiel oldMateriel, AffectationMaterielViewModel affectationMaterielViewModel)
+        {
+            Materiel materiel = new Materiel
+            {
+                Id = oldMateriel.Id,
+                Nom = oldMateriel.Nom,
+                Marque = oldMateriel.Marque,
+                Modele = oldMateriel.Modele,
+                ReferenceBT = oldMateriel.ReferenceBT,
+                NumeroDeSerie = oldMateriel.NumeroDeSerie,
+                Fournisseur = oldMateriel.Fournisseur,
+                UniteGestion = affectationMaterielViewModel.UniteGestion,
+                Etat = oldMateriel.Etat,
+                Statut = oldMateriel.Statut,
+                Agent = oldMateriel.Agent,
+                AffectedBy = oldMateriel.AffectedBy,
+                AffectedDate = DateTime.Now.ToString("dd/MM/yyyy"),
+                AffectedTime = DateTime.Now.ToString("HH:mm:ss"),
                 LastUpdatedBy = oldMateriel.LastUpdatedBy,
                 LastUpdatedDate = oldMateriel.LastUpdatedDate,
                 LastUpdatedTime = oldMateriel.LastUpdatedTime,

@@ -14,12 +14,11 @@ namespace BT.Stage.SGIMI.UserInterface.ViewModel
         public string Statut { get; set; }
         public string Agent { get; set; }
         public IEnumerable<SelectListItem> Agents { get; set; }
-
+        public string UniteGestion { get; set; }
+        public IEnumerable<SelectListItem> UniteGestions { get; set; }
         public string AffectedBy { get; set; }
         public string AffectedDate { get; set; }
         public string AffectedTime { get; set; }
-
-   
     }
 }
 
