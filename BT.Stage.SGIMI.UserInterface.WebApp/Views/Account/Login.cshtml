@@ -201,17 +201,19 @@ body {
         color: white;
         
     }
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
     </style>
 <div class="login-box">
-    
-    @*<div class="row">
-        <div class="col-md-8">
-            <section id="loginForm">*@
+   
 
     <img 
-         src="~/Content/images/SGIMI.png" 
-         width="350"
-         />
+         src="~/Images/sgimi12.png" class="center"
+    />
 
     @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
     {
@@ -256,7 +258,7 @@ body {
     <center> <button type="submit" class="btn btn-primary"><i class="fa fa-sign-in" aria-hidden="true"></i> Se connecter</button></center>
 </p>
 <p>
- <center>@Html.ActionLink("S'authentifier", "Register")</center>
+ <center>@Html.ActionLink("S'inscrire", "Register")</center>
 </p>
         <p>
 

@@ -62,13 +62,12 @@
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Reclamer" class="btn btn-success" />
+
+                <a class="btn btn-danger" href="@Url.Action("UserMateriels","Materiel")"><i class="fa fa-plus-square"></i>Retour</a>
             </div>
         </div>
     </div>
 }
-<div>
-    @Html.ActionLink("Retour", "Index")
-</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

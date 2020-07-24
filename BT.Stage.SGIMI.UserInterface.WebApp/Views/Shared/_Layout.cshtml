@@ -10,6 +10,7 @@
     {
         font-weight:bold;
         color:white;
+        margin-top:35%
     }
     h2, p {
         color: white;
@@ -156,10 +157,11 @@
 
     @if (Request.IsAuthenticated)
     {
+        
+    <footer>
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Systéme de Gestion des Interventions Maintenance Informatique de la Banque de Tunisie</p>
-        </footer>
+        <p>&copy; @DateTime.Now.Year - Systéme de Gestion des Interventions Maintenance Informatique de la Banque de Tunisie</p>
+    </footer>
     }
 </div>
 

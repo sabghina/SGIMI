@@ -2,28 +2,6 @@
 @{
     ViewBag.Title = "ModifierReclamation";
 }
-@*@{
-        List<SelectListItem> listEtat = new List<SelectListItem>();
-
-        listEtat.Add(new SelectListItem
-        {
-            Text = "En cours",
-            Value = "En cours",
-            Selected = true
-        });
-        listEtat.Add(new SelectListItem
-        {
-            Text = "Terminée",
-            Value = "Terminée",
-
-        });
-        listEtat.Add(new SelectListItem
-        {
-            Text = "Annulée",
-            Value = "Annulée",
-            Selected = true
-        });
-    }*@
 <style>
     h2, p {
         color: white;
@@ -47,7 +25,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Probleme, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Probleme, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.TextAreaFor(model => model.Probleme, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Probleme, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -55,7 +33,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Commentaire, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Commentaire, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.TextAreaFor(model => model.Commentaire, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Commentaire, "", new { @class = "text-danger" })
             </div>
         </div>

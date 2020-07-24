@@ -75,16 +75,12 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Ajouter" class="btn btn-success" />
+                <a><input type="submit" value="Ajouter" class="btn btn-success btn-sm" style="margin:10px" /></a>
+                <a class="btn btn-danger btn-sm" href="@Url.Action("Index","Home")"><i class="fa fa-plus-square"></i>Retour</a>
             </div>
         </div>
     </div>
 }
-
-<div>
-    @Html.ActionLink("Retour", "Index")
-</div>
-
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }

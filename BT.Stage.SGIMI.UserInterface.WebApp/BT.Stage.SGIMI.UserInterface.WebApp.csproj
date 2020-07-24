@@ -238,6 +238,8 @@
     <Content Include="Icon\treaty.png" />
     <Content Include="Images\home.jpg" />
     <Content Include="Images\logoBT.png" />
+    <Content Include="Images\sgimi11.png" />
+    <Content Include="Images\sgimi12.png" />
     <Content Include="Images\welcome5.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

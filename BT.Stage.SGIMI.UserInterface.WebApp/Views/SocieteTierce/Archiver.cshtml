@@ -1,30 +1,33 @@
 ﻿@model BT.Stage.SGIMI.UserInterface.ViewModel.SocieteTierceViewModel
-
+<style>
+    h1, h3 {
+        color: white;
+        text-align: center;
+    }
+</style>
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>SocieteTierceViewModel</h4>
+        <h1>Confirmation de la demande d'archive</h1>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.Id)
-        <p>
-            Voulez vous archiver cette societeTierce
 
-        </p>
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Oui" class="btn btn-default" />
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <div>
-                    @Html.ActionLink("Non", "Index")
-                </div>
+        <h3 style="text-align:center">
+            Voulez vous archiver cette Societe tierce ?
+
+        </h3>
+        <br />
+        <div class="form-group" style="margin-left:150px">
+            <div class="col-md-offset-4 col-md-10">
+                <input type="submit" value="Oui" class="btn btn-success btn-sm" style="margin:10px" />
+                <a class="btn btn-danger btn-sm" href="@Url.Action("Index","SocieteTierce")"><i class="fa fa-plus-square"></i>Non</a>
             </div>
         </div>
     </div>
+    <br />
 }
+

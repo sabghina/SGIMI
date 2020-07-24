@@ -75,15 +75,12 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Sauvgarder" class="btn btn-default" />
+                <input type="submit" value="Modifier" class="btn btn-success" style="margin:10px" />
+                <a class="btn btn-danger" href="@Url.Action("Index","Intervention")"><i class="fa fa-plus-square"></i>Retour</a>
             </div>
         </div>
     </div>
 }
-
-<div>
-    @Html.ActionLink("Retour", "Index")
-</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

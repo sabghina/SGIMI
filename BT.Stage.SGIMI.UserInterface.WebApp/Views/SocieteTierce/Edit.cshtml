@@ -71,15 +71,12 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Sauvgarder" class="btn btn-success btn-sm" />
+                <input type="submit" value="Enregistrer" class="btn btn-success btn-sm" />
+                <a class="btn btn-danger btn-sm" href="@Url.Action("Index","SocieteTierce")"><i class="fa fa-plus-square"></i>Retour</a>
             </div>
         </div>
     </div>
 }
-
-<div>
-    @Html.ActionLink("Retour", "Index")
-</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
